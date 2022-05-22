@@ -4,23 +4,24 @@
   <meta charset="utf-8">
   
   
-  <title>使用Hexo admin來部屬(deploy)網站 | Int&#39;s blog</title>
+  <title>如何部屬HEXO到github.io(deploy on github) | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Hexo admin是一個很方便的插件，可以用圖形化介面來管理你的網站後台，不過下載後來是要自己設定一些東西才能部屬網站，這篇文就是來介紹部屬的設定。 步驟 安裝hexo admin: 在cmd輸入以下指令，不知道怎麼打開cmd可以看這篇文 1$npm install hexo-admin --save 打開blog資料夾裡的 _config.yml，在最底下新增以下程式碼 12admin:">
+  <meta name="description" content="上一篇文提到了如何使用Hexo admin來部屬網站，但要部屬網站就要有相對的網域來讓你發佈，而github.io即是一個很常拿來發佈靜態網站的地方，這篇文就要來介紹如何使用github來發佈靜態網站。 步驟 註冊github: https:&#x2F;&#x2F;github.com&#x2F;  到自己的個人頁面，按下repositories旁邊的new  在名稱欄位輸入username.github.io(usernam">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Hexo admin來部屬(deploy)網站">
-<meta property="og:url" content="https://huanginch.github.io/2022/05/21/hexo-admin-deploy/index.html">
+<meta property="og:title" content="如何部屬HEXO到github.io(deploy on github)">
+<meta property="og:url" content="https://huanginch.github.io/2022/05/22/deploy-on-github/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="Hexo admin是一個很方便的插件，可以用圖形化介面來管理你的網站後台，不過下載後來是要自己設定一些東西才能部屬網站，這篇文就是來介紹部屬的設定。 步驟 安裝hexo admin: 在cmd輸入以下指令，不知道怎麼打開cmd可以看這篇文 1$npm install hexo-admin --save 打開blog資料夾裡的 _config.yml，在最底下新增以下程式碼 12admin:">
+<meta property="og:description" content="上一篇文提到了如何使用Hexo admin來部屬網站，但要部屬網站就要有相對的網域來讓你發佈，而github.io即是一個很常拿來發佈靜態網站的地方，這篇文就要來介紹如何使用github來發佈靜態網站。 步驟 註冊github: https:&#x2F;&#x2F;github.com&#x2F;  到自己的個人頁面，按下repositories旁邊的new  在名稱欄位輸入username.github.io(usernam">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://huanginch.github.io/images/hexo-admin-navbar.png">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-4.png">
-<meta property="article:published_time" content="2022-05-21T03:33:00.000Z">
-<meta property="article:modified_time" content="2022-05-21T04:14:49.507Z">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-5.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-6.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-7.png">
+<meta property="article:published_time" content="2022-05-22T03:18:00.000Z">
+<meta property="article:modified_time" content="2022-05-22T03:55:56.760Z">
 <meta property="article:author" content="int">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huanginch.github.io/images/hexo-admin-navbar.png">
+<meta name="twitter:image" content="https://huanginch.github.io/images/pasted-5.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -81,16 +82,12 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-hexo-admin-deploy" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-deploy-on-github" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/05/21/hexo-admin-deploy/" class="article-date">
-  <time class="dt-published" datetime="2022-05-21T03:33:00.000Z" itemprop="datePublished">2022-05-21</time>
+    <a href="/2022/05/22/deploy-on-github/" class="article-date">
+  <time class="dt-published" datetime="2022-05-22T03:18:00.000Z" itemprop="datePublished">2022-05-22</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo-introduce/">hexo introduce</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -99,7 +96,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      使用Hexo admin來部屬(deploy)網站
+      如何部屬HEXO到github.io(deploy on github)
     </h1>
   
 
@@ -107,27 +104,33 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Hexo admin是一個很方便的插件，可以用圖形化介面來管理你的網站後台，不過下載後來是要自己設定一些東西才能部屬網站，這篇文就是來介紹部屬的設定。</p>
+        <p><a href="https://huanginch.github.io/2022/05/21/hexo-admin-deploy/">上一篇文</a>提到了如何使用Hexo admin來部屬網站，但要部屬網站就要有相對的網域來讓你發佈，而github.io即是一個很常拿來發佈靜態網站的地方，這篇文就要來介紹如何使用github來發佈靜態網站。</p>
 <h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol>
-<li><p>安裝hexo admin: 在cmd輸入以下指令，不知道怎麼打開cmd可以看<a href="https://huanginch.github.io/2022/05/19/My-First-Post/">這篇文</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$npm install hexo-admin --save</span><br></pre></td></tr></table></figure></li>
-<li><p>打開blog資料夾裡的 <strong>_config.yml</strong>，在最底下新增以下程式碼</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">admin:</span><br><span class="line">          deployCommand: &#x27;hexo-publish.bat&#x27;</span><br></pre></td></tr></table></figure></li>
-<li><p>在跟 <strong>_config.yml</strong> 同一層的地方新增一個叫 <strong>hexo-publish.bat</strong> 的檔案</p>
+<li><p>註冊github: <a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a></p>
 </li>
-<li><p>在<strong>hexo-publish.bat</strong>中新增以下程式碼</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure></li>
-<li><p>切換到Hexo Admin中的deploy頁面<br><img src="/../images/hexo-admin-navbar.png"></p>
+<li><p>到自己的個人頁面，按下repositories旁邊的new<br><img src="/../images/pasted-5.png"></p>
 </li>
-<li><p>在輸入欄輸入本次更新說明文字後按下deploy即可<br><img src="/../images/pasted-4.png"></p>
+<li><p>在名稱欄位輸入username.github.io(username是你註冊的帳號名稱)，因為我已經註冊過了所以會有紅字<br><img src="/../images/pasted-6.png"></p>
+</li>
+<li><p>拉到最下面按下create repository<br><img src="/../images/pasted-7.png"></p>
+</li>
+<li><p>接著到你安裝HEXO的blog資料夾，打開 <strong>_config.yml</strong></p>
+</li>
+<li><p>拉到最底下找到 **deploy:**，並輸入以下文字，同樣的username也是你的github帳號名稱</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">        type: git</span><br><span class="line">        repo: https://github.com/username/username.github.io.git</span><br><span class="line">        branch: master</span><br></pre></td></tr></table></figure>
+<p>基本上這樣就算完成了，你可以按照上篇文的步驟按下admin的deploy就可以部屬網站到github.io上，又或者你可以在終端機輸入以下指令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<ul>
+<li>hexo g和hexo d也可以合併替換成hexo g -d <p>完成後你可以前往自己的github.io網站(https://username.github.io/) ，你會看到網站成功出現，不過有時候他不會那麼快更新，你要稍等一下</p>
+ <p>以後如果要更新文章或是發布文章也只需要輸入最後那三個終端機指令，或是直接使用admin的deploy即可，那這篇文差不多到這邊，有任何問題歡迎和我提出。</p></li>
+</ul>
 </li>
 </ol>
-<p>因為我自己是用github.io來部屬網站，所以我成功後就可以在自己的github上面看到更新後的檔案，至於怎麼使用github來部屬網站下一篇文我會介紹。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/21/hexo-admin-deploy/" data-id="cl3fcxp6u00079ovp36jwa5eb" data-title="使用Hexo admin來部屬(deploy)網站" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/05/22/deploy-on-github/" data-id="cl3grpask0000eovp3j9xhazq" data-title="如何部屬HEXO到github.io(deploy on github)" class="article-share-link">Share</a>
       
       
       
@@ -139,19 +142,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/05/22/deploy-on-github/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          如何部屬HEXO到github.io(deploy on github)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/05/20/insertImage/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/05/21/hexo-admin-deploy/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">在HEXO文章上插入本地端圖片</div>
+      <div class="article-nav-title">使用Hexo admin來部屬(deploy)網站</div>
     </a>
   
 </nav>

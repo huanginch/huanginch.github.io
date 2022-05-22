@@ -75,6 +75,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-deploy-on-github" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/22/deploy-on-github/" class="article-date">
+  <time class="dt-published" datetime="2022-05-22T03:18:00.000Z" itemprop="datePublished">2022-05-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/05/22/deploy-on-github/">如何部屬HEXO到github.io(deploy on github)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><a href="https://huanginch.github.io/2022/05/21/hexo-admin-deploy/">上一篇文</a>提到了如何使用Hexo admin來部屬網站，但要部屬網站就要有相對的網域來讓你發佈，而github.io即是一個很常拿來發佈靜態網站的地方，這篇文就要來介紹如何使用github來發佈靜態網站。</p>
+<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol>
+<li><p>註冊github: <a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a></p>
+</li>
+<li><p>到自己的個人頁面，按下repositories旁邊的new<br><img src="/../images/pasted-5.png"></p>
+</li>
+<li><p>在名稱欄位輸入username.github.io(username是你註冊的帳號名稱)，因為我已經註冊過了所以會有紅字<br><img src="/../images/pasted-6.png"></p>
+</li>
+<li><p>拉到最下面按下create repository<br><img src="/../images/pasted-7.png"></p>
+</li>
+<li><p>接著到你安裝HEXO的blog資料夾，打開 <strong>_config.yml</strong></p>
+</li>
+<li><p>拉到最底下找到 **deploy:**，並輸入以下文字，同樣的username也是你的github帳號名稱</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">        type: git</span><br><span class="line">        repo: https://github.com/username/username.github.io.git</span><br><span class="line">        branch: master</span><br></pre></td></tr></table></figure>
+<p>基本上這樣就算完成了，你可以按照上篇文的步驟按下admin的deploy就可以部屬網站到github.io上，又或者你可以在終端機輸入以下指令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<ul>
+<li>hexo g和hexo d也可以合併替換成hexo g -d <p>完成後你可以前往自己的github.io網站(https://username.github.io/) ，你會看到網站成功出現，不過有時候他不會那麼快更新，你要稍等一下</p>
+ <p>以後如果要更新文章或是發布文章也只需要輸入最後那三個終端機指令，或是直接使用admin的deploy即可，那這篇文差不多到這邊，有任何問題歡迎和我提出。</p></li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/05/22/deploy-on-github/" data-id="cl3grpask0000eovp3j9xhazq" data-title="如何部屬HEXO到github.io(deploy on github)" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-hexo-admin-deploy" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/05/21/hexo-admin-deploy/" class="article-date">
@@ -311,6 +373,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/05/22/deploy-on-github/">如何部屬HEXO到github.io(deploy on github)</a>
+          </li>
         
           <li>
             <a href="/2022/05/21/hexo-admin-deploy/">使用Hexo admin來部屬(deploy)網站</a>
