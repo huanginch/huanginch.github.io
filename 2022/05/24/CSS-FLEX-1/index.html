@@ -6,12 +6,12 @@
   
   <title>CSS排版: FLEX(1) | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="前言此文章為觀看六角學院CSS Flex 超詳解，彈性版型任你操控！影片後整理之筆記整理下來有點太多，可能會分成幾篇來記錄，想看下一篇可以到這裡 FLex介紹Flex是一個CSS中很常使用的排版工具，他能夠自由操作div容器，主要概念為下圖  可以透過操作主軸與交錯軸來達成排版，預設主軸線為由左至右，交錯軸為由上至下 語法介紹外容器: display: flex; flex-flow: flex-">
+  <meta name="description" content="前言此文章為觀看六角學院CSS Flex 超詳解，彈性版型任你操控！影片後整理之筆記整理下來有點太多，可能會分成兩篇來記錄，想看下一篇可以到這裡 FLex介紹Flex是一個CSS中很常使用的排版工具，他能夠自由操作div容器，主要概念為下圖  可以透過操作主軸與交錯軸來達成排版，預設主軸線為由左至右，交錯軸為由上至下 語法介紹外容器: display: flex;(需加在外容器上) flex-fl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS排版: FLEX(1)">
 <meta property="og:url" content="https://huanginch.github.io/2022/05/24/CSS-FLEX-1/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="前言此文章為觀看六角學院CSS Flex 超詳解，彈性版型任你操控！影片後整理之筆記整理下來有點太多，可能會分成幾篇來記錄，想看下一篇可以到這裡 FLex介紹Flex是一個CSS中很常使用的排版工具，他能夠自由操作div容器，主要概念為下圖  可以透過操作主軸與交錯軸來達成排版，預設主軸線為由左至右，交錯軸為由上至下 語法介紹外容器: display: flex; flex-flow: flex-">
+<meta property="og:description" content="前言此文章為觀看六角學院CSS Flex 超詳解，彈性版型任你操控！影片後整理之筆記整理下來有點太多，可能會分成兩篇來記錄，想看下一篇可以到這裡 FLex介紹Flex是一個CSS中很常使用的排版工具，他能夠自由操作div容器，主要概念為下圖  可以透過操作主軸與交錯軸來達成排版，預設主軸線為由左至右，交錯軸為由上至下 語法介紹外容器: display: flex;(需加在外容器上) flex-fl">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://huanginch.github.io/images/pasted-8.png">
 <meta property="og:image" content="https://huanginch.github.io/images/pasted-18.png">
@@ -43,10 +43,10 @@
 <meta property="og:image" content="https://huanginch.github.io/images/pasted-44.png">
 <meta property="og:image" content="https://huanginch.github.io/images/pasted-46.png">
 <meta property="article:published_time" content="2022-05-24T05:42:00.000Z">
-<meta property="article:modified_time" content="2022-05-25T03:15:48.789Z">
+<meta property="article:modified_time" content="2022-05-25T04:14:35.299Z">
 <meta property="article:author" content="int">
 <meta property="article:tag" content="css">
-<meta property="article:tag" content="flex">
+<meta property="article:tag" content="css-flex">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://huanginch.github.io/images/pasted-8.png">
   
@@ -135,12 +135,12 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="此文章為觀看六角學院CSS-Flex-超詳解，彈性版型任你操控！影片後整理之筆記"><a href="#此文章為觀看六角學院CSS-Flex-超詳解，彈性版型任你操控！影片後整理之筆記" class="headerlink" title="此文章為觀看六角學院CSS Flex 超詳解，彈性版型任你操控！影片後整理之筆記"></a>此文章為觀看<a target="_blank" rel="noopener" href="https://youtu.be/88ymaHaStoQ">六角學院CSS Flex 超詳解，彈性版型任你操控！</a>影片後整理之筆記</h3><p>整理下來有點太多，可能會分成幾篇來記錄，想看下一篇可以到<a href>這裡</a></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="此文章為觀看六角學院CSS-Flex-超詳解，彈性版型任你操控！影片後整理之筆記"><a href="#此文章為觀看六角學院CSS-Flex-超詳解，彈性版型任你操控！影片後整理之筆記" class="headerlink" title="此文章為觀看六角學院CSS Flex 超詳解，彈性版型任你操控！影片後整理之筆記"></a>此文章為觀看<a target="_blank" rel="noopener" href="https://youtu.be/88ymaHaStoQ">六角學院CSS Flex 超詳解，彈性版型任你操控！</a>影片後整理之筆記</h3><p>整理下來有點太多，可能會分成兩篇來記錄，想看下一篇可以到<a href>這裡</a></p>
 <h2 id="FLex介紹"><a href="#FLex介紹" class="headerlink" title="FLex介紹"></a>FLex介紹</h2><p>Flex是一個CSS中很常使用的排版工具，他能夠自由操作div容器，主要概念為下圖</p>
 <p><img src="/../images/pasted-8.png"></p>
 <p>可以透過操作主軸與交錯軸來達成排版，預設主軸線為由左至右，交錯軸為由上至下</p>
 <h3 id="語法介紹"><a href="#語法介紹" class="headerlink" title="語法介紹"></a>語法介紹</h3><h4 id="外容器"><a href="#外容器" class="headerlink" title="外容器:"></a>外容器:</h4><ol>
-<li>display: flex;</li>
+<li>display: flex;(<strong>需加在外容器上</strong>)</li>
 <li>flex-flow:<ul>
 <li>flex-direction-控制主軸方向:<ul>
 <li>row (預設值，由左至右)<img src="/../images/pasted-18.png"></li>
@@ -209,13 +209,22 @@
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flex/" rel="tag">flex</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li></ul>
 
     </footer>
   </div>
   
     
 <nav id="article-nav">
+  
+    <a href="/2022/05/25/CSS-Flex-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          CSS排版: Flex(2)
+        
+      </div>
+    </a>
   
   
     <a href="/2022/05/23/ERROR-ENOENT/" id="article-nav-older" class="article-nav-link-wrap">
@@ -247,7 +256,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flex/" rel="tag">flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li></ul>
     </div>
   </div>
 
@@ -257,7 +266,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/flex/" style="font-size: 10px;">flex</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a>
+      <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/css-flex/" style="font-size: 15px;">css-flex</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a>
     </div>
   </div>
 
@@ -279,6 +288,10 @@
       <ul>
         
           <li>
+            <a href="/2022/05/25/CSS-Flex-2/">CSS排版: Flex(2)</a>
+          </li>
+        
+          <li>
             <a href="/2022/05/24/CSS-FLEX-1/">CSS排版: FLEX(1)</a>
           </li>
         
@@ -292,10 +305,6 @@
         
           <li>
             <a href="/2022/05/21/hexo-admin-deploy/">使用Hexo admin來部屬(deploy)網站</a>
-          </li>
-        
-          <li>
-            <a href="/2022/05/20/insertImage/">在HEXO文章上插入本地端圖片</a>
           </li>
         
       </ul>
