@@ -4,24 +4,20 @@
   <meta charset="utf-8">
   
   
-  <title>如何部屬HEXO到github.io(deploy on github) | Int&#39;s blog</title>
+  <title>Javascript: 十進制數字與其他進制數字互相轉換 | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="上一篇文提到了如何使用Hexo admin來部屬網站，但要部屬網站就要有相對的網域來讓你發佈，而github.io即是一個很常拿來發佈靜態網站的地方，這篇文就要來介紹如何使用github來發佈靜態網站。 步驟 註冊github: https:&#x2F;&#x2F;github.com&#x2F;  到自己的個人頁面，按下repositories旁邊的new  在名稱欄位輸入username.github.io(usernam">
+  <meta name="description" content="相較其他語言，在javascript中，要將十進制的數字轉換成其他進制的數字算是相對容易，函式在讀取參數的時候只要有相對應的前綴就會自動幫你轉換，但同時也有不便之處，這篇會來介紹我所採的雷以及如何轉換十進制成其他進制。 十進制轉換成其他進制在你的程式碼中想要做到十進制轉換成不同進制只需要用到 toString() 這個函式。舉例來說我想把10進制轉成8進制以及2進制，可以這樣寫: 12(11).t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何部屬HEXO到github.io(deploy on github)">
-<meta property="og:url" content="https://huanginch.github.io/2022/05/22/deploy-on-github/index.html">
+<meta property="og:title" content="Javascript: 十進制數字與其他進制數字互相轉換">
+<meta property="og:url" content="https://huanginch.github.io/2022/05/27/javascript-octal-decimal/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="上一篇文提到了如何使用Hexo admin來部屬網站，但要部屬網站就要有相對的網域來讓你發佈，而github.io即是一個很常拿來發佈靜態網站的地方，這篇文就要來介紹如何使用github來發佈靜態網站。 步驟 註冊github: https:&#x2F;&#x2F;github.com&#x2F;  到自己的個人頁面，按下repositories旁邊的new  在名稱欄位輸入username.github.io(usernam">
+<meta property="og:description" content="相較其他語言，在javascript中，要將十進制的數字轉換成其他進制的數字算是相對容易，函式在讀取參數的時候只要有相對應的前綴就會自動幫你轉換，但同時也有不便之處，這篇會來介紹我所採的雷以及如何轉換十進制成其他進制。 十進制轉換成其他進制在你的程式碼中想要做到十進制轉換成不同進制只需要用到 toString() 這個函式。舉例來說我想把10進制轉成8進制以及2進制，可以這樣寫: 12(11).t">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-5.png">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-6.png">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-7.png">
-<meta property="article:published_time" content="2022-05-22T03:18:00.000Z">
-<meta property="article:modified_time" content="2022-05-24T06:52:56.685Z">
+<meta property="article:published_time" content="2022-05-27T04:33:00.000Z">
+<meta property="article:modified_time" content="2022-05-27T05:17:35.977Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huanginch.github.io/images/pasted-5.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -82,16 +78,12 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-deploy-on-github" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-javascript-octal-decimal" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/05/22/deploy-on-github/" class="article-date">
-  <time class="dt-published" datetime="2022-05-22T03:18:00.000Z" itemprop="datePublished">2022-05-22</time>
+    <a href="/2022/05/27/javascript-octal-decimal/" class="article-date">
+  <time class="dt-published" datetime="2022-05-27T04:33:00.000Z" itemprop="datePublished">2022-05-27</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo-introduce/">hexo introduce</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -100,7 +92,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      如何部屬HEXO到github.io(deploy on github)
+      Javascript: 十進制數字與其他進制數字互相轉換
     </h1>
   
 
@@ -108,37 +100,26 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p><a href="https://huanginch.github.io/2022/05/21/hexo-admin-deploy/">上一篇文</a>提到了如何使用Hexo admin來部屬網站，但要部屬網站就要有相對的網域來讓你發佈，而github.io即是一個很常拿來發佈靜態網站的地方，這篇文就要來介紹如何使用github來發佈靜態網站。</p>
-<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol>
-<li><p>註冊github: <a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a></p>
-</li>
-<li><p>到自己的個人頁面，按下repositories旁邊的new<br><img src="/../images/pasted-5.png"></p>
-</li>
-<li><p>在名稱欄位輸入username.github.io(username是你註冊的帳號名稱)，因為我已經註冊過了所以會有紅字<br><img src="/../images/pasted-6.png"></p>
-</li>
-<li><p>拉到最下面按下create repository<br><img src="/../images/pasted-7.png"></p>
-</li>
-<li><p>接著到你安裝HEXO的blog資料夾，打開 <strong>_config.yml</strong></p>
-</li>
-<li><p>拉到最底下找到 **deploy:**，並輸入以下文字，同樣的username也是你的github帳號名稱</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">        type: git</span><br><span class="line">        repo: https://github.com/username/username.github.io.git</span><br><span class="line">        branch: master</span><br></pre></td></tr></table></figure>
-<p>基本上這樣就算完成了，你可以按照上篇文的步驟按下admin的deploy就可以部屬網站到github.io上，又或者你可以在終端機輸入以下指令:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+        <p>相較其他語言，在javascript中，要將十進制的數字轉換成其他進制的數字算是相對容易，函式在讀取參數的時候只要有相對應的前綴就會自動幫你轉換，但同時也有不便之處，這篇會來介紹我所採的雷以及如何轉換十進制成其他進制。</p>
+<h2 id="十進制轉換成其他進制"><a href="#十進制轉換成其他進制" class="headerlink" title="十進制轉換成其他進制"></a>十進制轉換成其他進制</h2><p>在你的程式碼中想要做到十進制轉換成不同進制只需要用到 toString() 這個函式。<br>舉例來說我想把10進制轉成8進制以及2進制，可以這樣寫:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">11</span>).<span class="title function_">toString</span>(<span class="number">2</span>);<span class="comment">//10進制的11轉2進制表示</span></span><br><span class="line">(<span class="number">156</span>).<span class="title function_">toString</span>(<span class="number">8</span>);<span class="comment">//10進制的156轉8進制表示</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>hexo g和hexo d也可以合併替換成hexo g -d <p>完成後你可以前往自己的github.io網站(https://username.github.io/) ，你會看到網站成功出現，不過有時候他不會那麼快更新，你要稍等一下</p>
- <p>以後如果要更新文章或是發布文章也只需要輸入最後那三個終端機指令，或是直接使用admin的deploy即可，那這篇文差不多到這邊，有任何問題歡迎和我提出。</p></li>
+<li>不過要注意使用了toString後資料型態會變成字串，你想要它變回數字的話記得使用parseInt();</li>
 </ul>
-</li>
-</ol>
+<h2 id="其他進制轉成十進制"><a href="#其他進制轉成十進制" class="headerlink" title="其他進制轉成十進制"></a>其他進制轉成十進制</h2><p>那如果想要反過來將其他進制轉成十進制就可以使用 parseInt() 這個函式，程式碼如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let num = 11;</span><br><span class="line">parseInt(num, 2);//將2進制的11轉成10進制</span><br><span class="line">parseInt(num, 8);//將8進制的11轉成10進制</span><br></pre></td></tr></table></figure>
+<h2 id="參數的自動轉換"><a href="#參數的自動轉換" class="headerlink" title="參數的自動轉換"></a>參數的自動轉換</h2><p>在javascript中，如果數字以0作為前綴，它會將數字視為8進制並自動轉換成10進制<br>比如說我這樣寫:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">010</span>)</span><br></pre></td></tr></table></figure>
+<p>輸出會是8，又或者是以0x為前綴則會視為16進制。<br><br>這個看似方便的功能也帶給我一些麻煩，我遇到一個題目是輸入有可能會有032這樣的輸入，但js卻會自己幫我轉型，我試著想要取消自動轉型似乎是辦不到，唯一的方法就是改成用字串輸入，所以大家在做的時候要注意使用者是否會誤輸格式，又或者是你必須限制使用者只能輸入字串。如果有人知道如何實作取消自動轉型歡迎和我分享。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/22/deploy-on-github/" data-id="cl3i8dz8i00040cvpdaxj7jyx" data-title="如何部屬HEXO到github.io(deploy on github)" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/05/27/javascript-octal-decimal/" data-id="cl3nzt8tg00008wvp5vow2tr3" data-title="Javascript: 十進制數字與其他進制數字互相轉換" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
 
     </footer>
   </div>
@@ -146,19 +127,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/05/23/ERROR-ENOENT/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          HEXO ERROR: spawn ENOENT
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/05/21/hexo-admin-deploy/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/05/26/RenPy-hide-quick-menu/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">使用Hexo admin來部屬(deploy)網站</div>
+      <div class="article-nav-title">Ren&#39;Py : How to hide quick menu on screen</div>
     </a>
   
 </nav>
