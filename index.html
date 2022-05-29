@@ -75,6 +75,131 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-c-bit-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/28/c-bit-operator/" class="article-date">
+  <time class="dt-published" datetime="2022-05-28T04:41:00.000Z" itemprop="datePublished">2022-05-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/05/28/c-bit-operator/">bit operator in C language</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在C語言中做邏輯判斷時經常會用到邏輯運算子(&amp;&amp;、|| 等)，但還有一種位元運算子新手經常會搞混，與邏輯運算子不同，位元運算子是針對位元來做邏輯判斷，而這篇來簡單整理C語言中的位元運算子:</p>
+<h2 id="運算子"><a href="#運算子" class="headerlink" title="運算子"></a>運算子</h2><ol>
+<li>and: &amp;</li>
+<li>or: |</li>
+<li>xor: ^</li>
+<li>left shift: &lt;&lt;</li>
+<li>right shift: &gt;&gt;</li>
+<li>not: !</li>
+</ol>
+<h2 id="真值表"><a href="#真值表" class="headerlink" title="真值表"></a>真值表</h2><table>
+<thead>
+<tr>
+<th>and</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>or</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>xor</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>not</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<h2 id="left-shift-and-right-shift"><a href="#left-shift-and-right-shift" class="headerlink" title="left shift and right shift"></a>left shift and right shift</h2><ul>
+<li>left shift: 0011 &lt;&lt; 1 &#x3D;&gt; 1100</li>
+<li>right shift: 1100 &gt;&gt; 1 &#x3D;&gt; 0011</li>
+</ul>
+<p>剛好作業有用到，算是紀錄一下，之後可能也會多少寫一些C的東西這樣。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/05/28/c-bit-operator/" data-id="cl3qqmhv60009rkvphm8iftyk" data-title="bit operator in C language" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-javascript-octal-decimal" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/05/27/javascript-octal-decimal/" class="article-date">
@@ -112,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/27/javascript-octal-decimal/" data-id="cl3nzt8tg00008wvp5vow2tr3" data-title="Javascript: 十進制數字與其他進制數字互相轉換" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/05/27/javascript-octal-decimal/" data-id="cl3qqmhvf0011rkvp5amy8ehi" data-title="Javascript: 十進制數字與其他進制數字互相轉換" class="article-share-link">Share</a>
       
       
       
@@ -148,12 +273,8 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>最近在做的Ren’py side project我想要實作一個功能，就是常見的齒輪菜單，我希望按下畫面上的齒輪就能顯示與隱藏菜單(如圖，並且這裡的菜單都是指遊戲內的quick menu)，找了很多文章提供的方法都不符合我想呈現的效果，所以這篇文就是來介紹如何實作這樣的一個功能。</p>
-<div style="display:flex;">
-  <img src="../images/pasted-53.png" style="margin-right: auto">
-  <img src="../images/pasted-52.png">
-</div>
-
+        <p>最近在做的Ren’py side project我想要實作一個功能，就是常見的齒輪菜單，我希望按下畫面上的齒輪就能顯示與隱藏菜單(如圖，並且這裡的菜單都是指遊戲內的quick menu)，找了很多文章提供的方法都不符合我想呈現的效果，所以這篇文就是來介紹如何實作這樣的一個功能。<br><img src="/../images/pasted-53.png"></p>
+<p><img src="/../images/pasted-52.png"></p>
 <h2 id="隱藏quick-menu"><a href="#隱藏quick-menu" class="headerlink" title="隱藏quick menu"></a>隱藏quick menu</h2><p>首先要讓quick menu有辦法在畫面上被隱藏，原本screen.py裡用的是if quick_menu，但因為齒輪的部分使用了imagebutton，imagebutton裡並沒有比較簡單自訂action的方法，所以我們這裡要把if quick menu這個statement刪掉。<br><img src="/../images/pasted-55.png"></p>
 <p>下面宣告quick menu變數部分也可以順便註解掉。<br><img src="/../images/pasted-57.png"></p>
 <p>你會發現quick menu依舊還是在畫面上，那是因為這一行程式碼的關係，他會讓quick menu永遠顯示在畫面上，註解掉後就可以對quick menu進行操作了。<br><img src="/../images/pasted-59.png"></p>
@@ -166,7 +287,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/26/RenPy-hide-quick-menu/" data-id="cl3mkvv960000u0vp93r51uh6" data-title="Ren&#39;Py : How to hide quick menu on screen" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/05/26/RenPy-hide-quick-menu/" data-id="cl3qqmhv30004rkvpb6s72as3" data-title="Ren&#39;Py : How to hide quick menu on screen" class="article-share-link">Share</a>
       
       
       
@@ -241,7 +362,7 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/25/CSS-Flex-2/" data-id="cl3l2ojxm0002xsvp0s2rblq5" data-title="CSS排版: Flex(2)" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/05/25/CSS-Flex-2/" data-id="cl3qqmhuv0000rkvpavp4dzm8" data-title="CSS排版: Flex(2)" class="article-share-link">Share</a>
       
       
       
@@ -351,7 +472,7 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/24/CSS-FLEX-1/" data-id="cl3jsglad000aiwvpddrr4qdu" data-title="CSS排版: FLEX(1)" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/05/24/CSS-FLEX-1/" data-id="cl3qqmhv50006rkvpgewl3yim" data-title="CSS排版: FLEX(1)" class="article-share-link">Share</a>
       
       
       
@@ -396,7 +517,7 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/23/ERROR-ENOENT/" data-id="cl3i8dz8c00000cvp1s6o93ab" data-title="HEXO ERROR: spawn ENOENT" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/05/23/ERROR-ENOENT/" data-id="cl3qqmhv00001rkvp9e4v2876" data-title="HEXO ERROR: spawn ENOENT" class="article-share-link">Share</a>
       
       
       
@@ -462,7 +583,7 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/22/deploy-on-github/" data-id="cl3i8dz8i00040cvpdaxj7jyx" data-title="如何部屬HEXO到github.io(deploy on github)" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/05/22/deploy-on-github/" data-id="cl3qqmhv40005rkvp2iyuht3c" data-title="如何部屬HEXO到github.io(deploy on github)" class="article-share-link">Share</a>
       
       
       
@@ -522,7 +643,7 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/21/hexo-admin-deploy/" data-id="cl3i8dz8j00070cvpb58g1clh" data-title="使用Hexo admin來部屬(deploy)網站" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/05/21/hexo-admin-deploy/" data-id="cl3qqmhv6000arkvpdis9716a" data-title="使用Hexo admin來部屬(deploy)網站" class="article-share-link">Share</a>
       
       
       
@@ -587,7 +708,7 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/20/insertImage/" data-id="cl3i8dz8k000a0cvp4ode12jy" data-title="在HEXO文章上插入本地端圖片" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/05/20/insertImage/" data-id="cl3qqmhv7000drkvpf7rhh0qr" data-title="在HEXO文章上插入本地端圖片" class="article-share-link">Share</a>
       
       
       
@@ -648,7 +769,7 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/19/My-First-Post/" data-id="cl3i8dz8j00050cvpb0f78pd9" data-title="如何使用HEXO建立個人部落格" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/05/19/My-First-Post/" data-id="cl3qqmhve0010rkvp5lbt3oht" data-title="如何使用HEXO建立個人部落格" class="article-share-link">Share</a>
       
       
       
@@ -682,7 +803,7 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
   <div class="widget-wrap">
     <h3 class="widget-title">標籤</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
     </div>
   </div>
 
@@ -692,7 +813,7 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Ren-Py/" style="font-size: 10px;">Ren'Py</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/css-flex/" style="font-size: 15px;">css-flex</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a>
+      <a href="/tags/Ren-Py/" style="font-size: 10px;">Ren'Py</a> <a href="/tags/c/" style="font-size: 10px;">c</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/css-flex/" style="font-size: 15px;">css-flex</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a>
     </div>
   </div>
 
@@ -714,6 +835,10 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       <ul>
         
           <li>
+            <a href="/2022/05/28/c-bit-operator/">bit operator in C language</a>
+          </li>
+        
+          <li>
             <a href="/2022/05/27/javascript-octal-decimal/">Javascript: 十進制數字與其他進制數字互相轉換</a>
           </li>
         
@@ -727,10 +852,6 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
         
           <li>
             <a href="/2022/05/24/CSS-FLEX-1/">CSS排版: FLEX(1)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/05/23/ERROR-ENOENT/">HEXO ERROR: spawn ENOENT</a>
           </li>
         
       </ul>

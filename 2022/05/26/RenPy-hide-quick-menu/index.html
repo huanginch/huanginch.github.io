@@ -6,15 +6,15 @@
   
   <title>Ren&#39;Py : How to hide quick menu on screen | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="最近在做的Ren’py side project我想要實作一個功能，就是常見的齒輪菜單，我希望按下畫面上的齒輪就能顯示與隱藏菜單(如圖，並且這裡的菜單都是指遊戲內的quick menu)，找了很多文章提供的方法都不符合我想呈現的效果，所以這篇文就是來介紹如何實作這樣的一個功能。          隱藏quick menu首先要讓quick menu有辦法在畫面上被隱藏，原本screen.py裡用的">
+  <meta name="description" content="最近在做的Ren’py side project我想要實作一個功能，就是常見的齒輪菜單，我希望按下畫面上的齒輪就能顯示與隱藏菜單(如圖，並且這裡的菜單都是指遊戲內的quick menu)，找了很多文章提供的方法都不符合我想呈現的效果，所以這篇文就是來介紹如何實作這樣的一個功能。  隱藏quick menu首先要讓quick menu有辦法在畫面上被隱藏，原本screen.py裡用的是if quic">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ren&#39;Py : How to hide quick menu on screen">
 <meta property="og:url" content="https://huanginch.github.io/2022/05/26/RenPy-hide-quick-menu/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="最近在做的Ren’py side project我想要實作一個功能，就是常見的齒輪菜單，我希望按下畫面上的齒輪就能顯示與隱藏菜單(如圖，並且這裡的菜單都是指遊戲內的quick menu)，找了很多文章提供的方法都不符合我想呈現的效果，所以這篇文就是來介紹如何實作這樣的一個功能。          隱藏quick menu首先要讓quick menu有辦法在畫面上被隱藏，原本screen.py裡用的">
+<meta property="og:description" content="最近在做的Ren’py side project我想要實作一個功能，就是常見的齒輪菜單，我希望按下畫面上的齒輪就能顯示與隱藏菜單(如圖，並且這裡的菜單都是指遊戲內的quick menu)，找了很多文章提供的方法都不符合我想呈現的效果，所以這篇文就是來介紹如何實作這樣的一個功能。  隱藏quick menu首先要讓quick menu有辦法在畫面上被隱藏，原本screen.py裡用的是if quic">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://huanginch.github.io/2022/05/26/images/pasted-53.png">
-<meta property="og:image" content="https://huanginch.github.io/2022/05/26/images/pasted-52.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-53.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-52.png">
 <meta property="og:image" content="https://huanginch.github.io/images/pasted-55.png">
 <meta property="og:image" content="https://huanginch.github.io/images/pasted-57.png">
 <meta property="og:image" content="https://huanginch.github.io/images/pasted-59.png">
@@ -22,11 +22,11 @@
 <meta property="og:image" content="https://huanginch.github.io/images/pasted-60.png">
 <meta property="og:image" content="https://huanginch.github.io/images/pasted-56.png">
 <meta property="article:published_time" content="2022-05-26T05:32:00.000Z">
-<meta property="article:modified_time" content="2022-05-27T04:32:47.327Z">
+<meta property="article:modified_time" content="2022-05-28T04:39:26.937Z">
 <meta property="article:author" content="int">
 <meta property="article:tag" content="Ren&#39;Py">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huanginch.github.io/2022/05/26/images/pasted-53.png">
+<meta name="twitter:image" content="https://huanginch.github.io/images/pasted-53.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -109,12 +109,8 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>最近在做的Ren’py side project我想要實作一個功能，就是常見的齒輪菜單，我希望按下畫面上的齒輪就能顯示與隱藏菜單(如圖，並且這裡的菜單都是指遊戲內的quick menu)，找了很多文章提供的方法都不符合我想呈現的效果，所以這篇文就是來介紹如何實作這樣的一個功能。</p>
-<div style="display:flex;">
-  <img src="../images/pasted-53.png" style="margin-right: auto">
-  <img src="../images/pasted-52.png">
-</div>
-
+        <p>最近在做的Ren’py side project我想要實作一個功能，就是常見的齒輪菜單，我希望按下畫面上的齒輪就能顯示與隱藏菜單(如圖，並且這裡的菜單都是指遊戲內的quick menu)，找了很多文章提供的方法都不符合我想呈現的效果，所以這篇文就是來介紹如何實作這樣的一個功能。<br><img src="/../images/pasted-53.png"></p>
+<p><img src="/../images/pasted-52.png"></p>
 <h2 id="隱藏quick-menu"><a href="#隱藏quick-menu" class="headerlink" title="隱藏quick menu"></a>隱藏quick menu</h2><p>首先要讓quick menu有辦法在畫面上被隱藏，原本screen.py裡用的是if quick_menu，但因為齒輪的部分使用了imagebutton，imagebutton裡並沒有比較簡單自訂action的方法，所以我們這裡要把if quick menu這個statement刪掉。<br><img src="/../images/pasted-55.png"></p>
 <p>下面宣告quick menu變數部分也可以順便註解掉。<br><img src="/../images/pasted-57.png"></p>
 <p>你會發現quick menu依舊還是在畫面上，那是因為這一行程式碼的關係，他會讓quick menu永遠顯示在畫面上，註解掉後就可以對quick menu進行操作了。<br><img src="/../images/pasted-59.png"></p>
@@ -127,7 +123,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/26/RenPy-hide-quick-menu/" data-id="cl3mkvv960000u0vp93r51uh6" data-title="Ren&#39;Py : How to hide quick menu on screen" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/05/26/RenPy-hide-quick-menu/" data-id="cl3qqmhv30004rkvpb6s72as3" data-title="Ren&#39;Py : How to hide quick menu on screen" class="article-share-link">Share</a>
       
       
       
@@ -178,7 +174,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
     </div>
   </div>
 
@@ -188,7 +184,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Ren-Py/" style="font-size: 10px;">Ren'Py</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/css-flex/" style="font-size: 15px;">css-flex</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a>
+      <a href="/tags/Ren-Py/" style="font-size: 10px;">Ren'Py</a> <a href="/tags/c/" style="font-size: 10px;">c</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/css-flex/" style="font-size: 15px;">css-flex</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a>
     </div>
   </div>
 
@@ -210,6 +206,10 @@
       <ul>
         
           <li>
+            <a href="/2022/05/28/c-bit-operator/">bit operator in C language</a>
+          </li>
+        
+          <li>
             <a href="/2022/05/27/javascript-octal-decimal/">Javascript: 十進制數字與其他進制數字互相轉換</a>
           </li>
         
@@ -223,10 +223,6 @@
         
           <li>
             <a href="/2022/05/24/CSS-FLEX-1/">CSS排版: FLEX(1)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/05/23/ERROR-ENOENT/">HEXO ERROR: spawn ENOENT</a>
           </li>
         
       </ul>
