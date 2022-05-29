@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   
   
-  <title>Tag: hexo | Int&#39;s blog</title>
+  <title>Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Int&#39;s blog">
-<meta property="og:url" content="https://huanginch.github.io/tags/hexo/index.html">
+<meta property="og:url" content="https://huanginch.github.io/page/2/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:author" content="int">
@@ -75,114 +75,73 @@
       <div class="outer">
         <section id="main">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/23/ERROR-ENOENT/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-23T03:14:00.000Z" itemprop="datePublished">5月 23</time>
+    <article id="post-My-First-Post" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/19/My-First-Post/" class="article-date">
+  <time class="dt-published" datetime="2022-05-19T13:26:00.000Z" itemprop="datePublished">2022-05-19</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo-introduce/">hexo introduce</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/23/ERROR-ENOENT/">HEXO ERROR: spawn ENOENT</a>
+      <a class="p-name article-title" href="/2022/05/19/My-First-Post/">如何使用HEXO建立個人部落格</a>
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/22/deploy-on-github/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-22T03:18:00.000Z" itemprop="datePublished">5月 22</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/22/deploy-on-github/">如何部屬HEXO到github.io(deploy on github)</a>
-    </h1>
-  
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>一些廢話，不想看可以直接看步驟</strong></p>
+<p>許多工程師都擁有自己的技術部落格，剛好在六角學院上課的時候有一小節就是在介紹寫部落格這件事，剛好趁這次機會開始養成寫部落格的習慣。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/21/hexo-admin-deploy/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-21T03:33:00.000Z" itemprop="datePublished">5月 21</time>
-</a>
+<p>一開始我跟著HEXO的 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/">官方文件</a> 操作，不過中間的步驟可能是我誤解文件的意思還是怎樣，總之我按照首頁的步驟做是錯的，所以想說順便用這個主題來當作我的第一篇文章。</p>
+<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟:"></a>步驟:</h2><ol>
+<li><p>打開cmd(不會的可以按 window +R 輸入後 cmd 或直接在工具列的搜尋欄搜尋cmd)</p>
+</li>
+<li><p>切到自己希望網站放置的資料夾，我是選D槽根目錄，當然你也可以選別的槽，又或者是在槽中建個資料夾來放之類的，不過他等等會自己產生一個叫blog的資料夾我就沒特別創資料夾了</p>
+</li>
+<li><p>依序輸入下列指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo init blog</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></li>
+<li><p>依照指令執行完就建置好環境了，你的cmd應該會跳出一行字: <strong>Hexo is running at <a target="_blank" rel="noopener" href="http://localhost:4000/(%E5%A6%82%E5%9C%96)">http://localhost:4000/(如圖)</a></strong><img src="https://i.imgur.com/UKZ1SWm.png"></p>
+</li>
+<li><p>在瀏覽器上輸入剛剛出現在cmd上的網址就可以成功打開Hexo部落格了</p>
+</li>
+</ol>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語:"></a>結語:</h2><p>第一次寫部落格，挺有趣的，之後應該會記錄一些Hexo的使用方法跟程式課程的筆記<br>如果有任何問題歡迎和我聯繫</p>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/21/hexo-admin-deploy/">使用Hexo admin來部屬(deploy)網站</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/20/insertImage/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-20T10:24:00.000Z" itemprop="datePublished">5月 20</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/05/19/My-First-Post/" data-id="cl3qqmhve0010rkvp5lbt3oht" data-title="如何使用HEXO建立個人部落格" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/20/insertImage/">在HEXO文章上插入本地端圖片</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/19/My-First-Post/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-19T13:26:00.000Z" itemprop="datePublished">5月 19</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/19/My-First-Post/">如何使用HEXO建立個人部落格</a>
-    </h1>
-  
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
 </article>
-  
-  
-    </div></section>
+
+
+
   
 
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 </section>
         
