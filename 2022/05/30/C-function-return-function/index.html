@@ -4,20 +4,24 @@
   <meta charset="utf-8">
   
   
-  <title>Javascript: 十進制數字與其他進制數字互相轉換 | Int&#39;s blog</title>
+  <title>C Error: 不允許回傳函式的函式 | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="相較其他語言，在javascript中，要將十進制的數字轉換成其他進制的數字算是相對容易，函式在讀取參數的時候只要有相對應的前綴就會自動幫你轉換，但同時也有不便之處，這篇會來介紹我所採的雷以及如何轉換十進制成其他進制。 十進制轉換成其他進制在你的程式碼中想要做到十進制轉換成不同進制只需要用到 toString() 這個函式。舉例來說我想把10進制轉成8進制以及2進制，可以這樣寫: 12(11).t">
+  <meta name="description" content="昨天在寫C語言期末專案的時候遇到了這個錯誤，簡單來說因為C語言沒辦法像javascript或其他語言那樣在函式裡回傳函式(無法寫巢狀函式)才會產生這個錯誤，但問題是我宣告的函式根本沒有回傳函式阿! 那怎麼會這樣? 先來看看我宣告了什麼函式。  這裡我是想寫一個自己的qsort，並用自訂的struct與linked-list實作，你們有發現什麼問題嗎? 沒錯就是這個函式的名稱，原來sort是c的保留">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript: 十進制數字與其他進制數字互相轉換">
-<meta property="og:url" content="https://huanginch.github.io/2022/05/27/javascript-octal-decimal/index.html">
+<meta property="og:title" content="C Error: 不允許回傳函式的函式">
+<meta property="og:url" content="https://huanginch.github.io/2022/05/30/C-function-return-function/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="相較其他語言，在javascript中，要將十進制的數字轉換成其他進制的數字算是相對容易，函式在讀取參數的時候只要有相對應的前綴就會自動幫你轉換，但同時也有不便之處，這篇會來介紹我所採的雷以及如何轉換十進制成其他進制。 十進制轉換成其他進制在你的程式碼中想要做到十進制轉換成不同進制只需要用到 toString() 這個函式。舉例來說我想把10進制轉成8進制以及2進制，可以這樣寫: 12(11).t">
+<meta property="og:description" content="昨天在寫C語言期末專案的時候遇到了這個錯誤，簡單來說因為C語言沒辦法像javascript或其他語言那樣在函式裡回傳函式(無法寫巢狀函式)才會產生這個錯誤，但問題是我宣告的函式根本沒有回傳函式阿! 那怎麼會這樣? 先來看看我宣告了什麼函式。  這裡我是想寫一個自己的qsort，並用自訂的struct與linked-list實作，你們有發現什麼問題嗎? 沒錯就是這個函式的名稱，原來sort是c的保留">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-05-27T04:33:00.000Z">
-<meta property="article:modified_time" content="2022-05-27T05:17:35.977Z">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-63.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-64.png">
+<meta property="article:published_time" content="2022-05-30T03:16:00.000Z">
+<meta property="article:modified_time" content="2022-05-30T03:30:15.413Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="c">
+<meta property="article:tag" content="c error">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://huanginch.github.io/images/pasted-63.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -78,10 +82,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-javascript-octal-decimal" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-C-function-return-function" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/05/27/javascript-octal-decimal/" class="article-date">
-  <time class="dt-published" datetime="2022-05-27T04:33:00.000Z" itemprop="datePublished">2022-05-27</time>
+    <a href="/2022/05/30/C-function-return-function/" class="article-date">
+  <time class="dt-published" datetime="2022-05-30T03:16:00.000Z" itemprop="datePublished">2022-05-30</time>
 </a>
     
   </div>
@@ -92,7 +96,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Javascript: 十進制數字與其他進制數字互相轉換
+      C Error: 不允許回傳函式的函式
     </h1>
   
 
@@ -100,26 +104,20 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>相較其他語言，在javascript中，要將十進制的數字轉換成其他進制的數字算是相對容易，函式在讀取參數的時候只要有相對應的前綴就會自動幫你轉換，但同時也有不便之處，這篇會來介紹我所採的雷以及如何轉換十進制成其他進制。</p>
-<h2 id="十進制轉換成其他進制"><a href="#十進制轉換成其他進制" class="headerlink" title="十進制轉換成其他進制"></a>十進制轉換成其他進制</h2><p>在你的程式碼中想要做到十進制轉換成不同進制只需要用到 toString() 這個函式。<br>舉例來說我想把10進制轉成8進制以及2進制，可以這樣寫:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">11</span>).<span class="title function_">toString</span>(<span class="number">2</span>);<span class="comment">//10進制的11轉2進制表示</span></span><br><span class="line">(<span class="number">156</span>).<span class="title function_">toString</span>(<span class="number">8</span>);<span class="comment">//10進制的156轉8進制表示</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>不過要注意使用了toString後資料型態會變成字串，你想要它變回數字的話記得使用parseInt();</li>
-</ul>
-<h2 id="其他進制轉成十進制"><a href="#其他進制轉成十進制" class="headerlink" title="其他進制轉成十進制"></a>其他進制轉成十進制</h2><p>那如果想要反過來將其他進制轉成十進制就可以使用 parseInt() 這個函式，程式碼如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let num = 11;</span><br><span class="line">parseInt(num, 2);//將2進制的11轉成10進制</span><br><span class="line">parseInt(num, 8);//將8進制的11轉成10進制</span><br></pre></td></tr></table></figure>
-<h2 id="參數的自動轉換"><a href="#參數的自動轉換" class="headerlink" title="參數的自動轉換"></a>參數的自動轉換</h2><p>在javascript中，如果數字以0作為前綴，它會將數字視為8進制並自動轉換成10進制<br>比如說我這樣寫:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">010</span>)</span><br></pre></td></tr></table></figure>
-<p>輸出會是8，又或者是以0x為前綴則會視為16進制。<br><br>這個看似方便的功能也帶給我一些麻煩，我遇到一個題目是輸入有可能會有032這樣的輸入，但js卻會自己幫我轉型，我試著想要取消自動轉型似乎是辦不到，唯一的方法就是改成用字串輸入，所以大家在做的時候要注意使用者是否會誤輸格式，又或者是你必須限制使用者只能輸入字串。如果有人知道如何實作取消自動轉型歡迎和我分享。</p>
+        <p>昨天在寫C語言期末專案的時候遇到了這個錯誤，簡單來說因為C語言沒辦法像javascript或其他語言那樣在函式裡回傳函式(無法寫巢狀函式)才會產生這個錯誤，但問題是我宣告的函式根本沒有回傳函式阿! 那怎麼會這樣? 先來看看我宣告了什麼函式。</p>
+<p><img src="/../images/pasted-63.png"></p>
+<p>這裡我是想寫一個自己的qsort，並用自訂的struct與linked-list實作，你們有發現什麼問題嗎? 沒錯就是這個函式的名稱，原來sort是c的保留字阿，我完全忘記c已經有sort()這個函式，應該說我以前沒有用到就一直以為只有qsort()，所以我只需要把sort名字改掉就行了，這邊我改成_sort()就沒報錯了。</p>
+<p><img src="/../images/pasted-64.png"></p>
+<p>又學到了一課，不過這次好像是我自己蠢，下次記得sort()不能拿來當自訂函式名稱。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/27/javascript-octal-decimal/" data-id="cl3qqmhvf0011rkvp5amy8ehi" data-title="Javascript: 十進制數字與其他進制數字互相轉換" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/05/30/C-function-return-function/" data-id="cl3s6arzw0000v0vp2n5y6rof" data-title="C Error: 不允許回傳函式的函式" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li></ul>
 
     </footer>
   </div>
@@ -127,19 +125,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/05/28/c-bit-operator/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          bit operator in C language
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/05/26/RenPy-hide-quick-menu/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/05/29/Renpy-customize-quickmenu/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Ren&#39;Py : How to hide quick menu on screen</div>
+      <div class="article-nav-title">Ren&#39;Py: customize quick menu</div>
     </a>
   
 </nav>
