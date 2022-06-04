@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>彙整 | Int&#39;s blog</title>
+  <title>Javascript: 邏輯運算子 | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Int&#39;s blog">
-<meta property="og:url" content="https://huanginch.github.io/archives/index.html">
+  <meta name="description" content="這篇會來簡單介紹js中的邏輯運算子語法 語法 and: &amp;&amp; or: || not: !  其實語法就跟多數語言一樣，沒什麼不同。 真值表   and True False    True True False   False False Fasle      or Fsalse True    Fasle Fasle True   True True True      not">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript: 邏輯運算子">
+<meta property="og:url" content="https://huanginch.github.io/2022/06/04/Javascript-logic-operator/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
+<meta property="og:description" content="這篇會來簡單介紹js中的邏輯運算子語法 語法 and: &amp;&amp; or: || not: !  其實語法就跟多數語言一樣，沒什麼不同。 真值表   and True False    True True False   False False Fasle      or Fsalse True    Fasle Fasle True   True True True      not">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-06-04T12:22:00.000Z">
+<meta property="article:modified_time" content="2022-06-04T12:30:57.934Z">
 <meta property="article:author" content="int">
+<meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -73,216 +78,115 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/04/Javascript-logic-operator/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-04T12:22:00.000Z" itemprop="datePublished">6月 4</time>
+        <section id="main"><article id="post-Javascript-logic-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/04/Javascript-logic-operator/" class="article-date">
+  <time class="dt-published" datetime="2022-06-04T12:22:00.000Z" itemprop="datePublished">2022-06-04</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/04/Javascript-logic-operator/">Javascript: 邏輯運算子</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      Javascript: 邏輯運算子
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/03/javascript-datatype/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-03T06:49:00.000Z" itemprop="datePublished">6月 3</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/03/javascript-datatype/">javascript: 常見資料型態</a>
-    </h1>
-  
+        <p>這篇會來簡單介紹js中的邏輯運算子語法</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><ul>
+<li>and: &amp;&amp;</li>
+<li>or: ||</li>
+<li>not: !</li>
+</ul>
+<p>其實語法就跟多數語言一樣，沒什麼不同。</p>
+<h2 id="真值表"><a href="#真值表" class="headerlink" title="真值表"></a>真值表</h2><table>
+<thead>
+<tr>
+<th>and</th>
+<th>True</th>
+<th>False</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>True</td>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr>
+<td>False</td>
+<td>False</td>
+<td>Fasle</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>or</th>
+<th>Fsalse</th>
+<th>True</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fasle</td>
+<td>Fasle</td>
+<td>True</td>
+</tr>
+<tr>
+<td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>not</th>
+<th>Fasle</th>
+<th>True</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>True</td>
+<td>Fasle</td>
+</tr>
+</tbody></table>
+<p>很簡單的一篇，但我想把各種運算子都記錄一下。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/02/javascript-variable/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-02T03:02:00.000Z" itemprop="datePublished">6月 2</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/02/javascript-variable/">javascript: 變數宣告</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/01/Renpy-screen/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-01T03:29:00.000Z" itemprop="datePublished">6月 1</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/04/Javascript-logic-operator/" data-id="cl3zutt430000nkvp2g0655c3" data-title="Javascript: 邏輯運算子" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/01/Renpy-screen/">Ren&#39;Py: screen types</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/31/js-dom-selector/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-31T03:16:00.000Z" itemprop="datePublished">5月 31</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/31/js-dom-selector/">Javascript: 選取DOM元素</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/30/C-function-return-function/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-30T03:16:00.000Z" itemprop="datePublished">5月 30</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/30/C-function-return-function/">C Error: 不允許回傳函式的函式</a>
-    </h1>
-  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/06/03/javascript-datatype/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">javascript: 常見資料型態</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/29/Renpy-customize-quickmenu/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-29T03:06:00.000Z" itemprop="datePublished">5月 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/29/Renpy-customize-quickmenu/">Ren&#39;Py: customize quick menu</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/28/c-bit-operator/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-28T04:41:00.000Z" itemprop="datePublished">5月 28</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/28/c-bit-operator/">bit operator in C language</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/27/javascript-octal-decimal/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-27T04:33:00.000Z" itemprop="datePublished">5月 27</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/27/javascript-octal-decimal/">Javascript: 十進制數字與其他進制數字互相轉換</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/26/RenPy-hide-quick-menu/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-26T05:32:00.000Z" itemprop="datePublished">5月 26</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/26/RenPy-hide-quick-menu/">Ren&#39;Py : How to hide quick menu on screen</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">下一頁 &raquo;</a>
-  </nav>
 
 </section>
         
