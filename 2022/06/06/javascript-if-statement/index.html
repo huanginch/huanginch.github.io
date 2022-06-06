@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Javascript: if判斷式 | Int&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="在javascript中，可以透過if判斷式來進行條件判斷，比如說判斷一個人年紀是否超過18，超過18才能買菸買酒。 語法123if(statement)&amp;#123;	&#x2F;*your code...*&#x2F;&amp;#125;  以前面的例子來說就可以寫成: 123if(age &gt;&#x3D; 18)&amp;#123;	console.log(&amp;#x27;可以買菸買酒&amp;#x27;);&amp;#125;  else 判斷式如果想">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript: if判斷式">
+<meta property="og:url" content="https://huanginch.github.io/2022/06/06/javascript-if-statement/index.html">
+<meta property="og:site_name" content="Int&#39;s blog">
+<meta property="og:description" content="在javascript中，可以透過if判斷式來進行條件判斷，比如說判斷一個人年紀是否超過18，超過18才能買菸買酒。 語法123if(statement)&amp;#123;	&#x2F;*your code...*&#x2F;&amp;#125;  以前面的例子來說就可以寫成: 123if(age &gt;&#x3D; 18)&amp;#123;	console.log(&amp;#x27;可以買菸買酒&amp;#x27;);&amp;#125;  else 判斷式如果想">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-06-06T03:11:00.000Z">
+<meta property="article:modified_time" content="2022-06-06T03:30:40.779Z">
+<meta property="article:author" content="int">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Int&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Int 的程式筆記</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://huanginch.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-javascript-if-statement" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/06/javascript-if-statement/" class="article-date">
+  <time class="dt-published" datetime="2022-06-06T03:11:00.000Z" itemprop="datePublished">2022-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Javascript: if判斷式
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在javascript中，可以透過if判斷式來進行條件判斷，比如說判斷一個人年紀是否超過18，超過18才能買菸買酒。</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(statement)&#123;</span><br><span class="line">	/*your code...*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以前面的例子來說就可以寫成:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(age &gt;= 18)&#123;</span><br><span class="line">	console.log(&#x27;可以買菸買酒&#x27;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="else-判斷式"><a href="#else-判斷式" class="headerlink" title="else 判斷式"></a>else 判斷式</h2><p>如果想對if以外的條件也做出處理，可以使用else</p>
+<h3 id="語法-1"><a href="#語法-1" class="headerlink" title="語法"></a>語法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if(statement)&#123;</span><br><span class="line">	/*your code..*/</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	/*your code...*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>當條件符合if中的判斷式時，會執行if大括弧中的code，不符合會跳過if大括弧，執行else大括弧中的code。</p>
+<p>以前面的例子來說:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if(age &gt; 18)&#123;</span><br><span class="line">	console.log(&#x27;可以買菸買酒&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	console.log(&#x27;你未成年，不能買菸買酒&#x27;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="if-else-判斷式"><a href="#if-else-判斷式" class="headerlink" title="if-else 判斷式"></a>if-else 判斷式</h2><p>如果想要同時判斷多個條件，可以用if-else</p>
+<h3 id="語法-2"><a href="#語法-2" class="headerlink" title="語法"></a>語法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if(statement)&#123;</span><br><span class="line">	/*your code...*/</span><br><span class="line">&#125;</span><br><span class="line">else if(statement)&#123;</span><br><span class="line">	/*your code...*/</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	/*your code...*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我們用上面的例子，但這次多個條件判斷是否大於20歲來看看</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">if(age &gt; 20)&#123;</span><br><span class="line">	console.log(&#x27;民法成年&#x27;)</span><br><span class="line">&#125;</span><br><span class="line">else if(age &gt; 18)&#123;</span><br><span class="line">	console.log(&#x27;刑法成年&#x27;)</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	console.log(&#x27;未成年&#x27;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注意! if-else可以有很多個，但if跟else只能有一個，if只能在最前，else只能在最後，if-else 和 else 可以沒有。</li>
+</ul>
+<p>if判斷式算是非常基本但是卻非常常被使用到的語法，紀錄下來和大家分享。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/06/javascript-if-statement/" data-id="cl426eosq0000swvpbb1gcfeh" data-title="Javascript: if判斷式" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/06/05/js-assignment-operator/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Javascript: 賦值運算子</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/css-flex/">css flex</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo-introduce/">hexo introduce</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Ren-Py/" style="font-size: 15px;">Ren'Py</a> <a href="/tags/c/" style="font-size: 12.5px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 12.5px;">css</a> <a href="/tags/css-flex/" style="font-size: 12.5px;">css-flex</a> <a href="/tags/hexo/" style="font-size: 17.5px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/06/06/javascript-if-statement/">Javascript: if判斷式</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/05/js-assignment-operator/">Javascript: 賦值運算子</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/04/Javascript-logic-operator/">Javascript: 邏輯運算子</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/03/javascript-datatype/">javascript: 常見資料型態</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/02/javascript-variable/">javascript: 變數宣告</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 int<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
