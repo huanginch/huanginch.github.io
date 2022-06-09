@@ -171,28 +171,32 @@
 <p>可以看到arr第一個值(索引值0)變成了1。</p>
 <h2 id="新增"><a href="#新增" class="headerlink" title="新增"></a>新增</h2><p>前面都只有針對已經有的值做處理，那如果我們想要增加一個元素進去該怎麼做?</p>
 <ul>
-<li><p>push():</p>
-<ul>
+<li>push():<ul>
 <li>使用push可以在陣列最後面新增元素  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [720, 800, 100];</span><br><span class="line">arr.push(500);</span><br><span class="line">console.log(arr); //執行結果: [720, 800, 100, 500]</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li><p>unshift()”</p>
-<ul>
-<li>使用unshift可以在陣列最前面新增元素  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [720, 800 ,100];</span><br><span class="line">arr.unshift(500);</span><br><span class="line">console.log(arr); //執行結果: [500, 720, 800, 100]</span><br></pre></td></tr></table></figure>
-<h2 id="刪除"><a href="#刪除" class="headerlink" title="刪除"></a>刪除</h2> 有了新增，自然也會有刪除</li>
+<li>unshift()”<ul>
+<li>使用unshift可以在陣列最前面新增元素  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [720, 800 ,100];</span><br><span class="line">arr.unshift(500);</span><br><span class="line">console.log(arr); //執行結果: [500, 720, 800, 100]</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li><p>pop():</p>
+</ul>
+<h2 id="刪除"><a href="#刪除" class="headerlink" title="刪除"></a>刪除</h2><p> 有了新增，自然也會有刪除</p>
 <ul>
+<li>pop():<ul>
 <li>與push相對，pop可以從陣列最後面刪除元素  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [720, 800, 100];</span><br><span class="line">arr.pop();</span><br><span class="line">console.log(arr); //執行結果: [720, 800]</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li><p>shift():</p>
-<ul>
+<li>shift():<ul>
 <li>與unshift()相對，shift可以從最前面刪除元素  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [720, 800, 100];</span><br><span class="line">arr.shift();</span><br><span class="line">console.log(arr); //執行結果: [800, 100]</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
+<h2 id="取得長度"><a href="#取得長度" class="headerlink" title="取得長度"></a>取得長度</h2><p>想取得當前陣列長度(意即有幾個元素)可以使用array.length。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1, 2, 3];</span><br><span class="line"></span><br><span class="line">console.log(arr.length) //執行結果: 3</span><br></pre></td></tr></table></figure>
+
+<p>以上述程式碼來看，我宣告的arr使有三個元素的陣列，所以arr.length的值就會是3。</p>
+<br>
+    
 <p>基本操作就介紹到這邊，其他進階的array function會留到下一篇做講解。</p>
 
       
