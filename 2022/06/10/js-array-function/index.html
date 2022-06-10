@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Javascript: 陣列函式(下) | Int&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="我們在上篇介紹了forEach、filter、find、findIndex和map，這篇會來介紹其他常用的陣列函式。  slice():  slice可以從給定的範圍複製一份新的array。  123456let arr &#x3D; [1, 2, 3, 4, 5];let newArr1 &#x3D; arr.slice(2);let newArr2 &#x3D; arr.slice(2, 4);console.log(ne">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript: 陣列函式(下)">
+<meta property="og:url" content="https://huanginch.github.io/2022/06/10/js-array-function/index.html">
+<meta property="og:site_name" content="Int&#39;s blog">
+<meta property="og:description" content="我們在上篇介紹了forEach、filter、find、findIndex和map，這篇會來介紹其他常用的陣列函式。  slice():  slice可以從給定的範圍複製一份新的array。  123456let arr &#x3D; [1, 2, 3, 4, 5];let newArr1 &#x3D; arr.slice(2);let newArr2 &#x3D; arr.slice(2, 4);console.log(ne">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-06-10T02:38:00.000Z">
+<meta property="article:modified_time" content="2022-06-10T04:26:13.745Z">
+<meta property="article:author" content="int">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Int&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Int 的程式筆記</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://huanginch.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-js-array-function" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/10/js-array-function/" class="article-date">
+  <time class="dt-published" datetime="2022-06-10T02:38:00.000Z" itemprop="datePublished">2022-06-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Javascript: 陣列函式(下)
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>我們在<a href="https://huanginch.github.io/2022/06/09/Javascript-array-function/">上篇</a>介紹了forEach、filter、find、findIndex和map，這篇會來介紹其他常用的陣列函式。</p>
+<ul>
+<li><p>slice():</p>
+<ul>
+<li>slice可以從給定的範圍複製一份新的array。  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1, 2, 3, 4, 5];</span><br><span class="line">let newArr1 = arr.slice(2);</span><br><span class="line">let newArr2 = arr.slice(2, 4);</span><br><span class="line"></span><br><span class="line">console.log(newArr1);//執行結果:[3, 4, 5]</span><br><span class="line">console.log(newArr2);//執行結果:[3, 4]</span><br></pre></td></tr></table></figure>
+  帶入slice中的第一個參數代表要從哪個索引值開始複製，第二個代表結束的索引值，不代第二個預設會是複製到array結束，如果帶入負數會從最後一個元素開始往前推，比如說-3就是倒數第三個。這裡要注意，複製範圍是含頭不含尾，所以可以看到newArr2只複製到索引值3的元素。</li>
+</ul>
+</li>
+<li><p>splice():</p>
+<ul>
+<li>這個函式跟slice只差了一個字，導致我常常記錯。與slice不同，splice是用來插入或刪除元素，比較像是push跟pop的用法。  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1, 2, 3];</span><br><span class="line">arr.splice(0, 1);</span><br><span class="line">console.log(arr);//執行結果:[2, 3];</span><br><span class="line"></span><br><span class="line">arr.splice(0, 0, 5);</span><br><span class="line">console.log(arr);//執行結果:[5, 2, 3];</span><br><span class="line"></span><br><span class="line">arr.splice(0, 1, 1);</span><br><span class="line">console.log(arr);//執行結果:[1, 2, 3];</span><br></pre></td></tr></table></figure>
+  splice第一個參數代表開始的索引值，這裡跟slice一樣，第二個代表要移動幾步，比如說以執行結果1來說，我從索引值0移動了一步，移到了索引值1，接著用第三個參數的值取代掉移動到的前一個元素(一樣含頭不含尾的概念)，而結果1沒有第三個參數，所以執行出來後arr只剩下[2, 3]。雖然說可以做到刪除插入元素的結果，但我個人感覺整體邏輯是取代就是，拿執行結果2來說，不移動所以沒東西可以取代，就直接插入5這樣。最後，跟slice一樣，參數可以代負數，負數就代表從最後面開始算。</li>
+</ul>
+</li>
+<li><p>sort():</p>
+<ul>
+<li>這個從名字就可以看出來是排序用的。  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1, 5, 6, 8, 4, 3];</span><br><span class="line">arr.sort();</span><br><span class="line">console.log(arr);//執行結果:[1, 3, 4, 5, 6, 8]</span><br></pre></td></tr></table></figure>
+  直接使用的話是由小排到大，如果是字串就按照ascii code來排，比較特別的是sort可以寫compare function來自訂排序方式。  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> let arr = [2, 5, 1, 0];</span><br><span class="line"> arr.sort(compare(b, a) &#123;</span><br><span class="line">   if ( a &lt; b) &#123;</span><br><span class="line">     return -1;</span><br><span class="line">   &#125;</span><br><span class="line">   if ( a &gt; b) &#123;</span><br><span class="line">     return 1;</span><br><span class="line">   &#125;</span><br><span class="line">   // a 必須等於 b</span><br><span class="line">   return 0;</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line"> console.log(arr); //執行結果:[5, 2, 1, 0]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  a, b代表了陣列中的元素，他會依序去比較你帶入的參數，小於回傳-1，大於回傳+1，等於回傳0。像這裡我就把它改成由大排到小。</li>
+</ul>
+</li>
+</ul>
+<p>本次陣列函式介紹就差不多到這邊，雖然沒有列出所有的函式，但我認為我列出的已經是相對常用的了，希望大家會喜歡。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/10/js-array-function/" data-id="cl47y56tl0000kwvp2sip9np3" data-title="Javascript: 陣列函式(下)" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/06/09/Javascript-array-function/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Javascript: 陣列函式(上)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/css-flex/">css flex</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo-introduce/">hexo introduce</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Ren-Py/" style="font-size: 15px;">Ren'Py</a> <a href="/tags/c/" style="font-size: 12.5px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/css-flex/" style="font-size: 12.5px;">css-flex</a> <a href="/tags/hexo/" style="font-size: 17.5px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/06/10/js-array-function/">Javascript: 陣列函式(下)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/09/Javascript-array-function/">Javascript: 陣列函式(上)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/08/css-block-and-inline/">CSS: 區塊元素與行內元素</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/07/Javascipt-array/">Javascipt: 陣列</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/06/javascript-if-statement/">Javascript: if判斷式</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 int<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
