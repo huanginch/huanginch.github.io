@@ -4,23 +4,20 @@
   <meta charset="utf-8">
   
   
-  <title>使用Hexo admin來部屬(deploy)網站 | Int&#39;s blog</title>
+  <title>CSS: Reset | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Hexo admin是一個很方便的插件，可以用圖形化介面來管理你的網站後台，不過下載後來是要自己設定一些東西才能部屬網站，這篇文就是來介紹部屬的設定。 步驟 安裝hexo admin: 在cmd輸入以下指令，不知道怎麼打開cmd可以看這篇文 1$npm install hexo-admin --save 打開blog資料夾裡的 _config.yml，在最底下新增以下程式碼 12admin:">
+  <meta name="description" content="在各大瀏覽器中，其實他們都有自己預設的css style，所以就算你不下css，你的HTML用瀏覽器打開時還是會有一些基本的css設定，但這些設定會因瀏覽器的不同而不同，為了讓你的網頁在不同瀏覽器都能有相同的css，就必須使用到css reset。 要使用css reset很簡單，最常見的做法就是去google搜尋css reset，就會有一堆網站跑出來給你複製code，比如說這個，你就可以將程式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Hexo admin來部屬(deploy)網站">
-<meta property="og:url" content="https://huanginch.github.io/2022/05/21/hexo-admin-deploy/index.html">
+<meta property="og:title" content="CSS: Reset">
+<meta property="og:url" content="https://huanginch.github.io/2022/06/12/css-reset/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="Hexo admin是一個很方便的插件，可以用圖形化介面來管理你的網站後台，不過下載後來是要自己設定一些東西才能部屬網站，這篇文就是來介紹部屬的設定。 步驟 安裝hexo admin: 在cmd輸入以下指令，不知道怎麼打開cmd可以看這篇文 1$npm install hexo-admin --save 打開blog資料夾裡的 _config.yml，在最底下新增以下程式碼 12admin:">
+<meta property="og:description" content="在各大瀏覽器中，其實他們都有自己預設的css style，所以就算你不下css，你的HTML用瀏覽器打開時還是會有一些基本的css設定，但這些設定會因瀏覽器的不同而不同，為了讓你的網頁在不同瀏覽器都能有相同的css，就必須使用到css reset。 要使用css reset很簡單，最常見的做法就是去google搜尋css reset，就會有一堆網站跑出來給你複製code，比如說這個，你就可以將程式">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://huanginch.github.io/images/hexo-admin-navbar.png">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-4.png">
-<meta property="article:published_time" content="2022-05-21T03:33:00.000Z">
-<meta property="article:modified_time" content="2022-05-23T04:21:11.984Z">
+<meta property="article:published_time" content="2022-06-12T02:15:00.000Z">
+<meta property="article:modified_time" content="2022-06-12T02:20:51.505Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huanginch.github.io/images/hexo-admin-navbar.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -81,16 +78,12 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-hexo-admin-deploy" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-css-reset" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/05/21/hexo-admin-deploy/" class="article-date">
-  <time class="dt-published" datetime="2022-05-21T03:33:00.000Z" itemprop="datePublished">2022-05-21</time>
+    <a href="/2022/06/12/css-reset/" class="article-date">
+  <time class="dt-published" datetime="2022-06-12T02:15:00.000Z" itemprop="datePublished">2022-06-12</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo-introduce/">hexo introduce</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -99,7 +92,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      使用Hexo admin來部屬(deploy)網站
+      CSS: Reset
     </h1>
   
 
@@ -107,31 +100,18 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Hexo admin是一個很方便的插件，可以用圖形化介面來管理你的網站後台，不過下載後來是要自己設定一些東西才能部屬網站，這篇文就是來介紹部屬的設定。</p>
-<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol>
-<li><p>安裝hexo admin: 在cmd輸入以下指令，不知道怎麼打開cmd可以看<a href="https://huanginch.github.io/2022/05/19/My-First-Post/">這篇文</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$npm install hexo-admin --save</span><br></pre></td></tr></table></figure></li>
-<li><p>打開blog資料夾裡的 <strong>_config.yml</strong>，在最底下新增以下程式碼</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">admin:</span><br><span class="line">          deployCommand: &#x27;hexo-publish.bat&#x27;</span><br></pre></td></tr></table></figure></li>
-<li><p>在跟 <strong>_config.yml</strong> 同一層的地方新增一個叫 <strong>hexo-publish.bat</strong> 的檔案</p>
-</li>
-<li><p>在<strong>hexo-publish.bat</strong>中新增以下程式碼</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure></li>
-<li><p>切換到Hexo Admin中的deploy頁面<br><img src="/../images/hexo-admin-navbar.png"></p>
-</li>
-<li><p>在輸入欄輸入本次更新說明文字後按下deploy即可<br><img src="/../images/pasted-4.png"></p>
-</li>
-</ol>
-<p>因為我自己是用github.io來部屬網站，所以我成功後就可以在自己的github上面看到更新後的檔案，至於怎麼使用github來部屬網站可以到<a href="https://huanginch.github.io/2022/05/22/deploy-on-github/">這篇文</a>。</p>
+        <p>在各大瀏覽器中，其實他們都有自己預設的css style，所以就算你不下css，你的HTML用瀏覽器打開時還是會有一些基本的css設定，但這些設定會因瀏覽器的不同而不同，為了讓你的網頁在不同瀏覽器都能有相同的css，就必須使用到css reset。</p>
+<p>要使用css reset很簡單，最常見的做法就是去google搜尋css reset，就會有一堆網站跑出來給你複製code，比如說<a target="_blank" rel="noopener" href="https://meyerweb.com/eric/tools/css/reset/">這個</a>，你就可以將程式碼複製貼上到你的專案的css檔，這樣就完成css reset了。</p>
+<p>我印象中還有其他方法，不過我目前只學到這個，等以後有學到其他的再來分享。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/21/hexo-admin-deploy/" data-id="cl3qqmhv6000arkvpdis9716a" data-title="使用Hexo admin來部屬(deploy)網站" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/06/12/css-reset/" data-id="cl4aojjf50000qcvp0t20823d" data-title="CSS: Reset" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
     </footer>
   </div>
@@ -139,19 +119,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/05/22/deploy-on-github/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          如何部屬HEXO到github.io(deploy on github)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/05/20/insertImage/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/06/11/css-descendant-combinator/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">在HEXO文章上插入本地端圖片</div>
+      <div class="article-nav-title">CSS: 後代選擇器</div>
     </a>
   
 </nav>
