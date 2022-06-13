@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Ren&#39;Py: screen types | Int&#39;s blog</title>
+  <title>Javascript: bit operator | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="在Ren’Py中所有的畫面都是用screen來呈現，而screen又分為以下幾種:  window 一個普通的視窗，給我的感覺有點像html裡的div，可以設定背景等等，可參考:官方文件   frame 跟window很像，最大的不同是背景樣式會套用gui資料夾裡的frame.png，所以你可以透過自訂frame.png以及gui.rpy中屬於frame的參數來修改他的樣式，同樣可參考官方文件">
+  <meta name="description" content="我們在前幾篇有介紹到邏輯運算子，這篇會來介紹新手很容易與邏輯運算子搞錯的位元運算子，其實我之前也有介紹過C的位元運算子，不過javascript能用的指令比C多了一些，就讓我們來看一下吧。  and: &amp; 兩個位元都為1就設為1   or: | 其中一個位元為1就設為1   xor: ^ 兩個位元不同就設為1   not: ~ 位元為0設為1，位元為1設為0   zero fill lef">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ren&#39;Py: screen types">
-<meta property="og:url" content="https://huanginch.github.io/2022/06/01/Renpy-screen/index.html">
+<meta property="og:title" content="Javascript: bit operator">
+<meta property="og:url" content="https://huanginch.github.io/2022/06/13/js-bit-operator/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="在Ren’Py中所有的畫面都是用screen來呈現，而screen又分為以下幾種:  window 一個普通的視窗，給我的感覺有點像html裡的div，可以設定背景等等，可參考:官方文件   frame 跟window很像，最大的不同是背景樣式會套用gui資料夾裡的frame.png，所以你可以透過自訂frame.png以及gui.rpy中屬於frame的參數來修改他的樣式，同樣可參考官方文件">
+<meta property="og:description" content="我們在前幾篇有介紹到邏輯運算子，這篇會來介紹新手很容易與邏輯運算子搞錯的位元運算子，其實我之前也有介紹過C的位元運算子，不過javascript能用的指令比C多了一些，就讓我們來看一下吧。  and: &amp; 兩個位元都為1就設為1   or: | 其中一個位元為1就設為1   xor: ^ 兩個位元不同就設為1   not: ~ 位元為0設為1，位元為1設為0   zero fill lef">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-06-01T03:29:00.000Z">
-<meta property="article:modified_time" content="2022-06-02T02:41:16.653Z">
+<meta property="article:published_time" content="2022-06-13T05:25:00.000Z">
+<meta property="article:modified_time" content="2022-06-13T05:36:12.258Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="Ren&#39;Py">
+<meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -78,10 +78,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-Renpy-screen" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-js-bit-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/06/01/Renpy-screen/" class="article-date">
-  <time class="dt-published" datetime="2022-06-01T03:29:00.000Z" itemprop="datePublished">2022-06-01</time>
+    <a href="/2022/06/13/js-bit-operator/" class="article-date">
+  <time class="dt-published" datetime="2022-06-13T05:25:00.000Z" itemprop="datePublished">2022-06-13</time>
 </a>
     
   </div>
@@ -92,7 +92,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Ren&#39;Py: screen types
+      Javascript: bit operator
     </h1>
   
 
@@ -100,39 +100,47 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>在Ren’Py中所有的畫面都是用screen來呈現，而screen又分為以下幾種:</p>
-<ol>
-<li>window<ul>
-<li>一個普通的視窗，給我的感覺有點像html裡的div，可以設定背景等等，可參考:<a target="_blank" rel="noopener" href="https://www.renpy.org/doc/html/style_properties.html#window-style-properties">官方文件</a></li>
+        <p>我們在前幾篇有介紹到邏輯運算子，這篇會來介紹新手很容易與邏輯運算子搞錯的位元運算子，其實我之前也有介紹過C的位元運算子，不過javascript能用的指令比C多了一些，就讓我們來看一下吧。</p>
+<ul>
+<li>and: &amp;<ul>
+<li>兩個位元都為1就設為1</li>
 </ul>
 </li>
-<li>frame<ul>
-<li>跟window很像，最大的不同是背景樣式會套用gui資料夾裡的frame.png，所以你可以透過自訂frame.png以及gui.rpy中屬於frame的參數來修改他的樣式，同樣可參考<a target="_blank" rel="noopener" href="https://www.renpy.org/doc/html/screens.html#frame">官方文件</a></li>
+<li>or: |<ul>
+<li>其中一個位元為1就設為1</li>
 </ul>
 </li>
-<li>vbox<ul>
-<li>會給予一個透明背景的視窗，沒辦法自訂背景樣式，最大的特點是可以讓box內的元素垂直排列，<a target="_blank" rel="noopener" href="https://www.renpy.org/doc/html/screens.html#vbox">官方文件</a></li>
+<li>xor: ^<ul>
+<li>兩個位元不同就設為1</li>
 </ul>
 </li>
-<li>hbox<ul>
-<li>和vbox基本上一模一樣，最大的不同是box內元素是水平排列，<a target="_blank" rel="noopener" href="https://www.renpy.org/doc/html/screens.html#hbox">官方文件</a></li>
+<li>not: ~<ul>
+<li>位元為0設為1，位元為1設為0</li>
 </ul>
 </li>
-<li>imagemap<ul>
-<li>完全用圖像來呈現，可以做出像地圖的感覺，<a target="_blank" rel="noopener" href="https://www.renpy.org/doc/html/screens.html?highlight=imagemap#imagemap-statements">官方文件</a></li>
+<li>zero fill left shift: &lt;&lt;<ul>
+<li>全部位元往左移動，空著的地方補0</li>
 </ul>
 </li>
-</ol>
-<p>這篇文只是簡單列出screen可以用的種類，以後會在寫文針對每個的特性等等做更詳細的介紹。</p>
+<li>signed right shift: &gt;&gt;<ul>
+<li>全部位元往右移動，但最右邊的會被推到最左邊(循環的概念)</li>
+</ul>
+</li>
+<li>zero fill right shift: &gt;&gt;&gt;<ul>
+<li>全部位元往右移動，空著的地方補0</li>
+</ul>
+</li>
+</ul>
+<p>與C最不同的是，js提供了signed right shift，讓我們不用自己寫(話說前幾天考試才剛考如何用C寫出signed right shift XD)，算是相當方便，不過其他的部分就大同小異，重要的還是要注意這是針對位元來做邏輯運算，而不是對整個資料。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/01/Renpy-screen/" data-id="cl3v1y2tl0000y4vp9s54190f" data-title="Ren&#39;Py: screen types" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/06/13/js-bit-operator/" data-id="cl4cayqv60000lovp0f4vf1u0" data-title="Javascript: bit operator" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
 
     </footer>
   </div>
@@ -140,19 +148,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/06/02/javascript-variable/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          javascript: 變數宣告
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/05/31/js-dom-selector/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/06/12/css-reset/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Javascript: 選取DOM元素</div>
+      <div class="article-nav-title">CSS: Reset</div>
     </a>
   
 </nav>
