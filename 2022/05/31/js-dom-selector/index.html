@@ -14,7 +14,7 @@
 <meta property="og:description" content="在javascipt中，如果想操作Html的元素要先使用document.querySelector()等語法來選取，這篇會來介紹有哪些語法以及如何選取。 語法 document.querySelector(): 最常見的語法，這個語法可以選取html中第一個符合條件的元素。 document.querySelectorAll(): 與querySelector()用法相同，但會選取所有符合條件的">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-05-31T03:16:00.000Z">
-<meta property="article:modified_time" content="2022-05-31T04:01:35.264Z">
+<meta property="article:modified_time" content="2022-06-15T03:30:17.731Z">
 <meta property="article:author" content="int">
 <meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
@@ -110,14 +110,14 @@
 </ul>
 <h2 id="選取元素"><a href="#選取元素" class="headerlink" title="選取元素"></a>選取元素</h2><p>在qeuerySelector()與querySelectorAll()中，根據選取不同類型元素，條件寫法也不同。<br></p>
 <ul>
-<li>選取html tag: 在單引號或雙引號中直接寫上標籤名稱即可<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.querySelector(&#x27;h1&#x27;);</span><br></pre></td></tr></table></figure></li>
-<li>選取class name: 在在單引號或雙引號中寫上classname，但前面必須加.<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docuemnt.querySelector(&#x27;.header&#x27;);</span><br></pre></td></tr></table></figure></li>
-<li>選取id: 在單引號或雙引號中寫上id，但前面必須加#<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.querySelector(&#x27;#email&#x27;);</span><br></pre></td></tr></table></figure></li>
+<li>選取html tag: 在單引號或雙引號中直接寫上標籤名稱即可<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;h1&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+<li>選取class name: 在在單引號或雙引號中寫上classname，但前面必須加.<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docuemnt.<span class="title function_">querySelector</span>(<span class="string">&#x27;.header&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+<li>選取id: 在單引號或雙引號中寫上id，但前面必須加#<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#email&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
 </ul>
 <p>其實選取方式就跟css的選取方式相同，所以說querySelector的部分也可以寫成這樣:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.querySelector(&#x27;.header h1&#x27;); // 選取header class中的h1</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.header h1&#x27;</span>); <span class="comment">// 選取header class中的h1</span></span><br></pre></td></tr></table></figure>
 <p>在剩下的getElementBy…中，只需要在單引號或雙引號中寫下相對應的名字即可</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&#x27;email&#x27;);</span><br><span class="line">document.getElementByClassName(&#x27;header&#x27;);</span><br><span class="line">document.getElementByTagName(&#x27;h1&#x27;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;email&#x27;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementByClassName</span>(<span class="string">&#x27;header&#x27;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementByTagName</span>(<span class="string">&#x27;h1&#x27;</span>);</span><br></pre></td></tr></table></figure>
 
 <p>這篇算是簡單整理，幫助自己記憶，平常的話我都使用querySelector()或querySelectorAll()而已，其他幾個視情況使用，分享給大家。</p>
 

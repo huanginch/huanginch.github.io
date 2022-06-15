@@ -212,11 +212,11 @@
 </ul>
 </li>
 <li>array<ul>
-<li>用 [ ] 表示，可以存數字、字串、陣列、物件等等，但每筆資料型態必須相同，表示方式為  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let arr = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span><br></pre></td></tr></table></figure></li>
+<li>用 [ ] 表示，可以存數字、字串、陣列、物件等等，但每筆資料型態必須相同，表示方式為  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>]</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li>object<ul>
-<li>用 { } 表示，包含屬性與值，可以是數字、字串、陣列、物件等等，每筆資料都可以是不同型態，表示方式為  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123;</span><br><span class="line">	name: &quot;Andy&quot;,</span><br><span class="line">    age: 5</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>用 { } 表示，包含屬性與值，可以是數字、字串、陣列、物件等等，每筆資料都可以是不同型態，表示方式為  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">	<span class="attr">name</span>: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li>null<ul>
@@ -272,19 +272,19 @@
         <p>javascript的變數宣告相對其他語言簡單容易的許多，這篇會簡單介紹怎麼宣告。</p>
 <ul>
 <li>var<ul>
-<li>最早在javascript中只有這個語法可以用來宣告變數  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var a;</span><br></pre></td></tr></table></figure></li>
+<li>最早在javascript中只有這個語法可以用來宣告變數  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li>let <ul>
-<li>現在都使用這個語法來宣告變數  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let a;</span><br></pre></td></tr></table></figure></li>
+<li>現在都使用這個語法來宣告變數  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li>const<ul>
-<li>一旦被初始化就很難再被重新賦值  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const a;</span><br></pre></td></tr></table></figure></li>
+<li>一旦被初始化就很難再被重新賦值  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li>什麼都不寫<ul>
-<li>沒錯，只寫變數名稱也能夠宣告，因為沒有寫的話會被當作是在window下的變數  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = 0;</span><br></pre></td></tr></table></figure></li>
+<li>沒錯，只寫變數名稱也能夠宣告，因為沒有寫的話會被當作是在window下的變數  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">0</span>;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
@@ -403,14 +403,14 @@
 </ul>
 <h2 id="選取元素"><a href="#選取元素" class="headerlink" title="選取元素"></a>選取元素</h2><p>在qeuerySelector()與querySelectorAll()中，根據選取不同類型元素，條件寫法也不同。<br></p>
 <ul>
-<li>選取html tag: 在單引號或雙引號中直接寫上標籤名稱即可<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.querySelector(&#x27;h1&#x27;);</span><br></pre></td></tr></table></figure></li>
-<li>選取class name: 在在單引號或雙引號中寫上classname，但前面必須加.<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docuemnt.querySelector(&#x27;.header&#x27;);</span><br></pre></td></tr></table></figure></li>
-<li>選取id: 在單引號或雙引號中寫上id，但前面必須加#<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.querySelector(&#x27;#email&#x27;);</span><br></pre></td></tr></table></figure></li>
+<li>選取html tag: 在單引號或雙引號中直接寫上標籤名稱即可<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;h1&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+<li>選取class name: 在在單引號或雙引號中寫上classname，但前面必須加.<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docuemnt.<span class="title function_">querySelector</span>(<span class="string">&#x27;.header&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+<li>選取id: 在單引號或雙引號中寫上id，但前面必須加#<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#email&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
 </ul>
 <p>其實選取方式就跟css的選取方式相同，所以說querySelector的部分也可以寫成這樣:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.querySelector(&#x27;.header h1&#x27;); // 選取header class中的h1</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.header h1&#x27;</span>); <span class="comment">// 選取header class中的h1</span></span><br></pre></td></tr></table></figure>
 <p>在剩下的getElementBy…中，只需要在單引號或雙引號中寫下相對應的名字即可</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&#x27;email&#x27;);</span><br><span class="line">document.getElementByClassName(&#x27;header&#x27;);</span><br><span class="line">document.getElementByTagName(&#x27;h1&#x27;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;email&#x27;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementByClassName</span>(<span class="string">&#x27;header&#x27;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementByTagName</span>(<span class="string">&#x27;h1&#x27;</span>);</span><br></pre></td></tr></table></figure>
 
 <p>這篇算是簡單整理，幫助自己記憶，平常的話我都使用querySelector()或querySelectorAll()而已，其他幾個視情況使用，分享給大家。</p>
 
@@ -673,14 +673,14 @@
       
         <p>相較其他語言，在javascript中，要將十進制的數字轉換成其他進制的數字算是相對容易，函式在讀取參數的時候只要有相對應的前綴就會自動幫你轉換，但同時也有不便之處，這篇會來介紹我所採的雷以及如何轉換十進制成其他進制。</p>
 <h2 id="十進制轉換成其他進制"><a href="#十進制轉換成其他進制" class="headerlink" title="十進制轉換成其他進制"></a>十進制轉換成其他進制</h2><p>在你的程式碼中想要做到十進制轉換成不同進制只需要用到 toString() 這個函式。<br>舉例來說我想把10進制轉成8進制以及2進制，可以這樣寫:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">11</span>).<span class="title function_">toString</span>(<span class="number">2</span>);<span class="comment">//10進制的11轉2進制表示</span></span><br><span class="line">(<span class="number">156</span>).<span class="title function_">toString</span>(<span class="number">8</span>);<span class="comment">//10進制的156轉8進制表示</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">11</span>).<span class="title function_">toString</span>(<span class="number">2</span>);<span class="comment">//10進制的11轉2進制表示</span></span><br><span class="line">(<span class="number">156</span>).<span class="title function_">toString</span>(<span class="number">8</span>);<span class="comment">//10進制的156轉8進制表示</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>不過要注意使用了toString後資料型態會變成字串，你想要它變回數字的話記得使用parseInt();</li>
 </ul>
 <h2 id="其他進制轉成十進制"><a href="#其他進制轉成十進制" class="headerlink" title="其他進制轉成十進制"></a>其他進制轉成十進制</h2><p>那如果想要反過來將其他進制轉成十進制就可以使用 parseInt() 這個函式，程式碼如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let num = 11;</span><br><span class="line">parseInt(num, 2);//將2進制的11轉成10進制</span><br><span class="line">parseInt(num, 8);//將8進制的11轉成10進制</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">11</span>;</span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">2</span>);<span class="comment">//將2進制的11轉成10進制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">8</span>);<span class="comment">//將8進制的11轉成10進制</span></span><br></pre></td></tr></table></figure>
 <h2 id="參數的自動轉換"><a href="#參數的自動轉換" class="headerlink" title="參數的自動轉換"></a>參數的自動轉換</h2><p>在javascript中，如果數字以0作為前綴，它會將數字視為8進制並自動轉換成10進制<br>比如說我這樣寫:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">010</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">010</span>)</span><br></pre></td></tr></table></figure>
 <p>輸出會是8，又或者是以0x為前綴則會視為16進制。<br><br>這個看似方便的功能也帶給我一些麻煩，我遇到一個題目是輸入有可能會有032這樣的輸入，但js卻會自己幫我轉型，我試著想要取消自動轉型似乎是辦不到，唯一的方法就是改成用字串輸入，所以大家在做的時候要注意使用者是否會誤輸格式，又或者是你必須限制使用者只能輸入字串。如果有人知道如何實作取消自動轉型歡迎和我分享。</p>
 
       
