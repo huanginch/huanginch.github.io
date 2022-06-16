@@ -75,6 +75,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-javascript-if-statement" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/06/javascript-if-statement/" class="article-date">
+  <time class="dt-published" datetime="2022-06-06T03:11:00.000Z" itemprop="datePublished">2022-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/06/javascript-if-statement/">Javascript: if判斷式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在javascript中，可以透過if判斷式來進行條件判斷，比如說判斷一個人年紀是否超過18，超過18才能買菸買酒。</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(statement)&#123;</span><br><span class="line">	<span class="comment">/*your code...*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以前面的例子來說就可以寫成:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(age &gt;= <span class="number">18</span>)&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;可以買菸買酒&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="else-判斷式"><a href="#else-判斷式" class="headerlink" title="else 判斷式"></a>else 判斷式</h2><p>如果想對if以外的條件也做出處理，可以使用else</p>
+<h3 id="語法-1"><a href="#語法-1" class="headerlink" title="語法"></a>語法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(statement)&#123;</span><br><span class="line">	<span class="comment">/*your code..*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">	<span class="comment">/*your code...*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>當條件符合if中的判斷式時，會執行if大括弧中的code，不符合會跳過if大括弧，執行else大括弧中的code。</p>
+<p>以前面的例子來說:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(age &gt; <span class="number">18</span>)&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;可以買菸買酒&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;你未成年，不能買菸買酒&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="if-else-判斷式"><a href="#if-else-判斷式" class="headerlink" title="if-else 判斷式"></a>if-else 判斷式</h2><p>如果想要同時判斷多個條件，可以用if-else</p>
+<h3 id="語法-2"><a href="#語法-2" class="headerlink" title="語法"></a>語法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(statement)&#123;</span><br><span class="line">	<span class="comment">/*your code...*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(statement)&#123;</span><br><span class="line">	<span class="comment">/*your code...*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">	<span class="comment">/*your code...*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我們用上面的例子，但這次多個條件判斷是否大於20歲來看看</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(age &gt; <span class="number">20</span>)&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;民法成年&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(age &gt; <span class="number">18</span>)&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;刑法成年&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;未成年&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注意! if-else可以有很多個，但if跟else只能有一個，if只能在最前，else只能在最後，if-else 和 else 可以沒有。</li>
+</ul>
+<p>if判斷式算是非常基本但是卻非常常被使用到的語法，紀錄下來和大家分享。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/06/javascript-if-statement/" data-id="cl426eosq0000swvpbb1gcfeh" data-title="Javascript: if判斷式" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-js-assignment-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/05/js-assignment-operator/" class="article-date">
@@ -693,57 +755,6 @@
 
 
   
-    <article id="post-javascript-octal-decimal" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/27/javascript-octal-decimal/" class="article-date">
-  <time class="dt-published" datetime="2022-05-27T04:33:00.000Z" itemprop="datePublished">2022-05-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/27/javascript-octal-decimal/">Javascript: 十進制數字與其他進制數字互相轉換</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>相較其他語言，在javascript中，要將十進制的數字轉換成其他進制的數字算是相對容易，函式在讀取參數的時候只要有相對應的前綴就會自動幫你轉換，但同時也有不便之處，這篇會來介紹我所採的雷以及如何轉換十進制成其他進制。</p>
-<h2 id="十進制轉換成其他進制"><a href="#十進制轉換成其他進制" class="headerlink" title="十進制轉換成其他進制"></a>十進制轉換成其他進制</h2><p>在你的程式碼中想要做到十進制轉換成不同進制只需要用到 toString() 這個函式。<br>舉例來說我想把10進制轉成8進制以及2進制，可以這樣寫:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">11</span>).<span class="title function_">toString</span>(<span class="number">2</span>);<span class="comment">//10進制的11轉2進制表示</span></span><br><span class="line">(<span class="number">156</span>).<span class="title function_">toString</span>(<span class="number">8</span>);<span class="comment">//10進制的156轉8進制表示</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>不過要注意使用了toString後資料型態會變成字串，你想要它變回數字的話記得使用parseInt();</li>
-</ul>
-<h2 id="其他進制轉成十進制"><a href="#其他進制轉成十進制" class="headerlink" title="其他進制轉成十進制"></a>其他進制轉成十進制</h2><p>那如果想要反過來將其他進制轉成十進制就可以使用 parseInt() 這個函式，程式碼如下</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">11</span>;</span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">2</span>);<span class="comment">//將2進制的11轉成10進制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">8</span>);<span class="comment">//將8進制的11轉成10進制</span></span><br></pre></td></tr></table></figure>
-<h2 id="參數的自動轉換"><a href="#參數的自動轉換" class="headerlink" title="參數的自動轉換"></a>參數的自動轉換</h2><p>在javascript中，如果數字以0作為前綴，它會將數字視為8進制並自動轉換成10進制<br>比如說我這樣寫:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">010</span>)</span><br></pre></td></tr></table></figure>
-<p>輸出會是8，又或者是以0x為前綴則會視為16進制。<br><br>這個看似方便的功能也帶給我一些麻煩，我遇到一個題目是輸入有可能會有032這樣的輸入，但js卻會自己幫我轉型，我試著想要取消自動轉型似乎是辦不到，唯一的方法就是改成用字串輸入，所以大家在做的時候要注意使用者是否會誤輸格式，又或者是你必須限制使用者只能輸入字串。如果有人知道如何實作取消自動轉型歡迎和我分享。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/27/javascript-octal-decimal/" data-id="cl3qqmhvf0011rkvp5amy8ehi" data-title="Javascript: 十進制數字與其他進制數字互相轉換" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -801,6 +812,10 @@
       <ul>
         
           <li>
+            <a href="/2022/06/16/js-conditional-operator/">Javascript: 條件運算子(三元運算子)</a>
+          </li>
+        
+          <li>
             <a href="/2022/06/15/js-arthimetic-operator/">Javascript: 算數運算子</a>
           </li>
         
@@ -814,10 +829,6 @@
         
           <li>
             <a href="/2022/06/12/css-reset/">CSS: Reset</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/11/css-descendant-combinator/">CSS: 後代選擇器</a>
           </li>
         
       </ul>
