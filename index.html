@@ -75,6 +75,54 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-js-relation-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/17/js-relation-operator/" class="article-date">
+  <time class="dt-published" datetime="2022-06-17T03:31:00.000Z" itemprop="datePublished">2022-06-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/17/js-relation-operator/">Javascript: 關係運算子</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>可以比較兩者的關係(子集與宇集的概念)</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a <span class="keyword">in</span> b</span><br></pre></td></tr></table></figure>
+
+<p>如果a在b裡面，回傳true，否則回傳false。</p>
+<p>ex:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a <span class="keyword">in</span> arr);<span class="comment">//執行結果: true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;length&#x27;</span> <span class="keyword">in</span> arr);<span class="comment">//執行結果: true</span></span><br></pre></td></tr></table></figure>
+
+<p>可以比較的不只是元素與陣列，還有函式與物件，屬性與物件都可以比較，所以’length’ in arr才會回傳true，因為arr的屬性有length。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/17/js-relation-operator/" data-id="cl4hwqkyv0000h8vpgieg348t" data-title="Javascript: 關係運算子" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-js-conditional-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/16/js-conditional-operator/" class="article-date">
@@ -651,87 +699,6 @@
 
 
   
-    <article id="post-Javascipt-array" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/07/Javascipt-array/" class="article-date">
-  <time class="dt-published" datetime="2022-06-07T05:14:00.000Z" itemprop="datePublished">2022-06-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/07/Javascipt-array/">Javascipt: 陣列</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>在<a href="https://huanginch.github.io/2022/06/03/javascript-datatype/">資料型態</a>那篇有介紹到array這個型別，這篇就會詳細介紹array的基本使用方法與概念。</p>
-<h2 id="宣告"><a href="#宣告" class="headerlink" title="宣告"></a>宣告</h2><p>陣列宣告會用中括號來表示，而陣列的值會放在中括號中，陣列的值可以是其他資料型態，但是每個值都必須是相同型態。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 空陣列</span></span><br><span class="line"><span class="keyword">let</span> arr1 = [];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 數字陣列</span></span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">1</span>, <span class="number">2</span> ,<span class="number">3</span>, <span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">//字串陣列</span></span><br><span class="line"><span class="keyword">let</span> arr3 = [<span class="string">&quot;aaa&quot;</span>, <span class="string">&quot;bbb&quot;</span>, <span class="string">&quot;ccc&quot;</span>];</span><br></pre></td></tr></table></figure>
-<ul>
-<li>陣列的縮寫常會使用arr</li>
-</ul>
-<h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><p>陣列有所謂的索引值，可以透過索引值取得對應的值，而索引值是從0開始，寫法如下</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">100</span>, <span class="number">520</span>, <span class="number">891</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">0</span>]); <span class="comment">//執行結果: 100</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">1</span>]); <span class="comment">//執行結果: 520</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">2</span>]); <span class="comment">//執行結果: 891</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="賦值"><a href="#賦值" class="headerlink" title="賦值"></a>賦值</h2><p>如果想要更改arr中的內容，寫法也跟取值一樣，並使用賦值運算子。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">800</span>, <span class="number">900</span>, <span class="number">1000</span>];</span><br><span class="line"></span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">0</span>]); <span class="comment">//執行結果: 1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">//執行結果: [1, 900, 1000]</span></span><br></pre></td></tr></table></figure>
-<p>可以看到arr第一個值(索引值0)變成了1。</p>
-<h2 id="新增"><a href="#新增" class="headerlink" title="新增"></a>新增</h2><p>前面都只有針對已經有的值做處理，那如果我們想要增加一個元素進去該怎麼做?</p>
-<ul>
-<li>push():<ul>
-<li>使用push可以在陣列最後面新增元素  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">720</span>, <span class="number">800</span>, <span class="number">100</span>];</span><br><span class="line">arr.<span class="title function_">push</span>(<span class="number">500</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">//執行結果: [720, 800, 100, 500]</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>unshift()”<ul>
-<li>使用unshift可以在陣列最前面新增元素  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">720</span>, <span class="number">800</span> ,<span class="number">100</span>];</span><br><span class="line">arr.<span class="title function_">unshift</span>(<span class="number">500</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">//執行結果: [500, 720, 800, 100]</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-<h2 id="刪除"><a href="#刪除" class="headerlink" title="刪除"></a>刪除</h2><p> 有了新增，自然也會有刪除</p>
-<ul>
-<li>pop():<ul>
-<li>與push相對，pop可以從陣列最後面刪除元素  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">720</span>, <span class="number">800</span>, <span class="number">100</span>];</span><br><span class="line">arr.<span class="title function_">pop</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">//執行結果: [720, 800]</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>shift():<ul>
-<li>與unshift()相對，shift可以從最前面刪除元素  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">720</span>, <span class="number">800</span>, <span class="number">100</span>];</span><br><span class="line">arr.<span class="title function_">shift</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">//執行結果: [800, 100]</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-<h2 id="取得長度"><a href="#取得長度" class="headerlink" title="取得長度"></a>取得長度</h2><p>想取得當前陣列長度(意即有幾個元素)可以使用array.length。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="property">length</span>) <span class="comment">//執行結果: 3</span></span><br></pre></td></tr></table></figure>
-
-<p>以上述程式碼來看，我宣告的arr使有三個元素的陣列，所以arr.length的值就會是3。</p>
-<br>
-    
-<p>基本操作就介紹到這邊，其他進階的array function會留到下一篇做講解。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/07/Javascipt-array/" data-id="cl43qmkae0000ssvp8v4z2op1" data-title="Javascipt: 陣列" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -789,6 +756,10 @@
       <ul>
         
           <li>
+            <a href="/2022/06/17/js-relation-operator/">Javascript: 關係運算子</a>
+          </li>
+        
+          <li>
             <a href="/2022/06/16/js-conditional-operator/">Javascript: 條件運算子(三元運算子)</a>
           </li>
         
@@ -802,10 +773,6 @@
         
           <li>
             <a href="/2022/06/13/js-bit-operator/">Javascript: bit operator</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/12/css-reset/">CSS: Reset</a>
           </li>
         
       </ul>
