@@ -75,6 +75,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-js-typeof" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/20/js-typeof/" class="article-date">
+  <time class="dt-published" datetime="2022-06-20T04:19:43.000Z" itemprop="datePublished">2022-06-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/20/js-typeof/">Javascript: typeof、void</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>這篇也繼續把剩下的運算子補齊。</p>
+<h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p>typeof有兩種寫法:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> 運算元</span><br><span class="line"></span><br><span class="line"><span class="title function_">typeof</span>(運算元)</span><br></pre></td></tr></table></figure>
+
+<p>這兩種意思都一樣，使用typeof回傳運算元的資料型態，非常方便，所以這個運算子也是相當常見。</p>
+<h2 id="void"><a href="#void" class="headerlink" title="void"></a>void</h2><p>void也有兩種寫法:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void 運算式</span><br><span class="line"></span><br><span class="line">void(運算式)</span><br></pre></td></tr></table></figure>
+
+<p>void會解析運算式然後回傳undefined，白話一點就是不回傳任何東西但可以執行後面的運算式。可以被使用在a連結中:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;javascript:void(0)&quot;</span>&gt;</span>點擊這裡，甚麼都不會發生<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>當使用者點擊連結時， void(0)會被解析為undefined， 而甚麼都不會發生。這個算是比較少見，但偶爾會看到有人使用來增加程式的可讀性。</p>
+<p>寫了這麼多篇運算子也結束了，這篇就是運算子介紹完結篇，下次會出一篇總整理方便大家找。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/20/js-typeof/" data-id="cl4m8z2al0000covpbgybh3jk" data-title="Javascript: typeof、void" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-js-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/19/js-operator/" class="article-date">
@@ -244,13 +294,19 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>可以比較兩者的關係(子集與宇集的概念)</p>
-<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a <span class="keyword">in</span> b</span><br></pre></td></tr></table></figure>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><h3 id="in"><a href="#in" class="headerlink" title="in"></a>in</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a <span class="keyword">in</span> b</span><br></pre></td></tr></table></figure>
 
 <p>如果a在b裡面，回傳true，否則回傳false。</p>
 <p>ex:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a <span class="keyword">in</span> arr);<span class="comment">//執行結果: true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;length&#x27;</span> <span class="keyword">in</span> arr);<span class="comment">//執行結果: true</span></span><br></pre></td></tr></table></figure>
 
 <p>可以比較的不只是元素與陣列，還有函式與物件，屬性與物件都可以比較，所以’length’ in arr才會回傳true，因為arr的屬性有length。</p>
+<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">物件名稱 <span class="keyword">instanceof</span> 物件類型</span><br></pre></td></tr></table></figure>
+
+<p>跟in比較不一樣，instanceof只是用來比較這個物件是不是某個物件類型，是的話一樣回傳true。用英文來看就是這個object是不是這個class的instance，這裡如果對物件導向有了解應該就看得懂，不了解也沒關係，可以看看以下例子:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> theDay = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">1995</span>, <span class="number">12</span>, <span class="number">17</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(theDay <span class="keyword">instanceof</span> <span class="title class_">Date</span>);<span class="comment">//執行結果: true</span></span><br></pre></td></tr></table></figure>
+
+<p>這樣應該就比較清楚了，關係運算式我自己比較少用到，但可能是我做的專案還不夠多不夠大，不過我自己覺得他用起來很方便，那這篇就差不多到這邊。</p>
 
       
     </div>
@@ -648,69 +704,6 @@
 
 
   
-    <article id="post-js-array-function" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/10/js-array-function/" class="article-date">
-  <time class="dt-published" datetime="2022-06-10T02:38:00.000Z" itemprop="datePublished">2022-06-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/10/js-array-function/">Javascript: 陣列函式(下)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>我們在<a href="https://huanginch.github.io/2022/06/09/Javascript-array-function/">上篇</a>介紹了forEach、filter、find、findIndex和map，這篇會來介紹其他常用的陣列函式。</p>
-<ul>
-<li><p>slice():</p>
-<ul>
-<li>slice可以從給定的範圍複製一份新的array。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> newArr1 = arr.<span class="title function_">slice</span>(<span class="number">2</span>);</span><br><span class="line"><span class="keyword">let</span> newArr2 = arr.<span class="title function_">slice</span>(<span class="number">2</span>, <span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArr1);<span class="comment">//執行結果:[3, 4, 5]</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArr2);<span class="comment">//執行結果:[3, 4]</span></span><br></pre></td></tr></table></figure>
-  帶入slice中的第一個參數代表要從哪個索引值開始複製，第二個代表結束的索引值，不代第二個預設會是複製到array結束，如果帶入負數會從最後一個元素開始往前推，比如說-3就是倒數第三個。這裡要注意，複製範圍是含頭不含尾，所以可以看到newArr2只複製到索引值3的元素。</li>
-</ul>
-</li>
-<li><p>splice():</p>
-<ul>
-<li>這個函式跟slice只差了一個字，導致我常常記錯。與slice不同，splice是用來插入或刪除元素，比較像是push跟pop的用法。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.<span class="title function_">splice</span>(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);<span class="comment">//執行結果:[2, 3];</span></span><br><span class="line"></span><br><span class="line">arr.<span class="title function_">splice</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">5</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);<span class="comment">//執行結果:[5, 2, 3];</span></span><br><span class="line"></span><br><span class="line">arr.<span class="title function_">splice</span>(<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);<span class="comment">//執行結果:[1, 2, 3];</span></span><br></pre></td></tr></table></figure>
-  splice第一個參數代表開始的索引值，這裡跟slice一樣，第二個代表要移動幾步，比如說以執行結果1來說，我從索引值0移動了一步，移到了索引值1，接著用第三個參數的值取代掉移動到的前一個元素(一樣含頭不含尾的概念)，而結果1沒有第三個參數，所以執行出來後arr只剩下[2, 3]。雖然說可以做到刪除插入元素的結果，但我個人感覺整體邏輯是取代就是，拿執行結果2來說，不移動所以沒東西可以取代，就直接插入5這樣。最後，跟slice一樣，參數可以代負數，負數就代表從最後面開始算。</li>
-</ul>
-</li>
-<li><p>sort():</p>
-<ul>
-<li>這個從名字就可以看出來是排序用的。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">3</span>];</span><br><span class="line">arr.<span class="title function_">sort</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);<span class="comment">//執行結果:[1, 3, 4, 5, 6, 8]</span></span><br></pre></td></tr></table></figure>
-  直接使用的話是由小排到大，如果是字串就按照ascii code來排，比較特別的是sort可以寫compare function來自訂排序方式。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">let</span> arr = [<span class="number">2</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">0</span>];</span><br><span class="line"> arr.<span class="title function_">sort</span>(<span class="title function_">compare</span>(<span class="params">b, a</span>) &#123;</span><br><span class="line">   <span class="keyword">if</span> ( a &lt; b) &#123;</span><br><span class="line">     <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">if</span> ( a &gt; b) &#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">// a 必須等於 b</span></span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">//執行結果:[5, 2, 1, 0]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-  a, b代表了陣列中的元素，他會依序去比較你帶入的參數，小於回傳-1，大於回傳+1，等於回傳0。像這裡我就把它改成由大排到小。</li>
-</ul>
-</li>
-</ul>
-<p>本次陣列函式介紹就差不多到這邊，雖然沒有列出所有的函式，但我認為我列出的已經是相對常用的了，希望大家會喜歡。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/10/js-array-function/" data-id="cl49smn6u000014vpcjtg3im4" data-title="Javascript: 陣列函式(下)" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -768,6 +761,10 @@
       <ul>
         
           <li>
+            <a href="/2022/06/20/js-typeof/">Javascript: typeof、void</a>
+          </li>
+        
+          <li>
             <a href="/2022/06/19/js-operator/">Javascript: delete、逗號運算子、字串運算子</a>
           </li>
         
@@ -781,10 +778,6 @@
         
           <li>
             <a href="/2022/06/16/js-conditional-operator/">Javascript: 條件運算子(三元運算子)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/15/js-arthimetic-operator/">Javascript: 算數運算子</a>
           </li>
         
       </ul>

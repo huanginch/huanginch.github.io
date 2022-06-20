@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>彙整: 2022 | Int&#39;s blog</title>
+  <title>Javascript: typeof、void | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Int&#39;s blog">
-<meta property="og:url" content="https://huanginch.github.io/archives/2022/page/4/index.html">
+  <meta name="description" content="這篇也繼續把剩下的運算子補齊。 typeoftypeof有兩種寫法: 123typeof 運算元typeof(運算元)  這兩種意思都一樣，使用typeof回傳運算元的資料型態，非常方便，所以這個運算子也是相當常見。 voidvoid也有兩種寫法: 123void 運算式void(運算式)  void會解析運算式然後回傳undefined，白話一點就是不回傳任何東西但可以執行後面的運算式。可以被使">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript: typeof、void">
+<meta property="og:url" content="https://huanginch.github.io/2022/06/20/js-typeof/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
+<meta property="og:description" content="這篇也繼續把剩下的運算子補齊。 typeoftypeof有兩種寫法: 123typeof 運算元typeof(運算元)  這兩種意思都一樣，使用typeof回傳運算元的資料型態，非常方便，所以這個運算子也是相當常見。 voidvoid也有兩種寫法: 123void 運算式void(運算式)  void會解析運算式然後回傳undefined，白話一點就是不回傳任何東西但可以執行後面的運算式。可以被使">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-06-20T04:19:43.000Z">
+<meta property="article:modified_time" content="2022-06-20T04:31:02.145Z">
 <meta property="article:author" content="int">
 <meta name="twitter:card" content="summary">
   
@@ -73,83 +77,65 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/21/hexo-admin-deploy/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-21T03:33:00.000Z" itemprop="datePublished">5月 21</time>
+        <section id="main"><article id="post-js-typeof" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/20/js-typeof/" class="article-date">
+  <time class="dt-published" datetime="2022-06-20T04:19:43.000Z" itemprop="datePublished">2022-06-20</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/21/hexo-admin-deploy/">使用Hexo admin來部屬(deploy)網站</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      Javascript: typeof、void
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/20/insertImage/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-20T10:24:00.000Z" itemprop="datePublished">5月 20</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/20/insertImage/">在HEXO文章上插入本地端圖片</a>
-    </h1>
-  
+        <p>這篇也繼續把剩下的運算子補齊。</p>
+<h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p>typeof有兩種寫法:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> 運算元</span><br><span class="line"></span><br><span class="line"><span class="title function_">typeof</span>(運算元)</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/19/My-First-Post/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-19T13:26:00.000Z" itemprop="datePublished">5月 19</time>
-</a>
+<p>這兩種意思都一樣，使用typeof回傳運算元的資料型態，非常方便，所以這個運算子也是相當常見。</p>
+<h2 id="void"><a href="#void" class="headerlink" title="void"></a>void</h2><p>void也有兩種寫法:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void 運算式</span><br><span class="line"></span><br><span class="line">void(運算式)</span><br></pre></td></tr></table></figure>
+
+<p>void會解析運算式然後回傳undefined，白話一點就是不回傳任何東西但可以執行後面的運算式。可以被使用在a連結中:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;javascript:void(0)&quot;</span>&gt;</span>點擊這裡，甚麼都不會發生<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>當使用者點擊連結時， void(0)會被解析為undefined， 而甚麼都不會發生。這個算是比較少見，但偶爾會看到有人使用來增加程式的可讀性。</p>
+<p>寫了這麼多篇運算子也結束了，這篇就是運算子介紹完結篇，下次會出一篇總整理方便大家找。</p>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/19/My-First-Post/">如何使用HEXO建立個人部落格</a>
-    </h1>
-  
-
-    </header>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/20/js-typeof/" data-id="cl4m8z2al0000covpbgybh3jk" data-title="Javascript: typeof、void" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
   </div>
-</article>
   
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/archives/2022/page/3/">&laquo; 上一頁</a><a class="page-number" href="/archives/2022/">1</a><a class="page-number" href="/archives/2022/page/2/">2</a><a class="page-number" href="/archives/2022/page/3/">3</a><span class="page-number current">4</span>
-  </nav>
+<nav id="article-nav">
+  
+  
+    <a href="/2022/06/19/js-operator/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Javascript: delete、逗號運算子、字串運算子</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
 
 </section>
         
