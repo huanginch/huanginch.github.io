@@ -4,24 +4,20 @@
   <meta charset="utf-8">
   
   
-  <title>如何部屬HEXO到github.io(deploy on github) | Int&#39;s blog</title>
+  <title>CSS: 擬態選擇器 | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="上一篇文提到了如何使用Hexo admin來部屬網站，但要部屬網站就要有相對的網域來讓你發佈，而github.io即是一個很常拿來發佈靜態網站的地方，這篇文就要來介紹如何使用github來發佈靜態網站。 步驟 註冊github: https:&#x2F;&#x2F;github.com&#x2F;  到自己的個人頁面，按下repositories旁邊的new  在名稱欄位輸入username.github.io(usernam">
+  <meta name="description" content="在css中有種被稱作pesudo class的類別，可以用來做一些互動效果，最常見的就是a link上會用到的hover。而css中要選取pesudo class就要用到pesudo class selector，中文翻作擬態選擇器。 語法123a:hover&amp;#123;	color: #000;&amp;#125; 使用分號後接上pesudo class的名稱就是pesudo class selecto">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何部屬HEXO到github.io(deploy on github)">
-<meta property="og:url" content="https://huanginch.github.io/2022/05/22/deploy-on-github/index.html">
+<meta property="og:title" content="CSS: 擬態選擇器">
+<meta property="og:url" content="https://huanginch.github.io/2022/06/22/css-Pseudo-Class-Selector/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="上一篇文提到了如何使用Hexo admin來部屬網站，但要部屬網站就要有相對的網域來讓你發佈，而github.io即是一個很常拿來發佈靜態網站的地方，這篇文就要來介紹如何使用github來發佈靜態網站。 步驟 註冊github: https:&#x2F;&#x2F;github.com&#x2F;  到自己的個人頁面，按下repositories旁邊的new  在名稱欄位輸入username.github.io(usernam">
+<meta property="og:description" content="在css中有種被稱作pesudo class的類別，可以用來做一些互動效果，最常見的就是a link上會用到的hover。而css中要選取pesudo class就要用到pesudo class selector，中文翻作擬態選擇器。 語法123a:hover&amp;#123;	color: #000;&amp;#125; 使用分號後接上pesudo class的名稱就是pesudo class selecto">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-5.png">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-6.png">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-7.png">
-<meta property="article:published_time" content="2022-05-22T03:18:00.000Z">
-<meta property="article:modified_time" content="2022-05-24T06:52:56.685Z">
+<meta property="article:published_time" content="2022-06-22T06:05:00.000Z">
+<meta property="article:modified_time" content="2022-06-22T06:14:15.904Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huanginch.github.io/images/pasted-5.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -82,16 +78,12 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-deploy-on-github" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-css-Pseudo-Class-Selector" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/05/22/deploy-on-github/" class="article-date">
-  <time class="dt-published" datetime="2022-05-22T03:18:00.000Z" itemprop="datePublished">2022-05-22</time>
+    <a href="/2022/06/22/css-Pseudo-Class-Selector/" class="article-date">
+  <time class="dt-published" datetime="2022-06-22T06:05:00.000Z" itemprop="datePublished">2022-06-22</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo-introduce/">hexo introduce</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -100,7 +92,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      如何部屬HEXO到github.io(deploy on github)
+      CSS: 擬態選擇器
     </h1>
   
 
@@ -108,37 +100,19 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p><a href="https://huanginch.github.io/2022/05/21/hexo-admin-deploy/">上一篇文</a>提到了如何使用Hexo admin來部屬網站，但要部屬網站就要有相對的網域來讓你發佈，而github.io即是一個很常拿來發佈靜態網站的地方，這篇文就要來介紹如何使用github來發佈靜態網站。</p>
-<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol>
-<li><p>註冊github: <a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a></p>
-</li>
-<li><p>到自己的個人頁面，按下repositories旁邊的new<br><img src="/../images/pasted-5.png"></p>
-</li>
-<li><p>在名稱欄位輸入username.github.io(username是你註冊的帳號名稱)，因為我已經註冊過了所以會有紅字<br><img src="/../images/pasted-6.png"></p>
-</li>
-<li><p>拉到最下面按下create repository<br><img src="/../images/pasted-7.png"></p>
-</li>
-<li><p>接著到你安裝HEXO的blog資料夾，打開 <strong>_config.yml</strong></p>
-</li>
-<li><p>拉到最底下找到 **deploy:**，並輸入以下文字，同樣的username也是你的github帳號名稱</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">        type: git</span><br><span class="line">        repo: https://github.com/username/username.github.io.git</span><br><span class="line">        branch: master</span><br></pre></td></tr></table></figure>
-<p>基本上這樣就算完成了，你可以按照上篇文的步驟按下admin的deploy就可以部屬網站到github.io上，又或者你可以在終端機輸入以下指令:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<ul>
-<li>hexo g和hexo d也可以合併替換成hexo g -d <p>完成後你可以前往自己的github.io網站(https://username.github.io/) ，你會看到網站成功出現，不過有時候他不會那麼快更新，你要稍等一下</p>
- <p>以後如果要更新文章或是發布文章也只需要輸入最後那三個終端機指令，或是直接使用admin的deploy即可，那這篇文差不多到這邊，有任何問題歡迎和我提出。</p></li>
-</ul>
-</li>
-</ol>
+        <p>在css中有種被稱作pesudo class的類別，可以用來做一些互動效果，最常見的就是a link上會用到的hover。而css中要選取pesudo class就要用到pesudo class selector，中文翻作擬態選擇器。</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用分號後接上pesudo class的名稱就是pesudo class selector，常見的pesudov class除了hover還有 active、link等等。因為很多就不一一列出，有興趣可以參閱<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/CSS/Pseudo-classes">MDN網站</a></p>
+<p>這篇只是介紹最簡單的用法，因為深入的原理等等我還沒學會，如果有機會我會再寫文章來詳細介紹的。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/22/deploy-on-github/" data-id="cl3qqmhv40005rkvp2iyuht3c" data-title="如何部屬HEXO到github.io(deploy on github)" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/06/22/css-Pseudo-Class-Selector/" data-id="cl4p7aazs0000h4vp9xc1game" data-title="CSS: 擬態選擇器" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
     </footer>
   </div>
@@ -146,19 +120,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/05/23/ERROR-ENOENT/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          HEXO ERROR: spawn ENOENT
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/05/21/hexo-admin-deploy/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/06/21/js-operators/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">使用Hexo admin來部屬(deploy)網站</div>
+      <div class="article-nav-title">Javascript: 運算子總整理</div>
     </a>
   
 </nav>
