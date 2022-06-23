@@ -4,22 +4,20 @@
   <meta charset="utf-8">
   
   
-  <title>如何使用HEXO建立個人部落格 | Int&#39;s blog</title>
+  <title>CSS: border-box | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="前言一些廢話，不想看可以直接看步驟 許多工程師都擁有自己的技術部落格，剛好在六角學院上課的時候有一小節就是在介紹寫部落格這件事，剛好趁這次機會開始養成寫部落格的習慣。  一開始我跟著HEXO的 官方文件 操作，不過中間的步驟可能是我誤解文件的意思還是怎樣，總之我按照首頁的步驟做是錯的，所以想說順便用這個主題來當作我的第一篇文章。 步驟: 打開cmd(不會的可以按 window +R 輸入後 cmd">
+  <meta name="description" content="在css中常常要自己去計算padding、margin等等的推擠造成的盒模型大小不同，所以css有提供一個叫border-box的方法讓你不用去計算。 box-sizing這個就是用來選擇是否使用border-box，不修改的話預設會是content-box。 123.box&amp;#123;	box-sizing: content-box;&amp;#125;  border-box想要使用border-bo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何使用HEXO建立個人部落格">
-<meta property="og:url" content="https://huanginch.github.io/2022/05/19/My-First-Post/index.html">
+<meta property="og:title" content="CSS: border-box">
+<meta property="og:url" content="https://huanginch.github.io/2022/06/23/css-box-sizing-border-box/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="前言一些廢話，不想看可以直接看步驟 許多工程師都擁有自己的技術部落格，剛好在六角學院上課的時候有一小節就是在介紹寫部落格這件事，剛好趁這次機會開始養成寫部落格的習慣。  一開始我跟著HEXO的 官方文件 操作，不過中間的步驟可能是我誤解文件的意思還是怎樣，總之我按照首頁的步驟做是錯的，所以想說順便用這個主題來當作我的第一篇文章。 步驟: 打開cmd(不會的可以按 window +R 輸入後 cmd">
+<meta property="og:description" content="在css中常常要自己去計算padding、margin等等的推擠造成的盒模型大小不同，所以css有提供一個叫border-box的方法讓你不用去計算。 box-sizing這個就是用來選擇是否使用border-box，不修改的話預設會是content-box。 123.box&amp;#123;	box-sizing: content-box;&amp;#125;  border-box想要使用border-bo">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://i.imgur.com/UKZ1SWm.png">
-<meta property="article:published_time" content="2022-05-19T13:26:00.000Z">
-<meta property="article:modified_time" content="2022-05-20T11:25:09.251Z">
+<meta property="article:published_time" content="2022-06-23T03:55:00.000Z">
+<meta property="article:modified_time" content="2022-06-23T04:03:51.794Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.imgur.com/UKZ1SWm.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -80,16 +78,12 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-My-First-Post" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-css-box-sizing-border-box" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/05/19/My-First-Post/" class="article-date">
-  <time class="dt-published" datetime="2022-05-19T13:26:00.000Z" itemprop="datePublished">2022-05-19</time>
+    <a href="/2022/06/23/css-box-sizing-border-box/" class="article-date">
+  <time class="dt-published" datetime="2022-06-23T03:55:00.000Z" itemprop="datePublished">2022-06-23</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo-introduce/">hexo introduce</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -98,7 +92,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      如何使用HEXO建立個人部落格
+      CSS: border-box
     </h1>
   
 
@@ -106,32 +100,27 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>一些廢話，不想看可以直接看步驟</strong></p>
-<p>許多工程師都擁有自己的技術部落格，剛好在六角學院上課的時候有一小節就是在介紹寫部落格這件事，剛好趁這次機會開始養成寫部落格的習慣。</p>
+        <p>在css中常常要自己去計算padding、margin等等的推擠造成的盒模型大小不同，所以css有提供一個叫border-box的方法讓你不用去計算。</p>
+<h2 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h2><p>這個就是用來選擇是否使用border-box，不修改的話預設會是content-box。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>一開始我跟著HEXO的 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/">官方文件</a> 操作，不過中間的步驟可能是我誤解文件的意思還是怎樣，總之我按照首頁的步驟做是錯的，所以想說順便用這個主題來當作我的第一篇文章。</p>
-<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟:"></a>步驟:</h2><ol>
-<li><p>打開cmd(不會的可以按 window +R 輸入後 cmd 或直接在工具列的搜尋欄搜尋cmd)</p>
-</li>
-<li><p>切到自己希望網站放置的資料夾，我是選D槽根目錄，當然你也可以選別的槽，又或者是在槽中建個資料夾來放之類的，不過他等等會自己產生一個叫blog的資料夾我就沒特別創資料夾了</p>
-</li>
-<li><p>依序輸入下列指令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo init blog</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></li>
-<li><p>依照指令執行完就建置好環境了，你的cmd應該會跳出一行字: <strong>Hexo is running at <a target="_blank" rel="noopener" href="http://localhost:4000/(%E5%A6%82%E5%9C%96)">http://localhost:4000/(如圖)</a></strong><img src="https://i.imgur.com/UKZ1SWm.png"></p>
-</li>
-<li><p>在瀏覽器上輸入剛剛出現在cmd上的網址就可以成功打開Hexo部落格了</p>
-</li>
-</ol>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語:"></a>結語:</h2><p>第一次寫部落格，挺有趣的，之後應該會記錄一些Hexo的使用方法跟程式課程的筆記<br>如果有任何問題歡迎和我聯繫</p>
+<h2 id="border-box"><a href="#border-box" class="headerlink" title="border-box"></a>border-box</h2><p>想要使用border-box只需要把content-box做修改即可</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="套用到所有元素"><a href="#套用到所有元素" class="headerlink" title="套用到所有元素"></a>套用到所有元素</h2><p>因為border-box很方便，所以開發者通常會希望一次都套用到所有元素上，這時候就可以這樣寫</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*, *:before, *:after&#123;</span><br><span class="line">	box-sizing: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>這樣所有元素都會吃到border-box，* 代表全部，至於before和after就是擬態選擇器中有稍微提到的pesudo class，這部分以後會一起介紹。</p>
+<p>其實我之前切版都沒有使用到，下次應該會來試試，這樣我就不用自己計算推擠了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/19/My-First-Post/" data-id="cl3qqmhve0010rkvp5lbt3oht" data-title="如何使用HEXO建立個人部落格" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/06/23/css-box-sizing-border-box/" data-id="cl4qi2hrv0000vcvpchux075i" data-title="CSS: border-box" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
     </footer>
   </div>
@@ -139,15 +128,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/05/20/insertImage/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          在HEXO文章上插入本地端圖片
-        
-      </div>
-    </a>
   
+    <a href="/2022/06/22/css-Pseudo-Class-Selector/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS: 擬態選擇器</div>
+    </a>
   
 </nav>
 
