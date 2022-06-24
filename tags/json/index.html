@@ -4,19 +4,14 @@
   <meta charset="utf-8">
   
   
-  <title>CSS: border-box | Int&#39;s blog</title>
+  <title>Tag: json | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="在css中常常要自己去計算padding、margin等等的推擠造成的盒模型大小不同，所以css有提供一個叫border-box的方法讓你不用去計算。 box-sizing這個就是用來選擇是否使用border-box，不修改的話預設會是content-box。 123.box&amp;#123;	box-sizing: content-box;&amp;#125;  border-box想要使用border-bo">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CSS: border-box">
-<meta property="og:url" content="https://huanginch.github.io/2022/06/23/css-box-sizing-border-box/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Int&#39;s blog">
+<meta property="og:url" content="https://huanginch.github.io/tags/json/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="在css中常常要自己去計算padding、margin等等的推擠造成的盒模型大小不同，所以css有提供一個叫border-box的方法讓你不用去計算。 box-sizing這個就是用來選擇是否使用border-box，不修改的話預設會是content-box。 123.box&amp;#123;	box-sizing: content-box;&amp;#125;  border-box想要使用border-bo">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-06-23T03:55:00.000Z">
-<meta property="article:modified_time" content="2022-06-23T04:03:51.794Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -78,75 +73,39 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-css-box-sizing-border-box" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/23/css-box-sizing-border-box/" class="article-date">
-  <time class="dt-published" datetime="2022-06-23T03:55:00.000Z" itemprop="datePublished">2022-06-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="p-name article-title" itemprop="headline name">
-      CSS: border-box
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/" class="archive-article-date">
+  <time class="dt-published" datetime="2022-06-24T14:55:00.000Z" itemprop="datePublished">6月 24</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/">JSON格式</a>
     </h1>
   
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>在css中常常要自己去計算padding、margin等等的推擠造成的盒模型大小不同，所以css有提供一個叫border-box的方法讓你不用去計算。</p>
-<h2 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h2><p>這個就是用來選擇是否使用border-box，不修改的話預設會是content-box。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="border-box"><a href="#border-box" class="headerlink" title="border-box"></a>border-box</h2><p>想要使用border-box只需要把content-box做修改即可</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="套用到所有元素"><a href="#套用到所有元素" class="headerlink" title="套用到所有元素"></a>套用到所有元素</h2><p>因為border-box很方便，所以開發者通常會希望一次都套用到所有元素上，這時候就可以這樣寫</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*, *:before, *:after&#123;</span><br><span class="line">	box-sizing: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>這樣所有元素都會吃到border-box，* 代表全部，至於before和after就是擬態選擇器中有稍微提到的pesudo class，這部分以後會一起介紹。</p>
-<p>其實我之前切版都沒有使用到，下次應該會來試試，這樣我就不用自己計算推擠了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/23/css-box-sizing-border-box/" data-id="cl4qi2hrv0000vcvpchux075i" data-title="CSS: border-box" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          JSON格式
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2022/06/22/css-Pseudo-Class-Selector/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">CSS: 擬態選擇器</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
 
 </section>
