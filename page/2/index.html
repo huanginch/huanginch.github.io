@@ -75,6 +75,148 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-js-operators" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/21/js-operators/" class="article-date">
+  <time class="dt-published" datetime="2022-06-21T02:48:00.000Z" itemprop="datePublished">2022-06-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/js-operator/">js-operator</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/21/js-operators/">Javascript: 運算子總整理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>因為之前發的運算子文章都是分開發的，雖然有資料夾整理好，不過我覺得要調整一下順序跟增加優先級表格。</p>
+<h2 id="文章整理"><a href="#文章整理" class="headerlink" title="文章整理"></a>文章整理</h2><ul>
+<li>順序大致會比照MDN的順序</li>
+</ul>
+<ol>
+<li><p><a href="https://huanginch.github.io/2022/06/05/js-assignment-operator/">賦值運算子</a></p>
+</li>
+<li><p><a href="https://huanginch.github.io/2022/06/14/js-compare-operator/">比較運算子</a></p>
+</li>
+<li><p><a href="https://huanginch.github.io/2022/06/15/js-arthimetic-operator/">算數運算子</a></p>
+</li>
+<li><p><a href="https://huanginch.github.io/2022/06/13/js-bit-operator/">位元運算子</a></p>
+</li>
+<li><p><a href="https://huanginch.github.io/2022/06/04/Javascript-logic-operator/">邏輯運算子</a></p>
+</li>
+<li><p><a href="https://huanginch.github.io/2022/06/16/js-conditional-operator/">三元運算子</a></p>
+</li>
+<li><p><a href="https://huanginch.github.io/2022/06/17/js-relation-operator/">關係運算子</a></p>
+</li>
+<li><p>其他:</p>
+<ol>
+<li><a href="https://huanginch.github.io/2022/06/19/js-operator/">delete、逗號運算子、字串運算子</a></li>
+<li><a href="https://huanginch.github.io/2022/06/20/js-typeof/">typeof、void</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="運算子優先級"><a href="#運算子優先級" class="headerlink" title="運算子優先級"></a>運算子優先級</h2><table>
+<thead>
+<tr>
+<th>運算子類型</th>
+<th>屬於該類別的運算子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>成員</td>
+<td><code>. []</code></td>
+</tr>
+<tr>
+<td>呼叫&#x2F;建立 實例</td>
+<td><code>() new</code></td>
+</tr>
+<tr>
+<td>反向&#x2F;增加</td>
+<td><code>! ~ - + ++ -- typeof void delete</code></td>
+</tr>
+<tr>
+<td>乘法&#x2F;除法</td>
+<td><code>* / %</code></td>
+</tr>
+<tr>
+<td>加法&#x2F;減法</td>
+<td><code>+ -</code></td>
+</tr>
+<tr>
+<td>位元移動</td>
+<td><code>&lt;&lt; &gt;&gt; &gt;&gt;&gt;</code></td>
+</tr>
+<tr>
+<td>關係運算子</td>
+<td><code>&lt; &lt;= &gt; &gt;= in instanceof</code></td>
+</tr>
+<tr>
+<td>相等性</td>
+<td><code>== != === !==</code></td>
+</tr>
+<tr>
+<td>位元 and</td>
+<td><code>&amp;</code></td>
+</tr>
+<tr>
+<td>位元 xor</td>
+<td><code>^</code></td>
+</tr>
+<tr>
+<td>位元 or</td>
+<td><code>|</code></td>
+</tr>
+<tr>
+<td>邏輯 and</td>
+<td><code>&amp;&amp;</code></td>
+</tr>
+<tr>
+<td>邏輯 or</td>
+<td><code>||</code></td>
+</tr>
+<tr>
+<td>條件運算子</td>
+<td><code>? :</code></td>
+</tr>
+<tr>
+<td>指定運算子</td>
+<td><code>= += -= *= /= %= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;= &amp;= ^= |=</code></td>
+</tr>
+<tr>
+<td>逗點運算子</td>
+<td><code>,</code></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/21/js-operators/" data-id="cl4nlni7d000044vpbo2980sl" data-title="Javascript: 運算子總整理" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-js-typeof" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/20/js-typeof/" class="article-date">
@@ -685,69 +827,6 @@
 
 
   
-    <article id="post-js-array-function" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/10/js-array-function/" class="article-date">
-  <time class="dt-published" datetime="2022-06-10T02:38:00.000Z" itemprop="datePublished">2022-06-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/10/js-array-function/">Javascript: 陣列函式(下)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>我們在<a href="https://huanginch.github.io/2022/06/09/Javascript-array-function/">上篇</a>介紹了forEach、filter、find、findIndex和map，這篇會來介紹其他常用的陣列函式。</p>
-<ul>
-<li><p>slice():</p>
-<ul>
-<li>slice可以從給定的範圍複製一份新的array。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> newArr1 = arr.<span class="title function_">slice</span>(<span class="number">2</span>);</span><br><span class="line"><span class="keyword">let</span> newArr2 = arr.<span class="title function_">slice</span>(<span class="number">2</span>, <span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArr1);<span class="comment">//執行結果:[3, 4, 5]</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArr2);<span class="comment">//執行結果:[3, 4]</span></span><br></pre></td></tr></table></figure>
-  帶入slice中的第一個參數代表要從哪個索引值開始複製，第二個代表結束的索引值，不代第二個預設會是複製到array結束，如果帶入負數會從最後一個元素開始往前推，比如說-3就是倒數第三個。這裡要注意，複製範圍是含頭不含尾，所以可以看到newArr2只複製到索引值3的元素。</li>
-</ul>
-</li>
-<li><p>splice():</p>
-<ul>
-<li>這個函式跟slice只差了一個字，導致我常常記錯。與slice不同，splice是用來插入或刪除元素，比較像是push跟pop的用法。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.<span class="title function_">splice</span>(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);<span class="comment">//執行結果:[2, 3];</span></span><br><span class="line"></span><br><span class="line">arr.<span class="title function_">splice</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">5</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);<span class="comment">//執行結果:[5, 2, 3];</span></span><br><span class="line"></span><br><span class="line">arr.<span class="title function_">splice</span>(<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);<span class="comment">//執行結果:[1, 2, 3];</span></span><br></pre></td></tr></table></figure>
-  splice第一個參數代表開始的索引值，這裡跟slice一樣，第二個代表要移動幾步，比如說以執行結果1來說，我從索引值0移動了一步，移到了索引值1，接著用第三個參數的值取代掉移動到的前一個元素(一樣含頭不含尾的概念)，而結果1沒有第三個參數，所以執行出來後arr只剩下[2, 3]。雖然說可以做到刪除插入元素的結果，但我個人感覺整體邏輯是取代就是，拿執行結果2來說，不移動所以沒東西可以取代，就直接插入5這樣。最後，跟slice一樣，參數可以代負數，負數就代表從最後面開始算。</li>
-</ul>
-</li>
-<li><p>sort():</p>
-<ul>
-<li>這個從名字就可以看出來是排序用的。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">3</span>];</span><br><span class="line">arr.<span class="title function_">sort</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);<span class="comment">//執行結果:[1, 3, 4, 5, 6, 8]</span></span><br></pre></td></tr></table></figure>
-  直接使用的話是由小排到大，如果是字串就按照ascii code來排，比較特別的是sort可以寫compare function來自訂排序方式。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">let</span> arr = [<span class="number">2</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">0</span>];</span><br><span class="line"> arr.<span class="title function_">sort</span>(<span class="title function_">compare</span>(<span class="params">b, a</span>) &#123;</span><br><span class="line">   <span class="keyword">if</span> ( a &lt; b) &#123;</span><br><span class="line">     <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">if</span> ( a &gt; b) &#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">// a 必須等於 b</span></span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">//執行結果:[5, 2, 1, 0]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-  a, b代表了陣列中的元素，他會依序去比較你帶入的參數，小於回傳-1，大於回傳+1，等於回傳0。像這裡我就把它改成由大排到小。</li>
-</ul>
-</li>
-</ul>
-<p>本次陣列函式介紹就差不多到這邊，雖然沒有列出所有的函式，但我認為我列出的已經是相對常用的了，希望大家會喜歡。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/10/js-array-function/" data-id="cl49smn6u000014vpcjtg3im4" data-title="Javascript: 陣列函式(下)" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -792,7 +871,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">彙整</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a></li></ul>
     </div>
   </div>
 
@@ -803,6 +882,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/07/01/css-margin-and-padding-shorthand/">CSS: Margin 、 Padding與Border 的寫法與縮寫</a>
+          </li>
         
           <li>
             <a href="/2022/06/30/css-box-model/">CSS: 盒模型</a>
@@ -818,10 +901,6 @@
         
           <li>
             <a href="/2022/06/27/html-tag/">常見html標籤</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/27/github-token/">Github: Personal Access Token</a>
           </li>
         
       </ul>
