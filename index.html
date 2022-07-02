@@ -648,7 +648,7 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="套用到所有元素"><a href="#套用到所有元素" class="headerlink" title="套用到所有元素"></a>套用到所有元素</h2><p>因為border-box很方便，所以開發者通常會希望一次都套用到所有元素上，這時候就可以這樣寫</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*, *:before, *:after&#123;</span><br><span class="line">	box-sizing: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*, </span><br><span class="line">*::before, </span><br><span class="line">*::after&#123;</span><br><span class="line">	box-sizing: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>這樣所有元素都會吃到border-box，* 代表全部，至於before和after就是擬態選擇器中有稍微提到的pesudo class，這部分以後會一起介紹。</p>
 <p>其實我之前切版都沒有使用到，下次應該會來試試，這樣我就不用自己計算推擠了。</p>
