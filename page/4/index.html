@@ -75,6 +75,66 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-javascript-variable" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/02/javascript-variable/" class="article-date">
+  <time class="dt-published" datetime="2022-06-02T03:02:00.000Z" itemprop="datePublished">2022-06-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/02/javascript-variable/">javascript: 變數宣告</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>javascript的變數宣告相對其他語言簡單容易的許多，這篇會簡單介紹怎麼宣告。</p>
+<ul>
+<li>var<ul>
+<li>最早在javascript中只有這個語法可以用來宣告變數  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>let <ul>
+<li>現在都使用這個語法來宣告變數  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>const<ul>
+<li>一旦被初始化就很難再被重新賦值  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>什麼都不寫<ul>
+<li>沒錯，只寫變數名稱也能夠宣告，因為沒有寫的話會被當作是在window下的變數  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">0</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<p>相對於其他語言，javascript宣告變數真的簡單很多，也可能和他是弱型別語言有關，這部分我不是很了解，等有機會研究之後再來寫文。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/02/javascript-variable/" data-id="cl3wgayzt0000dkvpb8gw1r9b" data-title="javascript: 變數宣告" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Renpy-screen" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/01/Renpy-screen/" class="article-date">
@@ -703,51 +763,6 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
 
 
   
-    <article id="post-ERROR-ENOENT" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/23/ERROR-ENOENT/" class="article-date">
-  <time class="dt-published" datetime="2022-05-23T03:14:00.000Z" itemprop="datePublished">2022-05-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/23/ERROR-ENOENT/">HEXO ERROR: spawn ENOENT</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>前幾天在更新文章到github時出現了一個錯誤碼:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: spawn ENOENT</span><br></pre></td></tr></table></figure>
-<p>ENOENT是Error NO ENTry 或 Error No ENTity的縮寫，意思等同於常見的no such file or directory，中文意思就是檔案不存在或找不到路徑。</p>
-<p>本以為是deploy需要的hexo-publish.bat沒寫好或_config.yml中哪裡沒設定好，但後來發現是文章我使用了中文命名才導致他無法辨識。</p>
-<p>所以說<strong>不要用中文幫文章命名，標題可以建好檔案之後改</strong>。</p>
-<p>也算是學了一課，不然當初找半天找不要哪裡錯。</p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/23/ERROR-ENOENT/" data-id="cl3qqmhv00001rkvp9e4v2876" data-title="HEXO ERROR: spawn ENOENT" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -805,6 +820,10 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       <ul>
         
           <li>
+            <a href="/2022/07/03/css-tag-class-and-id-selector/">CSS: 標籤、類別、ID選擇器</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/02/css-margin-collapse/">CSS: 邊界重疊(Margin Collapse)</a>
           </li>
         
@@ -818,10 +837,6 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
         
           <li>
             <a href="/2022/06/29/css-combinator-selector/">CSS: 關係選擇器</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/28/css-intro/">CSS介紹</a>
           </li>
         
       </ul>
