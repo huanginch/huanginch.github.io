@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Category: css flex | Int&#39;s blog</title>
+  <title>CSS:類別與ID選擇器比較 | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Int&#39;s blog">
-<meta property="og:url" content="https://huanginch.github.io/categories/css-flex/index.html">
+  <meta name="description" content="在上一篇介紹了類別與ID選擇器，但什麼時候要用類別選擇器，什麼時候要用ID選擇器？這篇就會針對這兩個相似的選擇器做個比較。 比較表格   比較項目\選擇器 類別選擇器 ID選擇器    寫法 .classname&amp;#123;...&amp;#125; #IDname&amp;#123;...&amp;#125;   選擇對象 會選擇有所有相符class的元素 只會選擇第一個有相符ID的元素   使用次數 可重複使用 一個">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS:類別與ID選擇器比較">
+<meta property="og:url" content="https://huanginch.github.io/2022/07/04/css-cmp-class-and-id-selector/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
+<meta property="og:description" content="在上一篇介紹了類別與ID選擇器，但什麼時候要用類別選擇器，什麼時候要用ID選擇器？這篇就會針對這兩個相似的選擇器做個比較。 比較表格   比較項目\選擇器 類別選擇器 ID選擇器    寫法 .classname&amp;#123;...&amp;#125; #IDname&amp;#123;...&amp;#125;   選擇對象 會選擇有所有相符class的元素 只會選擇第一個有相符ID的元素   使用次數 可重複使用 一個">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-07-04T03:03:00.000Z">
+<meta property="article:modified_time" content="2022-07-04T03:30:17.205Z">
 <meta property="article:author" content="int">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -73,58 +78,90 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/25/CSS-Flex-2/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-25T03:16:00.000Z" itemprop="datePublished">5月 25</time>
+        <section id="main"><article id="post-css-cmp-class-and-id-selector" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/04/css-cmp-class-and-id-selector/" class="article-date">
+  <time class="dt-published" datetime="2022-07-04T03:03:00.000Z" itemprop="datePublished">2022-07-04</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/25/CSS-Flex-2/">CSS排版: Flex(2)</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      CSS:類別與ID選擇器比較
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/24/CSS-FLEX-1/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-24T05:42:00.000Z" itemprop="datePublished">5月 24</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/24/CSS-FLEX-1/">CSS排版: FLEX(1)</a>
-    </h1>
-  
+        <p>在<a href="https://huanginch.github.io/2022/07/03/css-tag-class-and-id-selector/">上一篇</a>介紹了類別與ID選擇器，但什麼時候要用類別選擇器，什麼時候要用ID選擇器？這篇就會針對這兩個相似的選擇器做個比較。</p>
+<h2 id="比較表格"><a href="#比較表格" class="headerlink" title="比較表格"></a>比較表格</h2><table>
+<thead>
+<tr>
+<th>比較項目\選擇器</th>
+<th>類別選擇器</th>
+<th>ID選擇器</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>寫法</td>
+<td><code>.classname&#123;...&#125;</code></td>
+<td><code>#IDname&#123;...&#125;</code></td>
+</tr>
+<tr>
+<td>選擇對象</td>
+<td>會選擇有所有相符class的元素</td>
+<td>只會選擇第一個有相符ID的元素</td>
+</tr>
+<tr>
+<td>使用次數</td>
+<td>可重複使用</td>
+<td>一個頁面只能使用一次</td>
+</tr>
+<tr>
+<td>與css或html的關聯</td>
+<td>只能用來標記元素並為他加上樣式</td>
+<td>可能會與html有關(比如說內頁跳轉連結)</td>
+</tr>
+<tr>
+<td>使用時機</td>
+<td>一般情況都會選擇使用</td>
+<td>特定時機才會使用</td>
+</tr>
+</tbody></table>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>一般情況下盡量使用類別選擇器，因為類別選擇器就是為了css styling而設計的，ID的意義主要還是在html上(比如說跳到某個段落，舉個例子點這個<a href>連結</a>可以跳到比較表格，你可以看到網址上多了#比較表格，這就是ID最大的用途)，當然在有需要的情況下還是可以使用ID選擇器，但不要只是為了幫元素加點樣式就使用ID選擇器。</p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/04/css-cmp-class-and-id-selector/" data-id="cl566qkif0000ncvp6ah33mm9" data-title="CSS:類別與ID選擇器比較" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/07/03/css-tag-class-and-id-selector/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS: 標籤、類別、ID選擇器</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>

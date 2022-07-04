@@ -75,6 +75,78 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-javascript-datatype" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/03/javascript-datatype/" class="article-date">
+  <time class="dt-published" datetime="2022-06-03T06:49:00.000Z" itemprop="datePublished">2022-06-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/03/javascript-datatype/">javascript: 常見資料型態</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>這篇會簡單整理常見的javascript資料型態</p>
+<ul>
+<li>number<ul>
+<li>數字型別，不管整數小數都是number type</li>
+</ul>
+</li>
+<li>string<ul>
+<li>字串型別，用單引號或雙引號包起來都行</li>
+</ul>
+</li>
+<li>boolean<ul>
+<li>布林值，只有true和false兩種值</li>
+</ul>
+</li>
+<li>array<ul>
+<li>用 [ ] 表示，可以存數字、字串、陣列、物件等等，但每筆資料型態必須相同，表示方式為  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>object<ul>
+<li>用 { } 表示，包含屬性與值，可以是數字、字串、陣列、物件等等，每筆資料都可以是不同型態，表示方式為  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">	<span class="attr">name</span>: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>null<ul>
+<li>空值</li>
+</ul>
+</li>
+<li>Undefined<ul>
+<li>未定義，任何變數在被初始化前都是未定義</li>
+</ul>
+</li>
+</ul>
+<p>當然這只是列出常見的，還有其他我比較不了解的我沒有列出來，就只是記錄比較常用的這樣。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/03/javascript-datatype/" data-id="cl3y3jgao00006ovpagj6dafv" data-title="javascript: 常見資料型態" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-javascript-variable" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/02/javascript-variable/" class="article-date">
@@ -653,116 +725,6 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
 
 
   
-    <article id="post-CSS-FLEX-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/24/CSS-FLEX-1/" class="article-date">
-  <time class="dt-published" datetime="2022-05-24T05:42:00.000Z" itemprop="datePublished">2022-05-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/css-flex/">css flex</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/24/CSS-FLEX-1/">CSS排版: FLEX(1)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="此文章為觀看六角學院CSS-Flex-超詳解，彈性版型任你操控！影片後整理之筆記"><a href="#此文章為觀看六角學院CSS-Flex-超詳解，彈性版型任你操控！影片後整理之筆記" class="headerlink" title="此文章為觀看六角學院CSS Flex 超詳解，彈性版型任你操控！影片後整理之筆記"></a>此文章為觀看<a target="_blank" rel="noopener" href="https://youtu.be/88ymaHaStoQ">六角學院CSS Flex 超詳解，彈性版型任你操控！</a>影片後整理之筆記</h3><p>整理下來有點太多，可能會分成兩篇來記錄，想看下一篇可以到<a href>這裡</a></p>
-<h2 id="FLex介紹"><a href="#FLex介紹" class="headerlink" title="FLex介紹"></a>FLex介紹</h2><p>Flex是一個CSS中很常使用的排版工具，他能夠自由操作div容器，主要概念為下圖</p>
-<p><img src="/../images/pasted-8.png"></p>
-<p>可以透過操作主軸與交錯軸來達成排版，預設主軸線為由左至右，交錯軸為由上至下</p>
-<h3 id="語法介紹"><a href="#語法介紹" class="headerlink" title="語法介紹"></a>語法介紹</h3><h4 id="外容器"><a href="#外容器" class="headerlink" title="外容器:"></a>外容器:</h4><ol>
-<li>display: flex;(<strong>需加在外容器上</strong>)</li>
-<li>flex-flow:<ul>
-<li>flex-direction-控制主軸方向:<ul>
-<li>row (預設值，由左至右)<img src="/../images/pasted-18.png"></li>
-<li>row-reverse(由右至左)<img src="/../images/pasted-19.png"></li>
-<li>column(由上至下)<img src="/../images/pasted-45.png"></li>
-<li>column-reverse(由下至上)<img src="/../images/pasted-21.png"></li>
-</ul>
-</li>
-<li>flex-wrap-換行方式:<ul>
-<li>nowrap(不使用)<img src="/../images/pasted-22.png"></li>
-<li>wrap(遇到邊界自動換行)<img src="/../images/pasted-23.png"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>justify-content-對齊主軸線方式:<ul>
-<li>center(置中)<img src="/../images/pasted-24.png"></li>
-<li>flex-start(靠主軸起點)<img src="/../images/pasted-25.png"></li>
-<li>flex-end(靠主軸終點)<img src="/../images/pasted-26.png"></li>
-<li>space-between(中間留空格)<img src="/../images/pasted-27.png"></li>
-<li>space-around(元素左右都留空格，但比例為1:2:1)<img src="/../images/pasted-28.png"></li>
-<li>space-evenly(元素左右平均分配空格)<img src="/../images/pasted-29.png"></li>
-</ul>
-</li>
-<li>align-items-與交錯軸對齊方式:<ul>
-<li>center(置中)<img src="/../images/pasted-30.png"></li>
-<li>flex-start(靠交錯軸起點)<img src="/../images/pasted-31.png"></li>
-<li>flex-end(靠交錯軸終點)<img src="/../images/pasted-32.png"></li>
-<li>strech(預設值，撐開至flexbox大小)<img src="/../images/pasted-33.png"></li>
-<li>baseline(對齊內容物基線)<img src="/../images/pasted-34.png"></li>
-</ul>
-</li>
-<li>align-content-內容物對齊方式<ul>
-<li>center(每行對齊交錯軸線中間)<img src="/../images/pasted-35.png"></li>
-<li>flex-start(每行貼齊交錯軸線最前端)<img src="/../images/pasted-36.png"></li>
-<li>flex-end(每行貼齊交錯軸線最末端)<img src="/../images/pasted-37.png"></li>
-<li>space-between(第一行與最後一行分別對齊交錯軸線最前端與最末端)<img src="/../images/pasted-38.png"></li>
-<li>space-around(每行平均分配每行間距)<img src="/../images/pasted-39.png"></li>
-<li>strech(預設值，每行內容元素全部撐開至 flexbox 大小)<img src="/../images/pasted-40.png"></li>
-</ul>
-</li>
-</ol>
-<h4 id="內容器"><a href="#內容器" class="headerlink" title="內容器:"></a>內容器:</h4><ol>
-<li>flex:<ul>
-<li>flex-grow(子元素伸展比例分配)</li>
-<li>flex-shrink(子元素壓縮比例分配)</li>
-<li>flex-basis(子元素基本大小)</li>
-</ul>
-</li>
-<li>order: 老師這裡沒有特別介紹，以後學會再補上</li>
-<li>align-self:<ul>
-<li>center(置中)<img src="/../images/pasted-41.png"></li>
-<li>flex-start(靠交錯軸起點)<img src="/../images/pasted-42.png"></li>
-<li>flex-end(靠交錯軸終點)<img src="/../images/pasted-43.png"></li>
-<li>strech(撐開至flexbox大小)<img src="/../images/pasted-44.png"></li>
-</ul>
-</li>
-<li>margin-子元素邊界<img src="/../images/pasted-46.png"></li>
-</ol>
-<p>下一篇將會以程式碼做與實例做更進一步的講解。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/24/CSS-FLEX-1/" data-id="cl3qqmhv50006rkvpgewl3yim" data-title="CSS排版: FLEX(1)" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -820,6 +782,10 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       <ul>
         
           <li>
+            <a href="/2022/07/04/css-cmp-class-and-id-selector/">CSS:類別與ID選擇器比較</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/03/css-tag-class-and-id-selector/">CSS: 標籤、類別、ID選擇器</a>
           </li>
         
@@ -833,10 +799,6 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
         
           <li>
             <a href="/2022/06/30/css-box-model/">CSS: 盒模型</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/29/css-combinator-selector/">CSS: 關係選擇器</a>
           </li>
         
       </ul>
