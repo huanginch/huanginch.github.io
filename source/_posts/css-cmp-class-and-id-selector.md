@@ -2,7 +2,8 @@ title: 'CSS:類別與ID選擇器比較'
 author: int
 tags:
   - css
-categories: []
+categories:
+  - css selector
 date: 2022-07-04 11:03:00
 ---
 在[上一篇](https://huanginch.github.io/2022/07/03/css-tag-class-and-id-selector/)介紹了類別與ID選擇器，但什麼時候要用類別選擇器，什麼時候要用ID選擇器？這篇就會針對這兩個相似的選擇器做個比較。

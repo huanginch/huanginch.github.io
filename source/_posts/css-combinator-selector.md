@@ -2,7 +2,8 @@ title: 'CSS: 關係選擇器'
 author: int
 tags:
   - css
-categories: []
+categories:
+  - css selector
 date: 2022-06-29 11:04:00
 ---
 ## 前言

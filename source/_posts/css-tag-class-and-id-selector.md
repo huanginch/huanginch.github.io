@@ -2,7 +2,8 @@ title: 'CSS: 標籤、類別、ID選擇器'
 author: int
 tags:
   - css
-categories: []
+categories:
+  - css selector
 date: 2022-07-03 11:28:00
 ---
 CSS中要對html元素做操作就會需要用到所謂的選擇器來選取DOM元素，這裡會介紹幾個基礎且常見的選擇器。
