@@ -101,11 +101,10 @@
 <h2 id="權重排序"><a href="#權重排序" class="headerlink" title="權重排序"></a>權重排序</h2><p>含有!important的規則 &gt; 直接寫在html上的style屬性 &gt; ID選擇器 &gt; 類別、偽類別、屬性選擇器 &gt; 標籤、偽元素選擇器</p>
 <h2 id="順序也會影響權重"><a href="#順序也會影響權重" class="headerlink" title="順序也會影響權重"></a>順序也會影響權重</h2><p>css的寫法是由上而下，除了標籤本身的權重(上述所示)，在css檔案中的排序也會影響權重，越下方的權重越大，但順序的影響力並沒有原本權重排序來的大，所以ID選擇器就算寫在上方也不會被類別選擇器蓋掉，要特別注意</p>
 <h2 id="關係選擇器可以看成加法"><a href="#關係選擇器可以看成加法" class="headerlink" title="關係選擇器可以看成加法"></a>關係選擇器可以看成加法</h2><p>以最常見的後代選擇器來說</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">h2</span>&#123;</span><br><span class="line">....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">h2</span>&#123;</span><br><span class="line">	....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>這種就可以理解為 10 + 1的權重，會比單純的.box權重來的高，即使.box的選擇器寫在他的下方也一樣。</p>
 <br>
 要學好css就一定要學會權重，這方面我也還是要多加練習，有時候會因為權重不對導致自己想要的樣式被蓋掉，在編寫上的邏輯就還要多加訓練。
-
       
     </div>
     <footer class="article-footer">
