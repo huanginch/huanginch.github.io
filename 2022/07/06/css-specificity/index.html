@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>彙整: 2022/6 | Int&#39;s blog</title>
+  <title>CSS: Specificity | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Int&#39;s blog">
-<meta property="og:url" content="https://huanginch.github.io/archives/2022/06/page/3/index.html">
+  <meta name="description" content="CSS中每個規則、標籤會有不同的權重，所以對相同標籤下不同規則會互相覆蓋，而誰覆蓋誰就是由權重決定。所謂的Specificity(優先級、權重)就是瀏覽器用來決定權重的算法。 權重排序含有!important的規則 &gt; 直接寫在html上的style屬性 &gt; ID選擇器 &gt; 類別、偽類別、屬性選擇器 &gt; 標籤、偽元素選擇器 順序也會影響權重css的寫法是由上而下，除了標籤本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS: Specificity">
+<meta property="og:url" content="https://huanginch.github.io/2022/07/06/css-specificity/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
+<meta property="og:description" content="CSS中每個規則、標籤會有不同的權重，所以對相同標籤下不同規則會互相覆蓋，而誰覆蓋誰就是由權重決定。所謂的Specificity(優先級、權重)就是瀏覽器用來決定權重的算法。 權重排序含有!important的規則 &gt; 直接寫在html上的style屬性 &gt; ID選擇器 &gt; 類別、偽類別、屬性選擇器 &gt; 標籤、偽元素選擇器 順序也會影響權重css的寫法是由上而下，除了標籤本">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-07-06T02:32:00.000Z">
+<meta property="article:modified_time" content="2022-07-06T05:57:55.270Z">
 <meta property="article:author" content="int">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -73,197 +78,63 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/09/Javascript-array-function/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-09T03:49:00.000Z" itemprop="datePublished">6月 9</time>
+        <section id="main"><article id="post-css-specificity" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/06/css-specificity/" class="article-date">
+  <time class="dt-published" datetime="2022-07-06T02:32:00.000Z" itemprop="datePublished">2022-07-06</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/09/Javascript-array-function/">Javascript: 陣列函式(上)</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      CSS: Specificity
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/08/css-block-and-inline/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-08T03:47:00.000Z" itemprop="datePublished">6月 8</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/08/css-block-and-inline/">CSS: 區塊元素與行內元素</a>
-    </h1>
-  
+        <p>CSS中每個規則、標籤會有不同的權重，所以對相同標籤下不同規則會互相覆蓋，而誰覆蓋誰就是由權重決定。所謂的Specificity(優先級、權重)就是瀏覽器用來決定權重的算法。</p>
+<h2 id="權重排序"><a href="#權重排序" class="headerlink" title="權重排序"></a>權重排序</h2><p>含有!important的規則 &gt; 直接寫在html上的style屬性 &gt; ID選擇器 &gt; 類別、偽類別、屬性選擇器 &gt; 標籤、偽元素選擇器</p>
+<h2 id="順序也會影響權重"><a href="#順序也會影響權重" class="headerlink" title="順序也會影響權重"></a>順序也會影響權重</h2><p>css的寫法是由上而下，除了標籤本身的權重(上述所示)，在css檔案中的排序也會影響權重，越下方的權重越大，但順序的影響力並沒有原本權重排序來的大，所以ID選擇器就算寫在上方也不會被類別選擇器蓋掉，要特別注意</p>
+<h2 id="關係選擇器可以看成加法"><a href="#關係選擇器可以看成加法" class="headerlink" title="關係選擇器可以看成加法"></a>關係選擇器可以看成加法</h2><p>以最常見的後代選擇器來說</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">h2</span>&#123;</span><br><span class="line">....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>這種就可以理解為 10 + 1的權重，會比單純的.box權重來的高，即使.box的選擇器寫在他的下方也一樣。</p>
+<br>
+要學好css就一定要學會權重，這方面我也還是要多加練習，有時候會因為權重不對導致自己想要的樣式被蓋掉，在編寫上的邏輯就還要多加訓練。
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/07/Javascipt-array/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-07T05:14:00.000Z" itemprop="datePublished">6月 7</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/07/Javascipt-array/">Javascipt: 陣列</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/06/javascript-if-statement/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-06T03:11:00.000Z" itemprop="datePublished">6月 6</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/06/css-specificity/" data-id="cl596vcg70000qkvpaioic5en" data-title="CSS: Specificity" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/06/javascript-if-statement/">Javascript: if判斷式</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/05/js-assignment-operator/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-05T04:44:00.000Z" itemprop="datePublished">6月 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/05/js-assignment-operator/">Javascript: 賦值運算子</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/04/Javascript-logic-operator/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-04T12:22:00.000Z" itemprop="datePublished">6月 4</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/04/Javascript-logic-operator/">Javascript: 邏輯運算子</a>
-    </h1>
-  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/07/05/css-important/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS: !important</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/03/javascript-datatype/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-03T06:49:00.000Z" itemprop="datePublished">6月 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/03/javascript-datatype/">javascript: 常見資料型態</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/02/javascript-variable/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-02T03:02:00.000Z" itemprop="datePublished">6月 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/02/javascript-variable/">javascript: 變數宣告</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/01/Renpy-screen/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-01T03:29:00.000Z" itemprop="datePublished">6月 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/01/Renpy-screen/">Ren&#39;Py: screen types</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/archives/2022/06/page/2/">&laquo; 上一頁</a><a class="page-number" href="/archives/2022/06/">1</a><a class="page-number" href="/archives/2022/06/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
 
 </section>
         
