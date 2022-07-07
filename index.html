@@ -75,6 +75,87 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-float" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/07/css-float/" class="article-date">
+  <time class="dt-published" datetime="2022-07-07T03:09:00.000Z" itemprop="datePublished">2022-07-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/07/css-float/">CSS:float</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>float是一種可以讓元素漂移的屬性，用法很像word中常用的文繞圖，所以float也比較常應用在文字與圖片的排版，元素與元素間還是比較常使用flex box。</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><ol>
+<li><p>none:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">float</span>: none:</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 不使用float，預設也是這個。</p>
+</li>
+<li><p>right</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="float practice" src="https://codepen.io/intHuang/embed/MWVKBRj?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/MWVKBRj">
+  float practice</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+(推薦使用0.5x觀看)
+可以看到圖片會飄到右邊，文字則是繞著圖片下來。
+</li>
+<li><p>left</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="float right" src="https://codepen.io/intHuang/embed/LYdGJYm?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/LYdGJYm">
+  float right</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+(推薦使用0.5x觀看)
+可以看到圖片會飄到左邊，文字和right一樣繞著圖片下來。
+</li>
+<li><p>inline-start</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="float left" src="https://codepen.io/intHuang/embed/mdxVGyo?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/mdxVGyo">
+  float left</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe></li>
+</ol>
+<p>元素會從容器的開頭，也就是上一個元素的最左邊開始延伸。</p>
+<ol start="5">
+<li>inline-end<iframe height="300" style="width: 100%;" scrolling="no" title="float inline-start" src="https://codepen.io/intHuang/embed/KKoVxNN?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/KKoVxNN">
+  float inline-start</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe></li>
+</ol>
+<p>元素會從容器的結尾，也就是上一個元素的最右邊開始延伸。</p>
+<h2 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h2><p>其實inline-start跟inline-end看起來根本一樣，我還是有點搞不清楚它們差在哪裡，試了不同的排版方式他們看起來還是一樣，如果有人知道他們到底差在哪裡希望可以告訴我。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/07/css-float/" data-id="cl5ai8u5e00005gvpb8q67q7e" data-title="CSS:float" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-specificity" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/06/css-specificity/" class="article-date">
@@ -108,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/06/css-specificity/" data-id="cl596vcg70000qkvpaioic5en" data-title="CSS: Specificity" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/07/06/css-specificity/" data-id="cl58zj7vl0000egvp0n61gezg" data-title="CSS: Specificity" class="article-share-link">Share</a>
       
       
       
@@ -652,111 +733,6 @@
 
 
   
-    <article id="post-html-tag" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/27/html-tag/" class="article-date">
-  <time class="dt-published" datetime="2022-06-27T03:43:00.000Z" itemprop="datePublished">2022-06-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/27/html-tag/">常見html標籤</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>html，全名為HyperText Markup Language，其中會用到很多標籤來做撰寫，這篇會簡單介紹一些常用標籤。</p>
-<h2 id="h1-h6"><a href="#h1-h6" class="headerlink" title="h1~h6"></a>h1~h6</h2><p>這些是標題標籤，其中h1為主標題，其他就是副標題，重要性依序遞減，因為h1是主標題所以只能出現一次，出現超過一次的用法都是錯的，寫法如下:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>標題<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>副標題<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>結果:</p>
-<h1>標題</h1>
-<h2>副標題</h2>
-
-<h2 id="p"><a href="#p" class="headerlink" title="p"></a>p</h2><p>p標籤代表段落，就當作是寫文章會有標題就會有內文，p就是讓你用來表示一段話的</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;這是一段話這是一段話這是一段話這是一段話&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<p>結果:</p>
-<p>這是一段話這是一段話這是一段話這是一段話</p>
-
-
-<h2 id="a"><a href="#a" class="headerlink" title="a"></a>a</h2><p>a標籤是用來設定外部連結，他有一個屬性叫href，可以在裡面放置網址，網頁就會出現外部連結可以點擊，寫法如下:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.google.com&quot;</span>&gt;</span>link<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>結果:</p>
-<p><a target="_blank" rel="noopener" href="https://www.google.com">link</a></p>
-<p>點擊link就會連到google首頁</p>
-<h2 id="img"><a href="#img" class="headerlink" title="img"></a>img</h2><p>img就是image的縮寫，也就是用來放圖片的，通常會有兩個屬性，一個是src，用來放圖片連結，另一個是alt，用來放文字說明</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://imgur.com/t/kamen_rider/5jlSPUj&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;kamen rider&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>結果:</p>
-<p><img src="/../images/pasted-80.png"></p>
-<h2 id="div"><a href="#div" class="headerlink" title="div"></a>div</h2><p>div可以比較特別，他可以在網頁上劃出一個區塊，像個盒子一樣，基本上是為了方便css做撰寫</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>div1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>div2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>結果:</p>
-<div>div1</div>
-<div>div2</div>
-
-<h2 id="input"><a href="#input" class="headerlink" title="input"></a>input</h2><p>input會產生一個輸入欄位，可以讓使用者輸入文字，屬性type通常會設置為text</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<p>結果:<br><input type="text"><br><br></p>
-<h2 id="button"><a href="#button" class="headerlink" title="button"></a>button</h2><p>button就是按鈕，在網頁上產生一個可以讓使用者互動的按鈕</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>按我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>結果:<br><button>按我</button><br><br></p>
-<h2 id="ul、ol、li"><a href="#ul、ol、li" class="headerlink" title="ul、ol、li"></a>ul、ol、li</h2><p>ul是unordered list，而ol是指order list，li指的是list item，所以寫法是會把li包在ul或ol裡面。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>item1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>item2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>item1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>item2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>結果:</p>
-<ul>
-  <li>item1</li>
-  <li>item2</li>
-</ul>
-
-<ol>
-  <li>item1</li>
-  <li>item2</li>
-</ol>
-
-<h2 id="br、hr"><a href="#br、hr" class="headerlink" title="br、hr"></a>br、hr</h2><p>br代表換行，hr代表分隔線</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>abc<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>def<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<p>結果:</p>
-<p>abc</p>
-<br>
-<p>def</p>
-<hr>
-
-<h2 id="註解標籤"><a href="#註解標籤" class="headerlink" title="註解標籤"></a>註解標籤</h2><p>跟其他程式語言一樣，html也有註解可以使用</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--這是註解--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>這是一段話<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>結果:</p>
-<!--這是註解-->
-
-<p>這是一段話</p>
-
-<p>可以看到只有p段落有顯示出來</p>
-<p>常用標籤就差不多介紹到這邊，當然還有很多很多標籤沒有介紹到，這邊只是列出很常見的，之後有機會再介紹其他標籤。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/27/html-tag/" data-id="cl4w8njqw0000zovp3cgs4apv" data-title="常見html標籤" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/" rel="tag">html</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -814,6 +790,10 @@
       <ul>
         
           <li>
+            <a href="/2022/07/07/css-float/">CSS:float</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/06/css-specificity/">CSS: Specificity</a>
           </li>
         
@@ -827,10 +807,6 @@
         
           <li>
             <a href="/2022/07/03/css-tag-class-and-id-selector/">CSS: 標籤、類別、ID選擇器</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/02/css-margin-collapse/">CSS: 邊界重疊(Margin Collapse)</a>
           </li>
         
       </ul>

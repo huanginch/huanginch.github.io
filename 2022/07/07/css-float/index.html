@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>彙整: 2022 | Int&#39;s blog</title>
+  <title>CSS:float | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Int&#39;s blog">
-<meta property="og:url" content="https://huanginch.github.io/archives/2022/page/2/index.html">
+  <meta name="description" content="float是一種可以讓元素漂移的屬性，用法很像word中常用的文繞圖，所以float也比較常應用在文字與圖片的排版，元素與元素間還是比較常使用flex box。 語法 none: 123.box&amp;#123;	float: none:&amp;#125;  不使用float，預設也是這個。  right    See the Pen    float practice by int (@intHuang)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS:float">
+<meta property="og:url" content="https://huanginch.github.io/2022/07/07/css-float/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
+<meta property="og:description" content="float是一種可以讓元素漂移的屬性，用法很像word中常用的文繞圖，所以float也比較常應用在文字與圖片的排版，元素與元素間還是比較常使用flex box。 語法 none: 123.box&amp;#123;	float: none:&amp;#125;  不使用float，預設也是這個。  right    See the Pen    float practice by int (@intHuang)">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-07-07T03:09:00.000Z">
+<meta property="article:modified_time" content="2022-07-07T04:04:10.228Z">
 <meta property="article:author" content="int">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -73,216 +78,96 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/27/html-tag/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-27T03:43:00.000Z" itemprop="datePublished">6月 27</time>
+        <section id="main"><article id="post-css-float" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/07/css-float/" class="article-date">
+  <time class="dt-published" datetime="2022-07-07T03:09:00.000Z" itemprop="datePublished">2022-07-07</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/27/html-tag/">常見html標籤</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      CSS:float
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/27/github-token/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-26T16:05:00.000Z" itemprop="datePublished">6月 27</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/27/github-token/">Github: Personal Access Token</a>
-    </h1>
-  
+        <p>float是一種可以讓元素漂移的屬性，用法很像word中常用的文繞圖，所以float也比較常應用在文字與圖片的排版，元素與元素間還是比較常使用flex box。</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><ol>
+<li><p>none:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">float</span>: none:</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 不使用float，預設也是這個。</p>
+</li>
+<li><p>right</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="float practice" src="https://codepen.io/intHuang/embed/MWVKBRj?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/MWVKBRj">
+  float practice</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+(推薦使用0.5x觀看)
+可以看到圖片會飄到右邊，文字則是繞著圖片下來。
+</li>
+<li><p>left</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="float right" src="https://codepen.io/intHuang/embed/LYdGJYm?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/LYdGJYm">
+  float right</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+(推薦使用0.5x觀看)
+可以看到圖片會飄到左邊，文字和right一樣繞著圖片下來。
+</li>
+<li><p>inline-start</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="float left" src="https://codepen.io/intHuang/embed/mdxVGyo?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/mdxVGyo">
+  float left</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe></li>
+</ol>
+<p>元素會從容器的開頭，也就是上一個元素的最左邊開始延伸。</p>
+<ol start="5">
+<li>inline-end<iframe height="300" style="width: 100%;" scrolling="no" title="float inline-start" src="https://codepen.io/intHuang/embed/KKoVxNN?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/KKoVxNN">
+  float inline-start</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe></li>
+</ol>
+<p>元素會從容器的結尾，也就是上一個元素的最右邊開始延伸。</p>
+<h2 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h2><p>其實inline-start跟inline-end看起來根本一樣，我還是有點搞不清楚它們差在哪裡，試了不同的排版方式他們看起來還是一樣，如果有人知道他們到底差在哪裡希望可以告訴我。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/25/js-json/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-25T03:12:00.000Z" itemprop="datePublished">6月 25</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/25/js-json/">Javascript: 讀取JSON</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-24T14:55:00.000Z" itemprop="datePublished">6月 24</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/07/css-float/" data-id="cl5ai8u5e00005gvpb8q67q7e" data-title="CSS:float" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/">JSON格式</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/23/css-box-sizing-border-box/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-23T03:55:00.000Z" itemprop="datePublished">6月 23</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/23/css-box-sizing-border-box/">CSS: border-box</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/22/css-Pseudo-Class-Selector/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-22T06:05:00.000Z" itemprop="datePublished">6月 22</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/22/css-Pseudo-Class-Selector/">CSS: 擬態選擇器</a>
-    </h1>
-  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/07/06/css-specificity/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS: Specificity</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/21/js-operators/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-21T02:48:00.000Z" itemprop="datePublished">6月 21</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/21/js-operators/">Javascript: 運算子總整理</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/20/js-typeof/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-20T04:19:00.000Z" itemprop="datePublished">6月 20</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/20/js-typeof/">Javascript: typeof、void</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/19/js-operator/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-19T04:28:00.000Z" itemprop="datePublished">6月 19</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/19/js-operator/">Javascript: delete、逗號運算子、字串運算子</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/18/node-change-version/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-18T04:34:00.000Z" itemprop="datePublished">6月 18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/18/node-change-version/">Nodejs: 更改版本</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/archives/2022/">&laquo; 上一頁</a><a class="page-number" href="/archives/2022/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2022/page/3/">3</a><a class="page-number" href="/archives/2022/page/4/">4</a><a class="page-number" href="/archives/2022/page/5/">5</a><a class="extend next" rel="next" href="/archives/2022/page/3/">下一頁 &raquo;</a>
-  </nav>
 
 </section>
         
