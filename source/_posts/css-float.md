@@ -2,7 +2,8 @@ title: 'CSS:float'
 author: int
 tags:
   - css
-categories: []
+categories:
+  - css position
 date: 2022-07-07 11:09:00
 ---
 float是一種可以讓元素漂移的屬性，用法很像word中常用的文繞圖，所以float也比較常應用在文字與圖片的排版，元素與元素間還是比較常使用flex box。
