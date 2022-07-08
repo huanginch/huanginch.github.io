@@ -75,6 +75,65 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-intro" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/28/css-intro/" class="article-date">
+  <time class="dt-published" datetime="2022-06-28T05:33:00.000Z" itemprop="datePublished">2022-06-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/28/css-intro/">CSS介紹</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p>CSS，全名 Cascading Style Sheet，中文叫做階層式樣式表，是用來為網頁增加各種樣式，包括顏色、字體、排版等等，至於所謂的階層式代表著對同一個html元素可以增加不同的樣式規則，最後會顯示在網頁上的樣式則是由css的權重來決定。</p>
+<h2 id="歷史"><a href="#歷史" class="headerlink" title="歷史"></a>歷史</h2><p>css目前為止有三個版本，第一版出現於1996年，1998年推出第二版，同時也開始了css3的開發，也是我們目前正在使用的版本，時至今日css3依舊在開發中。至於未來會不會有css4，答案是否定的，因為有別於前兩版，css3的概念整個被翻新，他將各項功能模組化，所以未來只會有各種模組功能的更新，這也使得css的開發更加有彈性。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>想在html中使用css有三種方法</p>
+<h3 id="inline"><a href="#inline" class="headerlink" title="inline"></a>inline</h3><p>第一種是直接寫在html tag裡面，但就開發和維護上並不推薦這種做法</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;background: red&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>123<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="style-tag"><a href="#style-tag" class="headerlink" title="style tag"></a>style tag</h3><p>第二種一樣是寫在html裡面，但是會包在style tag裡</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">  	<span class="attribute">background</span>: red;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>123<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="另外寫一個檔案"><a href="#另外寫一個檔案" class="headerlink" title="另外寫一個檔案"></a>另外寫一個檔案</h3><p>就開發上來說，這個方法是最推薦的，因為方便維護，基本上除非用vue之類的框架，不然都會選擇這種方式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>uHost<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;favicon.png&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;main.css&quot;</span>&gt;</span> <span class="comment">&lt;!--加上自己寫的css file的link--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">main</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">&quot;product-overview&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Get the freedom you deserve.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">&quot;plans&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;section-title&quot;</span>&gt;</span>Choose Your Plan<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Make sure you get the most for your money!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>用codepen來示範會長這樣，html和css是不同檔案</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="Day2 - 移除圖片空隙" src="https://codepen.io/intHuang/embed/ZExEzPJ?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/ZExEzPJ">
+  Day2 - 移除圖片空隙</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>之前寫了很多篇css的用法，但好像都沒有從頭開始介紹，才會有這篇，之後也會寫其他的用法，像是權重的比較之類。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/28/css-intro/" data-id="cl4xr9xks0000kwvpcnya813z" data-title="CSS介紹" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-html-tag" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/27/html-tag/" class="article-date">
@@ -695,99 +754,6 @@
 
 
   
-    <article id="post-node-change-version" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/18/node-change-version/" class="article-date">
-  <time class="dt-published" datetime="2022-06-18T04:34:00.000Z" itemprop="datePublished">2022-06-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/18/node-change-version/">Nodejs: 更改版本</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>昨天在做六角的作業時有項任務是要架設GGG環境(用gulp建立github page)，但是我的node是最新版本(v16)，而gulp要求的版本只能在v12~v14(其實我不確定是不是gulp，因為當初報錯是node-sass找不到)，反正結論就是要用v14，我就想說找個可以隨意切換版本的，因為刪掉重裝好像有點硬A，所以我就找到nvm這個東西。殊不知，問題一堆，安裝環境這東西真的是搞死我。</p>
-<p>先一步一步來說好了，一開始我是先按照六角給的指示安裝了一個node.exe(v14)，可是我電腦的環境沒辦法被這東西蓋掉，我裡面的v16還是活得好好的，所以我就跑去裝nvm，參考了蠻多篇，我也不知道為什麼大家都寫的這麼不清楚，所以我這邊會好好解釋。</p>
-<h2 id="nvm安裝步驟"><a href="#nvm安裝步驟" class="headerlink" title="nvm安裝步驟"></a>nvm安裝步驟</h2><ol>
-<li><p>去<a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">官網</a>下載nvm-setup.exe，你要載zip也行，裡面打開也就一個一樣的exe。</p>
-</li>
-<li><p>載完之後執行他，按下一步之後停下，把這個路徑記起來。</p>
-<p> <img src="/../images/pasted-70.png"></p>
-<p> 再下一步是nodejs路徑</p>
-<p> <img src="/../images/pasted-69.png"></p>
-<p> 這裡請把nodejs資料夾移到一個名字沒有空格的路徑底下。</p>
-<p> 完成後去修改環境變數，把剛剛複製的路徑貼上。步驟如下:</p>
-<ol>
-<li>打開設定-&gt;系統-&gt;關於-&gt;右手邊的進階系統設定</li>
-<li>打開後會出現一個視窗，按下那個環境變數</li>
-</ol>
-<p> <img src="/../images/pasted-71.png"></p>
-<ol start="3">
-<li>找到上面那格的path按下編輯</li>
-</ol>
-<p> <img src="/../images/pasted-72.png"></p>
-<ol start="4">
-<li>按下新增，貼上路徑，儲存確定離開</li>
-</ol>
-<p> <img src="/../images/pasted-73.png"></p>
-<ol start="5">
-<li>到終端機打 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh </span><br></pre></td></tr></table></figure></li>
-</ol>
-<p> [註]本人環境為windows，mac我不會XD</p>
- <br></li>
-</ol>
-<p>我之前就是少做了新增環境變數所以一直沒辦法執行nvm，我也不知道為什麼其他說明都沒寫到要修改，可能是我上面那兩個他自己幫我加的nvm路徑沒作用吧，具體原因我也不知道為什麼。</p>
-<p>再來就是下載node v14，我一開始以為我用的方法是對的，結果今天要來hexo寫文發現v14不支援hexo，想改回v16卻發現沒用。恩? 這當初不就是要來切換版本的嗎怎麼沒有用??</p>
-<p>那是因為我一開始不管怎麼用六角給的node.exe他就是沒辦法切換(可能我放錯路徑，但我現在還是不知道該放哪)，所以我就跑去載了msi檔，因為當初裝v16也是載這個，欸，等等，其實這樣會把原本的v16蓋掉，說好的用nvm不要硬A呢? 但是我真的沒注意到這件事，看到nvm列出版本有v14，正在使用的也是v14，GGG也用好了就以為萬事ok了(而且那時候我打錯nvm install指令所以一直載不好才用msi檔。)</p>
-<p>所以該怎麼辦?</p>
-<h2 id="nvm-切換版本步驟"><a href="#nvm-切換版本步驟" class="headerlink" title="nvm 切換版本步驟"></a>nvm 切換版本步驟</h2><ol>
-<li><p>把電腦中的node環境全部remove掉</p>
-</li>
-<li><p>對cmd按右鍵，以系統管理員身分執行cmd</p>
-</li>
-<li><p>nvm install [版本名稱]</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install 16.14.0</span><br></pre></td></tr></table></figure>
-<ul>
-<li>想看有沒有裝成功可以使用nvm list觀看，他會列出所有已安裝的版本。</li>
-</ul>
-</li>
-<li><p>nvm use [版本名稱]</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 16.14.0</span><br></pre></td></tr></table></figure>
-<ul>
-<li>如此一來就可以自由切換node版本了</li>
-</ul>
-</li>
-</ol>
-<p>真的沒想到建個環境會遇到這麼多問題，而且我本來以為我解決了，沒想到又跑出一堆問題，今天執行hexo發現不能用真的嚇了我一跳，然後要切版本又切不回去QQ，搞了半天根本是昨天就搞錯了，用nvm就直接用nvm裝node就好，不要另外裝node.exe還是什麼的，不過剛好可以當作一篇文章記錄起來XD 希望我沒有漏掉什麼，如果有哪裡看不懂歡迎再跟我說。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/18/node-change-version/" data-id="cl4jfnq400000fkvp2yzqhd8j" data-title="Nodejs: 更改版本" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -803,7 +769,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分類</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/css-flex/">css flex</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css-selector/">css selector</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo-introduce/">hexo introduce</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-operator/">js-operator</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/css-flex/">css flex</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css-position/">css position</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css-selector/">css selector</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo-introduce/">hexo introduce</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-operator/">js-operator</a></li></ul>
     </div>
   </div>
 
@@ -845,6 +811,10 @@
       <ul>
         
           <li>
+            <a href="/2022/07/08/css-position/">CSS: position</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/07/css-float/">CSS:float</a>
           </li>
         
@@ -858,10 +828,6 @@
         
           <li>
             <a href="/2022/07/04/css-cmp-class-and-id-selector/">CSS:類別與ID選擇器比較</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/03/css-tag-class-and-id-selector/">CSS: 標籤、類別、ID選擇器</a>
           </li>
         
       </ul>

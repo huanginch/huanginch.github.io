@@ -75,6 +75,85 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-position" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/08/css-position/" class="article-date">
+  <time class="dt-published" datetime="2022-07-08T03:44:00.000Z" itemprop="datePublished">2022-07-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/css-position/">css position</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/08/css-position/">CSS: position</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>position可以用來安排元素的位置，包含讓他們重疊或固定於網頁某個地方都能用position來實現，這篇會來介紹position的各種值以及和position相關的其他屬性。</p>
+<p>不過因為有些屬性內容比較多我會改成用連結文章的方式，並且之後這幾天都會寫和positon相關的主題，之後再彙整過來。</p>
+<h2 id="position屬性"><a href="#position屬性" class="headerlink" title="position屬性"></a>position屬性</h2><ol>
+<li><p>static: </p>
+<ul>
+<li>預設值，在static上不會有任何元素重疊。 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: static;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>absolute、relative:</p>
+<ul>
+<li>這兩個雖然分別是不同屬性但基本上都會一起使用。</li>
+<li><a href>介紹文章傳送門</a> (待補) <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:absolute;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.child-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>fixed:</p>
+<ul>
+<li>可以將元素固定在網頁上，不論如何滑動頁面元素都不會消失。</li>
+<li><a href>介紹文章傳送門</a> (待補) <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>sticky</p>
+<ul>
+<li>sticky比較像fixed + relative，可以讓子元素固定在畫面上，滾動時又不會超出父元素。</li>
+<li><a href>介紹文章傳送門</a> (待補) <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: sticky;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h2 id="其他元素定位相關屬性"><a href="#其他元素定位相關屬性" class="headerlink" title="其他元素定位相關屬性"></a>其他元素定位相關屬性</h2><h2 id="float"><a href="#float" class="headerlink" title="float"></a>float</h2><ul>
+<li>常用於文字與圖片，可做出文繞圖的樣式。</li>
+<li><a href="https://huanginch.github.io/2022/07/07/css-float/">介紹文章傳送門</a></li>
+</ul>
+<h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><ul>
+<li>可調整網頁z軸(也就是圖片與元素的重疊和上下關係)</li>
+<li><a href>介紹文章傳送門</a> (待補)</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/08/css-position/" data-id="cl5byn5l000001svp3c4e699o" data-title="CSS: position" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-float" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/07/css-float/" class="article-date">
@@ -674,65 +753,6 @@
 
 
   
-    <article id="post-css-intro" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/28/css-intro/" class="article-date">
-  <time class="dt-published" datetime="2022-06-28T05:33:00.000Z" itemprop="datePublished">2022-06-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/28/css-intro/">CSS介紹</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p>CSS，全名 Cascading Style Sheet，中文叫做階層式樣式表，是用來為網頁增加各種樣式，包括顏色、字體、排版等等，至於所謂的階層式代表著對同一個html元素可以增加不同的樣式規則，最後會顯示在網頁上的樣式則是由css的權重來決定。</p>
-<h2 id="歷史"><a href="#歷史" class="headerlink" title="歷史"></a>歷史</h2><p>css目前為止有三個版本，第一版出現於1996年，1998年推出第二版，同時也開始了css3的開發，也是我們目前正在使用的版本，時至今日css3依舊在開發中。至於未來會不會有css4，答案是否定的，因為有別於前兩版，css3的概念整個被翻新，他將各項功能模組化，所以未來只會有各種模組功能的更新，這也使得css的開發更加有彈性。</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>想在html中使用css有三種方法</p>
-<h3 id="inline"><a href="#inline" class="headerlink" title="inline"></a>inline</h3><p>第一種是直接寫在html tag裡面，但就開發和維護上並不推薦這種做法</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;background: red&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>123<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="style-tag"><a href="#style-tag" class="headerlink" title="style tag"></a>style tag</h3><p>第二種一樣是寫在html裡面，但是會包在style tag裡</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">  	<span class="attribute">background</span>: red;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>123<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="另外寫一個檔案"><a href="#另外寫一個檔案" class="headerlink" title="另外寫一個檔案"></a>另外寫一個檔案</h3><p>就開發上來說，這個方法是最推薦的，因為方便維護，基本上除非用vue之類的框架，不然都會選擇這種方式</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>uHost<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;favicon.png&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;main.css&quot;</span>&gt;</span> <span class="comment">&lt;!--加上自己寫的css file的link--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">main</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">&quot;product-overview&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Get the freedom you deserve.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">&quot;plans&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;section-title&quot;</span>&gt;</span>Choose Your Plan<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Make sure you get the most for your money!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>用codepen來示範會長這樣，html和css是不同檔案</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="Day2 - 移除圖片空隙" src="https://codepen.io/intHuang/embed/ZExEzPJ?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/ZExEzPJ">
-  Day2 - 移除圖片空隙</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>之前寫了很多篇css的用法，但好像都沒有從頭開始介紹，才會有這篇，之後也會寫其他的用法，像是權重的比較之類。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/28/css-intro/" data-id="cl4xr9xks0000kwvpcnya813z" data-title="CSS介紹" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -748,7 +768,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分類</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/css-flex/">css flex</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css-selector/">css selector</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo-introduce/">hexo introduce</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-operator/">js-operator</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/css-flex/">css flex</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css-position/">css position</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css-selector/">css selector</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo-introduce/">hexo introduce</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-operator/">js-operator</a></li></ul>
     </div>
   </div>
 
@@ -790,6 +810,10 @@
       <ul>
         
           <li>
+            <a href="/2022/07/08/css-position/">CSS: position</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/07/css-float/">CSS:float</a>
           </li>
         
@@ -803,10 +827,6 @@
         
           <li>
             <a href="/2022/07/04/css-cmp-class-and-id-selector/">CSS:類別與ID選擇器比較</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/03/css-tag-class-and-id-selector/">CSS: 標籤、類別、ID選擇器</a>
           </li>
         
       </ul>

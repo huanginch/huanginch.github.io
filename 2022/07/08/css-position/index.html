@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Javascript: 算數運算子 | Int&#39;s blog</title>
+  <title>CSS: position | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="算術運算子，簡單來說就是加減乘除。不過除了這幾個之外，還有其他可以使用，像次方之類的，這篇就會列出所有js中的算術運算子。  加法: + 就跟數學中的加法一樣   減法: - 就跟數學中的減法一樣   乘法: * 就跟數學中的乘法一樣   取商數: &#x2F; js中的除法分成兩種，取商數和取餘數，這個就會回傳商數。   取餘數: % 這個不念percent，要念mod。會回傳除法的餘數，其實就">
+  <meta name="description" content="position可以用來安排元素的位置，包含讓他們重疊或固定於網頁某個地方都能用position來實現，這篇會來介紹position的各種值以及和position相關的其他屬性。 不過因為有些屬性內容比較多我會改成用連結文章的方式，並且之後這幾天都會寫和positon相關的主題，之後再彙整過來。 position屬性 static:   預設值，在static上不會有任何元素重疊。 123h2&amp;#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript: 算數運算子">
-<meta property="og:url" content="https://huanginch.github.io/2022/06/15/js-arthimetic-operator/index.html">
+<meta property="og:title" content="CSS: position">
+<meta property="og:url" content="https://huanginch.github.io/2022/07/08/css-position/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="算術運算子，簡單來說就是加減乘除。不過除了這幾個之外，還有其他可以使用，像次方之類的，這篇就會列出所有js中的算術運算子。  加法: + 就跟數學中的加法一樣   減法: - 就跟數學中的減法一樣   乘法: * 就跟數學中的乘法一樣   取商數: &#x2F; js中的除法分成兩種，取商數和取餘數，這個就會回傳商數。   取餘數: % 這個不念percent，要念mod。會回傳除法的餘數，其實就">
+<meta property="og:description" content="position可以用來安排元素的位置，包含讓他們重疊或固定於網頁某個地方都能用position來實現，這篇會來介紹position的各種值以及和position相關的其他屬性。 不過因為有些屬性內容比較多我會改成用連結文章的方式，並且之後這幾天都會寫和positon相關的主題，之後再彙整過來。 position屬性 static:   預設值，在static上不會有任何元素重疊。 123h2&amp;#">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-06-15T03:11:00.000Z">
-<meta property="article:modified_time" content="2022-06-21T02:49:39.600Z">
+<meta property="article:published_time" content="2022-07-08T03:44:00.000Z">
+<meta property="article:modified_time" content="2022-07-08T04:30:47.752Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -78,14 +78,14 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-js-arthimetic-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-css-position" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/06/15/js-arthimetic-operator/" class="article-date">
-  <time class="dt-published" datetime="2022-06-15T03:11:00.000Z" itemprop="datePublished">2022-06-15</time>
+    <a href="/2022/07/08/css-position/" class="article-date">
+  <time class="dt-published" datetime="2022-07-08T03:44:00.000Z" itemprop="datePublished">2022-07-08</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/js-operator/">js-operator</a>
+    <a class="article-category-link" href="/categories/css-position/">css position</a>
   </div>
 
   </div>
@@ -96,7 +96,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Javascript: 算數運算子
+      CSS: position
     </h1>
   
 
@@ -104,59 +104,50 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>算術運算子，簡單來說就是加減乘除。不過除了這幾個之外，還有其他可以使用，像次方之類的，這篇就會列出所有js中的算術運算子。</p>
+        <p>position可以用來安排元素的位置，包含讓他們重疊或固定於網頁某個地方都能用position來實現，這篇會來介紹position的各種值以及和position相關的其他屬性。</p>
+<p>不過因為有些屬性內容比較多我會改成用連結文章的方式，並且之後這幾天都會寫和positon相關的主題，之後再彙整過來。</p>
+<h2 id="position屬性"><a href="#position屬性" class="headerlink" title="position屬性"></a>position屬性</h2><ol>
+<li><p>static: </p>
 <ul>
-<li>加法: +<ul>
-<li>就跟數學中的加法一樣</li>
+<li>預設值，在static上不會有任何元素重疊。 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: static;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li>減法: -<ul>
-<li>就跟數學中的減法一樣</li>
+<li><p>absolute、relative:</p>
+<ul>
+<li>這兩個雖然分別是不同屬性但基本上都會一起使用。</li>
+<li><a href>介紹文章傳送門</a> (待補) <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:absolute;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.child-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li>乘法: *<ul>
-<li>就跟數學中的乘法一樣</li>
+<li><p>fixed:</p>
+<ul>
+<li>可以將元素固定在網頁上，不論如何滑動頁面元素都不會消失。</li>
+<li><a href>介紹文章傳送門</a> (待補) <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li>取商數: &#x2F;<ul>
-<li>js中的除法分成兩種，取商數和取餘數，這個就會回傳商數。</li>
+<li><p>sticky</p>
+<ul>
+<li>sticky比較像fixed + relative，可以讓子元素固定在畫面上，滾動時又不會超出父元素。</li>
+<li><a href>介紹文章傳送門</a> (待補) <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: sticky;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li>取餘數: %<ul>
-<li>這個不念percent，要念mod。會回傳除法的餘數，其實就是數學中的mod運算。</li>
+</ol>
+<h2 id="其他元素定位相關屬性"><a href="#其他元素定位相關屬性" class="headerlink" title="其他元素定位相關屬性"></a>其他元素定位相關屬性</h2><h2 id="float"><a href="#float" class="headerlink" title="float"></a>float</h2><ul>
+<li>常用於文字與圖片，可做出文繞圖的樣式。</li>
+<li><a href="https://huanginch.github.io/2022/07/07/css-float/">介紹文章傳送門</a></li>
 </ul>
-</li>
-<li>增加: ++<ul>
-<li>一元運算子，對變數做增加1。比如說  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">0</span>;</span><br><span class="line">a++;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">//執行結果: 1</span></span><br></pre></td></tr></table></figure></li>
+<h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><ul>
+<li>可調整網頁z軸(也就是圖片與元素的重疊和上下關係)</li>
+<li><a href>介紹文章傳送門</a> (待補)</li>
 </ul>
-</li>
-<li>減少: –<ul>
-<li>一元運算子，對變數做減少1。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">0</span>;</span><br><span class="line">a--;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">//執行結果: -1</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>取負數: -<ul>
-<li>一元運算子，我自己覺得跟減法很像，不過前面的減法是二元運算子。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(-a); <span class="comment">//執行結果: -1</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>加號: +<ul>
-<li>一元運算子，可以把不是數字的運算元改成數字。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="literal">true</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(+<span class="literal">true</span>); <span class="comment">//執行結果: 1</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>指數運算子: **<ul>
-<li>用來運算指數的 a ** b 就是算a的b次方。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>**<span class="number">3</span>); <span class="comment">//執行結果: 8</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-<p>[註] 一元運算子表示只需要一個運算元，二元表示要兩個運算元，三元表示三個，最多到三元。上述沒有特別標註的都是二元運算子，而三元之後會另外寫一篇。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/15/js-arthimetic-operator/" data-id="cl4f1rf500000rsvp5kwp0379" data-title="Javascript: 算數運算子" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/07/08/css-position/" data-id="cl5byn5l000001svp3c4e699o" data-title="CSS: position" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
     </footer>
   </div>
@@ -164,19 +155,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/06/16/js-conditional-operator/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Javascript: 條件運算子(三元運算子)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/06/14/js-compare-operator/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/07/07/css-float/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Javascript: 比較運算子</div>
+      <div class="article-nav-title">CSS:float</div>
     </a>
   
 </nav>

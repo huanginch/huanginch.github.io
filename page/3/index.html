@@ -75,6 +75,99 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-node-change-version" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/18/node-change-version/" class="article-date">
+  <time class="dt-published" datetime="2022-06-18T04:34:00.000Z" itemprop="datePublished">2022-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/18/node-change-version/">Nodejs: 更改版本</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>昨天在做六角的作業時有項任務是要架設GGG環境(用gulp建立github page)，但是我的node是最新版本(v16)，而gulp要求的版本只能在v12~v14(其實我不確定是不是gulp，因為當初報錯是node-sass找不到)，反正結論就是要用v14，我就想說找個可以隨意切換版本的，因為刪掉重裝好像有點硬A，所以我就找到nvm這個東西。殊不知，問題一堆，安裝環境這東西真的是搞死我。</p>
+<p>先一步一步來說好了，一開始我是先按照六角給的指示安裝了一個node.exe(v14)，可是我電腦的環境沒辦法被這東西蓋掉，我裡面的v16還是活得好好的，所以我就跑去裝nvm，參考了蠻多篇，我也不知道為什麼大家都寫的這麼不清楚，所以我這邊會好好解釋。</p>
+<h2 id="nvm安裝步驟"><a href="#nvm安裝步驟" class="headerlink" title="nvm安裝步驟"></a>nvm安裝步驟</h2><ol>
+<li><p>去<a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">官網</a>下載nvm-setup.exe，你要載zip也行，裡面打開也就一個一樣的exe。</p>
+</li>
+<li><p>載完之後執行他，按下一步之後停下，把這個路徑記起來。</p>
+<p> <img src="/../images/pasted-70.png"></p>
+<p> 再下一步是nodejs路徑</p>
+<p> <img src="/../images/pasted-69.png"></p>
+<p> 這裡請把nodejs資料夾移到一個名字沒有空格的路徑底下。</p>
+<p> 完成後去修改環境變數，把剛剛複製的路徑貼上。步驟如下:</p>
+<ol>
+<li>打開設定-&gt;系統-&gt;關於-&gt;右手邊的進階系統設定</li>
+<li>打開後會出現一個視窗，按下那個環境變數</li>
+</ol>
+<p> <img src="/../images/pasted-71.png"></p>
+<ol start="3">
+<li>找到上面那格的path按下編輯</li>
+</ol>
+<p> <img src="/../images/pasted-72.png"></p>
+<ol start="4">
+<li>按下新增，貼上路徑，儲存確定離開</li>
+</ol>
+<p> <img src="/../images/pasted-73.png"></p>
+<ol start="5">
+<li>到終端機打 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh </span><br></pre></td></tr></table></figure></li>
+</ol>
+<p> [註]本人環境為windows，mac我不會XD</p>
+ <br></li>
+</ol>
+<p>我之前就是少做了新增環境變數所以一直沒辦法執行nvm，我也不知道為什麼其他說明都沒寫到要修改，可能是我上面那兩個他自己幫我加的nvm路徑沒作用吧，具體原因我也不知道為什麼。</p>
+<p>再來就是下載node v14，我一開始以為我用的方法是對的，結果今天要來hexo寫文發現v14不支援hexo，想改回v16卻發現沒用。恩? 這當初不就是要來切換版本的嗎怎麼沒有用??</p>
+<p>那是因為我一開始不管怎麼用六角給的node.exe他就是沒辦法切換(可能我放錯路徑，但我現在還是不知道該放哪)，所以我就跑去載了msi檔，因為當初裝v16也是載這個，欸，等等，其實這樣會把原本的v16蓋掉，說好的用nvm不要硬A呢? 但是我真的沒注意到這件事，看到nvm列出版本有v14，正在使用的也是v14，GGG也用好了就以為萬事ok了(而且那時候我打錯nvm install指令所以一直載不好才用msi檔。)</p>
+<p>所以該怎麼辦?</p>
+<h2 id="nvm-切換版本步驟"><a href="#nvm-切換版本步驟" class="headerlink" title="nvm 切換版本步驟"></a>nvm 切換版本步驟</h2><ol>
+<li><p>把電腦中的node環境全部remove掉</p>
+</li>
+<li><p>對cmd按右鍵，以系統管理員身分執行cmd</p>
+</li>
+<li><p>nvm install [版本名稱]</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install 16.14.0</span><br></pre></td></tr></table></figure>
+<ul>
+<li>想看有沒有裝成功可以使用nvm list觀看，他會列出所有已安裝的版本。</li>
+</ul>
+</li>
+<li><p>nvm use [版本名稱]</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 16.14.0</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如此一來就可以自由切換node版本了</li>
+</ul>
+</li>
+</ol>
+<p>真的沒想到建個環境會遇到這麼多問題，而且我本來以為我解決了，沒想到又跑出一堆問題，今天執行hexo發現不能用真的嚇了我一跳，然後要切版本又切不回去QQ，搞了半天根本是昨天就搞錯了，用nvm就直接用nvm裝node就好，不要另外裝node.exe還是什麼的，不過剛好可以當作一篇文章記錄起來XD 希望我沒有漏掉什麼，如果有哪裡看不懂歡迎再跟我說。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/18/node-change-version/" data-id="cl4jfnq400000fkvp2yzqhd8j" data-title="Nodejs: 更改版本" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-js-relation-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/17/js-relation-operator/" class="article-date">
@@ -676,87 +769,6 @@
 
 
   
-    <article id="post-Javascipt-array" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/07/Javascipt-array/" class="article-date">
-  <time class="dt-published" datetime="2022-06-07T05:14:00.000Z" itemprop="datePublished">2022-06-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/07/Javascipt-array/">Javascipt: 陣列</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>在<a href="https://huanginch.github.io/2022/06/03/javascript-datatype/">資料型態</a>那篇有介紹到array這個型別，這篇就會詳細介紹array的基本使用方法與概念。</p>
-<h2 id="宣告"><a href="#宣告" class="headerlink" title="宣告"></a>宣告</h2><p>陣列宣告會用中括號來表示，而陣列的值會放在中括號中，陣列的值可以是其他資料型態，但是每個值都必須是相同型態。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 空陣列</span></span><br><span class="line"><span class="keyword">let</span> arr1 = [];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 數字陣列</span></span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">1</span>, <span class="number">2</span> ,<span class="number">3</span>, <span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">//字串陣列</span></span><br><span class="line"><span class="keyword">let</span> arr3 = [<span class="string">&quot;aaa&quot;</span>, <span class="string">&quot;bbb&quot;</span>, <span class="string">&quot;ccc&quot;</span>];</span><br></pre></td></tr></table></figure>
-<ul>
-<li>陣列的縮寫常會使用arr</li>
-</ul>
-<h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><p>陣列有所謂的索引值，可以透過索引值取得對應的值，而索引值是從0開始，寫法如下</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">100</span>, <span class="number">520</span>, <span class="number">891</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">0</span>]); <span class="comment">//執行結果: 100</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">1</span>]); <span class="comment">//執行結果: 520</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">2</span>]); <span class="comment">//執行結果: 891</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="賦值"><a href="#賦值" class="headerlink" title="賦值"></a>賦值</h2><p>如果想要更改arr中的內容，寫法也跟取值一樣，並使用賦值運算子。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">800</span>, <span class="number">900</span>, <span class="number">1000</span>];</span><br><span class="line"></span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">0</span>]); <span class="comment">//執行結果: 1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">//執行結果: [1, 900, 1000]</span></span><br></pre></td></tr></table></figure>
-<p>可以看到arr第一個值(索引值0)變成了1。</p>
-<h2 id="新增"><a href="#新增" class="headerlink" title="新增"></a>新增</h2><p>前面都只有針對已經有的值做處理，那如果我們想要增加一個元素進去該怎麼做?</p>
-<ul>
-<li>push():<ul>
-<li>使用push可以在陣列最後面新增元素  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">720</span>, <span class="number">800</span>, <span class="number">100</span>];</span><br><span class="line">arr.<span class="title function_">push</span>(<span class="number">500</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">//執行結果: [720, 800, 100, 500]</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>unshift()”<ul>
-<li>使用unshift可以在陣列最前面新增元素  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">720</span>, <span class="number">800</span> ,<span class="number">100</span>];</span><br><span class="line">arr.<span class="title function_">unshift</span>(<span class="number">500</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">//執行結果: [500, 720, 800, 100]</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-<h2 id="刪除"><a href="#刪除" class="headerlink" title="刪除"></a>刪除</h2><p> 有了新增，自然也會有刪除</p>
-<ul>
-<li>pop():<ul>
-<li>與push相對，pop可以從陣列最後面刪除元素  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">720</span>, <span class="number">800</span>, <span class="number">100</span>];</span><br><span class="line">arr.<span class="title function_">pop</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">//執行結果: [720, 800]</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>shift():<ul>
-<li>與unshift()相對，shift可以從最前面刪除元素  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">720</span>, <span class="number">800</span>, <span class="number">100</span>];</span><br><span class="line">arr.<span class="title function_">shift</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">//執行結果: [800, 100]</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-<h2 id="取得長度"><a href="#取得長度" class="headerlink" title="取得長度"></a>取得長度</h2><p>想取得當前陣列長度(意即有幾個元素)可以使用array.length。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="property">length</span>) <span class="comment">//執行結果: 3</span></span><br></pre></td></tr></table></figure>
-
-<p>以上述程式碼來看，我宣告的arr使有三個元素的陣列，所以arr.length的值就會是3。</p>
-<br>
-    
-<p>基本操作就介紹到這邊，其他進階的array function會留到下一篇做講解。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/07/Javascipt-array/" data-id="cl43qmkae0000ssvp8v4z2op1" data-title="Javascipt: 陣列" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -772,7 +784,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分類</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/css-flex/">css flex</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css-selector/">css selector</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo-introduce/">hexo introduce</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-operator/">js-operator</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/css-flex/">css flex</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css-position/">css position</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css-selector/">css selector</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo-introduce/">hexo introduce</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-operator/">js-operator</a></li></ul>
     </div>
   </div>
 
@@ -814,6 +826,10 @@
       <ul>
         
           <li>
+            <a href="/2022/07/08/css-position/">CSS: position</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/07/css-float/">CSS:float</a>
           </li>
         
@@ -827,10 +843,6 @@
         
           <li>
             <a href="/2022/07/04/css-cmp-class-and-id-selector/">CSS:類別與ID選擇器比較</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/03/css-tag-class-and-id-selector/">CSS: 標籤、類別、ID選擇器</a>
           </li>
         
       </ul>
