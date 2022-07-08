@@ -23,11 +23,11 @@ position可以用來安排元素的位置，包含讓他們重疊或固定於網
     * [介紹文章傳送門]() (待補)
     ```css
     .parent-box{
-    	position:absolute;
+    	position:relative;
     }
     
     .child-box{
-    	position:relative;
+    	position:absolute;
     }
     ```
 
