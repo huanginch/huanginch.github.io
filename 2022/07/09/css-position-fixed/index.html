@@ -4,20 +4,22 @@
   <meta charset="utf-8">
   
   
-  <title>CSS: position | Int&#39;s blog</title>
+  <title>CSS: Position: fixed | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="position可以用來安排元素的位置，包含讓他們重疊或固定於網頁某個地方都能用position來實現，這篇會來介紹position的各種值以及和position相關的其他屬性。 不過因為有些屬性內容比較多我會改成用連結文章的方式，並且之後這幾天都會寫和positon相關的主題，之後再彙整過來。 position屬性 static:   預設值，在static上不會有任何元素重疊。 123h2&amp;#">
+  <meta name="description" content="很常會看到有些網頁的NavBar會跟著畫面滾動並停留在最上方，並不會因為畫面向下拉而消失，又或者是有些在最左下角的回頂端(如圖)  想要實現這種功能就必須使用到 position: fixed 語法123.box&amp;#123;	position:fixed;&amp;#125; 舉例   See the Pen    position: fixed by int (@intHuang)   on CodeP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS: position">
-<meta property="og:url" content="https://huanginch.github.io/2022/07/08/css-position/index.html">
+<meta property="og:title" content="CSS: Position: fixed">
+<meta property="og:url" content="https://huanginch.github.io/2022/07/09/css-position-fixed/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="position可以用來安排元素的位置，包含讓他們重疊或固定於網頁某個地方都能用position來實現，這篇會來介紹position的各種值以及和position相關的其他屬性。 不過因為有些屬性內容比較多我會改成用連結文章的方式，並且之後這幾天都會寫和positon相關的主題，之後再彙整過來。 position屬性 static:   預設值，在static上不會有任何元素重疊。 123h2&amp;#">
+<meta property="og:description" content="很常會看到有些網頁的NavBar會跟著畫面滾動並停留在最上方，並不會因為畫面向下拉而消失，又或者是有些在最左下角的回頂端(如圖)  想要實現這種功能就必須使用到 position: fixed 語法123.box&amp;#123;	position:fixed;&amp;#125; 舉例   See the Pen    position: fixed by int (@intHuang)   on CodeP">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-07-08T03:44:00.000Z">
-<meta property="article:modified_time" content="2022-07-08T05:14:43.156Z">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-88.png">
+<meta property="article:published_time" content="2022-07-09T03:09:00.000Z">
+<meta property="article:modified_time" content="2022-07-09T03:44:59.890Z">
 <meta property="article:author" content="int">
 <meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://huanginch.github.io/images/pasted-88.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -78,10 +80,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-css-position" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-css-position-fixed" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/07/08/css-position/" class="article-date">
-  <time class="dt-published" datetime="2022-07-08T03:44:00.000Z" itemprop="datePublished">2022-07-08</time>
+    <a href="/2022/07/09/css-position-fixed/" class="article-date">
+  <time class="dt-published" datetime="2022-07-09T03:09:00.000Z" itemprop="datePublished">2022-07-09</time>
 </a>
     
   <div class="article-category">
@@ -96,7 +98,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      CSS: position
+      CSS: Position: fixed
     </h1>
   
 
@@ -104,46 +106,26 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>position可以用來安排元素的位置，包含讓他們重疊或固定於網頁某個地方都能用position來實現，這篇會來介紹position的各種值以及和position相關的其他屬性。</p>
-<p>不過因為有些屬性內容比較多我會改成用連結文章的方式，並且之後這幾天都會寫和positon相關的主題，之後再彙整過來。</p>
-<h2 id="position屬性"><a href="#position屬性" class="headerlink" title="position屬性"></a>position屬性</h2><ol>
-<li><p>static: </p>
-<ul>
-<li>預設值，在static上不會有任何元素重疊。 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: static;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>absolute、relative:</p>
-<ul>
-<li>這兩個雖然分別是不同屬性但基本上都會一起使用。</li>
-<li><a href>介紹文章傳送門</a> (待補) <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.child-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:absolute;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>fixed:</p>
-<ul>
-<li>可以將元素固定在網頁上，不論如何滑動頁面元素都不會消失。</li>
-<li><a href>介紹文章傳送門</a> (待補) <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>sticky</p>
-<ul>
-<li>sticky比較像fixed + relative，可以讓子元素固定在畫面上，滾動時又不會超出父元素。</li>
-<li><a href>介紹文章傳送門</a> (待補) <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: sticky;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ol>
-<h2 id="其他元素定位相關屬性"><a href="#其他元素定位相關屬性" class="headerlink" title="其他元素定位相關屬性"></a>其他元素定位相關屬性</h2><h2 id="float"><a href="#float" class="headerlink" title="float"></a>float</h2><ul>
-<li>常用於文字與圖片，可做出文繞圖的樣式。</li>
-<li><a href="https://huanginch.github.io/2022/07/07/css-float/">介紹文章傳送門</a></li>
-</ul>
-<h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><ul>
-<li>可調整網頁z軸(也就是圖片與元素的重疊和上下關係)</li>
-<li><a href>介紹文章傳送門</a> (待補)</li>
-</ul>
+        <p>很常會看到有些網頁的NavBar會跟著畫面滾動並停留在最上方，並不會因為畫面向下拉而消失，又或者是有些在最左下角的回頂端(如圖)</p>
+<p><img src="/../images/pasted-88.png" alt="蝦皮回頂端按鈕"></p>
+<p>想要實現這種功能就必須使用到 position: fixed</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="舉例"><a href="#舉例" class="headerlink" title="舉例"></a>舉例</h3><iframe height="300" style="width: 100%;" scrolling="no" title="position: fixed" src="https://codepen.io/intHuang/embed/MWVyqmb?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/MWVyqmb">
+  position: fixed</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>在上面的codepen中可以看到我在navbar中下了position:fixed;，所以當你滾動畫面時粉紅色navbar會一直固定在畫面上。</p>
+<h3 id="top-bottom-left-和-right"><a href="#top-bottom-left-和-right" class="headerlink" title="top bottom left 和 right"></a>top bottom left 和 right</h3><p>但要注意，只寫position:fixed並不能將navbar固定在畫面最上方，你可以自己試試看，會發現他和上面有一些距離，所以這時候就要使用top。</p>
+<p>透過top、bottom、left和right可以設定fixed元素的位置，以上面的codepen例子來說，top: 0;指的就是距離畫面頂端為0，所以會固定在畫面最上方，同理將其他值設成0就會與左邊右邊或底部沒有距離。</p>
+<p>當然也可以設置成別的數值，px就是距離那個屬性的位置有幾個px，設定成%的話，假設是top:50%; 就會固定在由頂端往下50%的地方。</p>
+<h2 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h2><p>fixed可以製作navbar等會固定在畫面上的元素，與fixed相似的還有sticky和relative，關於他們可以參考我的其他篇文章。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/08/css-position/" data-id="cl5bwzduy0000bsvpgu8x9iel" data-title="CSS: position" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/07/09/css-position-fixed/" data-id="cl5dcg77q0000qwvpfrpm05lz" data-title="CSS: Position: fixed" class="article-share-link">Share</a>
       
       
       
@@ -155,19 +137,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/07/09/css-position-fixed/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          CSS: Position: fixed
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/07/07/css-float/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/07/08/css-position/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">CSS:float</div>
+      <div class="article-nav-title">CSS: position</div>
     </a>
   
 </nav>
