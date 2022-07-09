@@ -33,7 +33,7 @@ position可以用來安排元素的位置，包含讓他們重疊或固定於網
 
 3. fixed:
 	* 可以將元素固定在網頁上，不論如何滑動頁面元素都不會消失。
-	* [介紹文章傳送門]() (待補)
+	* [介紹文章傳送門](https://huanginch.github.io/2022/07/09/css-position-fixed/)
     ```css
     h2{
     	position: fixed;
