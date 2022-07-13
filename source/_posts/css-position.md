@@ -41,7 +41,7 @@ position可以用來安排元素的位置，包含讓他們重疊或固定於網
     ```
 5. sticky
 	* sticky比較像fixed + relative，可以讓子元素固定在畫面上，滾動時又不會超出父元素。
-	* [介紹文章傳送門]() (待補)
+	* [介紹文章傳送門](https://huanginch.github.io/2022/07/13/css-position-sticky/) 
     ```css
     h2{
     	position: sticky;
