@@ -75,6 +75,66 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hexo-admin-deploy" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/21/hexo-admin-deploy/" class="article-date">
+  <time class="dt-published" datetime="2022-05-21T03:33:00.000Z" itemprop="datePublished">2022-05-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo-introduce/">hexo introduce</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/05/21/hexo-admin-deploy/">使用Hexo admin來部屬(deploy)網站</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Hexo admin是一個很方便的插件，可以用圖形化介面來管理你的網站後台，不過下載後來是要自己設定一些東西才能部屬網站，這篇文就是來介紹部屬的設定。</p>
+<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol>
+<li><p>安裝hexo admin: 在cmd輸入以下指令，不知道怎麼打開cmd可以看<a href="https://huanginch.github.io/2022/05/19/My-First-Post/">這篇文</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$npm install hexo-admin --save</span><br></pre></td></tr></table></figure></li>
+<li><p>打開blog資料夾裡的 <strong>_config.yml</strong>，在最底下新增以下程式碼</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">admin:</span><br><span class="line">          deployCommand: &#x27;hexo-publish.bat&#x27;</span><br></pre></td></tr></table></figure></li>
+<li><p>在跟 <strong>_config.yml</strong> 同一層的地方新增一個叫 <strong>hexo-publish.bat</strong> 的檔案</p>
+</li>
+<li><p>在<strong>hexo-publish.bat</strong>中新增以下程式碼</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure></li>
+<li><p>切換到Hexo Admin中的deploy頁面<br><img src="/../images/hexo-admin-navbar.png"></p>
+</li>
+<li><p>在輸入欄輸入本次更新說明文字後按下deploy即可<br><img src="/../images/pasted-4.png"></p>
+</li>
+</ol>
+<p>因為我自己是用github.io來部屬網站，所以我成功後就可以在自己的github上面看到更新後的檔案，至於怎麼使用github來部屬網站可以到<a href="https://huanginch.github.io/2022/05/22/deploy-on-github/">這篇文</a>。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/05/21/hexo-admin-deploy/" data-id="cl3qqmhv6000arkvpdis9716a" data-title="使用Hexo admin來部屬(deploy)網站" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-insertImage" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/05/20/insertImage/" class="article-date">
@@ -236,7 +296,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Ren-Py/" style="font-size: 14px;">Ren'Py</a> <a href="/tags/c/" style="font-size: 12px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 12px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/json/" style="font-size: 12px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a>
+      <a href="/tags/Ren-Py/" style="font-size: 15px;">Ren'Py</a> <a href="/tags/c/" style="font-size: 12.5px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 12.5px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 17.5px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/json/" style="font-size: 12.5px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a>
     </div>
   </div>
 
@@ -258,6 +318,10 @@
       <ul>
         
           <li>
+            <a href="/2022/07/13/css-position-sticky/">CSS: position:sticky</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/12/css-z-index/">CSS: z-index</a>
           </li>
         
@@ -271,10 +335,6 @@
         
           <li>
             <a href="/2022/07/07/css-float/">CSS:float</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/06/css-specificity/">CSS: Specificity</a>
           </li>
         
       </ul>

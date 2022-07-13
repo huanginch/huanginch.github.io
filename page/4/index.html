@@ -75,6 +75,69 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-js-array-function" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/10/js-array-function/" class="article-date">
+  <time class="dt-published" datetime="2022-06-10T02:38:00.000Z" itemprop="datePublished">2022-06-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/10/js-array-function/">Javascript: 陣列函式(下)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>我們在<a href="https://huanginch.github.io/2022/06/09/Javascript-array-function/">上篇</a>介紹了forEach、filter、find、findIndex和map，這篇會來介紹其他常用的陣列函式。</p>
+<ul>
+<li><p>slice():</p>
+<ul>
+<li>slice可以從給定的範圍複製一份新的array。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> newArr1 = arr.<span class="title function_">slice</span>(<span class="number">2</span>);</span><br><span class="line"><span class="keyword">let</span> newArr2 = arr.<span class="title function_">slice</span>(<span class="number">2</span>, <span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArr1);<span class="comment">//執行結果:[3, 4, 5]</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArr2);<span class="comment">//執行結果:[3, 4]</span></span><br></pre></td></tr></table></figure>
+  帶入slice中的第一個參數代表要從哪個索引值開始複製，第二個代表結束的索引值，不代第二個預設會是複製到array結束，如果帶入負數會從最後一個元素開始往前推，比如說-3就是倒數第三個。這裡要注意，複製範圍是含頭不含尾，所以可以看到newArr2只複製到索引值3的元素。</li>
+</ul>
+</li>
+<li><p>splice():</p>
+<ul>
+<li>這個函式跟slice只差了一個字，導致我常常記錯。與slice不同，splice是用來插入或刪除元素，比較像是push跟pop的用法。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.<span class="title function_">splice</span>(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);<span class="comment">//執行結果:[2, 3];</span></span><br><span class="line"></span><br><span class="line">arr.<span class="title function_">splice</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">5</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);<span class="comment">//執行結果:[5, 2, 3];</span></span><br><span class="line"></span><br><span class="line">arr.<span class="title function_">splice</span>(<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);<span class="comment">//執行結果:[1, 2, 3];</span></span><br></pre></td></tr></table></figure>
+  splice第一個參數代表開始的索引值，這裡跟slice一樣，第二個代表要移動幾步，比如說以執行結果1來說，我從索引值0移動了一步，移到了索引值1，接著用第三個參數的值取代掉移動到的前一個元素(一樣含頭不含尾的概念)，而結果1沒有第三個參數，所以執行出來後arr只剩下[2, 3]。雖然說可以做到刪除插入元素的結果，但我個人感覺整體邏輯是取代就是，拿執行結果2來說，不移動所以沒東西可以取代，就直接插入5這樣。最後，跟slice一樣，參數可以代負數，負數就代表從最後面開始算。</li>
+</ul>
+</li>
+<li><p>sort():</p>
+<ul>
+<li>這個從名字就可以看出來是排序用的。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">3</span>];</span><br><span class="line">arr.<span class="title function_">sort</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);<span class="comment">//執行結果:[1, 3, 4, 5, 6, 8]</span></span><br></pre></td></tr></table></figure>
+  直接使用的話是由小排到大，如果是字串就按照ascii code來排，比較特別的是sort可以寫compare function來自訂排序方式。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">let</span> arr = [<span class="number">2</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">0</span>];</span><br><span class="line"> arr.<span class="title function_">sort</span>(<span class="title function_">compare</span>(<span class="params">b, a</span>) &#123;</span><br><span class="line">   <span class="keyword">if</span> ( a &lt; b) &#123;</span><br><span class="line">     <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">if</span> ( a &gt; b) &#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">// a 必須等於 b</span></span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">//執行結果:[5, 2, 1, 0]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  a, b代表了陣列中的元素，他會依序去比較你帶入的參數，小於回傳-1，大於回傳+1，等於回傳0。像這裡我就把它改成由大排到小。</li>
+</ul>
+</li>
+</ul>
+<p>本次陣列函式介紹就差不多到這邊，雖然沒有列出所有的函式，但我認為我列出的已經是相對常用的了，希望大家會喜歡。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/10/js-array-function/" data-id="cl49smn6u000014vpcjtg3im4" data-title="Javascript: 陣列函式(下)" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Javascript-array-function" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/09/Javascript-array-function/" class="article-date">
@@ -700,66 +763,6 @@
 
 
   
-    <article id="post-js-dom-selector" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/31/js-dom-selector/" class="article-date">
-  <time class="dt-published" datetime="2022-05-31T03:16:00.000Z" itemprop="datePublished">2022-05-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/31/js-dom-selector/">Javascript: 選取DOM元素</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>在javascipt中，如果想操作Html的元素要先使用document.querySelector()等語法來選取，這篇會來介紹有哪些語法以及如何選取。</p>
-<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><ul>
-<li>document.querySelector(): 最常見的語法，這個語法可以選取html中<strong>第一個符合條件的元素</strong>。</li>
-<li>document.querySelectorAll(): 與querySelector()用法相同，但會選取<strong>所有符合條件的元素</strong>，並回傳一個nodelist。</li>
-<li>document.getElementById(): 根據指定的id選取相對應元素。</li>
-<li>document.getElementByClassName(): 根據指定的class名稱選取相對應元素。</li>
-<li>document.getElementByTagName():根據指定的標籤名稱選取相對應元素。</li>
-</ul>
-<h2 id="選取元素"><a href="#選取元素" class="headerlink" title="選取元素"></a>選取元素</h2><p>在qeuerySelector()與querySelectorAll()中，根據選取不同類型元素，條件寫法也不同。<br></p>
-<ul>
-<li>選取html tag: 在單引號或雙引號中直接寫上標籤名稱即可<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;h1&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
-<li>選取class name: 在在單引號或雙引號中寫上classname，但前面必須加.<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.header&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
-<li>選取id: 在單引號或雙引號中寫上id，但前面必須加#<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#email&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>其實選取方式就跟css的選取方式相同，所以說querySelector的部分也可以寫成這樣:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.header h1&#x27;</span>); <span class="comment">// 選取header class中的h1</span></span><br></pre></td></tr></table></figure>
-<p>在剩下的getElementBy…中，只需要在單引號或雙引號中寫下相對應的名字即可</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;email&#x27;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementByClassName</span>(<span class="string">&#x27;header&#x27;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementByTagName</span>(<span class="string">&#x27;h1&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>這篇算是簡單整理，幫助自己記憶，平常的話我都使用querySelector()或querySelectorAll()而已，其他幾個視情況使用，分享給大家。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/31/js-dom-selector/" data-id="cl3tmuwic0000covp0r2v5ujf" data-title="Javascript: 選取DOM元素" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -795,7 +798,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Ren-Py/" style="font-size: 14px;">Ren'Py</a> <a href="/tags/c/" style="font-size: 12px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 18px;">css</a> <a href="/tags/css-flex/" style="font-size: 12px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/json/" style="font-size: 12px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a>
+      <a href="/tags/Ren-Py/" style="font-size: 15px;">Ren'Py</a> <a href="/tags/c/" style="font-size: 12.5px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 12.5px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 17.5px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/json/" style="font-size: 12.5px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a>
     </div>
   </div>
 
@@ -817,6 +820,10 @@
       <ul>
         
           <li>
+            <a href="/2022/07/13/css-position-sticky/">CSS: position:sticky</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/12/css-z-index/">CSS: z-index</a>
           </li>
         
@@ -830,10 +837,6 @@
         
           <li>
             <a href="/2022/07/07/css-float/">CSS:float</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/06/css-specificity/">CSS: Specificity</a>
           </li>
         
       </ul>
