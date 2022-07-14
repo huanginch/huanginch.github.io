@@ -4,19 +4,14 @@
   <meta charset="utf-8">
   
   
-  <title>CSS: 標籤、類別、ID選擇器 | Int&#39;s blog</title>
+  <title>Tag: css | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="CSS中要對html元素做操作就會需要用到所謂的選擇器來選取DOM元素，這裡會介紹幾個基礎且常見的選擇器。 標籤選擇器(Type Selector)html中有許多的標籤，之前這篇也有介紹一些常見的標籤，想當然可以直接選取標籤並為他們制定規則[註1]。    See the Pen    tag selector by int (@intHuang)   on CodePen.   標籤選擇器不需">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CSS: 標籤、類別、ID選擇器">
-<meta property="og:url" content="https://huanginch.github.io/2022/07/03/css-tag-class-and-id-selector/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Int&#39;s blog">
+<meta property="og:url" content="https://huanginch.github.io/tags/css/page/3/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="CSS中要對html元素做操作就會需要用到所謂的選擇器來選取DOM元素，這裡會介紹幾個基礎且常見的選擇器。 標籤選擇器(Type Selector)html中有許多的標籤，之前這篇也有介紹一些常見的標籤，想當然可以直接選取標籤並為他們制定規則[註1]。    See the Pen    tag selector by int (@intHuang)   on CodePen.   標籤選擇器不需">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-07-03T03:28:00.000Z">
-<meta property="article:modified_time" content="2022-07-06T05:59:27.420Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -78,96 +73,45 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-css-tag-class-and-id-selector" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/03/css-tag-class-and-id-selector/" class="article-date">
-  <time class="dt-published" datetime="2022-07-03T03:28:00.000Z" itemprop="datePublished">2022-07-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/css-selector/">css selector</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="p-name article-title" itemprop="headline name">
-      CSS: 標籤、類別、ID選擇器
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2022/05/24/CSS-FLEX-1/" class="archive-article-date">
+  <time class="dt-published" datetime="2022-05-24T05:42:00.000Z" itemprop="datePublished">5月 24</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/05/24/CSS-FLEX-1/">CSS排版: FLEX(1)</a>
     </h1>
   
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>CSS中要對html元素做操作就會需要用到所謂的選擇器來選取DOM元素，這裡會介紹幾個基礎且常見的選擇器。</p>
-<h2 id="標籤選擇器-Type-Selector"><a href="#標籤選擇器-Type-Selector" class="headerlink" title="標籤選擇器(Type Selector)"></a>標籤選擇器(Type Selector)</h2><p>html中有許多的標籤，之前<a href="https://huanginch.github.io/2022/06/27/html-tag/">這篇</a>也有介紹一些常見的標籤，想當然可以直接選取標籤並為他們制定規則[註1]。</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="tag selector" src="https://codepen.io/intHuang/embed/QWmbmzG?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/QWmbmzG">
-  tag selector</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>標籤選擇器不需要多寫什麼，直接寫上標籤名稱即可，像我這裡就幫h1加了背景。</p>
-<h2 id="類別選擇器-Class-Selector"><a href="#類別選擇器-Class-Selector" class="headerlink" title="類別選擇器(Class Selector)"></a>類別選擇器(Class Selector)</h2><p>因為標籤選擇器只能選取所有相同類別的標籤而不能單獨對某個特定標籤做出處理，所以就有了類別選擇器，可以在標籤上加上屬性class，選擇時可以針對class name做選取</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="class selector" src="https://codepen.io/intHuang/embed/YzaXadM?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/YzaXadM">
-  class selector</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>類別選擇器的寫法是在要選取的class name前面加上一個 <strong>.</strong></p>
-<h2 id="ID選擇器-ID-Selector"><a href="#ID選擇器-ID-Selector" class="headerlink" title="ID選擇器(ID Selector)"></a>ID選擇器(ID Selector)</h2><p>和類別選擇器很類似，ID選擇器也可以針對特定元素做出處理</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="ID Selector" src="https://codepen.io/intHuang/embed/poLJLYw?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/poLJLYw">
-  ID Selector</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>和class寫法不同，ID是在ID前面加上 <strong>#</strong></p>
-<p>[註1]所謂的規則(Rule)指的就是選擇器加上css屬性，例如:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>我自己比較常用到標籤與類別選擇器，至於類別和ID選擇器的差異會留到新文章來做比較。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/03/css-tag-class-and-id-selector/" data-id="cl54scto10006fovp0h2p6ahi" data-title="CSS: 標籤、類別、ID選擇器" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2022/07/04/css-cmp-class-and-id-selector/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          CSS:類別與ID選擇器比較
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2022/07/02/css-margin-collapse/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">CSS: 邊界重疊(Margin Collapse)</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/tags/css/page/2/">&laquo; 上一頁</a><a class="page-number" href="/tags/css/">1</a><a class="page-number" href="/tags/css/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
 
 </section>
         
