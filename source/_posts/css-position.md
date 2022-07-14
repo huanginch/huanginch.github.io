@@ -20,7 +20,7 @@ position可以用來安排元素的位置，包含讓他們重疊或固定於網
     ```
 2. absolute、relative:
 	* 這兩個雖然分別是不同屬性但基本上都會一起使用。
-    * [介紹文章傳送門]() (待補)
+    * [介紹文章傳送門](https://huanginch.github.io/2022/07/14/css-absolute-and-relative/)
     ```css
     .parent-box{
     	position:relative;
