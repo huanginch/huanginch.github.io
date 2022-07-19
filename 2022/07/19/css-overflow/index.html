@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Javascript: 十進制數字與其他進制數字互相轉換 | Int&#39;s blog</title>
+  <title>CSS: Overflow | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="相較其他語言，在javascript中，要將十進制的數字轉換成其他進制的數字算是相對容易，函式在讀取參數的時候只要有相對應的前綴就會自動幫你轉換，但同時也有不便之處，這篇會來介紹我所採的雷以及如何轉換十進制成其他進制。 十進制轉換成其他進制在你的程式碼中想要做到十進制轉換成不同進制只需要用到 toString() 這個函式。舉例來說我想把10進制轉成8進制以及2進制，可以這樣寫: 12(11).t">
+  <meta name="description" content="有時候會有元素太大導致超出父元素的問題，這就叫做overflow(特別容易發生在有設定高度的元素中)，以下面為例:    See the Pen    css:overflow by int (@intHuang)   on CodePen.   可以看到文字超出了parent 通常的作法是不設定高度，讓元素按照內容去伸展高度，但如果說我今天就是希望這個元素這麼高，這時候就可以使用overflow">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript: 十進制數字與其他進制數字互相轉換">
-<meta property="og:url" content="https://huanginch.github.io/2022/05/27/javascript-octal-decimal/index.html">
+<meta property="og:title" content="CSS: Overflow">
+<meta property="og:url" content="https://huanginch.github.io/2022/07/19/css-overflow/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="相較其他語言，在javascript中，要將十進制的數字轉換成其他進制的數字算是相對容易，函式在讀取參數的時候只要有相對應的前綴就會自動幫你轉換，但同時也有不便之處，這篇會來介紹我所採的雷以及如何轉換十進制成其他進制。 十進制轉換成其他進制在你的程式碼中想要做到十進制轉換成不同進制只需要用到 toString() 這個函式。舉例來說我想把10進制轉成8進制以及2進制，可以這樣寫: 12(11).t">
+<meta property="og:description" content="有時候會有元素太大導致超出父元素的問題，這就叫做overflow(特別容易發生在有設定高度的元素中)，以下面為例:    See the Pen    css:overflow by int (@intHuang)   on CodePen.   可以看到文字超出了parent 通常的作法是不設定高度，讓元素按照內容去伸展高度，但如果說我今天就是希望這個元素這麼高，這時候就可以使用overflow">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-05-27T04:33:00.000Z">
-<meta property="article:modified_time" content="2022-06-15T03:29:50.280Z">
+<meta property="article:published_time" content="2022-07-19T04:11:00.000Z">
+<meta property="article:modified_time" content="2022-07-19T04:51:27.362Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -78,10 +78,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-javascript-octal-decimal" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-css-overflow" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/05/27/javascript-octal-decimal/" class="article-date">
-  <time class="dt-published" datetime="2022-05-27T04:33:00.000Z" itemprop="datePublished">2022-05-27</time>
+    <a href="/2022/07/19/css-overflow/" class="article-date">
+  <time class="dt-published" datetime="2022-07-19T04:11:00.000Z" itemprop="datePublished">2022-07-19</time>
 </a>
     
   </div>
@@ -92,7 +92,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Javascript: 十進制數字與其他進制數字互相轉換
+      CSS: Overflow
     </h1>
   
 
@@ -100,26 +100,64 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>相較其他語言，在javascript中，要將十進制的數字轉換成其他進制的數字算是相對容易，函式在讀取參數的時候只要有相對應的前綴就會自動幫你轉換，但同時也有不便之處，這篇會來介紹我所採的雷以及如何轉換十進制成其他進制。</p>
-<h2 id="十進制轉換成其他進制"><a href="#十進制轉換成其他進制" class="headerlink" title="十進制轉換成其他進制"></a>十進制轉換成其他進制</h2><p>在你的程式碼中想要做到十進制轉換成不同進制只需要用到 toString() 這個函式。<br>舉例來說我想把10進制轉成8進制以及2進制，可以這樣寫:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">11</span>).<span class="title function_">toString</span>(<span class="number">2</span>);<span class="comment">//10進制的11轉2進制表示</span></span><br><span class="line">(<span class="number">156</span>).<span class="title function_">toString</span>(<span class="number">8</span>);<span class="comment">//10進制的156轉8進制表示</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>不過要注意使用了toString後資料型態會變成字串，你想要它變回數字的話記得使用parseInt();</li>
+        <p>有時候會有元素太大導致超出父元素的問題，這就叫做overflow(特別容易發生在有設定高度的元素中)，以下面為例:</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="css:overflow" src="https://codepen.io/intHuang/embed/qBormgx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/qBormgx">
+  css:overflow</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>可以看到文字超出了parent</p>
+<p>通常的作法是不設定高度，讓元素按照內容去伸展高度，但如果說我今天就是希望這個元素這麼高，這時候就可以使用overflow這個屬性</p>
+<h2 id="Overflow"><a href="#Overflow" class="headerlink" title="Overflow"></a>Overflow</h2><ul>
+<li>visible</li>
 </ul>
-<h2 id="其他進制轉成十進制"><a href="#其他進制轉成十進制" class="headerlink" title="其他進制轉成十進制"></a>其他進制轉成十進制</h2><p>那如果想要反過來將其他進制轉成十進制就可以使用 parseInt() 這個函式，程式碼如下</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">11</span>;</span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">2</span>);<span class="comment">//將2進制的11轉成10進制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">8</span>);<span class="comment">//將8進制的11轉成10進制</span></span><br></pre></td></tr></table></figure>
-<h2 id="參數的自動轉換"><a href="#參數的自動轉換" class="headerlink" title="參數的自動轉換"></a>參數的自動轉換</h2><p>在javascript中，如果數字以0作為前綴，它會將數字視為8進制並自動轉換成10進制<br>比如說我這樣寫:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">010</span>)</span><br></pre></td></tr></table></figure>
-<p>輸出會是8，又或者是以0x為前綴則會視為16進制。<br><br>這個看似方便的功能也帶給我一些麻煩，我遇到一個題目是輸入有可能會有032這樣的輸入，但js卻會自己幫我轉型，我試著想要取消自動轉型似乎是辦不到，唯一的方法就是改成用字串輸入，所以大家在做的時候要注意使用者是否會誤輸格式，又或者是你必須限制使用者只能輸入字串。如果有人知道如何實作取消自動轉型歡迎和我分享。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">overflow</span>: visibile;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>預設值，呈現效果等同上面的例子。</p>
+<ul>
+<li>hidden</li>
+</ul>
+<p>將overflow的元素藏起來</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">box&#123;</span><br><span class="line">	<span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="css:overflow" src="https://codepen.io/intHuang/embed/mdxWmov?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/mdxWmov">
+  css:overflow</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>可以看到多餘的部分都消失在元素內了。</p>
+<ul>
+<li>scroll</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">overflow</span>: scroll;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<iframe height="300" style="width: 100%;" scrolling="no" title="css:overflow: hidden" src="https://codepen.io/intHuang/embed/rNdymbm?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/rNdymbm">
+  css:overflow: hidden</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>讓子元素保持在父元素內，可以用上下左右滾動的方式看到超過的部分。</p>
+<ul>
+<li>auto、overlay<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">overflow</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<iframe height="300" style="width: 100%;" scrolling="no" title="css:overflow: auto" src="https://codepen.io/intHuang/embed/LYdWyvm?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/LYdWyvm">
+  css:overflow: auto</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>讓子元素保持在父元素內，和scroll不同，只能用上下滾動的方式看到超過的部分。<br>而overlay和auto相同，只是不同瀏覽器支援不同語法。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/27/javascript-octal-decimal/" data-id="cl3qqmhvf0011rkvp5amy8ehi" data-title="Javascript: 十進制數字與其他進制數字互相轉換" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/07/19/css-overflow/" data-id="cl5rp7s3f0000t4vpd5yge0of" data-title="CSS: Overflow" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
     </footer>
   </div>
@@ -127,19 +165,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/05/28/c-bit-operator/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          bit operator in C language
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/05/26/RenPy-hide-quick-menu/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/07/18/css-max-width-and-min-width/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Ren&#39;Py : How to hide quick menu on screen</div>
+      <div class="article-nav-title">CSS: Max-width and min-width</div>
     </a>
   
 </nav>
