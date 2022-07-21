@@ -37,7 +37,7 @@ background-image: url(...);
 
 為背景設定圖片，圖片會使用url語法來載入外部的圖片，可以同時載入兩張以上的url，也可以使用linear-gradient和linear-radius。
 
-* [文章傳送門](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)(自己寫的待補)
+* [文章傳送門](https://huanginch.github.io/2022/07/21/css-background-image/)
 
 ### background-repeat
 
