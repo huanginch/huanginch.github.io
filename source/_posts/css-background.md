@@ -47,7 +47,7 @@ background-repeat: no-repeat;
 
 background-reapet會出現在當背景圖片無法填滿整個元素時，會依照設定的值以重複出現圖片的方式來填滿元素
 
-* [文章傳送門](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat)(自己寫的待補)
+* [文章傳送門](https://huanginch.github.io/2022/07/22/css-background-repeat/)
 
 ### background-position
 
