@@ -75,6 +75,131 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-c-bit-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/28/c-bit-operator/" class="article-date">
+  <time class="dt-published" datetime="2022-05-28T04:41:00.000Z" itemprop="datePublished">2022-05-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/05/28/c-bit-operator/">bit operator in C language</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在C語言中做邏輯判斷時經常會用到邏輯運算子(&amp;&amp;、|| 等)，但還有一種位元運算子新手經常會搞混，與邏輯運算子不同，位元運算子是針對位元來做邏輯判斷，而這篇來簡單整理C語言中的位元運算子:</p>
+<h2 id="運算子"><a href="#運算子" class="headerlink" title="運算子"></a>運算子</h2><ol>
+<li>and: &amp;</li>
+<li>or: |</li>
+<li>xor: ^</li>
+<li>left shift: &lt;&lt;</li>
+<li>right shift: &gt;&gt;</li>
+<li>not: !</li>
+</ol>
+<h2 id="真值表"><a href="#真值表" class="headerlink" title="真值表"></a>真值表</h2><table>
+<thead>
+<tr>
+<th>and</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>or</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>xor</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>not</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<h2 id="left-shift-and-right-shift"><a href="#left-shift-and-right-shift" class="headerlink" title="left shift and right shift"></a>left shift and right shift</h2><ul>
+<li>left shift: 0011 &lt;&lt; 1 &#x3D;&gt; 1100</li>
+<li>right shift: 1100 &gt;&gt; 1 &#x3D;&gt; 0011</li>
+</ul>
+<p>剛好作業有用到，算是紀錄一下，之後可能也會多少寫一些C的東西這樣。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/05/28/c-bit-operator/" data-id="cl3qqmhv60009rkvphm8iftyk" data-title="bit operator in C language" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-javascript-octal-decimal" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/05/27/javascript-octal-decimal/" class="article-date">
@@ -715,6 +840,10 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       <ul>
         
           <li>
+            <a href="/2022/07/23/background-position/">CSS: background-position</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/22/css-background-repeat/">CSS: background-repeat</a>
           </li>
         
@@ -728,10 +857,6 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
         
           <li>
             <a href="/2022/07/19/css-overflow/">CSS: Overflow</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/18/css-max-width-and-min-width/">CSS: Max-width and min-width</a>
           </li>
         
       </ul>
