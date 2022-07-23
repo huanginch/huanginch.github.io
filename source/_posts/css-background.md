@@ -57,7 +57,7 @@ background-position: top;
 
 可以設定背景圖的位置，可以使用top、bottom、left、right、center、數字、百分比、與各種單位來設定
 
-* [文章傳送門](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)(自己寫的待補)
+* [文章傳送門](https://huanginch.github.io/2022/07/23/background-position/)
 
 ### background-size
 
