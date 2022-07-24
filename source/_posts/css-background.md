@@ -67,7 +67,7 @@ background-size: contain;
 
 一般來說背景圖片不可能剛好符合元素大小，用size可以調整背景圖片的大小與圖片會從哪裡開始延伸。
 
-* [文章傳送門](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)(自己寫的待補)
+* [文章傳送門](https://huanginch.github.io/2022/07/24/css-background-size/)
 
 ### background-origin
 
