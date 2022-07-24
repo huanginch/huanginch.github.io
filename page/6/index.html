@@ -75,6 +75,54 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Renpy-customize-quickmenu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/29/Renpy-customize-quickmenu/" class="article-date">
+  <time class="dt-published" datetime="2022-05-29T03:06:00.000Z" itemprop="datePublished">2022-05-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/05/29/Renpy-customize-quickmenu/">Ren&#39;Py: customize quick menu</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><a href="https://huanginch.github.io/2022/05/26/RenPy-hide-quick-menu/">上一篇文</a>介紹到如何隱藏quick menu，這篇要來介紹如何自訂quick menu。<br>其實應該要先寫這篇的，不過因為當時我被如何隱藏菜單搞了很久，想說好不容易解決就先記錄一下，所以這篇算是填坑。</p>
+<h2 id="自訂screen-rpy內容"><a href="#自訂screen-rpy內容" class="headerlink" title="自訂screen.rpy內容"></a>自訂screen.rpy內容</h2><p>找到screen quick_menu():的地方就可以自訂quick menu的內容、位置等等</p>
+<p><img src="/../images/pasted-61.png"></p>
+<p>像我這裡就改了x、y座標，加了一張image，也把一些英文的按鈕改成中文顯示。</p>
+<h2 id="自訂gui-rpy內容"><a href="#自訂gui-rpy內容" class="headerlink" title="自訂gui.rpy內容"></a>自訂gui.rpy內容</h2><p>在gui.rpy裡找到包含quick關鍵字的程式碼</p>
+<p><img src="/../images/pasted-62.png"></p>
+<p>這邊就可以自訂按鈕的顏色、字體大小等等，像我就把它改成粉色，字體大小25<br></p>
+<p>相較於隱藏菜單這個簡單多了，不過當時也是找如何改顏色找了一陣子，原來要從gui改，一直以為要在screen.rpy裡修改，那時候是參考了<a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLKdE0Vv4UA5-dqJLpDkPt5CLQzc6hJ-uh">這系列影片</a>，分享給大家。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/05/29/Renpy-customize-quickmenu/" data-id="cl3qqmhvf0013rkvp2smeboyf" data-title="Ren&#39;Py: customize quick menu" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-c-bit-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/05/28/c-bit-operator/" class="article-date">
@@ -722,72 +770,11 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
 
 
   
-    <article id="post-My-First-Post" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/19/My-First-Post/" class="article-date">
-  <time class="dt-published" datetime="2022-05-19T13:26:00.000Z" itemprop="datePublished">2022-05-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo-introduce/">hexo introduce</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/19/My-First-Post/">如何使用HEXO建立個人部落格</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>一些廢話，不想看可以直接看步驟</strong></p>
-<p>許多工程師都擁有自己的技術部落格，剛好在六角學院上課的時候有一小節就是在介紹寫部落格這件事，剛好趁這次機會開始養成寫部落格的習慣。</p>
-
-<p>一開始我跟著HEXO的 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/">官方文件</a> 操作，不過中間的步驟可能是我誤解文件的意思還是怎樣，總之我按照首頁的步驟做是錯的，所以想說順便用這個主題來當作我的第一篇文章。</p>
-<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟:"></a>步驟:</h2><ol>
-<li><p>打開cmd(不會的可以按 window +R 輸入後 cmd 或直接在工具列的搜尋欄搜尋cmd)</p>
-</li>
-<li><p>切到自己希望網站放置的資料夾，我是選D槽根目錄，當然你也可以選別的槽，又或者是在槽中建個資料夾來放之類的，不過他等等會自己產生一個叫blog的資料夾我就沒特別創資料夾了</p>
-</li>
-<li><p>依序輸入下列指令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo init blog</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></li>
-<li><p>依照指令執行完就建置好環境了，你的cmd應該會跳出一行字: <strong>Hexo is running at <a target="_blank" rel="noopener" href="http://localhost:4000/(%E5%A6%82%E5%9C%96)">http://localhost:4000/(如圖)</a></strong><img src="https://i.imgur.com/UKZ1SWm.png"></p>
-</li>
-<li><p>在瀏覽器上輸入剛剛出現在cmd上的網址就可以成功打開Hexo部落格了</p>
-</li>
-</ol>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語:"></a>結語:</h2><p>第一次寫部落格，挺有趣的，之後應該會記錄一些Hexo的使用方法跟程式課程的筆記<br>如果有任何問題歡迎和我聯繫</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/19/My-First-Post/" data-id="cl3qqmhve0010rkvp5lbt3oht" data-title="如何使用HEXO建立個人部落格" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/5/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+    <a class="extend prev" rel="prev" href="/page/5/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/">下一頁 &raquo;</a>
   </nav>
 
 </section>
@@ -840,6 +827,10 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       <ul>
         
           <li>
+            <a href="/2022/07/24/css-background-size/">CSS: background-size</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/23/background-position/">CSS: background-position</a>
           </li>
         
@@ -853,10 +844,6 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
         
           <li>
             <a href="/2022/07/20/css-background/">CSS: background</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/19/css-overflow/">CSS: Overflow</a>
           </li>
         
       </ul>
