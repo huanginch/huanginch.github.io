@@ -75,6 +75,61 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-background-origin" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/25/css-background-origin/" class="article-date">
+  <time class="dt-published" datetime="2022-07-25T05:07:00.000Z" itemprop="datePublished">2022-07-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/css-background/">css background</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/25/css-background-origin/">CSS: background-origin</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>background-origin可以設定背景圖片的起點位置，分為以下三種:</p>
+<h2 id="border-box"><a href="#border-box" class="headerlink" title="border-box"></a>border-box</h2><p>border-box會讓圖片從border正下方開始延伸，意即border會覆蓋在圖片上，這個也是background-origin的預設值。</p>
+<h2 id="padding-box"><a href="#padding-box" class="headerlink" title="padding-box"></a>padding-box</h2><p>padding-box會讓圖片從padding開始延伸，所以border底下會留白。</p>
+<h2 id="content-box"><a href="#content-box" class="headerlink" title="content-box"></a>content-box</h2><p>content-box會讓圖片從content開始延伸，所以border和padding的部分會留白。</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="background-origin" src="https://codepen.io/intHuang/embed/abYymLa?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/abYymLa">
+  background-origin</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>要注意的是如果沒有下no-repeat，看起來會沒有差別，不過一般來說都會設定no-repeat就是。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/25/css-background-origin/" data-id="cl60b38xs0000m0vpgcejfe3u" data-title="CSS: background-origin" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-background-size" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/24/css-background-size/" class="article-date">
@@ -668,63 +723,6 @@
 
 
   
-    <article id="post-css-z-index" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/12/css-z-index/" class="article-date">
-  <time class="dt-published" datetime="2022-07-12T12:30:00.000Z" itemprop="datePublished">2022-07-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/css-position/">css position</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/12/css-z-index/">CSS: z-index</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>一般排版的時候都是調整元素在網頁上的位置，也就是x、y軸，那如果想做出元素重疊時，要調整上下層就要調整z-index。</p>
-<p>z-index的數值可以自己自訂(你想寫10000也沒人阻止你，但不見一這樣做，程式碼很難維護)，但都遵循一個原則，數字越大越上面。</p>
-<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><p>z-index的值分成兩種，一個是數字另一個是auto，如果設成auto就會自動安排z-index，莫認為越下面z-index越大，元素也越上層；如果不寫z-index預設值為0。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box2</span>&#123;</span><br><span class="line">	<span class="attribute">z-index</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="z-index" src="https://codepen.io/intHuang/embed/WNzGwPE?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/WNzGwPE">
-  z-index</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>可以看到除了auto，z-index的數字是越大越上層，auto的部分則是按照順序安排權重。</p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>當然，你會看到我都有用到position，因為有使用到position才會出現元素重疊的情形，這時候z-index就是個好用的東西，好好運用就可以排出好看的排版。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/12/css-z-index/" data-id="cl5i5j94s0000akvp7t9c74q5" data-title="CSS: z-index" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -782,6 +780,10 @@
       <ul>
         
           <li>
+            <a href="/2022/07/25/css-background-origin/">CSS: background-origin</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/24/css-background-size/">CSS: background-size</a>
           </li>
         
@@ -795,10 +797,6 @@
         
           <li>
             <a href="/2022/07/21/css-background-image/">CSS: background-image</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/20/css-background/">CSS: background</a>
           </li>
         
       </ul>
