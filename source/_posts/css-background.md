@@ -77,7 +77,7 @@ background-origin: border-box;
 
 可以設定背景圖的起始位置，是從邊界開始算，還是從邊界裡面開始算都可以用這個設定
 
-* [文章傳送門](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)(自己寫的待補)
+* [文章傳送門](https://huanginch.github.io/2022/07/25/css-background-origin/)
 
 ### background-clip
 
