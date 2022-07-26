@@ -10,11 +10,10 @@ background-origin可以設定背景圖片的起點位置，分為以下三種:
 
 ## border-box
 
-border-box會讓圖片從border正下方開始延伸，意即border會覆蓋在圖片上，這個也是background-origin的預設值。
-
+border-box會讓圖片從border正下方開始延伸，意即border會覆蓋在圖片上。
 ## padding-box
 
-padding-box會讓圖片從padding開始延伸，所以border底下會留白。
+padding-box會讓圖片從padding開始延伸，所以border底下會留白，這個也是background-origin的預設值。
 
 ## content-box
 
