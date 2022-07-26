@@ -86,8 +86,7 @@ background-clip: border-box;
 ```
 可以設定背景會延伸到哪裡，延伸到邊界停止、到邊界底下、或是留白，與origin有點相似
 
-* [文章傳送門](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip)(自己寫的待補)
-
+* [文章傳送門](https://huanginch.github.io/2022/07/26/css-background-clip/)
 ### background-attachment
 
 ```css
