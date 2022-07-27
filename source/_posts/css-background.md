@@ -96,4 +96,4 @@ background-attachment: scroll;
 
 設定背景與viewport(滾動畫面時所能看見的範圍)的關係
 
-* [文章傳送門](https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment)(自己寫的待補)
+* [文章傳送門](https://huanginch.github.io/2022/07/27/css-background-attachment/)
