@@ -75,6 +75,74 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-absolute-and-relative" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/14/css-absolute-and-relative/" class="article-date">
+  <time class="dt-published" datetime="2022-07-14T03:40:00.000Z" itemprop="datePublished">2022-07-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/css-position/">css position</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/14/css-absolute-and-relative/">CSS: Position: Absolute and Relative</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>這兩個屬性通常會一起出現，所以這邊把他們放在一起介紹，讓我們先從absolute開始看起。</p>
+<h2 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>absolute屬性會讓元素從document flow上移除，講的白話一點，就是網頁上的其他元素會無視這個元素，所以就會出現元素重疊，而這個absolute元素的位置可以透過top、bottom、left、right屬性來設定，這四個屬性的相關介紹可以看<a href="https://huanginch.github.io/2022/07/09/css-position-fixed/">這裡</a></p>
+<p>可是他的位置是從哪裡算起的呢？答案是上一層並且有設定position的元素(除了position: static)，如果沒有那就會默認為起始的容器(通常都是body)</p>
+<p>以下面這個例子來看(建議以0.25x觀看)，黃色方塊會跑到最底下，因為我將bottom設置為0，同時他上面的父元素並沒有設置position，所以默認會用body來做計算。</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="position: absolute " src="https://codepen.io/intHuang/embed/rNdWVRv?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/rNdWVRv">
+  position: absolute </a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<h2 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h2><p>這時候如果想讓黃色方塊留在藍色方塊中，又不希望藍色方塊的位置跑掉，就可以使用position: relative</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.child-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>設置了relative屬性的元素也可以透過top、bottom、right、left四個屬性來設定位置，基本上就與static相同，所以relative可以說是為了absolute而存在的。</p>
+<p>從下面的例子就可以看到，我在藍色方塊設置了position: relative; 所以黃色方塊就被固定在藍色方塊的底部。</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="position: absolute " src="https://codepen.io/intHuang/embed/BarQNez?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/BarQNez">
+  position: absolute </a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>absolute與relative算是很常用在元素內的排版，特別是有圖文的樣式，之前寫作業的時候也有用到，不過一開始我沒想到可以用absolute和relative，還在那邊用background image XD ，下次我就會記得了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/14/css-absolute-and-relative/" data-id="cl5kjfe9u00009svp9zdc1ax5" data-title="CSS: Position: Absolute and Relative" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-position-sticky" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/13/css-position-sticky/" class="article-date">
@@ -654,57 +722,6 @@
 
 
   
-    <article id="post-css-margin-collapse" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/02/css-margin-collapse/" class="article-date">
-  <time class="dt-published" datetime="2022-07-02T03:55:00.000Z" itemprop="datePublished">2022-07-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/02/css-margin-collapse/">CSS: 邊界重疊(Margin Collapse)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>在<a href="https://huanginch.github.io/2022/06/30/css-box-model/">盒模型篇</a>有介紹了margin，這篇會來介紹在使用margin時會遇到的問題:邊界重疊</p>
-<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p>所謂邊界重疊，是發生在相連的元素之間如果都有寫上margin推擠，可能會導致重疊，舉個例子:</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/intHuang/embed/abYOmqg?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/abYOmqg">
-  Untitled</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>可以看到我用了top: 25px, bottom: 15px，照理來說兩個box之間的距離應該要是25+15 &#x3D; 40px，但這裡看起來的距離只有25px，這就是所謂的邊界重疊(margin collapse)，上下邊界會重疊，並由較大的覆蓋較小的，這並不是什麼bug，當初設計時就是這樣設計的。</p>
-<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>如果你不希望發生邊界重疊，試著使用padding達到相同視覺效果，當然還有其他方法，可以參考<a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10219975">這篇</a>，不過最推薦的方法還是使用padding。</p>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>會發生margin collapse的似乎不只是兄弟元素，父子之間也會，但我目前還沒有研究過，之後等我了解了會再來編輯文章。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/02/css-margin-collapse/" data-id="cl53cpitb0000d8vp7n1o1f2q" data-title="CSS: 邊界重疊(Margin Collapse)" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -762,6 +779,10 @@
       <ul>
         
           <li>
+            <a href="/2022/07/27/css-background-attachment/">CSS: background-attachment</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/26/css-background-clip/">CSS: background-clip</a>
           </li>
         
@@ -775,10 +796,6 @@
         
           <li>
             <a href="/2022/07/23/background-position/">CSS: background-position</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/22/css-background-repeat/">CSS: background-repeat</a>
           </li>
         
       </ul>

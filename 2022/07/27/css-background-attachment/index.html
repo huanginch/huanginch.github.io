@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>彙整: 2022/6 | Int&#39;s blog</title>
+  <title>CSS: background-attachment | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Int&#39;s blog">
-<meta property="og:url" content="https://huanginch.github.io/archives/2022/06/page/3/index.html">
+  <meta name="description" content="background-attachment可以設定背景圖片、文字與viewport的關係，有三個屬性。 fixed123.box&amp;#123;	background-attachment: fixed;&amp;#125;  背景會被固定在viewport上，意及不管怎麼滾動網頁，背景圖都不會改變。 local123.box&amp;#123;	background-attachment: local;&amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS: background-attachment">
+<meta property="og:url" content="https://huanginch.github.io/2022/07/27/css-background-attachment/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
+<meta property="og:description" content="background-attachment可以設定背景圖片、文字與viewport的關係，有三個屬性。 fixed123.box&amp;#123;	background-attachment: fixed;&amp;#125;  背景會被固定在viewport上，意及不管怎麼滾動網頁，背景圖都不會改變。 local123.box&amp;#123;	background-attachment: local;&amp;#125;">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-07-27T07:23:00.000Z">
+<meta property="article:modified_time" content="2022-07-27T08:02:58.113Z">
 <meta property="article:author" content="int">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -73,197 +78,78 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/09/Javascript-array-function/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-09T03:49:00.000Z" itemprop="datePublished">6月 9</time>
+        <section id="main"><article id="post-css-background-attachment" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/27/css-background-attachment/" class="article-date">
+  <time class="dt-published" datetime="2022-07-27T07:23:00.000Z" itemprop="datePublished">2022-07-27</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/css-background/">css background</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/09/Javascript-array-function/">Javascript: 陣列函式(上)</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      CSS: background-attachment
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/08/css-block-and-inline/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-08T03:47:00.000Z" itemprop="datePublished">6月 8</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/08/css-block-and-inline/">CSS: 區塊元素與行內元素</a>
-    </h1>
-  
+        <p>background-attachment可以設定背景圖片、文字與viewport的關係，有三個屬性。</p>
+<h2 id="fixed"><a href="#fixed" class="headerlink" title="fixed"></a>fixed</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">background-attachment</span>: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/07/Javascipt-array/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-07T05:14:00.000Z" itemprop="datePublished">6月 7</time>
-</a>
+<p>背景會被固定在viewport上，意及不管怎麼滾動網頁，背景圖都不會改變。</p>
+<h2 id="local"><a href="#local" class="headerlink" title="local"></a>local</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">background-attachment</span>: local;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>外層網頁在滾動的時候內層背景與內文會跟著滾動，滾動內層元素的時候背景與內文也會跟著移動(背景被固定在內文的位置)。</p>
+<h2 id="scroll"><a href="#scroll" class="headerlink" title="scroll"></a>scroll</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">background-attachment</span>: scroll</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>滾動外層網頁時的效果和local相同，但滾動內層的時候只有內文會滾動，背景圖會被固定在viewport上(背景被固定在元素上)。</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><ul>
+<li>建議使用0.5x觀看</li>
+</ul>
+<iframe height="300" style="width: 100%;" scrolling="no" title="background-attachment" src="https://codepen.io/intHuang/embed/OJvxxGO?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/OJvxxGO">
+  background-attachment</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>從上到下分別是fixed、local、scroll，最後一個則是因為有兩張背景圖，所以分別設定了scroll和local兩個屬性，這理想示範的是可以同時為不同背景設定不同屬性。</p>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/07/Javascipt-array/">Javascipt: 陣列</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/06/javascript-if-statement/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-06T03:11:00.000Z" itemprop="datePublished">6月 6</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/27/css-background-attachment/" data-id="cl63bkxj50000v0vp4xov3fht" data-title="CSS: background-attachment" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/06/javascript-if-statement/">Javascript: if判斷式</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/05/js-assignment-operator/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-05T04:44:00.000Z" itemprop="datePublished">6月 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/05/js-assignment-operator/">Javascript: 賦值運算子</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/04/Javascript-logic-operator/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-04T12:22:00.000Z" itemprop="datePublished">6月 4</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/04/Javascript-logic-operator/">Javascript: 邏輯運算子</a>
-    </h1>
-  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/07/26/css-background-clip/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS: background-clip</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/03/javascript-datatype/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-03T06:49:00.000Z" itemprop="datePublished">6月 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/03/javascript-datatype/">javascript: 常見資料型態</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/02/javascript-variable/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-02T03:02:00.000Z" itemprop="datePublished">6月 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/02/javascript-variable/">javascript: 變數宣告</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/01/Renpy-screen/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-06-01T03:29:00.000Z" itemprop="datePublished">6月 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/01/Renpy-screen/">Ren&#39;Py: screen types</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/archives/2022/06/page/2/">&laquo; 上一頁</a><a class="page-number" href="/archives/2022/06/">1</a><a class="page-number" href="/archives/2022/06/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
 
 </section>
         
