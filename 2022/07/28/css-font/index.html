@@ -13,11 +13,15 @@
 <meta property="og:site_name" content="Int&#39;s blog">
 <meta property="og:description" content="字型在網頁設計中是必不可少的一部份，這篇會來簡單介紹字型的屬性以及一些注意事項。 預設字體每種作業系統與瀏覽器都有自己的預設字體，這裡主要介紹Windows和Mac，因為這兩種作業系統在PC上的市佔率最高。  Windows: 常用中文字體有三種:新細明體(預設)、微軟正黑體、標楷體。英文有一種: Segoe UI。要特別注意雖然windows預設是新細明體，但在網頁設計上都會改成使用較好閱讀的微">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-89.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-90.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-91.png">
 <meta property="article:published_time" content="2022-07-28T05:46:00.000Z">
-<meta property="article:modified_time" content="2022-07-28T06:18:35.196Z">
+<meta property="article:modified_time" content="2022-07-28T06:36:59.508Z">
 <meta property="article:author" content="int">
 <meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://huanginch.github.io/images/pasted-89.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -118,6 +122,13 @@
 <h2 id="字重"><a href="#字重" class="headerlink" title="字重"></a>字重</h2><p>font還有一個屬性叫做font-weight，可以調整字體的粗細，可以細分為100、200…到900這幾種，不過要注意有些字體只有支援少數幾種字重，比如說微軟正黑只有Light(100)、Normal(400)、Bold(900)三種，所以大家才會選擇使用Google Fonts的Noto Sans TC，因為他支援100~900的字重。</p>
 <p>在觀看設計稿時也要特別注意設計師設計的字重，常見的有Medium、Regular(Normal)、Bold，Normal是預設，Medium與Bold轉換成數字分別對應到500與900。</p>
 <p>更多關於字重的介紹可以看<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">這篇</a></p>
+<h2 id="從Chrome開發人員工具觀看是否套用成功"><a href="#從Chrome開發人員工具觀看是否套用成功" class="headerlink" title="從Chrome開發人員工具觀看是否套用成功"></a>從Chrome開發人員工具觀看是否套用成功</h2><p>Chrome提供了非常強大的網頁開發工具，我們在自己撰寫網頁時可以用這個工具來看各種檔案的屬性與載入成功與否等等，這裡會介紹如何觀看字型是否套用成功。</p>
+<p>以這個例子來說，這是我自己撰寫的網站，我在英文字體的部分套用了Roboto字體，打開工具後我選取了Functional這個英文。</p>
+<p><img src="/../images/pasted-89.png" alt="chrome ex"></p>
+<p>選取後點擊右下角的Computed，之後拉到最下面有一個Rendered Fonts。</p>
+<p><img src="/../images/pasted-90.png" alt="Computed"></p>
+<p>上面會看到我現在使用的字體與字重(這裡是Roboto Medium)</p>
+<p><img src="/../images/pasted-91.png" alt="Rendered Fonts"></p>
 <h2 id="css懶人包"><a href="#css懶人包" class="headerlink" title="css懶人包"></a>css懶人包</h2><p>這個懶人包包含了所有常見預設字體，依序為Mac-&gt;Windows-&gt;Android-&gt;IOS-&gt;通用字體，其中Arial與sans-serif為最常見也最多瀏覽器支援的字體，如果不想特別設計字體可以使用這個懶人包。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: -apple-system, BlinkMacSystemFont, <span class="string">&quot;Segoe UI&quot;</span>, <span class="string">&quot;Microsoft JhengHei&quot;</span>, Roboto, <span class="string">&quot;Helvetica Neue&quot;</span>, Arial, sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
