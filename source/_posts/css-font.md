@@ -30,6 +30,7 @@ date: 2022-07-28 13:46:00
 
 想要在css中載入內建字體可以使用font-family，瀏覽器會從第一種字形開始套用，找不到就會套用第二種，以此類推，一般來說直接把字形名稱寫上去就好了，但如果遇到字體名稱有空格或無法載入就要加上單引號或雙引號。
 
+
 ## 載入外部字體
 
 除了作業系統內建的字體我們也可以載入外部字體，最常用的就是Google Fonts，因為這樣就沒有跨作業系統而缺字體的問題。
@@ -43,6 +44,22 @@ font還有一個屬性叫做font-weight，可以調整字體的粗細，可以�
 在觀看設計稿時也要特別注意設計師設計的字重，常見的有Medium、Regular(Normal)、Bold，Normal是預設，Medium與Bold轉換成數字分別對應到500與900。
 
 更多關於字重的介紹可以看[這篇](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
+
+## 從Chrome開發人員工具觀看是否套用成功
+
+Chrome提供了非常強大的網頁開發工具，我們在自己撰寫網頁時可以用這個工具來看各種檔案的屬性與載入成功與否等等，這裡會介紹如何觀看字型是否套用成功。
+
+以這個例子來說，這是我自己撰寫的網站，我在英文字體的部分套用了Roboto字體，打開工具後我選取了Functional這個英文。
+
+![chrome ex](../images/pasted-89.png)
+
+選取後點擊右下角的Computed，之後拉到最下面有一個Rendered Fonts。
+
+![Computed](../images/pasted-90.png)
+
+上面會看到我現在使用的字體與字重(這裡是Roboto Medium)
+
+![Rendered Fonts](../images/pasted-91.png)
 
 ## css懶人包
 
