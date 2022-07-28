@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Javascript: 選取DOM元素 | Int&#39;s blog</title>
+  <title>CSS: font | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="在javascipt中，如果想操作Html的元素要先使用document.querySelector()等語法來選取，這篇會來介紹有哪些語法以及如何選取。 語法 document.querySelector(): 最常見的語法，這個語法可以選取html中第一個符合條件的元素。 document.querySelectorAll(): 與querySelector()用法相同，但會選取所有符合條件的">
+  <meta name="description" content="字型在網頁設計中是必不可少的一部份，這篇會來簡單介紹字型的屬性以及一些注意事項。 預設字體每種作業系統與瀏覽器都有自己的預設字體，這裡主要介紹Windows和Mac，因為這兩種作業系統在PC上的市佔率最高。  Windows: 常用中文字體有三種:新細明體(預設)、微軟正黑體、標楷體。英文有一種: Segoe UI。要特別注意雖然windows預設是新細明體，但在網頁設計上都會改成使用較好閱讀的微">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript: 選取DOM元素">
-<meta property="og:url" content="https://huanginch.github.io/2022/05/31/js-dom-selector/index.html">
+<meta property="og:title" content="CSS: font">
+<meta property="og:url" content="https://huanginch.github.io/2022/07/28/css-font/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="在javascipt中，如果想操作Html的元素要先使用document.querySelector()等語法來選取，這篇會來介紹有哪些語法以及如何選取。 語法 document.querySelector(): 最常見的語法，這個語法可以選取html中第一個符合條件的元素。 document.querySelectorAll(): 與querySelector()用法相同，但會選取所有符合條件的">
+<meta property="og:description" content="字型在網頁設計中是必不可少的一部份，這篇會來簡單介紹字型的屬性以及一些注意事項。 預設字體每種作業系統與瀏覽器都有自己的預設字體，這裡主要介紹Windows和Mac，因為這兩種作業系統在PC上的市佔率最高。  Windows: 常用中文字體有三種:新細明體(預設)、微軟正黑體、標楷體。英文有一種: Segoe UI。要特別注意雖然windows預設是新細明體，但在網頁設計上都會改成使用較好閱讀的微">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-05-31T03:16:00.000Z">
-<meta property="article:modified_time" content="2022-06-15T03:44:08.499Z">
+<meta property="article:published_time" content="2022-07-28T05:46:00.000Z">
+<meta property="article:modified_time" content="2022-07-28T06:18:35.196Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -78,10 +78,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-js-dom-selector" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-css-font" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/05/31/js-dom-selector/" class="article-date">
-  <time class="dt-published" datetime="2022-05-31T03:16:00.000Z" itemprop="datePublished">2022-05-31</time>
+    <a href="/2022/07/28/css-font/" class="article-date">
+  <time class="dt-published" datetime="2022-07-28T05:46:00.000Z" itemprop="datePublished">2022-07-28</time>
 </a>
     
   </div>
@@ -92,7 +92,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Javascript: 選取DOM元素
+      CSS: font
     </h1>
   
 
@@ -100,35 +100,34 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>在javascipt中，如果想操作Html的元素要先使用document.querySelector()等語法來選取，這篇會來介紹有哪些語法以及如何選取。</p>
-<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><ul>
-<li>document.querySelector(): 最常見的語法，這個語法可以選取html中<strong>第一個符合條件的元素</strong>。</li>
-<li>document.querySelectorAll(): 與querySelector()用法相同，但會選取<strong>所有符合條件的元素</strong>，並回傳一個nodelist。</li>
-<li>document.getElementById(): 根據指定的id選取相對應元素。</li>
-<li>document.getElementByClassName(): 根據指定的class名稱選取相對應元素。</li>
-<li>document.getElementByTagName():根據指定的標籤名稱選取相對應元素。</li>
-</ul>
-<h2 id="選取元素"><a href="#選取元素" class="headerlink" title="選取元素"></a>選取元素</h2><p>在qeuerySelector()與querySelectorAll()中，根據選取不同類型元素，條件寫法也不同。<br></p>
+        <p>字型在網頁設計中是必不可少的一部份，這篇會來簡單介紹字型的屬性以及一些注意事項。</p>
+<h2 id="預設字體"><a href="#預設字體" class="headerlink" title="預設字體"></a>預設字體</h2><p>每種作業系統與瀏覽器都有自己的預設字體，這裡主要介紹Windows和Mac，因為這兩種作業系統在PC上的市佔率最高。</p>
 <ul>
-<li>選取html tag: 在單引號或雙引號中直接寫上標籤名稱即可<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;h1&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
-<li>選取class name: 在在單引號或雙引號中寫上classname，但前面必須加.<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.header&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
-<li>選取id: 在單引號或雙引號中寫上id，但前面必須加#<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#email&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>Windows: 常用中文字體有三種:新細明體(預設)、微軟正黑體、標楷體。英文有一種: Segoe UI。要特別注意雖然windows預設是新細明體，但在網頁設計上都會改成使用較好閱讀的微軟正黑，新細明體字體太細不適合閱讀，算是windows小雷的地方。</p>
+</li>
+<li><p>Mac: 中文: 蘋方(預設)</p>
+</li>
 </ul>
-<p>其實選取方式就跟css的選取方式相同，所以說querySelector的部分也可以寫成這樣:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.header h1&#x27;</span>); <span class="comment">// 選取header class中的h1</span></span><br></pre></td></tr></table></figure>
-<p>在剩下的getElementBy…中，只需要在單引號或雙引號中寫下相對應的名字即可</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;email&#x27;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementByClassName</span>(<span class="string">&#x27;header&#x27;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementByTagName</span>(<span class="string">&#x27;h1&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>其他系統預設英文字體可以參考<a target="_blank" rel="noopener" href="https://css-tricks.com/snippets/css/system-font-stack/">這篇</a></p>
+<p>在讀設計稿時常常會遇到一個問題: 設計師用Mac&#x2F;Windows內建字體設計，我的電腦沒有那個字體怎麼辦，這時候只要使用你的系統的預設字體即可，比如windows就用微軟正黑，Mac就用蘋方。</p>
+<h2 id="在css中載入字型"><a href="#在css中載入字型" class="headerlink" title="在css中載入字型"></a>在css中載入字型</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.body</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: 第一種字形, 第二種字形, <span class="string">&quot;第三 種字形&quot;</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>這篇算是簡單整理，幫助自己記憶，平常的話我都使用querySelector()或querySelectorAll()而已，其他幾個視情況使用，分享給大家。</p>
-
+<p>想要在css中載入內建字體可以使用font-family，瀏覽器會從第一種字形開始套用，找不到就會套用第二種，以此類推，一般來說直接把字形名稱寫上去就好了，但如果遇到字體名稱有空格或無法載入就要加上單引號或雙引號。</p>
+<h2 id="載入外部字體"><a href="#載入外部字體" class="headerlink" title="載入外部字體"></a>載入外部字體</h2><p>除了作業系統內建的字體我們也可以載入外部字體，最常用的就是Google Fonts，因為這樣就沒有跨作業系統而缺字體的問題。</p>
+<p>一般來說中文會使用Noto Sans TC，這是Google與Adobe共同開發的開源字體，英文則會使用Roboto。<br>載入詳細步驟可以參考<a target="_blank" rel="noopener" href="https://hackmd.io/@YmcMgo-NSKOqgTGAjl_5tg/HJpJk8ABU/https%3A%2F%2Fhackmd.io%2F2nenMilfR7WSJSDI4WzcWA%3Fview">這篇</a></p>
+<h2 id="字重"><a href="#字重" class="headerlink" title="字重"></a>字重</h2><p>font還有一個屬性叫做font-weight，可以調整字體的粗細，可以細分為100、200…到900這幾種，不過要注意有些字體只有支援少數幾種字重，比如說微軟正黑只有Light(100)、Normal(400)、Bold(900)三種，所以大家才會選擇使用Google Fonts的Noto Sans TC，因為他支援100~900的字重。</p>
+<p>在觀看設計稿時也要特別注意設計師設計的字重，常見的有Medium、Regular(Normal)、Bold，Normal是預設，Medium與Bold轉換成數字分別對應到500與900。</p>
+<p>更多關於字重的介紹可以看<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">這篇</a></p>
+<h2 id="css懶人包"><a href="#css懶人包" class="headerlink" title="css懶人包"></a>css懶人包</h2><p>這個懶人包包含了所有常見預設字體，依序為Mac-&gt;Windows-&gt;Android-&gt;IOS-&gt;通用字體，其中Arial與sans-serif為最常見也最多瀏覽器支援的字體，如果不想特別設計字體可以使用這個懶人包。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: -apple-system, BlinkMacSystemFont, <span class="string">&quot;Segoe UI&quot;</span>, <span class="string">&quot;Microsoft JhengHei&quot;</span>, Roboto, <span class="string">&quot;Helvetica Neue&quot;</span>, Arial, sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/31/js-dom-selector/" data-id="cl3tmuwic0000covp0r2v5ujf" data-title="Javascript: 選取DOM元素" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/07/28/css-font/" data-id="cl64naijc00001svpbm179egr" data-title="CSS: font" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
     </footer>
   </div>
@@ -136,19 +135,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/06/01/Renpy-screen/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Ren&#39;Py: screen types
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/05/30/C-function-return-function/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/07/27/css-background-attachment/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">C Error: 不允許回傳函式的函式</div>
+      <div class="article-nav-title">CSS: background-attachment</div>
     </a>
   
 </nav>
