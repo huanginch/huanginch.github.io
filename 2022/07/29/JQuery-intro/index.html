@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   
   
-  <title>CSS: background-image | Int&#39;s blog</title>
+  <title>JQuery介紹 | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="background-image可以為元素的背景設定圖像，通常是放上外部的圖片，不過除了圖片也能用其他的顏色函式(例如rgba、linear-gradient等)為背景上色，並且可以疊加。 linear-gradientlinear-gradient函式可以做出顏色漸層，搭配background-image就可以做出以下效果:    See the Pen    background-image:">
+  <meta name="description" content="此文章為觀看六角學院「jQuery基礎教學」影片之筆記。 什麼是JQueryJQuery是一個Javascript的函式庫，通常被用於網頁動畫呈現，優點是小、輕量、內容豐富且支援多個瀏覽器，所以很常被使用在網頁設計上。 載入方式要把JQuery加入到自己的作品內有幾個方法:  官網下載  CDN 1https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;jquery&#x2F;3.5.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS: background-image">
-<meta property="og:url" content="https://huanginch.github.io/2022/07/21/css-background-image/index.html">
+<meta property="og:title" content="JQuery介紹">
+<meta property="og:url" content="https://huanginch.github.io/2022/07/29/JQuery-intro/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="background-image可以為元素的背景設定圖像，通常是放上外部的圖片，不過除了圖片也能用其他的顏色函式(例如rgba、linear-gradient等)為背景上色，並且可以疊加。 linear-gradientlinear-gradient函式可以做出顏色漸層，搭配background-image就可以做出以下效果:    See the Pen    background-image:">
+<meta property="og:description" content="此文章為觀看六角學院「jQuery基礎教學」影片之筆記。 什麼是JQueryJQuery是一個Javascript的函式庫，通常被用於網頁動畫呈現，優點是小、輕量、內容豐富且支援多個瀏覽器，所以很常被使用在網頁設計上。 載入方式要把JQuery加入到自己的作品內有幾個方法:  官網下載  CDN 1https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;jquery&#x2F;3.5.">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-07-21T02:55:00.000Z">
-<meta property="article:modified_time" content="2022-07-21T04:05:23.198Z">
+<meta property="article:published_time" content="2022-07-29T07:19:00.000Z">
+<meta property="article:modified_time" content="2022-07-29T08:49:49.498Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="css">
+<meta property="article:tag" content="js">
+<meta property="article:tag" content="jquery">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -78,16 +79,12 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-css-background-image" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-JQuery-intro" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/07/21/css-background-image/" class="article-date">
-  <time class="dt-published" datetime="2022-07-21T02:55:00.000Z" itemprop="datePublished">2022-07-21</time>
+    <a href="/2022/07/29/JQuery-intro/" class="article-date">
+  <time class="dt-published" datetime="2022-07-29T07:19:00.000Z" itemprop="datePublished">2022-07-29</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/css-background/">css background</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -96,7 +93,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      CSS: background-image
+      JQuery介紹
     </h1>
   
 
@@ -104,34 +101,38 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>background-image可以為元素的背景設定圖像，通常是放上外部的圖片，不過除了圖片也能用其他的顏色函式(例如rgba、linear-gradient等)為背景上色，並且可以疊加。</p>
-<h2 id="linear-gradient"><a href="#linear-gradient" class="headerlink" title="linear-gradient"></a>linear-gradient</h2><p>linear-gradient函式可以做出顏色漸層，搭配background-image就可以做出以下效果:</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="background-image: linear-gradient" src="https://codepen.io/intHuang/embed/bGvWajY?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/bGvWajY">
-  background-image: linear-gradient</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-
-<p>設定幾個顏色就會有幾個顏色由上到下依序等分漸層，如果你設定了to left、to right或是to bottom(如box2)，就會從指定的方向漸層(範例中為向左漸層)，如果設定數字，就會在指定的位置才開始出現漸層，以box2為例，紅色我設定為75%，所以從右邊向左邊漸層，到75%的地方才會開始出現漸層，同時也能使用角度來設定方向(如box3)。</p>
-<h2 id="圖層疊加"><a href="#圖層疊加" class="headerlink" title="圖層疊加"></a>圖層疊加</h2><p>背景圖片也能疊加，可以圖片與圖片疊，也可以圖片與顏色疊加</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="background-image" src="https://codepen.io/intHuang/embed/jOzmZWX?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/jOzmZWX">
-  background-image</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>他會從最後一個開始，一層一層疊上去。</p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>通常使用了background-image都還會配合background-position和background-size來調整位置，可以看考上一篇<a href="https://huanginch.github.io/2022/07/20/css-background/">background</a></p>
+        <p>此文章為觀看六角學院「<a target="_blank" rel="noopener" href="https://youtu.be/GVWOIP-HX70">jQuery基礎教學</a>」影片之筆記。</p>
+<h2 id="什麼是JQuery"><a href="#什麼是JQuery" class="headerlink" title="什麼是JQuery"></a>什麼是JQuery</h2><p>JQuery是一個Javascript的函式庫，通常被用於網頁動畫呈現，優點是小、輕量、內容豐富且支援多個瀏覽器，所以很常被使用在網頁設計上。</p>
+<h2 id="載入方式"><a href="#載入方式" class="headerlink" title="載入方式"></a>載入方式</h2><p>要把JQuery加入到自己的作品內有幾個方法:</p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="https://jquery.com/">官網下載</a></p>
+</li>
+<li><p>CDN</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://cdnjs.com/libraries/jquery">其他版本CDN</a></li>
+</ul>
+</li>
+<li><p>npm或yarn</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install jquery</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn install jquery</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>當然還有其他下載方法，詳細可以參考<a target="_blank" rel="noopener" href="https://jquery.com/download/">官網</a></li>
+</ul>
+<h2 id="範例程式"><a href="#範例程式" class="headerlink" title="範例程式"></a>範例程式</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="variable language_">document</span>).<span class="title function_">ready</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">	$(<span class="string">&#x27;h1&#x27;</span>).<span class="title function_">hide</span>();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>在JQuery中使用了$()來代替listener，所以裡面會放置選擇器，再使用.functionname()來觸發目標函式以達到想要的效果。</p>
+<h2 id="常見函式"><a href="#常見函式" class="headerlink" title="常見函式"></a>常見函式</h2><p>動態載入、改變屬性等等都是JQuery常見的用法，所以有時候觀看原始碼時會發現有些部分在HTML中工程師並沒有寫任何東西，那他可能是透過JQuery進行動態載入。例如常見的<a target="_blank" rel="noopener" href="https://themeisle.com/">Nivo Slider</a>都是使用JQuery作呈現。</p>
+<h2 id="APIS"><a href="#APIS" class="headerlink" title="APIS"></a>APIS</h2><p>關於JQuery的所有函式都可以在官網文件找到:<a target="_blank" rel="noopener" href="https://api.jquery.com/">傳送門</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/21/css-background-image/" data-id="cl5ufyb130000bwvpb7kvcsyx" data-title="CSS: background-image" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/07/29/JQuery-intro/" data-id="cl6684ven0000kwvp565v6qu8" data-title="JQuery介紹" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/" rel="tag">js</a></li></ul>
 
     </footer>
   </div>
@@ -139,19 +140,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/07/22/css-background-repeat/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          CSS: background-repeat
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/07/20/css-background/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/07/28/css-font/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">CSS: background</div>
+      <div class="article-nav-title">CSS: font</div>
     </a>
   
 </nav>
