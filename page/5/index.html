@@ -75,6 +75,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-js-conditional-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/16/js-conditional-operator/" class="article-date">
+  <time class="dt-published" datetime="2022-06-16T05:58:00.000Z" itemprop="datePublished">2022-06-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/js-operator/">js-operator</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/16/js-conditional-operator/">Javascript: 條件運算子(三元運算子)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>上一篇有提到一元運算子以及二元運算子，這篇會來介紹三元運算子。<br>三元運算子，又稱作條件運算子，顧名思義就是針對三個運算元做運算。</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><p>condition ? 值a : 值b;</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">let</span> msg = a &gt;= <span class="number">0</span> ? <span class="string">&quot;a is positive&quot;</span> : <span class="string">&quot;a is negtive&quot;</span> ;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(msg); <span class="comment">//執行結果: &quot;a is positive&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>簡單來說問號前面是判斷式，根據你給的式子，成立的話會回傳值a，不成立就值b，所以才會又稱為條件運算子。</p>
+<p>一開始看到這個的時候會覺得是什麼XD 可能是因為這個東西其實不常使用，多數時候我們還是會使用if-else，主要是閱讀上比較直觀，但偶爾會不想寫那麼長的程式碼就會用這個代替。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/16/js-conditional-operator/" data-id="cl4gmggx50000lwvpd464896i" data-title="Javascript: 條件運算子(三元運算子)" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-js-arthimetic-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/15/js-arthimetic-operator/" class="article-date">
@@ -711,54 +761,6 @@
 
 
   
-    <article id="post-js-assignment-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/05/js-assignment-operator/" class="article-date">
-  <time class="dt-published" datetime="2022-06-05T04:44:00.000Z" itemprop="datePublished">2022-06-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/js-operator/">js-operator</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/05/js-assignment-operator/">Javascript: 賦值運算子</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>在javascript中，變數宣告後要給予變數值才能做進一步的運算或處理，這篇會來簡單介紹能夠給予變數值的賦值運算子。</p>
-<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-<p>沒錯，賦值運算子就是那個等於，上面這段程式碼的意思是把數字1存到a變數裡面，看起來與數學中的等於很相似，但是! 這也是新手常常會搞錯的地方，javascript中的等於要寫成「&#x3D;&#x3D;」或是「&#x3D;&#x3D;&#x3D;」。<br><br>很重要，<strong>js一個等號不是數學中的相等，一個等號是把值(數字、字串、陣列等)賦予給變數</strong>。<br></p>
-<p>即使是老手偶爾也會打錯，所以要記得比較時不要用錯用成一個等號。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/05/js-assignment-operator/" data-id="cl40tusok00006wvp4os5gm6q" data-title="Javascript: 賦值運算子" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -784,7 +786,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li></ul>
     </div>
   </div>
 
@@ -794,7 +796,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Ren-Py/" style="font-size: 14px;">Ren'Py</a> <a href="/tags/c/" style="font-size: 12px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 12px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/javascript/" style="font-size: 18px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/json/" style="font-size: 12px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a>
+      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 14px;">Ren'Py</a> <a href="/tags/c/" style="font-size: 12px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 12px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/javascript/" style="font-size: 18px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/json/" style="font-size: 12px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a>
     </div>
   </div>
 
@@ -816,6 +818,10 @@
       <ul>
         
           <li>
+            <a href="/2022/07/31/RWD-break-point/">RWD 與常用斷點</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/30/css-text-align/">CSS: text-align</a>
           </li>
         
@@ -829,10 +835,6 @@
         
           <li>
             <a href="/2022/07/27/css-background-attachment/">CSS: background-attachment</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/26/css-background-clip/">CSS: background-clip</a>
           </li>
         
       </ul>
