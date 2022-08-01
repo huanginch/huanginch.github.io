@@ -24,8 +24,7 @@ row與column有個特別的規定，row裡面一定要接column，就像ul或ol�
 ```html
 <div class="container">
 	<div class="row">
-  		<div class="col-6"></div>
-      	<div class="col-6"></div>
+  		<div class="col-6"></div><div class="col-6"></div>
   	</div>
 </div>
 ```
@@ -36,8 +35,7 @@ row與column有個特別的規定，row裡面一定要接column，就像ul或ol�
 <div class="container">
   	<h1>Title</h1>
 	<div class="row">
-  		<div class="col-6"></div>
-      	<div class="col-6"></div>
+  		<div class="col-6"></div><div class="col-6"></div>
   	</div>
 </div>
 ```
@@ -49,8 +47,7 @@ container底下可以接其他標籤
 <div class="container">
 	<div class="row">
       	<h3>sub title</h3>
-  		<div class="col-6"></div>
-      	<div class="col-6"></div>
+  	<div class="col-6"></div><div class="col-6"></div>
   	</div>
 </div>
 ```
