@@ -4,24 +4,15 @@
   <meta charset="utf-8">
   
   
-  <title>C Error: 不允許回傳函式的函式 | Int&#39;s blog</title>
+  <title>彙整: 2022/8 | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="昨天在寫C語言期末專案的時候遇到了這個錯誤，簡單來說因為C語言沒辦法像javascript或其他語言那樣在函式裡回傳函式(無法寫巢狀函式)才會產生這個錯誤，但問題是我宣告的函式根本沒有回傳函式阿! 那怎麼會這樣? 先來看看我宣告了什麼函式。  這裡我是想寫一個自己的qsort，並用自訂的struct與linked-list實作，你們有發現什麼問題嗎? 沒錯就是這個函式的名稱，原來sort是c的保留">
-<meta property="og:type" content="article">
-<meta property="og:title" content="C Error: 不允許回傳函式的函式">
-<meta property="og:url" content="https://huanginch.github.io/2022/05/30/C-function-return-function/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Int&#39;s blog">
+<meta property="og:url" content="https://huanginch.github.io/archives/2022/08/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="昨天在寫C語言期末專案的時候遇到了這個錯誤，簡單來說因為C語言沒辦法像javascript或其他語言那樣在函式裡回傳函式(無法寫巢狀函式)才會產生這個錯誤，但問題是我宣告的函式根本沒有回傳函式阿! 那怎麼會這樣? 先來看看我宣告了什麼函式。  這裡我是想寫一個自己的qsort，並用自訂的struct與linked-list實作，你們有發現什麼問題嗎? 沒錯就是這個函式的名稱，原來sort是c的保留">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-63.png">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-64.png">
-<meta property="article:published_time" content="2022-05-30T03:16:00.000Z">
-<meta property="article:modified_time" content="2022-05-30T03:30:15.413Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="c">
-<meta property="article:tag" content="c error">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huanginch.github.io/images/pasted-63.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -82,68 +73,39 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-C-function-return-function" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/30/C-function-return-function/" class="article-date">
-  <time class="dt-published" datetime="2022-05-30T03:16:00.000Z" itemprop="datePublished">2022-05-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="p-name article-title" itemprop="headline name">
-      C Error: 不允許回傳函式的函式
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2022/08/01/bs5-grid/" class="archive-article-date">
+  <time class="dt-published" datetime="2022-08-01T06:31:00.000Z" itemprop="datePublished">8月 1</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/08/01/bs5-grid/">Bootstrap5: 格線系統</a>
     </h1>
   
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>昨天在寫C語言期末專案的時候遇到了這個錯誤，簡單來說因為C語言沒辦法像javascript或其他語言那樣在函式裡回傳函式(無法寫巢狀函式)才會產生這個錯誤，但問題是我宣告的函式根本沒有回傳函式阿! 那怎麼會這樣? 先來看看我宣告了什麼函式。</p>
-<p><img src="/../images/pasted-63.png"></p>
-<p>這裡我是想寫一個自己的qsort，並用自訂的struct與linked-list實作，你們有發現什麼問題嗎? 沒錯就是這個函式的名稱，原來sort是c的保留字阿，我完全忘記c已經有sort()這個函式，應該說我以前沒有用到就一直以為只有qsort()，所以我只需要把sort名字改掉就行了，這邊我改成_sort()就沒報錯了。</p>
-<p><img src="/../images/pasted-64.png"></p>
-<p>又學到了一課，不過這次好像是我自己蠢，下次記得sort()不能拿來當自訂函式名稱。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/30/C-function-return-function/" data-id="cl3s6arzw0000v0vp2n5y6rof" data-title="C Error: 不允許回傳函式的函式" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2022/05/31/js-dom-selector/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Javascript: 選取DOM元素
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2022/05/29/Renpy-customize-quickmenu/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Ren&#39;Py: customize quick menu</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
 
 </section>
