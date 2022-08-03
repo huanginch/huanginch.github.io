@@ -75,6 +75,65 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-position-fixed" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/09/css-position-fixed/" class="article-date">
+  <time class="dt-published" datetime="2022-07-09T03:09:00.000Z" itemprop="datePublished">2022-07-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/css-position/">css position</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/09/css-position-fixed/">CSS: Position: fixed</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>很常會看到有些網頁的NavBar會跟著畫面滾動並停留在最上方，並不會因為畫面向下拉而消失，又或者是有些在最左下角的回頂端(如圖)</p>
+<p><img src="/../images/pasted-88.png" alt="蝦皮回頂端按鈕"></p>
+<p>想要實現這種功能就必須使用到 position: fixed</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="舉例"><a href="#舉例" class="headerlink" title="舉例"></a>舉例</h3><iframe height="300" style="width: 100%;" scrolling="no" title="position: fixed" src="https://codepen.io/intHuang/embed/MWVyqmb?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/MWVyqmb">
+  position: fixed</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>在上面的codepen中可以看到我在navbar中下了position:fixed;，所以當你滾動畫面時粉紅色navbar會一直固定在畫面上。</p>
+<h3 id="top-bottom-left-和-right"><a href="#top-bottom-left-和-right" class="headerlink" title="top bottom left 和 right"></a>top bottom left 和 right</h3><p>但要注意，只寫position:fixed並不能將navbar固定在畫面最上方，你可以自己試試看，會發現他和上面有一些距離，所以這時候就要使用top。</p>
+<p>透過top、bottom、left和right可以設定fixed元素的位置，以上面的codepen例子來說，top: 0;指的就是距離畫面頂端為0，所以會固定在畫面最上方，同理將其他值設成0就會與左邊右邊或底部沒有距離。</p>
+<p>當然也可以設置成別的數值，px就是距離那個屬性的位置有幾個px，設定成%的話，假設是top:50%; 就會固定在由頂端往下50%的地方。</p>
+<h2 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h2><p>fixed可以製作navbar等會固定在畫面上的元素，與fixed相似的還有sticky和relative，關於他們可以參考我的其他篇文章。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/09/css-position-fixed/" data-id="cl5db5viz0000u0vpclrd002z" data-title="CSS: Position: fixed" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-position" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/08/css-position/" class="article-date">
@@ -656,112 +715,11 @@
 
 
   
-    <article id="post-css-combinator-selector" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/29/css-combinator-selector/" class="article-date">
-  <time class="dt-published" datetime="2022-06-29T03:04:00.000Z" itemprop="datePublished">2022-06-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/css-selector/">css selector</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/29/css-combinator-selector/">CSS: 關係選擇器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Combinator Selectors，中文稱作關係選擇器，可以用來選擇不同的html標籤，之前也有寫過一篇後代選擇器就是關係選擇器的其中一種，但因為內容會重複所以我決定把之前那篇刪掉，只留下這篇。</p>
-<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p>關係選擇器一共有四種，分別為後代選擇器(Descendant Selector)、子代關係選擇器(Child Selector)、鄰接兄弟選擇器(Adjacent Sibling Selector)、通用兄弟選擇器(General Sibling Selector)，讓我們來一一介紹。</p>
-<h3 id="後代選擇器-Descendant-Selector"><a href="#後代選擇器-Descendant-Selector" class="headerlink" title="後代選擇器(Descendant Selector)"></a>後代選擇器(Descendant Selector)</h3><h4 id="以空格隔開"><a href="#以空格隔開" class="headerlink" title="以空格隔開"></a>以空格隔開</h4><ul>
-<li><p>語法</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">p</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>例子</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="css descendant selector" src="https://codepen.io/intHuang/embed/jOzOxxX?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/jOzOxxX">
-  css descendant selector</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>顧名思義，就是可以選擇標籤的後代(被包在某標籤內的都是該標籤後代)來制定css規則，像我範例中想對div中的h2修改字型，我就使用了後代選擇器，可以看見被修改到的只有div中的h2，因為只有div中的h2才是div的後代。</p>
-</li>
-</ul>
-<h3 id="子代關係選擇器-Child-Selector"><a href="#子代關係選擇器-Child-Selector" class="headerlink" title="子代關係選擇器(Child Selector)"></a>子代關係選擇器(Child Selector)</h3><h4 id="以-gt-隔開"><a href="#以-gt-隔開" class="headerlink" title="以 &gt; 隔開"></a>以 &gt; 隔開</h4><ul>
-<li><p>語法</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &gt; <span class="selector-tag">p</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>例子</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="css descendant selector" src="https://codepen.io/intHuang/embed/MWVWGqM?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/MWVWGqM">
-  css descendant selector</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>和後代選擇器很相似，不同的是，這裡只會選擇子代。什麼是子代? 剛剛前面提到後代是包在該標籤內的所有標籤，子代則是只有第一層(只縮一次排)，從上面的範例可以看到我只選擇到了Sub Title的h2，div外的以及li內的都沒有選到，因為只有Sub Title是div的子代，li的稱為孫代(想成爸爸孩子孫子的感覺)</p>
-</li>
-</ul>
-<h3 id="鄰接兄弟選擇器-Adjacent-Sibling-Selector"><a href="#鄰接兄弟選擇器-Adjacent-Sibling-Selector" class="headerlink" title="鄰接兄弟選擇器(Adjacent Sibling Selector)"></a>鄰接兄弟選擇器(Adjacent Sibling Selector)</h3><h4 id="以-隔開"><a href="#以-隔開" class="headerlink" title="以 + 隔開"></a>以 + 隔開</h4><ul>
-<li><p>語法</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span> + <span class="selector-tag">h2</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>例子</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="css child selector" src="https://codepen.io/intHuang/embed/YzazLdx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/YzazLdx">
-  css child selector</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>  剛剛前面解釋了後代，那這邊使用了兄弟應該也很明顯，指的是同一層(縮排相同)的元素，從範例中可以看到選擇了h2的兄弟p，li中的p並沒有被選取，因為他並不是任何一個h2的兄弟。值得注意的是，這邊只會往下選取不會往上，所以第一個p也沒有被選取。<br>那你可能想問，那個鄰接是什麼意思？很簡單，意思是只會找鄰居，所以你也可以發現同樣是兄弟的第四個p並沒有被選取到，因為他不是任何h2的鄰居。</p>
-</li>
-</ul>
-<h3 id="通用兄弟選擇器-General-Sibling-Selector"><a href="#通用兄弟選擇器-General-Sibling-Selector" class="headerlink" title="通用兄弟選擇器(General Sibling Selector)"></a>通用兄弟選擇器(General Sibling Selector)</h3><h4 id="以-隔開-1"><a href="#以-隔開-1" class="headerlink" title="以 ~ 隔開"></a>以 ~ 隔開</h4><ul>
-<li><p>語法:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span> ~ <span class="selector-tag">h2</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>例子</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="css adjacent sibling selector " src="https://codepen.io/intHuang/embed/VwXwxoM?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/VwXwxoM">
-  css adjacent sibling selector </a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>和鄰接兄弟選擇器很相似，同樣是選擇兄弟，最大的不同是不論是否為鄰居都會選擇到，所以剛剛沒被選擇到的第四個p以及h3底下的p這次都被選擇到了。</p>
-</li>
-</ul>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>我自己最常用到的還是後代選擇器，其他的我比較少用，會找機會來練習看看。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/29/css-combinator-selector/" data-id="cl4z2a9dh00029wvp71av5lwj" data-title="CSS: 關係選擇器" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/">下一頁 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/">下一頁 &raquo;</a>
   </nav>
 
 </section>
@@ -782,7 +740,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jquery/" rel="tag">Jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li></ul>
     </div>
   </div>
 
@@ -792,7 +750,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 14px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 10px;">bs5</a> <a href="/tags/c/" style="font-size: 12px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 12px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 12px;">html</a> <a href="/tags/javascript/" style="font-size: 18px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/json/" style="font-size: 12px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a>
+      <a href="/tags/Jquery/" style="font-size: 10px;">Jquery</a> <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 14px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 10px;">bs5</a> <a href="/tags/c/" style="font-size: 12px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 12px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 12px;">html</a> <a href="/tags/javascript/" style="font-size: 18px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/json/" style="font-size: 12px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a>
     </div>
   </div>
 
@@ -814,6 +772,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/03/JQuery-toggleClass/">JQuery: toggleClass</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/02/html-anchor/">html: 錨點</a>
           </li>
         
@@ -827,10 +789,6 @@
         
           <li>
             <a href="/2022/07/30/css-text-align/">CSS: text-align</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/29/JQuery-intro/">JQuery介紹</a>
           </li>
         
       </ul>
