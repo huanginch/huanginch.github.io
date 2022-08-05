@@ -1,8 +1,7 @@
 title: 'JQuery: toggleClass'
 author: int
 tags:
-  - Jquery
-  - ''
+  - jquery
 categories: []
 date: 2022-08-03 17:18:00
 ---

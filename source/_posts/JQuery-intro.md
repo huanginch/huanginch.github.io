@@ -1,8 +1,8 @@
 title: JQuery介紹
 author: int
 tags:
-  - js
   - jquery
+  - javascript
 categories: []
 date: 2022-07-29 15:19:00
 ---
