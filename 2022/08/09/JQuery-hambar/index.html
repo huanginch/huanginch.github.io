@@ -4,20 +4,23 @@
   <meta charset="utf-8">
   
   
-  <title>CSS: Reset | Int&#39;s blog</title>
+  <title>使用JQuery製作漢堡選單 | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="在各大瀏覽器中，其實他們都有自己預設的css style，所以就算你不下css，你的HTML用瀏覽器打開時還是會有一些基本的css設定，但這些設定會因瀏覽器的不同而不同，為了讓你的網頁在不同瀏覽器都能有相同的css，就必須使用到css reset。 要使用css reset很簡單，最常見的做法就是去google搜尋css reset，就會有一堆網站跑出來給你複製code，比如說這個，你就可以將程式">
+  <meta name="description" content="漢堡選單是一個很常使用在手機版網頁的菜單呈現方式，因為按鈕是三條線，很像一個漢堡所以稱為漢堡選單。  原理漢堡選單的原理是利用jquery的toggleClass來為navbar新增或移除css class，所以分成兩個部分，一個是css，一個是jquery。 CSS123456789101112131415.navbar&amp;#123;	width: 100%;	max-height: 0%;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS: Reset">
-<meta property="og:url" content="https://huanginch.github.io/2022/06/12/css-reset/index.html">
+<meta property="og:title" content="使用JQuery製作漢堡選單">
+<meta property="og:url" content="https://huanginch.github.io/2022/08/09/JQuery-hambar/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="在各大瀏覽器中，其實他們都有自己預設的css style，所以就算你不下css，你的HTML用瀏覽器打開時還是會有一些基本的css設定，但這些設定會因瀏覽器的不同而不同，為了讓你的網頁在不同瀏覽器都能有相同的css，就必須使用到css reset。 要使用css reset很簡單，最常見的做法就是去google搜尋css reset，就會有一堆網站跑出來給你複製code，比如說這個，你就可以將程式">
+<meta property="og:description" content="漢堡選單是一個很常使用在手機版網頁的菜單呈現方式，因為按鈕是三條線，很像一個漢堡所以稱為漢堡選單。  原理漢堡選單的原理是利用jquery的toggleClass來為navbar新增或移除css class，所以分成兩個部分，一個是css，一個是jquery。 CSS123456789101112131415.navbar&amp;#123;	width: 100%;	max-height: 0%;">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-06-12T02:15:00.000Z">
-<meta property="article:modified_time" content="2022-06-12T02:20:51.505Z">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-99.png">
+<meta property="article:published_time" content="2022-08-09T12:19:00.000Z">
+<meta property="article:modified_time" content="2022-08-09T14:16:41.029Z">
 <meta property="article:author" content="int">
 <meta property="article:tag" content="css">
+<meta property="article:tag" content="jquery">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://huanginch.github.io/images/pasted-99.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -78,10 +81,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-css-reset" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-JQuery-hambar" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/06/12/css-reset/" class="article-date">
-  <time class="dt-published" datetime="2022-06-12T02:15:00.000Z" itemprop="datePublished">2022-06-12</time>
+    <a href="/2022/08/09/JQuery-hambar/" class="article-date">
+  <time class="dt-published" datetime="2022-08-09T12:19:00.000Z" itemprop="datePublished">2022-08-09</time>
 </a>
     
   </div>
@@ -92,7 +95,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      CSS: Reset
+      使用JQuery製作漢堡選單
     </h1>
   
 
@@ -100,18 +103,30 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>在各大瀏覽器中，其實他們都有自己預設的css style，所以就算你不下css，你的HTML用瀏覽器打開時還是會有一些基本的css設定，但這些設定會因瀏覽器的不同而不同，為了讓你的網頁在不同瀏覽器都能有相同的css，就必須使用到css reset。</p>
-<p>要使用css reset很簡單，最常見的做法就是去google搜尋css reset，就會有一堆網站跑出來給你複製code，比如說<a target="_blank" rel="noopener" href="https://meyerweb.com/eric/tools/css/reset/">這個</a>，你就可以將程式碼複製貼上到你的專案的css檔，這樣就完成css reset了。</p>
-<p>我印象中還有其他方法，不過我目前只學到這個，等以後有學到其他的再來分享。</p>
+        <p>漢堡選單是一個很常使用在手機版網頁的菜單呈現方式，因為按鈕是三條線，很像一個漢堡所以稱為漢堡選單。</p>
+<p><img src="/../images/pasted-99.png" alt="hambar"></p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>漢堡選單的原理是利用jquery的toggleClass來為navbar新增或移除css class，所以分成兩個部分，一個是css，一個是jquery。</p>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.navbar</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">max-height</span>: <span class="number">0%</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">10</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(<span class="number">100%</span>);        </span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">transition</span>: max-height <span class="number">0.7s</span>;</span><br><span class="line">    <span class="attribute">background</span>: $navbar__color;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.navbar</span><span class="selector-class">.show</span>&#123;</span><br><span class="line">	<span class="attribute">max-height</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先是navbar的樣式，將navbar的高度設為0讓它消失，並用position和transform將navbar固定在自己想要的位置，transition設定展開動畫，overflow將多餘的內容隱藏，背景色設定成和原本的navbar相同。</p>
+<p>.show將navbar的高度變成500px(這裡可以自訂)，因為transition的緣故會產生動畫。</p>
+<h2 id="JQuery"><a href="#JQuery" class="headerlink" title="JQuery"></a>JQuery</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;.menu-btn&#x27;</span>).<span class="title function_">click</span>(<span class="keyword">function</span> (<span class="params">e</span>) &#123;</span><br><span class="line">    e.<span class="title function_">preventDefault</span>();</span><br><span class="line">    $(<span class="string">&#x27;.navbar&#x27;</span>).<span class="title function_">toggleClass</span>(<span class="string">&#x27;show&#x27;</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<p>按下漢堡選單後(我這裡的class叫menu-btn)，對navbar新增show class，所以高度會變成500，這時菜單就會出現了。而e.preventDefault()單純是用來取消a的預設動作。</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="hambar" src="https://codepen.io/intHuang/embed/KKoBpwG?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/KKoBpwG">
+  hambar</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/12/css-reset/" data-id="cl4aojjf50000qcvp0t20823d" data-title="CSS: Reset" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/08/09/JQuery-hambar/" data-id="cl6m9nlfp0000mkvp3yf751q8" data-title="使用JQuery製作漢堡選單" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li></ul>
 
     </footer>
   </div>
@@ -119,19 +134,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/06/13/js-bit-operator/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Javascript: bit operator
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/06/10/js-array-function/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/08/08/css-color/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Javascript: 陣列函式(下)</div>
+      <div class="article-nav-title">CSS: color</div>
     </a>
   
 </nav>
