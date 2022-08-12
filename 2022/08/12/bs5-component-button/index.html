@@ -4,20 +4,25 @@
   <meta charset="utf-8">
   
   
-  <title>CSS: !important | Int&#39;s blog</title>
+  <title>bs5: button | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="css中有一個特別的語法叫做 !important，他可以無視任何權重，任何規則都無法覆蓋加上!important的條件。 語法在某個條件最後方加上!important即可。 123h2&amp;#123;	color: white !important;&amp;#125;  不推薦使用但開發中並不推薦使用!important，因為他會讓你的程式碼無視權重，變得更難維護，你可能要在千萬行程式碼中找到!impor">
+  <meta name="description" content="button是bootstrap提供的一個元件，可以觀看官方文件，而這篇會簡單介紹如何使用button以及button這個元件是如何運作的。 使用button可以使用在button、a以及input三個tag上，一般來說我都會選擇a或是input，在tag上加入btn class就完成了button元件的引入。 1&lt;a class&#x3D;&quot;btn&quot;&gt;button&lt;&#x2F;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS: !important">
-<meta property="og:url" content="https://huanginch.github.io/2022/07/05/css-important/index.html">
+<meta property="og:title" content="bs5: button">
+<meta property="og:url" content="https://huanginch.github.io/2022/08/12/bs5-component-button/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="css中有一個特別的語法叫做 !important，他可以無視任何權重，任何規則都無法覆蓋加上!important的條件。 語法在某個條件最後方加上!important即可。 123h2&amp;#123;	color: white !important;&amp;#125;  不推薦使用但開發中並不推薦使用!important，因為他會讓你的程式碼無視權重，變得更難維護，你可能要在千萬行程式碼中找到!impor">
+<meta property="og:description" content="button是bootstrap提供的一個元件，可以觀看官方文件，而這篇會簡單介紹如何使用button以及button這個元件是如何運作的。 使用button可以使用在button、a以及input三個tag上，一般來說我都會選擇a或是input，在tag上加入btn class就完成了button元件的引入。 1&lt;a class&#x3D;&quot;btn&quot;&gt;button&lt;&#x2F;">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-07-05T03:12:00.000Z">
-<meta property="article:modified_time" content="2022-07-05T03:24:35.248Z">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-103.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-104.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-105.png">
+<meta property="article:published_time" content="2022-08-12T08:27:00.000Z">
+<meta property="article:modified_time" content="2022-08-12T09:08:04.066Z">
 <meta property="article:author" content="int">
 <meta property="article:tag" content="css">
+<meta property="article:tag" content="bs5">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://huanginch.github.io/images/pasted-103.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -78,10 +83,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-css-important" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-bs5-component-button" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/07/05/css-important/" class="article-date">
-  <time class="dt-published" datetime="2022-07-05T03:12:00.000Z" itemprop="datePublished">2022-07-05</time>
+    <a href="/2022/08/12/bs5-component-button/" class="article-date">
+  <time class="dt-published" datetime="2022-08-12T08:27:00.000Z" itemprop="datePublished">2022-08-12</time>
 </a>
     
   </div>
@@ -92,7 +97,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      CSS: !important
+      bs5: button
     </h1>
   
 
@@ -100,20 +105,38 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>css中有一個特別的語法叫做 !important，他可以無視任何權重，任何規則都無法覆蓋加上!important的條件。</p>
-<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><p>在某個條件最後方加上!important即可。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>: white <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>button是bootstrap提供的一個元件，可以觀看<a target="_blank" rel="noopener" href="https://bootstrap5.hexschool.com/docs/5.1/components/buttons/">官方文件</a>，而這篇會簡單介紹如何使用button以及button這個元件是如何運作的。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>button可以使用在button、a以及input三個tag上，一般來說我都會選擇a或是input，在tag上加入btn class就完成了button元件的引入。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;btn&quot;</span>&gt;</span>button<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="不推薦使用"><a href="#不推薦使用" class="headerlink" title="不推薦使用"></a>不推薦使用</h2><p>但開發中並不推薦使用!important，因為他會讓你的程式碼無視權重，變得更難維護，你可能要在千萬行程式碼中找到!important才知道為什麼你新下的規則蓋不掉，當然在某些特定情況下還是可以用，比如說你不希望任何一條規則覆蓋掉某個特定條件，但最好還是乖乖用權重來算就好。</p>
+<h3 id="樣式"><a href="#樣式" class="headerlink" title="樣式"></a>樣式</h3><p>button提供了不同種類的預設樣式，最常使用的就是這種實心按鈕，只需要寫上對應的class就能獲得對應的顏色以及hover effect。</p>
+<p><code>btn-primary</code> <code>btn-secondary</code> <code>btn-success</code> <code>btn-danger</code> <code>btn-warning</code> <code>btn-info</code> <code>btn-light</code> <code>btn-dark</code> <code>btn-link</code></p>
+<p><img src="/../images/pasted-103.png"></p>
+<p>除了實心也有提供只有外框(outline)的按鈕樣式</p>
+<p><code>btn-outline-primary</code> <code>btn-outline-secondary</code> <code>btn-outline-success</code> <code>btn-outline-danger</code> <code>btn-outline-warning</code> <code>btn-outline-info</code> <code>btn-outline-light</code> <code>btn-outline-dark</code> <code>btn-outline-link</code></p>
+<p><img src="/../images/pasted-104.png"></p>
+<h3 id="尺寸"><a href="#尺寸" class="headerlink" title="尺寸"></a>尺寸</h3><p>也有提供大小不同的按鈕，使用方法一樣是加上對應的class即可。</p>
+<p><code>btn-lg</code> <code>btn-sm</code></p>
+<p><img src="/../images/pasted-105.png"></p>
+<h3 id="狀態"><a href="#狀態" class="headerlink" title="狀態"></a>狀態</h3><p>button還可以新增其他狀態，例如禁用、啟用等等</p>
+<ul>
+<li><p>disable:<br>  禁用屬性直接加上disabled即可</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-lg btn-primary&quot;</span> <span class="attr">disabled</span>&gt;</span>Primary button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  不過在a標籤比較特別，因為a標籤本身沒有disabled屬性，所以要改加在class上，bs5同樣為a標籤撰寫了禁用的樣式</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary btn-lg disabled&quot;</span> <span class="attr">role</span>=<span class="string">&quot;button&quot;</span> <span class="attr">aria-disabled</span>=<span class="string">&quot;true&quot;</span>&gt;</span>Primary link<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>active:<br>   想讓按鈕為active狀態可以加上 <code>data-bs-toggle=&quot;button&quot;</code> 或是加上 <code>.active</code>這個class</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary active&quot;</span> <span class="attr">data-bs-toggle</span>=<span class="string">&quot;button&quot;</span> <span class="attr">autocomplete</span>=<span class="string">&quot;off&quot;</span> <span class="attr">aria-pressed</span>=<span class="string">&quot;true&quot;</span>&gt;</span>Active toggle button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>按鈕不只是上述介紹的而已，還能夠加上其他的class來達到與其他元件互動的效果，不過這部分讓我留到介紹需要使用按鈕作互動的元件時再來談吧。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/05/css-important/" data-id="cl57liv7y000048vp2x8dem2i" data-title="CSS: !important" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/08/12/bs5-component-button/" data-id="cl6q8ya4500003gvp4c5s92ad" data-title="bs5: button" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
     </footer>
   </div>
@@ -121,19 +144,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/07/06/css-specificity/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          CSS: Specificity
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/07/04/css-cmp-class-and-id-selector/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/08/12/bs5-component/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">CSS:類別與ID選擇器比較</div>
+      <div class="article-nav-title">bs5: component</div>
     </a>
   
 </nav>
