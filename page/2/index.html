@@ -75,6 +75,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JQuery-toggleClass" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/03/JQuery-toggleClass/" class="article-date">
+  <time class="dt-published" datetime="2022-08-03T09:18:00.000Z" itemprop="datePublished">2022-08-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/08/03/JQuery-toggleClass/">JQuery: toggleClass</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>我上次在<a href="https://huanginch.github.io/2022/07/29/JQuery-intro/">這篇</a>簡單介紹了jQuery，這篇要來介紹其中一個常見的function: toggleClass。</p>
+<p>這個函式是我在學如何製作漢堡選單時學習到的，之後也會寫一篇關於如何製作漢堡選單的文章。</p>
+<h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><p>toggleClass可以改變class的有無，比如說我對一個按鈕點擊後想要對某個元素做出樣式改變就可以使用。以下面這個例子來說，我設定成點擊.menu-btn後會修改.navbar-list的show class狀態，如果.navbar-list有show class會移除，沒有就會新增。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;.menu-btn&#x27;</span>).<span class="title function_">click</span>(<span class="keyword">function</span> (<span class="params">e</span>) &#123;</span><br><span class="line">    e.<span class="title function_">preventDefault</span>();</span><br><span class="line">    $(<span class="string">&#x27;.navbar-list&#x27;</span>).<span class="title function_">toggleClass</span>(<span class="string">&#x27;show&#x27;</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/03/JQuery-toggleClass/" data-id="cl6dhzd0o0000povp0mx0axn2" data-title="JQuery: toggleClass" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-html-anchor" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/02/html-anchor/" class="article-date">
@@ -631,73 +674,11 @@ row後面一定要接col，所以這樣寫是錯的。</li>
 
 
   
-    <article id="post-css-background-size" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/24/css-background-size/" class="article-date">
-  <time class="dt-published" datetime="2022-07-24T03:06:00.000Z" itemprop="datePublished">2022-07-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/css-background/">css background</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/24/css-background-size/">CSS: background-size</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>background-size顧名思義，可以調整圖片的大小，除了可以用數字來調整外，還包含以下幾個值:</p>
-<h2 id="contain"><a href="#contain" class="headerlink" title="contain"></a>contain</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">background-size</span>: contain;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>讓圖片盡可能填滿整個元素，並且用不裁切或擠壓到的方式，如果填不滿就會用repeat的方式填滿(除非你把repeat設為no-repeat，關於repeat可以看<a href="https://huanginch.github.io/2022/07/22/css-background-repeat/">這篇</a>)</p>
-<h2 id="cover"><a href="#cover" class="headerlink" title="cover"></a>cover</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">background-size</span>: cover;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>把圖片盡量縮小成可以完全塞進去元素的大小，如果圖片會超出去元素，多的部分就會被裁掉。</p>
-<h2 id="auto"><a href="#auto" class="headerlink" title="auto"></a>auto</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">background-size</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在不改變圖片的任何屬性的情況下用圖片填滿背景。</p>
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="background-size" src="https://codepen.io/intHuang/embed/MWVoRBV?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/MWVoRBV">
-  background-size</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-
-<p>除了以上三個屬性，還可以使用px、%、em等等單位，之後再配合background-position來調整位置，比較常見的作法是使用cover搭配background-posiiotn: center，如此就可以把圖片居中，並顯示出正中間的圖案。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/24/css-background-size/" data-id="cl5yrxz8m00003cvp0pg120vb" data-title="CSS: background-size" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">下一頁 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/">下一頁 &raquo;</a>
   </nav>
 
 </section>
@@ -728,7 +709,7 @@ row後面一定要接col，所以這樣寫是錯的。</li>
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 14px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 14px;">bs5</a> <a href="/tags/c/" style="font-size: 12px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 12px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 14px;">html</a> <a href="/tags/javascript/" style="font-size: 18px;">javascript</a> <a href="/tags/jquery/" style="font-size: 16px;">jquery</a> <a href="/tags/json/" style="font-size: 12px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a>
+      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 15px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 16.67px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a>
     </div>
   </div>
 
@@ -750,6 +731,10 @@ row後面一定要接col，所以這樣寫是錯的。</li>
       <ul>
         
           <li>
+            <a href="/2022/08/14/bs5-card/">bs5: card</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/12/bs5-component-button/">bs5: button</a>
           </li>
         
@@ -763,10 +748,6 @@ row後面一定要接col，所以這樣寫是錯的。</li>
         
           <li>
             <a href="/2022/08/09/JQuery-hambar/">使用JQuery製作漢堡選單</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/08/css-color/">CSS: color</a>
           </li>
         
       </ul>
