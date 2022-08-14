@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>bs5: Listed Group | Int&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="群組列表是bs5中的一個元件，使用的是一般的ul結構，不過bs5有為它制定了樣式。 群組列表由外層的list-group和內層的list-group-item組成。   最基本的群組列表  狀態群組列表同樣可以新增disabled、active等狀態  disabled: 將disabled class新增至對應的list-group-item上可以讓它呈現禁用狀態(如圖)。    active:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bs5: Listed Group">
+<meta property="og:url" content="https://huanginch.github.io/2022/08/14/bs5-listedgroup/index.html">
+<meta property="og:site_name" content="Int&#39;s blog">
+<meta property="og:description" content="群組列表是bs5中的一個元件，使用的是一般的ul結構，不過bs5有為它制定了樣式。 群組列表由外層的list-group和內層的list-group-item組成。   最基本的群組列表  狀態群組列表同樣可以新增disabled、active等狀態  disabled: 將disabled class新增至對應的list-group-item上可以讓它呈現禁用狀態(如圖)。    active:">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-110.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-111.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-112.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-114.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-113.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-115.png">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-116.png">
+<meta property="article:published_time" content="2022-08-14T15:42:00.000Z">
+<meta property="article:modified_time" content="2022-08-14T16:02:35.025Z">
+<meta property="article:author" content="int">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bs5">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://huanginch.github.io/images/pasted-110.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Int&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Int 的程式筆記</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://huanginch.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-bs5-listedgroup" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/14/bs5-listedgroup/" class="article-date">
+  <time class="dt-published" datetime="2022-08-14T15:42:00.000Z" itemprop="datePublished">2022-08-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      bs5: Listed Group
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>群組列表是bs5中的一個元件，使用的是一般的ul結構，不過bs5有為它制定了樣式。</p>
+<p>群組列表由外層的list-group和內層的list-group-item組成。</p>
+<p><img src="/../images/pasted-110.png" alt="basic listed group"></p>
+<ul>
+<li>最基本的群組列表</li>
+</ul>
+<h2 id="狀態"><a href="#狀態" class="headerlink" title="狀態"></a>狀態</h2><p>群組列表同樣可以新增<code>disabled</code>、<code>active</code>等狀態</p>
+<ul>
+<li>disabled: 將<code>disabled</code> class新增至對應的list-group-item上可以讓它呈現禁用狀態(如圖)。</li>
+</ul>
+<p><img src="/../images/pasted-111.png"></p>
+<ul>
+<li>active: 將<code>active</code> class新增至對應的 list-group-item 上可呈現啟用狀態(如圖)。</li>
+</ul>
+<p><img src="/../images/pasted-112.png"></p>
+<h2 id="列表內容"><a href="#列表內容" class="headerlink" title="列表內容"></a>列表內容</h2><p>列表內容可以不是單純的文字，連結、按鈕、圖片等等也都是可以放入列表中的，其中比較特別的是通用標籤。</p>
+<ul>
+<li>通用標籤是藉由新增通用類別來增加標籤這個樣式</li>
+</ul>
+<p><img src="/../images/pasted-114.png"></p>
+<h2 id="移除邊框與圓角"><a href="#移除邊框與圓角" class="headerlink" title="移除邊框與圓角"></a>移除邊框與圓角</h2><p>預設的列表樣式是有邊框與圓角的，加入<code>.list-group-flush</code> class 可以移除</p>
+<p><img src="/../images/pasted-113.png"></p>
+<h2 id="其他樣式"><a href="#其他樣式" class="headerlink" title="其他樣式"></a>其他樣式</h2><ul>
+<li>常用的前面帶有數字的ol在列表群組也有類似的樣式可以使用，在<code>list-group</code>後方新增 <code>list-group-numbered</code> class 即可</li>
+</ul>
+<p><img src="/../images/pasted-115.png"></p>
+<ul>
+<li>想要將列表改成水平的也是可行的，只需要加入<code>list-group-horizontal</code>class即可。</li>
+</ul>
+<p><img src="/../images/pasted-116.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/14/bs5-listedgroup/" data-id="cl6tin44u0000egvp8vt5475w" data-title="bs5: Listed Group" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/08/14/bs5-card/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">bs5: card</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/css-background/">css background</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css-flex/">css flex</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css-position/">css position</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css-selector/">css selector</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo-introduce/">hexo introduce</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-operator/">js-operator</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/owl-carousel/" rel="tag">owl-carousel</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 15px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 16.67px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/08/14/bs5-listedgroup/">bs5: Listed Group</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/14/bs5-card/">bs5: card</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/12/bs5-component-button/">bs5: button</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/12/bs5-component/">bs5: component</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/10/jquery-document-ready/">JQuery: $(document).ready()</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 int<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
