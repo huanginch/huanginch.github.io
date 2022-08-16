@@ -75,6 +75,64 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-text-transform" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/16/css-text-transform/" class="article-date">
+  <time class="dt-published" datetime="2022-08-16T12:06:00.000Z" itemprop="datePublished">2022-08-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/08/16/css-text-transform/">CSS: text-transform</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>text-transform可以改變文字的大小寫，基本上是針對英文字做使用。</p>
+<h2 id="屬性"><a href="#屬性" class="headerlink" title="屬性"></a>屬性</h2><h3 id="none"><a href="#none" class="headerlink" title="none"></a>none</h3><p>可以避免文字被套用text-transform。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">text-transform</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="uppercase"><a href="#uppercase" class="headerlink" title="uppercase"></a>uppercase</h3><p>將文字全部轉換成大寫</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">text-transform</span>: uppercase;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="lowercase"><a href="#lowercase" class="headerlink" title="lowercase"></a>lowercase</h3><p>將文字全部轉換成小寫</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">text-transform</span>: lowercase;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="capitalize"><a href="#capitalize" class="headerlink" title="capitalize"></a>capitalize</h3><p>將文字字首轉成大寫</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">text-transform</span>: capitalize;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="full-width"><a href="#full-width" class="headerlink" title="full-width"></a>full-width</h3><p>將文字強迫塞滿整個格子，通常會作用在象形符號或是拉丁文，讓他們的對齊方式像中文或日文那樣</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">text-transform</span>: full-width;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="full-size-kana"><a href="#full-size-kana" class="headerlink" title="full-size-kana"></a>full-size-kana</h3><p>通常用在<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby"><code>&lt;ruby&gt;</code></a> tag上，他會將所有小寫kana字元轉成大的kana</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>會用到這個是因為在寫六角第五週作業時某夜的文字在PC版和Pad版的字母大小寫有轉換，所以我就用上了text-transform來改變字母大小寫，至於他最後兩個屬性我還不太了解，kana似乎是用在類似日文的平假名或羅馬上標，有機會會再做介紹。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/16/css-text-transform/" data-id="cl6w72tcg0000r0vpgpo0155f" data-title="CSS: text-transform" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-em-and-rem" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/15/css-em-and-rem/" class="article-date">
@@ -543,49 +601,6 @@
 
 
   
-    <article id="post-owl-carsouel-drag-bug" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/08/06/owl-carsouel-drag-bug/" class="article-date">
-  <time class="dt-published" datetime="2022-08-06T13:58:00.000Z" itemprop="datePublished">2022-08-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/06/owl-carsouel-drag-bug/">owl-carousel drag bug</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>owl-carsouel是一個jquery插件，提供滾動式卡片樣式與動畫，<a target="_blank" rel="noopener" href="https://owlcarousel2.github.io/OwlCarousel2/">官網</a>，但是我卻發現他有一個bug，在手機版上如果左右滑動後點擊事件會失效。</p>
-<p>查了查後發現是owl-carsouel一直以來的bug，按著<a target="_blank" rel="noopener" href="https://github.com/OwlCarousel2/OwlCarousel2/issues/1864">這篇</a>試著解決這個bug，簡單來說要把owl.carousel.js或owl.carousel.min.js中的<code>(Math.abs(d.x)&gt;3||(new Date).getTime()-this._drag.time&gt;300)</code>改成<code>((Math.abs(delta.x) &gt; 3 || new Date().getTime() - this._drag.time &gt; 300) &amp;&amp; event.type === &#39;mouseup&#39;)</code>，我這著做之後在電腦上即使使用開發人員工具換成手機模式也不會產生bug了可喜可賀。</p>
-<p>但是，沒錯，但是我用手機開網頁這個bug還是在，真的尷尬，現在我查不到任何解決方法了，值得慶幸的是再點一次同樣可以觸發，如果有人知道如何解決歡迎告訴我。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/08/06/owl-carsouel-drag-bug/" data-id="cl6i47ktm00009gvpbmbr47cg" data-title="owl-carousel drag bug" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/owl-carousel/" rel="tag">owl-carousel</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -643,6 +658,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/16/css-text-transform/">CSS: text-transform</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/15/css-em-and-rem/">CSS: em 與 rem</a>
           </li>
         
@@ -656,10 +675,6 @@
         
           <li>
             <a href="/2022/08/12/bs5-component-button/">bs5: button</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/12/bs5-component/">bs5: component</a>
           </li>
         
       </ul>
