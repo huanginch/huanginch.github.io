@@ -9,11 +9,11 @@ date: 2022-08-15 23:16:00
 
 ## em
 
-em的計算方式是看父層元素的大小再乘上給予的係數，比如我將某個p段落的font-size設定成1.5em，如果父層元素的font-size是16px，那這個p段落的font-size就會是32px。
+em的計算方式是看父層元素的大小再乘上給予的係數，比如我將某個p段落的font-size設定成1.5em，如果父層元素的font-size是16px，那這個p段落的font-size就會是24px。
 
 ## rem
 
-rem的r代表的是root，所以會根據root的大小改變，一般瀏覽器預設字體大小都是16px，所以我任何文字的font-size設定成1.5rem都會是32px。
+rem的r代表的是root，所以會根據root的大小改變，一般瀏覽器預設字體大小都是16px，所以我任何文字的font-size設定成1.5rem都會是24px。
 
 ## 總結
 
