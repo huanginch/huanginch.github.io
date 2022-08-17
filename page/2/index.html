@@ -75,6 +75,54 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-background-attachment-fixed-on-safari" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/07/css-background-attachment-fixed-on-safari/" class="article-date">
+  <time class="dt-published" datetime="2022-08-07T12:56:00.000Z" itemprop="datePublished">2022-08-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/08/07/css-background-attachment-fixed-on-safari/">CSS: background-attachment:fixed on safari</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>CSS有一個屬性叫background-attachment:fixed，詳細可以參考<a href="https://huanginch.github.io/2022/07/27/css-background-attachment/">這篇</a>。</p>
+<p>不過他有一個很大的問題，就是safari以及一些安卓瀏覽器上不支援。</p>
+<p>我原本設計了一個網站，在body上下了一個背景並使用了background-attachment:fixed這個屬性，但卻因為這個理由我沒辦法完整呈現我的背景。</p>
+<p>不支援的理由主要是過於耗能，可以參考<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/23236158/how-to-replicate-background-attachment-fixed-on-ios">這篇</a>。</p>
+<p>那我能解決的辦法有兩個，一個是不要使用(沒錯，很像廢話，但查到的都是叫我改用scroll)，一個是改成用div以及position:fixed。</p>
+<p>我當然是選擇後者，因為我還是希望我的網頁背景有fixed的效果，所以我在我的網頁最上面加上一個div並給他background-image</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;background&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.background</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">&quot;../images/background-lg.png&quot;</span>) no-repeat, $secondary;</span><br><span class="line">    <span class="attribute">background-size</span>: cover;</span><br><span class="line">    -webkit-<span class="attribute">background-size</span>: cover;</span><br><span class="line">    <span class="attribute">background-position</span>: center;</span><br><span class="line">    <span class="attribute">background-position</span>-x: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">background-position</span>-y: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">@include</span> pad &#123;</span><br><span class="line">        <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&quot;../images/background-md.png&quot;</span>);</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">80%</span>;</span><br><span class="line">        <span class="attribute">background-position</span>-x: <span class="number">80%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/07/css-background-attachment-fixed-on-safari/" data-id="cl6jcem1w0000p8vp6xtb3nig" data-title="CSS: background-attachment:fixed on safari" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-owl-carsouel-drag-bug" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/06/owl-carsouel-drag-bug/" class="article-date">
@@ -577,72 +625,6 @@ row後面一定要接col，所以這樣寫是錯的。</li>
 
 
   
-    <article id="post-css-font" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/28/css-font/" class="article-date">
-  <time class="dt-published" datetime="2022-07-28T05:46:00.000Z" itemprop="datePublished">2022-07-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/28/css-font/">CSS: font</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>字型在網頁設計中是必不可少的一部份，這篇會來簡單介紹字型的屬性以及一些注意事項。</p>
-<h2 id="預設字體"><a href="#預設字體" class="headerlink" title="預設字體"></a>預設字體</h2><p>每種作業系統與瀏覽器都有自己的預設字體，這裡主要介紹Windows和Mac，因為這兩種作業系統在PC上的市佔率最高。</p>
-<ul>
-<li><p>Windows: 常用中文字體有三種:新細明體(預設)、微軟正黑體、標楷體。英文有一種: Segoe UI。要特別注意雖然windows預設是新細明體，但在網頁設計上都會改成使用較好閱讀的微軟正黑，新細明體字體太細不適合閱讀，算是windows小雷的地方。</p>
-</li>
-<li><p>Mac: 中文: 蘋方(預設)</p>
-</li>
-</ul>
-<p>其他系統預設英文字體可以參考<a target="_blank" rel="noopener" href="https://css-tricks.com/snippets/css/system-font-stack/">這篇</a></p>
-<p>在讀設計稿時常常會遇到一個問題: 設計師用Mac&#x2F;Windows內建字體設計，我的電腦沒有那個字體怎麼辦，這時候只要使用你的系統的預設字體即可，比如windows就用微軟正黑，Mac就用蘋方。</p>
-<h2 id="在css中載入字型"><a href="#在css中載入字型" class="headerlink" title="在css中載入字型"></a>在css中載入字型</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.body</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: 第一種字形, 第二種字形, <span class="string">&quot;第三 種字形&quot;</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>想要在css中載入內建字體可以使用font-family，瀏覽器會從第一種字形開始套用，找不到就會套用第二種，以此類推，一般來說直接把字形名稱寫上去就好了，但如果遇到字體名稱有空格或無法載入就要加上單引號或雙引號。</p>
-<h2 id="載入外部字體"><a href="#載入外部字體" class="headerlink" title="載入外部字體"></a>載入外部字體</h2><p>除了作業系統內建的字體我們也可以載入外部字體，最常用的就是Google Fonts，因為這樣就沒有跨作業系統而缺字體的問題。</p>
-<p>一般來說中文會使用Noto Sans TC，這是Google與Adobe共同開發的開源字體，英文則會使用Roboto。<br>載入詳細步驟可以參考<a target="_blank" rel="noopener" href="https://hackmd.io/@YmcMgo-NSKOqgTGAjl_5tg/HJpJk8ABU/https%3A%2F%2Fhackmd.io%2F2nenMilfR7WSJSDI4WzcWA%3Fview">這篇</a></p>
-<h2 id="字重"><a href="#字重" class="headerlink" title="字重"></a>字重</h2><p>font還有一個屬性叫做font-weight，可以調整字體的粗細，可以細分為100、200…到900這幾種，不過要注意有些字體只有支援少數幾種字重，比如說微軟正黑只有Light(100)、Normal(400)、Bold(900)三種，所以大家才會選擇使用Google Fonts的Noto Sans TC，因為他支援100~900的字重。</p>
-<p>在觀看設計稿時也要特別注意設計師設計的字重，常見的有Medium、Regular(Normal)、Bold，Normal是預設，Medium與Bold轉換成數字分別對應到500與900。</p>
-<p>更多關於字重的介紹可以看<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">這篇</a></p>
-<h2 id="從Chrome開發人員工具觀看是否套用成功"><a href="#從Chrome開發人員工具觀看是否套用成功" class="headerlink" title="從Chrome開發人員工具觀看是否套用成功"></a>從Chrome開發人員工具觀看是否套用成功</h2><p>Chrome提供了非常強大的網頁開發工具，我們在自己撰寫網頁時可以用這個工具來看各種檔案的屬性與載入成功與否等等，這裡會介紹如何觀看字型是否套用成功。</p>
-<p>以這個例子來說，這是我自己撰寫的網站，我在英文字體的部分套用了Roboto字體，打開工具後我選取了Functional這個英文。</p>
-<p><img src="/../images/pasted-89.png" alt="chrome ex"></p>
-<p>選取後點擊右下角的Computed，之後拉到最下面有一個Rendered Fonts。</p>
-<p><img src="/../images/pasted-90.png" alt="Computed"></p>
-<p>上面會看到我現在使用的字體與字重(這裡是Roboto Medium)</p>
-<p><img src="/../images/pasted-91.png" alt="Rendered Fonts"></p>
-<h2 id="css懶人包"><a href="#css懶人包" class="headerlink" title="css懶人包"></a>css懶人包</h2><p>這個懶人包包含了所有常見預設字體，依序為Mac-&gt;Windows-&gt;Android-&gt;IOS-&gt;通用字體，其中Arial與sans-serif為最常見也最多瀏覽器支援的字體，如果不想特別設計字體可以使用這個懶人包。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: -apple-system, BlinkMacSystemFont, <span class="string">&quot;Segoe UI&quot;</span>, <span class="string">&quot;Microsoft JhengHei&quot;</span>, Roboto, <span class="string">&quot;Helvetica Neue&quot;</span>, Arial, sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/28/css-font/" data-id="cl64naijc00001svpbm179egr" data-title="CSS: font" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -700,6 +682,10 @@ row後面一定要接col，所以這樣寫是錯的。</li>
       <ul>
         
           <li>
+            <a href="/2022/08/17/CSS-transition/">CSS: 轉場動畫(transition)</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/16/css-text-transform/">CSS: text-transform</a>
           </li>
         
@@ -713,10 +699,6 @@ row後面一定要接col，所以這樣寫是錯的。</li>
         
           <li>
             <a href="/2022/08/14/bs5-card/">bs5: card</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/12/bs5-component-button/">bs5: button</a>
           </li>
         
       </ul>
