@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Javascript: delete、逗號運算子、字串運算子 | Int&#39;s blog</title>
+  <title>CSS: vh、vw | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="前面幾篇幾乎把所有的運算子都介紹過一遍了，這篇會介紹幾個寫起來篇幅比較少的運算子。 一元運算子: delete之前在算術運算子篇中也有介紹其他的一元運算子，這篇會把最後的一元運算子介紹給大家。 delete可以刪除物件、物件屬性、陣列元素等等。刪除後物件會變成undefined 1234567delete 物件名稱;delete 物件名稱.屬性;delete 物件名稱[index];delete">
+  <meta name="description" content="在CSS中有兩個單位可以做到稱滿整個版面，一個是vh(view height)，一個是vw(view width)。 這兩個單位代表的是螢幕可視範圍高度與寬度的百分比，所以100vh與100vw分別代表100%整個螢幕可視高度與100%螢幕可視寬度。 與%單位不同，%是以父層來計算，vw與vh是整個視窗，所以經常會用在banner上。 範例   See the Pen    vh and vw b">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript: delete、逗號運算子、字串運算子">
-<meta property="og:url" content="https://huanginch.github.io/2022/06/19/js-operator/index.html">
+<meta property="og:title" content="CSS: vh、vw">
+<meta property="og:url" content="https://huanginch.github.io/2022/08/18/CSS-vh-and-vw/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="前面幾篇幾乎把所有的運算子都介紹過一遍了，這篇會介紹幾個寫起來篇幅比較少的運算子。 一元運算子: delete之前在算術運算子篇中也有介紹其他的一元運算子，這篇會把最後的一元運算子介紹給大家。 delete可以刪除物件、物件屬性、陣列元素等等。刪除後物件會變成undefined 1234567delete 物件名稱;delete 物件名稱.屬性;delete 物件名稱[index];delete">
+<meta property="og:description" content="在CSS中有兩個單位可以做到稱滿整個版面，一個是vh(view height)，一個是vw(view width)。 這兩個單位代表的是螢幕可視範圍高度與寬度的百分比，所以100vh與100vw分別代表100%整個螢幕可視高度與100%螢幕可視寬度。 與%單位不同，%是以父層來計算，vw與vh是整個視窗，所以經常會用在banner上。 範例   See the Pen    vh and vw b">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-06-19T04:28:00.000Z">
-<meta property="article:modified_time" content="2022-06-21T02:49:08.386Z">
+<meta property="article:published_time" content="2022-08-18T08:00:00.000Z">
+<meta property="article:modified_time" content="2022-08-18T08:57:18.785Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -78,16 +78,12 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-js-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-CSS-vh-and-vw" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/06/19/js-operator/" class="article-date">
-  <time class="dt-published" datetime="2022-06-19T04:28:00.000Z" itemprop="datePublished">2022-06-19</time>
+    <a href="/2022/08/18/CSS-vh-and-vw/" class="article-date">
+  <time class="dt-published" datetime="2022-08-18T08:00:00.000Z" itemprop="datePublished">2022-08-18</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/js-operator/">js-operator</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -96,7 +92,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Javascript: delete、逗號運算子、字串運算子
+      CSS: vh、vw
     </h1>
   
 
@@ -104,28 +100,25 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>前面幾篇幾乎把所有的運算子都介紹過一遍了，這篇會介紹幾個寫起來篇幅比較少的運算子。</p>
-<h2 id="一元運算子-delete"><a href="#一元運算子-delete" class="headerlink" title="一元運算子: delete"></a>一元運算子: delete</h2><p>之前在<a href="https://huanginch.github.io/2022/06/15/js-arthimetic-operator/">算術運算子篇</a>中也有介紹其他的一元運算子，這篇會把最後的一元運算子介紹給大家。</p>
-<p>delete可以刪除物件、物件屬性、陣列元素等等。刪除後物件會變成undefined</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">delete 物件名稱;</span><br><span class="line"></span><br><span class="line">delete 物件名稱.屬性;</span><br><span class="line"></span><br><span class="line">delete 物件名稱[index];</span><br><span class="line"></span><br><span class="line">delete 屬性; //只有在with中才能使用</span><br></pre></td></tr></table></figure>
+        <p>在CSS中有兩個單位可以做到稱滿整個版面，一個是vh(view height)，一個是vw(view width)。</p>
+<p>這兩個單位代表的是螢幕可視範圍高度與寬度的百分比，所以100vh與100vw分別代表100%<br>整個螢幕可視高度與100%螢幕可視寬度。</p>
+<p>與%單位不同，%是以父層來計算，vw與vh是整個視窗，所以經常會用在banner上。</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="vh and vw" src="https://codepen.io/intHuang/embed/mdxaXEZ?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/mdxaXEZ">
+  vh and vw</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
 
-<h2 id="逗點運算子"><a href="#逗點運算子" class="headerlink" title="逗點運算子"></a>逗點運算子</h2><p>常用於迴圈內，可以同時進行兩種條件式判斷</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(i = 0, j = 0; i &lt; n, j &lt;= n, i++, j++)&#123;</span><br><span class="line">	.....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="字串運算子"><a href="#字串運算子" class="headerlink" title="字串運算子"></a>字串運算子</h2><p>其實就是 ‘+’，只是他也可以用來連接字串</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let str1 = &#x27;this&#x27;;</span><br><span class="line">let str2 = &#x27;is&#x27;;</span><br><span class="line"></span><br><span class="line">let str3 = str1 + str2;</span><br><span class="line"></span><br><span class="line">console.log(str3);//執行結果: thisis</span><br></pre></td></tr></table></figure>
-
-
-
+<p>這裡的example使用了vw與vh這兩個單位，所以會撐滿整個視窗。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/19/js-operator/" data-id="cl4kub1it0000rsvp2x428wa5" data-title="Javascript: delete、逗號運算子、字串運算子" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/08/18/CSS-vh-and-vw/" data-id="cl6yt7j090000mwvp7yee3ol8" data-title="CSS: vh、vw" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
     </footer>
   </div>
@@ -133,19 +126,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/06/20/js-typeof/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Javascript: typeof、void
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/06/18/node-change-version/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/08/17/CSS-transition/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Nodejs: 更改版本</div>
+      <div class="article-nav-title">CSS: 轉場動畫(transition)</div>
     </a>
   
 </nav>

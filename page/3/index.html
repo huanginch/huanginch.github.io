@@ -75,6 +75,69 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JQuery-intro" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/29/JQuery-intro/" class="article-date">
+  <time class="dt-published" datetime="2022-07-29T07:19:00.000Z" itemprop="datePublished">2022-07-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/29/JQuery-intro/">JQuery介紹</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>此文章為觀看六角學院「<a target="_blank" rel="noopener" href="https://youtu.be/GVWOIP-HX70">jQuery基礎教學</a>」影片之筆記。</p>
+<h2 id="什麼是JQuery"><a href="#什麼是JQuery" class="headerlink" title="什麼是JQuery"></a>什麼是JQuery</h2><p>JQuery是一個Javascript的函式庫，通常被用於網頁動畫呈現，優點是小、輕量、內容豐富且支援多個瀏覽器，所以很常被使用在網頁設計上。</p>
+<h2 id="載入方式"><a href="#載入方式" class="headerlink" title="載入方式"></a>載入方式</h2><p>要把JQuery加入到自己的作品內有幾個方法:</p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="https://jquery.com/">官網下載</a></p>
+</li>
+<li><p>CDN</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://cdnjs.com/libraries/jquery">其他版本CDN</a></li>
+</ul>
+</li>
+<li><p>npm或yarn</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install jquery</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn install jquery</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>當然還有其他下載方法，詳細可以參考<a target="_blank" rel="noopener" href="https://jquery.com/download/">官網</a></li>
+</ul>
+<h2 id="範例程式"><a href="#範例程式" class="headerlink" title="範例程式"></a>範例程式</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="variable language_">document</span>).<span class="title function_">ready</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">	$(<span class="string">&#x27;h1&#x27;</span>).<span class="title function_">hide</span>();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>在JQuery中使用了$()來代替listener，所以裡面會放置選擇器，再使用.functionname()來觸發目標函式以達到想要的效果。</p>
+<h2 id="常見函式"><a href="#常見函式" class="headerlink" title="常見函式"></a>常見函式</h2><p>動態載入、改變屬性等等都是JQuery常見的用法，所以有時候觀看原始碼時會發現有些部分在HTML中工程師並沒有寫任何東西，那他可能是透過JQuery進行動態載入。例如常見的<a target="_blank" rel="noopener" href="https://themeisle.com/">Nivo Slider</a>都是使用JQuery作呈現。</p>
+<h2 id="APIS"><a href="#APIS" class="headerlink" title="APIS"></a>APIS</h2><p>關於JQuery的所有函式都可以在官網文件找到:<a target="_blank" rel="noopener" href="https://api.jquery.com/">傳送門</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/29/JQuery-intro/" data-id="cl6684ven0000kwvp565v6qu8" data-title="JQuery介紹" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-font" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/28/css-font/" class="article-date">
@@ -667,95 +730,6 @@
 
 
   
-    <article id="post-css-overflow" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/19/css-overflow/" class="article-date">
-  <time class="dt-published" datetime="2022-07-19T04:11:00.000Z" itemprop="datePublished">2022-07-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/19/css-overflow/">CSS: Overflow</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>有時候會有元素太大導致超出父元素的問題，這就叫做overflow(特別容易發生在有設定高度的元素中)，以下面為例:</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="css:overflow" src="https://codepen.io/intHuang/embed/qBormgx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/qBormgx">
-  css:overflow</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>可以看到文字超出了parent</p>
-<p>通常的作法是不設定高度，讓元素按照內容去伸展高度，但如果說我今天就是希望這個元素這麼高，這時候就可以使用overflow這個屬性</p>
-<h2 id="Overflow"><a href="#Overflow" class="headerlink" title="Overflow"></a>Overflow</h2><ul>
-<li>visible</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">overflow</span>: visibile;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>預設值，呈現效果等同上面的例子。</p>
-<ul>
-<li>hidden</li>
-</ul>
-<p>將overflow的元素藏起來</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">box&#123;</span><br><span class="line">	<span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<iframe height="300" style="width: 100%;" scrolling="no" title="css:overflow" src="https://codepen.io/intHuang/embed/mdxWmov?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/mdxWmov">
-  css:overflow</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>可以看到多餘的部分都消失在元素內了。</p>
-<ul>
-<li>scroll</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">overflow</span>: scroll;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<iframe height="300" style="width: 100%;" scrolling="no" title="css:overflow: hidden" src="https://codepen.io/intHuang/embed/rNdymbm?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/rNdymbm">
-  css:overflow: hidden</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>讓子元素保持在父元素內，可以用上下左右滾動的方式看到超過的部分。</p>
-<ul>
-<li>auto、overlay<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">overflow</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<iframe height="300" style="width: 100%;" scrolling="no" title="css:overflow: auto" src="https://codepen.io/intHuang/embed/LYdWyvm?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/LYdWyvm">
-  css:overflow: auto</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>讓子元素保持在父元素內，和scroll不同，只能用上下滾動的方式看到超過的部分。<br>而overlay和auto相同，只是不同瀏覽器支援不同語法。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/19/css-overflow/" data-id="cl5rns1ti0000g8vp9mw698a4" data-title="CSS: Overflow" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -813,6 +787,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/18/CSS-vh-and-vw/">CSS: vh、vw</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/17/CSS-transition/">CSS: 轉場動畫(transition)</a>
           </li>
         
@@ -826,10 +804,6 @@
         
           <li>
             <a href="/2022/08/14/bs5-listedgroup/">bs5: Listed Group</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/14/bs5-card/">bs5: card</a>
           </li>
         
       </ul>

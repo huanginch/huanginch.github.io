@@ -75,6 +75,86 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-cmp-class-and-id-selector" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/04/css-cmp-class-and-id-selector/" class="article-date">
+  <time class="dt-published" datetime="2022-07-04T03:03:00.000Z" itemprop="datePublished">2022-07-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/css-selector/">css selector</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/04/css-cmp-class-and-id-selector/">CSS:類別與ID選擇器比較</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在<a href="https://huanginch.github.io/2022/07/03/css-tag-class-and-id-selector/">上一篇</a>介紹了類別與ID選擇器，但什麼時候要用類別選擇器，什麼時候要用ID選擇器？這篇就會針對這兩個相似的選擇器做個比較。</p>
+<h2 id="比較表格"><a href="#比較表格" class="headerlink" title="比較表格"></a>比較表格</h2><table>
+<thead>
+<tr>
+<th>比較項目\選擇器</th>
+<th>類別選擇器</th>
+<th>ID選擇器</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>寫法</td>
+<td><code>.classname&#123;...&#125;</code></td>
+<td><code>#IDname&#123;...&#125;</code></td>
+</tr>
+<tr>
+<td>選擇對象</td>
+<td>會選擇有所有相符class的元素</td>
+<td>只會選擇第一個有相符ID的元素</td>
+</tr>
+<tr>
+<td>使用次數</td>
+<td>可重複使用</td>
+<td>一個頁面只能使用一次</td>
+</tr>
+<tr>
+<td>與css或html的關聯</td>
+<td>只能用來標記元素並為他加上樣式</td>
+<td>可能會與html有關(比如說內頁跳轉連結)</td>
+</tr>
+<tr>
+<td>使用時機</td>
+<td>一般情況都會選擇使用</td>
+<td>特定時機才會使用</td>
+</tr>
+</tbody></table>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>一般情況下盡量使用類別選擇器，因為類別選擇器就是為了css styling而設計的，ID的意義主要還是在html上(比如說跳到某個段落，舉個例子點這個<a href="https://huanginch.github.io/2022/07/04/css-cmp-class-and-id-selector/#%E6%AF%94%E8%BC%83%E8%A1%A8%E6%A0%BC">連結</a>可以跳到比較表格，你可以看到網址上多了#比較表格，這就是ID最大的用途)，當然在有需要的情況下還是可以使用ID選擇器，但不要只是為了幫元素加點樣式就使用ID選擇器。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/04/css-cmp-class-and-id-selector/" data-id="cl566qkif0000ncvp6ah33mm9" data-title="CSS:類別與ID選擇器比較" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-tag-class-and-id-selector" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/03/css-tag-class-and-id-selector/" class="article-date">
@@ -700,51 +780,6 @@
 
 
   
-    <article id="post-JSON格式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/" class="article-date">
-  <time class="dt-published" datetime="2022-06-24T14:55:00.000Z" itemprop="datePublished">2022-06-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/">JSON格式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>JSON是一種資料儲存的格式，全名為JavaScript Object Notation，但json格式不只可以在js中使用，其他語言也可以，其中在做網路請求時也很常使用json格式來傳遞資料。</p>
-<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line"> <span class="punctuation">&#123;</span></span><br><span class="line">   <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Ming&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;age&quot;</span><span class="punctuation">:</span> <span class="number">18</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;sex&quot;</span><span class="punctuation">:</span> <span class="string">&quot;male&quot;</span></span><br><span class="line"> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Amy&#x27;,</span></span><br><span class="line"><span class="string">  &quot;</span>age<span class="string">&quot;: 20,</span></span><br><span class="line"><span class="string">  &quot;</span>sex<span class="string">&quot;, &quot;</span>female<span class="string">&quot;</span></span><br><span class="line"><span class="string"> &#125;</span></span><br><span class="line"><span class="string">]</span></span><br></pre></td></tr></table></figure>
-<p>其實跟js的物件格式很像，你可以用陣列包裹物件，或是用物件包裹陣列，不同的是key會包在雙引號裡面。比較常見的用法是如同範例程式中用陣列包裹。</p>
-<p>json格式算是我最喜歡的資料格式，可能是因為我當初在學校學java第一個學怎麼處理的資料格式就是json。</p>
-<p>下篇會來介紹如何用js讀取json的值。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/" data-id="cl4slbdua0000rsvpgz8r895s" data-title="JSON格式" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/" rel="tag">json</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -802,6 +837,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/18/CSS-vh-and-vw/">CSS: vh、vw</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/17/CSS-transition/">CSS: 轉場動畫(transition)</a>
           </li>
         
@@ -815,10 +854,6 @@
         
           <li>
             <a href="/2022/08/14/bs5-listedgroup/">bs5: Listed Group</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/14/bs5-card/">bs5: card</a>
           </li>
         
       </ul>
