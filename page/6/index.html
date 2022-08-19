@@ -75,6 +75,60 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-js-json" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/25/js-json/" class="article-date">
+  <time class="dt-published" datetime="2022-06-25T03:12:00.000Z" itemprop="datePublished">2022-06-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/25/js-json/">Javascript: 讀取JSON</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在<a href="https://huanginch.github.io/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/">這篇</a>有介紹過json格式，這篇會來介紹如何用js讀取json。</p>
+<p>假設我們有一個json檔:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">[</span><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;first_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Frannie&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;last_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Sandeland&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;email&quot;</span><span class="punctuation">:</span> <span class="string">&quot;fsandeland0@sogou.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;gender&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Female&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;ip_address&quot;</span><span class="punctuation">:</span> <span class="string">&quot;227.100.11.35&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;first_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Batsheva&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;last_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Biswell&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;email&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bbiswell1@miitbeian.gov.cn&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;gender&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Female&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;ip_address&quot;</span><span class="punctuation">:</span> <span class="string">&quot;214.81.196.38&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;first_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Priscilla&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;last_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Mapletoft&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;email&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pmapletoft2@reference.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;gender&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Genderfluid&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;ip_address&quot;</span><span class="punctuation">:</span> <span class="string">&quot;37.45.100.248&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<p>假設我想要讀取第二筆的email，那這邊就要先觀察這個格式最外層，上一篇也說過通常最外層是陣列，這裡也是，那我就要寫成:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> data = <span class="string">`這裡貼上剛剛的data`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> target = data[<span class="number">1</span>];</span><br></pre></td></tr></table></figure>
+
+<p>這邊就會得到第二筆資料全部內容，可是我要怎麼單獨取出email欄位? 很簡單，因為這層是物件，用物件取值的方法就行了，寫法有兩種:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> target = data[<span class="number">1</span>].<span class="property">email</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> target = data[<span class="number">1</span>][<span class="string">&#x27;email&#x27;</span>];</span><br></pre></td></tr></table></figure>
+
+<p>這樣就可以拿到第二筆資料的email了，把上面的code整理一下:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> data = <span class="string">`這裡貼上剛剛的data`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> target = data[<span class="number">1</span>].<span class="property">email</span> <span class="comment">//或是 data[1][&#x27;email&#x27;];</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(target); <span class="comment">//執行結果: bbiswell1@miitbeian.gov.cn</span></span><br></pre></td></tr></table></figure>
+
+<p>是不是很簡單? 這篇裡有提到物件的讀取方法，但我還沒有寫文章介紹過，下次會整理一篇物件相關的文章，謝謝觀看。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/25/js-json/" data-id="cl4tbkh4i0000wovpc1x6hfv6" data-title="Javascript: 讀取JSON" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/" rel="tag">json</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-JSON格式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/" class="article-date">
@@ -676,94 +730,6 @@
 
 
   
-    <article id="post-js-arthimetic-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/15/js-arthimetic-operator/" class="article-date">
-  <time class="dt-published" datetime="2022-06-15T03:11:00.000Z" itemprop="datePublished">2022-06-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/js-operator/">js-operator</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/15/js-arthimetic-operator/">Javascript: 算數運算子</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>算術運算子，簡單來說就是加減乘除。不過除了這幾個之外，還有其他可以使用，像次方之類的，這篇就會列出所有js中的算術運算子。</p>
-<ul>
-<li>加法: +<ul>
-<li>就跟數學中的加法一樣</li>
-</ul>
-</li>
-<li>減法: -<ul>
-<li>就跟數學中的減法一樣</li>
-</ul>
-</li>
-<li>乘法: *<ul>
-<li>就跟數學中的乘法一樣</li>
-</ul>
-</li>
-<li>取商數: &#x2F;<ul>
-<li>js中的除法分成兩種，取商數和取餘數，這個就會回傳商數。</li>
-</ul>
-</li>
-<li>取餘數: %<ul>
-<li>這個不念percent，要念mod。會回傳除法的餘數，其實就是數學中的mod運算。</li>
-</ul>
-</li>
-<li>增加: ++<ul>
-<li>一元運算子，對變數做增加1。比如說  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">0</span>;</span><br><span class="line">a++;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">//執行結果: 1</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>減少: –<ul>
-<li>一元運算子，對變數做減少1。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">0</span>;</span><br><span class="line">a--;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">//執行結果: -1</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>取負數: -<ul>
-<li>一元運算子，我自己覺得跟減法很像，不過前面的減法是二元運算子。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(-a); <span class="comment">//執行結果: -1</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>加號: +<ul>
-<li>一元運算子，可以把不是數字的運算元改成數字。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="literal">true</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(+<span class="literal">true</span>); <span class="comment">//執行結果: 1</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>指數運算子: **<ul>
-<li>用來運算指數的 a ** b 就是算a的b次方。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>**<span class="number">3</span>); <span class="comment">//執行結果: 8</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-<p>[註] 一元運算子表示只需要一個運算元，二元表示要兩個運算元，三元表示三個，最多到三元。上述沒有特別標註的都是二元運算子，而三元之後會另外寫一篇。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/15/js-arthimetic-operator/" data-id="cl4f1rf500000rsvp5kwp0379" data-title="Javascript: 算數運算子" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -799,7 +765,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 15px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 16.67px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a>
+      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 14px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16px;">bs5</a> <a href="/tags/c/" style="font-size: 12px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 12px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 14px;">html</a> <a href="/tags/javascript/" style="font-size: 18px;">javascript</a> <a href="/tags/jquery/" style="font-size: 16px;">jquery</a> <a href="/tags/json/" style="font-size: 12px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a>
     </div>
   </div>
 
@@ -821,6 +787,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/19/bs5-card-height/">bs5: 卡片元件等高</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/18/CSS-vh-and-vw/">CSS: vh、vw</a>
           </li>
         
@@ -834,10 +804,6 @@
         
           <li>
             <a href="/2022/08/15/css-em-and-rem/">CSS: em 與 rem</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/14/bs5-listedgroup/">bs5: Listed Group</a>
           </li>
         
       </ul>
