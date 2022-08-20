@@ -75,6 +75,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-specificity" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/06/css-specificity/" class="article-date">
+  <time class="dt-published" datetime="2022-07-06T02:32:00.000Z" itemprop="datePublished">2022-07-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/06/css-specificity/">CSS: Specificity</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>CSS中每個規則、標籤會有不同的權重，所以對相同標籤下不同規則會互相覆蓋，而誰覆蓋誰就是由權重決定。所謂的Specificity(優先級、權重)就是瀏覽器用來決定權重的算法。</p>
+<h2 id="權重排序"><a href="#權重排序" class="headerlink" title="權重排序"></a>權重排序</h2><p>含有!important的規則 &gt; 直接寫在html上的style屬性 &gt; ID選擇器 &gt; 類別、偽類別、屬性選擇器 &gt; 標籤、偽元素選擇器</p>
+<h2 id="順序也會影響權重"><a href="#順序也會影響權重" class="headerlink" title="順序也會影響權重"></a>順序也會影響權重</h2><p>css的寫法是由上而下，除了標籤本身的權重(上述所示)，在css檔案中的排序也會影響權重，越下方的權重越大，但順序的影響力並沒有原本權重排序來的大，所以ID選擇器就算寫在上方也不會被類別選擇器蓋掉，要特別注意</p>
+<h2 id="關係選擇器可以看成加法"><a href="#關係選擇器可以看成加法" class="headerlink" title="關係選擇器可以看成加法"></a>關係選擇器可以看成加法</h2><p>以最常見的後代選擇器來說</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">h2</span>&#123;</span><br><span class="line">	....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>這種就可以理解為 10 + 1的權重，會比單純的.box權重來的高，即使.box的選擇器寫在他的下方也一樣。</p>
+<br>
+要學好css就一定要學會權重，這方面我也還是要多加練習，有時候會因為權重不對導致自己想要的樣式被蓋掉，在編寫上的邏輯就還要多加訓練。
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/06/css-specificity/" data-id="cl58zj7vl0000egvp0n61gezg" data-title="CSS: Specificity" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-important" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/05/css-important/" class="article-date">
@@ -710,67 +757,6 @@
 
 
   
-    <article id="post-github-token" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/27/github-token/" class="article-date">
-  <time class="dt-published" datetime="2022-06-26T16:05:00.000Z" itemprop="datePublished">2022-06-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/27/github-token/">Github: Personal Access Token</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>github在最近的更新對遠端推送作出了安全性的限制，以前推送時只要輸入帳號密碼即可，現在推送密碼的部分要更改成personal access token，這篇文就會來介紹如何新建一個token。</p>
-<ol>
-<li><p>首先到自己的github個人頁面點自己頭像進入個人資料設定</p>
-<p> <img src="/../images/pasted-74.png"></p>
-</li>
-<li><p>進去後拉到最下面，左手邊最底下有一個developer settings</p>
-<p> <img src="/../images/pasted-75.png"></p>
-</li>
-<li><p>點進去之後選personal acess token</p>
-<p> <img src="/../images/pasted-76.png"></p>
-</li>
-<li><p>按generate new token</p>
-<p> <img src="/../images/pasted-77.png"></p>
-</li>
-<li><p>按了以後他會要你輸入密碼，輸完後進入設定token頁面，你可以輸入這個token的名字、時效、並選取擁有這個token的人可以有哪些權限，基本上勾repo就好了</p>
-<p> <img src="/../images/pasted-79.png"></p>
-</li>
-<li><p>設定好後拉到最下面按generate就完成了，記得把它給你的token複製起來，之後要從遠端推送複製這個token即可。</p>
-</li>
-</ol>
-<p>當初用Linux做開發的時候很常使用到遠端推送，以前一直都是用密碼，直到某天他突然變成token嚇了我一跳XD，不過還蠻簡單的，至於windows好像要下一個清除的指令才能用，這邊我沒研究，之後研究完我再更新到這篇上。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/27/github-token/" data-id="cl4viv23f0000e8vp1tkg1uco" data-title="Github: Personal Access Token" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -806,7 +792,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 14px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16px;">bs5</a> <a href="/tags/c/" style="font-size: 12px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 12px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 16px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 14px;">html</a> <a href="/tags/javascript/" style="font-size: 18px;">javascript</a> <a href="/tags/jquery/" style="font-size: 16px;">jquery</a> <a href="/tags/json/" style="font-size: 12px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a>
+      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a>
     </div>
   </div>
 
@@ -828,6 +814,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/20/bs5-strechedlinked/">bs5: stretched-link</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/19/bs5-card-height/">bs5: 卡片元件等高</a>
           </li>
         
@@ -841,10 +831,6 @@
         
           <li>
             <a href="/2022/08/16/css-text-transform/">CSS: text-transform</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/15/css-em-and-rem/">CSS: em 與 rem</a>
           </li>
         
       </ul>
