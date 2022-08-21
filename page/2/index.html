@@ -75,6 +75,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-bs5-component" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/12/bs5-component/" class="article-date">
+  <time class="dt-published" datetime="2022-08-11T17:57:00.000Z" itemprop="datePublished">2022-08-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/08/12/bs5-component/">bs5: component</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在bootstrap中最強大的功能就是他所提供的元件(component)，所謂的元件是由bs5所提供事先寫好的、可重複利用的元素，比如說按鈕、navbar、card等等，他們會有固定的樣式與功能，當我們要使用時就可以直接套用，不用自己從頭寫一個。</p>
+<h2 id="元件種類"><a href="#元件種類" class="headerlink" title="元件種類"></a>元件種類</h2><p>bs5提供許多元件，比較常用的有button、navbar、tab、card等等，下面這兩張圖列出了所有bs5有提供的元件。</p>
+<p><img src="/../images/pasted-100.png"></p>
+<p><img src="/../images/pasted-101.png"></p>
+<h2 id="使用元件"><a href="#使用元件" class="headerlink" title="使用元件"></a>使用元件</h2><p>想要使用元件可以到相對應的文件，以按鈕為例，先進入按鈕的<a target="_blank" rel="noopener" href="https://bootstrap5.hexschool.com/docs/5.0/components/buttons/">文件</a></p>
+<p>再來選擇範例的樣式，複製下方程式碼貼到自己的編輯器上，就可以獲得與範例相同的按鈕(記得先引入bs5)</p>
+<p><img src="/../images/pasted-102.png"></p>
+<p>想要客製化可以依照下方其他範例做修改，更詳細的客製化方法在本篇不會介紹，之後會獨立一篇出來介紹。</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>元件比較困難的地方大概是要理解他寫好的class在做什麼才能做到客製化，我自己一開始在使用也是有點不知道從何下手，不過多用幾次就會發現非常方便，因為都幫你寫好了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/12/bs5-component/" data-id="cl6pcy6610000iovpa47g8ucf" data-title="bs5: component" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-jquery-document-ready" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/10/jquery-document-ready/" class="article-date">
@@ -522,67 +571,6 @@
 
 
   
-    <article id="post-bs5-grid" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/08/01/bs5-grid/" class="article-date">
-  <time class="dt-published" datetime="2022-08-01T06:31:00.000Z" itemprop="datePublished">2022-08-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/01/bs5-grid/">Bootstrap5: 格線系統</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>在Bootstrap中有一個很重要的東西稱作格線系統，BS5將網頁切分成row與column，一個row裡面會有12個column，所以在撰寫時會產生以下結構:</p>
-<p><strong>container &gt; row &gt; column</strong></p>
-<p>可以將網頁想成一個excel，container就是工作表，row與column就是欄位。</p>
-<p>在常用的設計稿軟體中有些也支援格線系統(如Adobe XD、figma)，工程師可以依照設計師劃的格線為網頁原宿設定統一的寬度，不用去撰寫一些奇怪的寬高(我們稱為magic number，乍看之下沒辦法得到什麼語意化的資訊)</p>
-<h2 id="規則"><a href="#規則" class="headerlink" title="規則"></a>規則</h2><p>row與column有個特別的規定，row裡面一定要接column，就像ul或ol裡面一定要接li，但container就沒有此限制。</p>
-<h3 id="正確例子"><a href="#正確例子" class="headerlink" title="正確例子"></a>正確例子</h3><ul>
-<li><p>ex1:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">  		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-6&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-6&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>這是最標準的寫法，container接row再接column。</p>
-</li>
-<li><p>ex2:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">  		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-6&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-6&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>container底下可以接其他標籤</p>
-</li>
-</ul>
-<h3 id="錯誤例子"><a href="#錯誤例子" class="headerlink" title="錯誤例子"></a>錯誤例子</h3><ul>
-<li>ex1:<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">      	<span class="tag">&lt;<span class="name">h3</span>&gt;</span>sub title<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-6&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-6&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-row後面一定要接col，所以這樣寫是錯的。</li>
-</ul>
-<h2 id="格線系統的RWD"><a href="#格線系統的RWD" class="headerlink" title="格線系統的RWD"></a>格線系統的RWD</h2><p>格線系統也支援RWD，寫法為 <code>col-size-number</code>，在col後面加上對應螢幕尺寸的代號(sm、md、lg、xl、xxl…)就可以達成RWD的效果。</p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>最近開始學習BS5，這篇寫的比較簡短，之後可能會再對做增加。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/08/01/bs5-grid/" data-id="cl6anwtv90000a4vp9oux2txf" data-title="Bootstrap5: 格線系統" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -640,6 +628,10 @@ row後面一定要接col，所以這樣寫是錯的。</li>
       <ul>
         
           <li>
+            <a href="/2022/08/21/CSS-unit/">CSS: 單位(unit)</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/20/bs5-strechedlinked/">bs5: stretched-link</a>
           </li>
         
@@ -653,10 +645,6 @@ row後面一定要接col，所以這樣寫是錯的。</li>
         
           <li>
             <a href="/2022/08/17/CSS-transition/">CSS: 轉場動畫(transition)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/16/css-text-transform/">CSS: text-transform</a>
           </li>
         
       </ul>
