@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>彙整: 2022/8 | Int&#39;s blog</title>
+  <title>CSS: vmax、vmin | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Int&#39;s blog">
-<meta property="og:url" content="https://huanginch.github.io/archives/2022/08/page/3/index.html">
+  <meta name="description" content="vmax與vmin是css中的單位，與vh、vw很相似，都是依據viewport來改變大小的單位，與vh、vw相同，範圍是0~100。 VMAXvmax會找到viewport中較大的那邊，元素的長度或寬度會與那個邊相同長度，比如現在螢幕大小是1920*1080，假設我使用了一個元素他的寬度是100vmax，那麼這個元素的寬度會和螢幕寬度相同(1920 &gt; 1080)。 VMIN和vamx相反">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS: vmax、vmin">
+<meta property="og:url" content="https://huanginch.github.io/2022/08/22/css-vmax-and-vmin/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
+<meta property="og:description" content="vmax與vmin是css中的單位，與vh、vw很相似，都是依據viewport來改變大小的單位，與vh、vw相同，範圍是0~100。 VMAXvmax會找到viewport中較大的那邊，元素的長度或寬度會與那個邊相同長度，比如現在螢幕大小是1920*1080，假設我使用了一個元素他的寬度是100vmax，那麼這個元素的寬度會和螢幕寬度相同(1920 &gt; 1080)。 VMIN和vamx相反">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-08-22T15:11:00.000Z">
+<meta property="article:modified_time" content="2022-08-22T15:23:13.059Z">
 <meta property="article:author" content="int">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -73,64 +78,65 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/08/02/html-anchor/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-08-02T10:03:00.000Z" itemprop="datePublished">8月 2</time>
+        <section id="main"><article id="post-css-vmax-and-vmin" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/22/css-vmax-and-vmin/" class="article-date">
+  <time class="dt-published" datetime="2022-08-22T15:11:00.000Z" itemprop="datePublished">2022-08-22</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/08/02/html-anchor/">html: 錨點</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      CSS: vmax、vmin
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/08/01/bs5-grid/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-08-01T06:31:00.000Z" itemprop="datePublished">8月 1</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/08/01/bs5-grid/">Bootstrap5: 格線系統</a>
-    </h1>
-  
+        <p>vmax與vmin是css中的單位，與vh、vw很相似，都是依據viewport來改變大小的單位，與vh、vw相同，範圍是0~100。</p>
+<h2 id="VMAX"><a href="#VMAX" class="headerlink" title="VMAX"></a>VMAX</h2><p>vmax會找到viewport中較大的那邊，元素的長度或寬度會與那個邊相同長度，比如現在螢幕大小是1920*1080，假設我使用了一個元素他的寬度是100vmax，那麼這個元素的寬度會和螢幕寬度相同(1920 &gt; 1080)。</p>
+<h2 id="VMIN"><a href="#VMIN" class="headerlink" title="VMIN"></a>VMIN</h2><p>和vamx相反，vmin會找較短的邊，該元素長度或寬度會與短邊相同。</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><ul>
+<li>可以試著改變螢幕大小來觀看效果</li>
+</ul>
+<iframe height="300" style="width: 100%;" scrolling="no" title="vmax、vmin" src="https://codepen.io/intHuang/embed/XWEGVaW?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/XWEGVaW">
+  vmax、vmin</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/22/css-vmax-and-vmin/" data-id="cl74wr7b50000oovphxs44e9g" data-title="CSS: vmax、vmin" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/archives/2022/08/page/2/">&laquo; 上一頁</a><a class="page-number" href="/archives/2022/08/">1</a><a class="page-number" href="/archives/2022/08/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
+<nav id="article-nav">
+  
+  
+    <a href="/2022/08/21/CSS-unit/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS: 單位(unit)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
 
 </section>
         
