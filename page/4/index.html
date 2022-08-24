@@ -75,6 +75,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-background-size" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/24/css-background-size/" class="article-date">
+  <time class="dt-published" datetime="2022-07-24T03:06:00.000Z" itemprop="datePublished">2022-07-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/css-background/">css background</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/24/css-background-size/">CSS: background-size</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>background-size顧名思義，可以調整圖片的大小，除了可以用數字來調整外，還包含以下幾個值:</p>
+<h2 id="contain"><a href="#contain" class="headerlink" title="contain"></a>contain</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">background-size</span>: contain;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>讓圖片盡可能填滿整個元素，並且用不裁切或擠壓到的方式，如果填不滿就會用repeat的方式填滿(除非你把repeat設為no-repeat，關於repeat可以看<a href="https://huanginch.github.io/2022/07/22/css-background-repeat/">這篇</a>)</p>
+<h2 id="cover"><a href="#cover" class="headerlink" title="cover"></a>cover</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">background-size</span>: cover;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>把圖片盡量縮小成可以完全塞進去元素的大小，如果圖片會超出去元素，多的部分就會被裁掉。</p>
+<h2 id="auto"><a href="#auto" class="headerlink" title="auto"></a>auto</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">background-size</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在不改變圖片的任何屬性的情況下用圖片填滿背景。</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="background-size" src="https://codepen.io/intHuang/embed/MWVoRBV?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/MWVoRBV">
+  background-size</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+
+<p>除了以上三個屬性，還可以使用px、%、em等等單位，之後再配合background-position來調整位置，比較常見的作法是使用cover搭配background-posiiotn: center，如此就可以把圖片居中，並顯示出正中間的圖案。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/24/css-background-size/" data-id="cl5yrxz8m00003cvp0pg120vb" data-title="CSS: background-size" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-background-position" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/23/background-position/" class="article-date">
@@ -663,70 +725,11 @@
 
 
   
-    <article id="post-css-position-fixed" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/09/css-position-fixed/" class="article-date">
-  <time class="dt-published" datetime="2022-07-09T03:09:00.000Z" itemprop="datePublished">2022-07-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/css-position/">css position</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/09/css-position-fixed/">CSS: Position: fixed</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>很常會看到有些網頁的NavBar會跟著畫面滾動並停留在最上方，並不會因為畫面向下拉而消失，又或者是有些在最左下角的回頂端(如圖)</p>
-<p><img src="/../images/pasted-88.png" alt="蝦皮回頂端按鈕"></p>
-<p>想要實現這種功能就必須使用到 position: fixed</p>
-<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="舉例"><a href="#舉例" class="headerlink" title="舉例"></a>舉例</h3><iframe height="300" style="width: 100%;" scrolling="no" title="position: fixed" src="https://codepen.io/intHuang/embed/MWVyqmb?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/MWVyqmb">
-  position: fixed</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>在上面的codepen中可以看到我在navbar中下了position:fixed;，所以當你滾動畫面時粉紅色navbar會一直固定在畫面上。</p>
-<h3 id="top-bottom-left-和-right"><a href="#top-bottom-left-和-right" class="headerlink" title="top bottom left 和 right"></a>top bottom left 和 right</h3><p>但要注意，只寫position:fixed並不能將navbar固定在畫面最上方，你可以自己試試看，會發現他和上面有一些距離，所以這時候就要使用top。</p>
-<p>透過top、bottom、left和right可以設定fixed元素的位置，以上面的codepen例子來說，top: 0;指的就是距離畫面頂端為0，所以會固定在畫面最上方，同理將其他值設成0就會與左邊右邊或底部沒有距離。</p>
-<p>當然也可以設置成別的數值，px就是距離那個屬性的位置有幾個px，設定成%的話，假設是top:50%; 就會固定在由頂端往下50%的地方。</p>
-<h2 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h2><p>fixed可以製作navbar等會固定在畫面上的元素，與fixed相似的還有sticky和relative，關於他們可以參考我的其他篇文章。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/09/css-position-fixed/" data-id="cl5db5viz0000u0vpclrd002z" data-title="CSS: Position: fixed" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/3/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/5/">下一頁 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/5/">下一頁 &raquo;</a>
   </nav>
 
 </section>
@@ -779,6 +782,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/24/css-keyframe/">CSS: animation and @keyframe</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/22/css-vmax-and-vmin/">CSS: vmax、vmin</a>
           </li>
         
@@ -792,10 +799,6 @@
         
           <li>
             <a href="/2022/08/19/bs5-card-height/">bs5: 卡片元件等高</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/18/CSS-vh-and-vw/">CSS: vh、vw</a>
           </li>
         
       </ul>
