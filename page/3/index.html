@@ -75,6 +75,73 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Google-Font" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/04/Google-Font/" class="article-date">
+  <time class="dt-published" datetime="2022-08-04T14:42:00.000Z" itemprop="datePublished">2022-08-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/08/04/Google-Font/">Google Font 載入方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Google提供了許多開源的線上字型，這篇會來介紹如何在自己的專案載入Google提供的字型。</p>
+<ol>
+<li><p>首先到 <a target="_blank" rel="noopener" href="https://fonts.google.com/about">Google Font</a>的網站點選Font</p>
+<p> <img src="/../images/pasted-92.png"></p>
+</li>
+<li><p>選一個你想要的字型，也可以用搜尋的</p>
+<p> <img src="/../images/pasted-93.png"></p>
+</li>
+<li><p>我這邊示範選擇Roboto，點進去之後會看到下面的畫面</p>
+<p> <img src="/../images/pasted-94.png"></p>
+</li>
+<li><p>對自己想要的字重按+號，想按引入幾種就按幾種。</p>
+<p> <img src="/../images/pasted-95.png"></p>
+</li>
+<li><p>右手邊就會出現你選擇的字型</p>
+<p> <img src="/../images/pasted-96.png"></p>
+</li>
+<li><p>點選link可以貼到html的header上</p>
+<p> <img src="/../images/pasted-97.png"></p>
+</li>
+<li><p>又或者是點選import可以從scss上載入</p>
+<p> <img src="/../images/pasted-98.png"></p>
+</li>
+<li><p>這樣就載入完成了，可以使用font-family語法直接引入字型了</p>
+</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.body</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: Roboto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/04/Google-Font/" data-id="cl6f65x5u0000dwvp3dv0bbkd" data-title="Google Font 載入方法" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-JQuery-toggleClass" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/03/JQuery-toggleClass/" class="article-date">
@@ -620,61 +687,6 @@ row後面一定要接col，所以這樣寫是錯的。</li>
 
 
   
-    <article id="post-css-background-origin" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/25/css-background-origin/" class="article-date">
-  <time class="dt-published" datetime="2022-07-25T05:07:00.000Z" itemprop="datePublished">2022-07-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/css-background/">css background</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/25/css-background-origin/">CSS: background-origin</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>background-origin可以設定背景圖片的起點位置，分為以下三種:</p>
-<h2 id="border-box"><a href="#border-box" class="headerlink" title="border-box"></a>border-box</h2><p>border-box會讓圖片從border正下方開始延伸，意即border會覆蓋在圖片上。</p>
-<h2 id="padding-box"><a href="#padding-box" class="headerlink" title="padding-box"></a>padding-box</h2><p>padding-box會讓圖片從padding開始延伸，所以border底下會留白，這個也是background-origin的預設值。</p>
-<h2 id="content-box"><a href="#content-box" class="headerlink" title="content-box"></a>content-box</h2><p>content-box會讓圖片從content開始延伸，所以border和padding的部分會留白。</p>
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="background-origin" src="https://codepen.io/intHuang/embed/abYymLa?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/abYymLa">
-  background-origin</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>要注意的是如果沒有下no-repeat，看起來會沒有差別，不過一般來說都會設定no-repeat就是。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/25/css-background-origin/" data-id="cl60b38xs0000m0vpgcejfe3u" data-title="CSS: background-origin" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -732,6 +744,10 @@ row後面一定要接col，所以這樣寫是錯的。</li>
       <ul>
         
           <li>
+            <a href="/2022/08/25/CSS-opacity/">CSS: opacity</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/24/css-keyframe/">CSS: animation and @keyframe</a>
           </li>
         
@@ -745,10 +761,6 @@ row後面一定要接col，所以這樣寫是錯的。</li>
         
           <li>
             <a href="/2022/08/20/bs5-strechedlinked/">bs5: stretched-link</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/19/bs5-card-height/">bs5: 卡片元件等高</a>
           </li>
         
       </ul>

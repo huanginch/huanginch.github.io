@@ -75,6 +75,80 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Javascript-array-function" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/09/Javascript-array-function/" class="article-date">
+  <time class="dt-published" datetime="2022-06-09T03:49:00.000Z" itemprop="datePublished">2022-06-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/09/Javascript-array-function/">Javascript: 陣列函式(上)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>我們在<a href="https://huanginch.github.io/2022/06/07/Javascipt-array/">這篇文</a>有提到陣列的基本性質介紹與簡單的賦值取值操作，這篇會來介紹可以用在陣列上的一些常用函式。</p>
+<ul>
+<li><p>forEach():</p>
+<ul>
+<li>forEach有點像for迴圈，他會遍歷每個元素，用法如下。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.<span class="title function_">forEach</span>(<span class="keyword">function</span>(<span class="params">item, index, arr</span>)&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(item);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">/*執行結果為:</span></span><br><span class="line"><span class="comment">1</span></span><br><span class="line"><span class="comment">2</span></span><br><span class="line"><span class="comment">3</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+  有幾個特別的地方要注意，首先，括弧內要放入一個函式，再來，函式傳入的參數至少要有一個item，但後面的index，array可以視情況加，而他們分別代表當前元素的值、索引值與陣列本身，值得提醒的一點，item、index、array這三個參數名稱不是固定的，你可以改成a、b、c也沒差，但還是建議用方便辨識的方法來命名。</li>
+</ul>
+</li>
+<li><p>filter():</p>
+<ul>
+<li>可以根據給的條件，回傳符合條件的元素陣列。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> newArr = arr.<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">item</span>)&#123;</span><br><span class="line">	<span class="keyword">return</span> item &gt; <span class="number">1</span>;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArr); <span class="comment">//執行結果: [2, 3]</span></span><br></pre></td></tr></table></figure>
+  以這段程式碼來說，return後就是我所設的條件，其中傳入的function與item就和forEach一樣。與forEach不同的是，filter不會修改到原本的arr，而是會建一個新的array，所以我才會又宣告一個newArr來接。</li>
+</ul>
+</li>
+<li><p>find():</p>
+<ul>
+<li>find跟filter很像，都會去尋找符合條件的元素並回傳，但find只會找<strong>第一個</strong>符合條件的，所以他回傳的是元素不是陣列。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> a = arr.<span class="title function_">find</span>(<span class="keyword">function</span>(<span class="params">item</span>)&#123;</span><br><span class="line">	<span class="keyword">return</span> item &gt; <span class="number">1</span>;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">//執行結果: 2</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>findIndex():</p>
+<ul>
+<li>從名稱可以看出來，這是用來找索引值的，而跟find相同，只會找符合的第一個元素。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> aIndex = arr.<span class="title function_">find</span>(<span class="keyword">function</span>(<span class="params">item</span>)&#123;</span><br><span class="line">	<span class="keyword">return</span> item &gt; <span class="number">1</span>;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(aIndex); <span class="comment">//執行結果: 1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  第一筆符合的是2，而2的index為1，所以結果為1。</li>
+</ul>
+</li>
+<li><p>map():</p>
+<ul>
+<li>map和forEach很像，唯一不同的是他會回傳新陣列。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> newArr = arr.<span class="title function_">map</span>(<span class="keyword">function</span>(<span class="params">item</span>)&#123;</span><br><span class="line">	<span class="keyword">return</span> item &gt; <span class="number">1</span>;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArr); <span class="comment">//執行結果: [false, true, true]</span></span><br></pre></td></tr></table></figure>
+  map遍歷了arr中每個元素，並根據條件做出判斷，1沒有小於1所以是false，2、3都大於1所以是true。</li>
+</ul>
+</li>
+<li><p>除了forEahc之外，其他三個都會回傳一個新的陣列，所以要記得加上return才不會出錯，下篇我會來介紹slice、splice等等。</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/09/Javascript-array-function/" data-id="cl46jht8u0000rcvp4excby34" data-title="Javascript: 陣列函式(上)" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-block-and-inline" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/08/css-block-and-inline/" class="article-date">
@@ -686,51 +760,6 @@
 
 
   
-    <article id="post-C-function-return-function" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/30/C-function-return-function/" class="article-date">
-  <time class="dt-published" datetime="2022-05-30T03:16:00.000Z" itemprop="datePublished">2022-05-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/30/C-function-return-function/">C Error: 不允許回傳函式的函式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>昨天在寫C語言期末專案的時候遇到了這個錯誤，簡單來說因為C語言沒辦法像javascript或其他語言那樣在函式裡回傳函式(無法寫巢狀函式)才會產生這個錯誤，但問題是我宣告的函式根本沒有回傳函式阿! 那怎麼會這樣? 先來看看我宣告了什麼函式。</p>
-<p><img src="/../images/pasted-63.png"></p>
-<p>這裡我是想寫一個自己的qsort，並用自訂的struct與linked-list實作，你們有發現什麼問題嗎? 沒錯就是這個函式的名稱，原來sort是c的保留字阿，我完全忘記c已經有sort()這個函式，應該說我以前沒有用到就一直以為只有qsort()，所以我只需要把sort名字改掉就行了，這邊我改成_sort()就沒報錯了。</p>
-<p><img src="/../images/pasted-64.png"></p>
-<p>又學到了一課，不過這次好像是我自己蠢，下次記得sort()不能拿來當自訂函式名稱。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/30/C-function-return-function/" data-id="cl3s6arzw0000v0vp2n5y6rof" data-title="C Error: 不允許回傳函式的函式" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -788,6 +817,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/25/CSS-opacity/">CSS: opacity</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/24/css-keyframe/">CSS: animation and @keyframe</a>
           </li>
         
@@ -801,10 +834,6 @@
         
           <li>
             <a href="/2022/08/20/bs5-strechedlinked/">bs5: stretched-link</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/19/bs5-card-height/">bs5: 卡片元件等高</a>
           </li>
         
       </ul>
