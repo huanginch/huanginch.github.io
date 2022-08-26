@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>彙整: 2022 | Int&#39;s blog</title>
+  <title>CSS: animation on scroll plugin | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Int&#39;s blog">
-<meta property="og:url" content="https://huanginch.github.io/archives/2022/page/9/index.html">
+  <meta name="description" content="為了讓網頁看起來更豐富，很常會讓頁面在滾動時套用動畫，這篇會介紹最簡單達成這個目的的插件-animation on scroll library。 AOS插件提供了非常多樣的簡易載入動畫，如果只是要讓網頁呈現簡單的動畫，aos肯定是首選。 載入方法 npm、yarn  CDN   css:  1&lt;link href&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;aos@2.3.1&#x2F;dist">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS: animation on scroll plugin">
+<meta property="og:url" content="https://huanginch.github.io/2022/08/26/css-aos/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
+<meta property="og:description" content="為了讓網頁看起來更豐富，很常會讓頁面在滾動時套用動畫，這篇會介紹最簡單達成這個目的的插件-animation on scroll library。 AOS插件提供了非常多樣的簡易載入動畫，如果只是要讓網頁呈現簡單的動畫，aos肯定是首選。 載入方法 npm、yarn  CDN   css:  1&lt;link href&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;aos@2.3.1&#x2F;dist">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-08-26T10:31:00.000Z">
+<meta property="article:modified_time" content="2022-08-26T10:55:55.338Z">
 <meta property="article:author" content="int">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -73,216 +78,79 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/31/js-dom-selector/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-31T03:16:00.000Z" itemprop="datePublished">5月 31</time>
+        <section id="main"><article id="post-css-aos" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/26/css-aos/" class="article-date">
+  <time class="dt-published" datetime="2022-08-26T10:31:00.000Z" itemprop="datePublished">2022-08-26</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/31/js-dom-selector/">Javascript: 選取DOM元素</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      CSS: animation on scroll plugin
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/30/C-function-return-function/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-30T03:16:00.000Z" itemprop="datePublished">5月 30</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/30/C-function-return-function/">C Error: 不允許回傳函式的函式</a>
-    </h1>
-  
+        <p>為了讓網頁看起來更豐富，很常會讓頁面在滾動時套用動畫，這篇會介紹最簡單達成這個目的的插件-<a target="_blank" rel="noopener" href="https://michalsnik.github.io/aos/">animation on scroll library</a>。</p>
+<p>AOS插件提供了非常多樣的簡易載入動畫，如果只是要讓網頁呈現簡單的動畫，aos肯定是首選。</p>
+<h2 id="載入方法"><a href="#載入方法" class="headerlink" title="載入方法"></a>載入方法</h2><ol>
+<li><p>npm、yarn</p>
+</li>
+<li><p>CDN</p>
+</li>
+</ol>
+<p>css: </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://unpkg.com/aos@2.3.1/dist/aos.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>js: </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/aos@2.3.1/dist/aos.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/29/Renpy-customize-quickmenu/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-29T03:06:00.000Z" itemprop="datePublished">5月 29</time>
-</a>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
+<li>在網頁中加入初始化js語法(可以寫在script中或寫在外部的js檔案)。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">AOS</span>.<span class="title function_">init</span>();</span><br></pre></td></tr></table></figure></li>
+<li>在欲套用動畫的元素上加入對應的動畫函式。<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-aos</span>=<span class="string">&quot;fade-up&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>兩步驟結束，是不是超簡單XD<br>當然也可以自訂動畫時間、動畫函式與滾動次數等等</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-aos</span>=<span class="string">&quot;fade-up&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-aos-duration</span>=<span class="string">&quot;3000&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-aos</span>=<span class="string">&quot;fade-down&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-aos-easing</span>=<span class="string">&quot;linear&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-aos-duration</span>=<span class="string">&quot;1500&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>套用方式也是只要複製貼上就好，相當簡單。</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>之前不知道有這個套件我都手寫jQuery還達不到自己想要的效果，自從知道這個套件後簡單的載入動畫我都改用這個了。</p>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/29/Renpy-customize-quickmenu/">Ren&#39;Py: customize quick menu</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/28/c-bit-operator/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-28T04:41:00.000Z" itemprop="datePublished">5月 28</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/26/css-aos/" data-id="cl7acyxyw00007ovpbg45eidy" data-title="CSS: animation on scroll plugin" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/28/c-bit-operator/">bit operator in C language</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/27/javascript-octal-decimal/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-27T04:33:00.000Z" itemprop="datePublished">5月 27</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/27/javascript-octal-decimal/">Javascript: 十進制數字與其他進制數字互相轉換</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/26/RenPy-hide-quick-menu/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-26T05:32:00.000Z" itemprop="datePublished">5月 26</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/26/RenPy-hide-quick-menu/">Ren&#39;Py : How to hide quick menu on screen</a>
-    </h1>
-  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/08/25/CSS-opacity/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS: opacity</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/25/CSS-Flex-2/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-25T03:16:00.000Z" itemprop="datePublished">5月 25</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/25/CSS-Flex-2/">CSS排版: Flex(2)</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/24/CSS-FLEX-1/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-24T05:42:00.000Z" itemprop="datePublished">5月 24</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/24/CSS-FLEX-1/">CSS排版: FLEX(1)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/23/ERROR-ENOENT/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-23T03:14:00.000Z" itemprop="datePublished">5月 23</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/23/ERROR-ENOENT/">HEXO ERROR: spawn ENOENT</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/05/22/deploy-on-github/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-05-22T03:18:00.000Z" itemprop="datePublished">5月 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/22/deploy-on-github/">如何部屬HEXO到github.io(deploy on github)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/archives/2022/page/8/">&laquo; 上一頁</a><a class="page-number" href="/archives/2022/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2022/page/7/">7</a><a class="page-number" href="/archives/2022/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/archives/2022/page/10/">10</a><a class="extend next" rel="next" href="/archives/2022/page/10/">下一頁 &raquo;</a>
-  </nav>
 
 </section>
         

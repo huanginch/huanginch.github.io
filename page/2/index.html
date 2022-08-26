@@ -75,6 +75,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-em-and-rem" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/15/css-em-and-rem/" class="article-date">
+  <time class="dt-published" datetime="2022-08-15T15:16:00.000Z" itemprop="datePublished">2022-08-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/08/15/css-em-and-rem/">CSS: em 與 rem</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>我們平常寫網頁使用的單位是px，不過px是絕對單位，如果使用者改變預設字體大小，使用px單位的元素將不會跟著改變，這時候就會使用em或者rem這兩個相對單位。</p>
+<h2 id="em"><a href="#em" class="headerlink" title="em"></a>em</h2><p>em的計算方式是看父層元素的大小再乘上給予的係數，比如我將某個p段落的font-size設定成1.5em，如果父層元素的font-size是16px，那這個p段落的font-size就會是24px。</p>
+<h2 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h2><p>rem的r代表的是root，所以會根據root的大小改變，一般瀏覽器預設字體大小都是16px，所以我任何文字的font-size設定成1.5rem都會是24px。</p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>em與rem不只會用於文字上，margin、padding等等有時也會使用em與rem，不過border、shadow、border-radius並不會使用em或rem，還是會使用px。</p>
+<p>一般來說會使用的都是rem，因為rem是根據root來設定，em在計算上面較不方便。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/15/css-em-and-rem/" data-id="cl6uwser80000oovpecmegqrs" data-title="CSS: em 與 rem" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-bs5-listedgroup" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/14/bs5-listedgroup/" class="article-date">
@@ -541,56 +586,6 @@
 
 
   
-    <article id="post-JQuery-anchor-animation" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/08/05/JQuery-anchor-animation/" class="article-date">
-  <time class="dt-published" datetime="2022-08-05T12:44:00.000Z" itemprop="datePublished">2022-08-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/05/JQuery-anchor-animation/">JQuery: Html錨點動畫</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>我在<a href="https://huanginch.github.io/2022/08/02/html-anchor/">這篇</a>有介紹到html中的錨點，而本篇會來介紹如何用JQuery來讓跳轉的動畫變得流暢。</p>
-<h2 id="載入JQuery"><a href="#載入JQuery" class="headerlink" title="載入JQuery"></a>載入JQuery</h2><p>首先第一步當然是載入JQuery，載入的方法在<a href="https://huanginch.github.io/2022/07/29/JQuery-intro/">JQuery介紹</a>有說明。</p>
-<h2 id="撰寫JQuery"><a href="#撰寫JQuery" class="headerlink" title="撰寫JQuery"></a>撰寫JQuery</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//回頂部</span></span><br><span class="line">$(<span class="string">&#x27;h1&#x27;</span>).<span class="title function_">on</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    $(<span class="string">&quot;html,body&quot;</span>).<span class="title function_">animate</span>(</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">scrollTop</span>: <span class="number">0</span> <span class="comment">//回到第一個區塊</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="number">800</span></span><br><span class="line">    );</span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//其它連到對應區塊</span></span><br><span class="line">  $(<span class="string">&quot;.navbar-list a&quot;</span>).<span class="title function_">on</span>(<span class="string">&quot;click&quot;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> hrefLink = $(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&quot;href&quot;</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(hrefLink);</span><br><span class="line">    $(<span class="string">&quot;html,body&quot;</span>).<span class="title function_">animate</span>(</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">scrollTop</span>: $(hrefLink).<span class="title function_">offset</span>().<span class="property">top</span><span class="comment">//直接到相對位置</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="number">800</span></span><br><span class="line">    );</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>首先我們來一步一步拆解，回頂部區塊就是會滾動回網頁最頂部，用在href&#x3D;”#”的link中，所以當相對應得標籤被點擊(在我這裡是h1)，html和body就會用animate function滾回頂部，用800毫秒的時間，而這裡最重要的就是scrollTop()，scrollTop代表目前viewport最頂端的元素在網頁中的位置，所以將scrollTop設為0就會回到頂部。</p>
-</li>
-<li><p>接著是其他按鈕會滾動到對應區塊的動畫，同樣按了對應的按鈕(我這裡叫navbar-list裡的a)就會產生滾動動畫，透過hrefLink取得id，再透過.offset().top，取得那個元素的頂部座標，就會產生滾動動畫了。</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/08/05/JQuery-anchor-animation/" data-id="cl6gmyl960000bgvp9ysa33x9" data-title="JQuery: Html錨點動畫" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -648,6 +643,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/26/css-aos/">CSS: animation on scroll plugin</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/25/CSS-opacity/">CSS: opacity</a>
           </li>
         
@@ -661,10 +660,6 @@
         
           <li>
             <a href="/2022/08/21/CSS-unit/">CSS: 單位(unit)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/20/bs5-strechedlinked/">bs5: stretched-link</a>
           </li>
         
       </ul>
