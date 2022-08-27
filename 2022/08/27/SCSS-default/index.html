@@ -4,20 +4,23 @@
   <meta charset="utf-8">
   
   
-  <title>Javascript: 比較運算子 | Int&#39;s blog</title>
+  <title>SCSS: !default | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="在賦值運算子篇中有提到常常被新手搞混的「&#x3D;&#x3D;」，這篇就會來介紹和 &#x3D;&#x3D; 同為比較運算子的成員。  大於: &gt;  判斷左式是否大於右式，與數學中的大於無異。   小於: &lt;  判斷左式是否小於右式，與數學中的小於無異。   等於: &#x3D;&#x3D;  判斷左右兩邊是否相等，相等回傳true，不相等回傳false，就和數學中的相等是一樣的，值">
+  <meta name="description" content="在scss中有個語法叫!default，與css中的!important有點像是相反的存在，關於!important可以參考這篇，不過!defult是scss特有的，css並沒有。 如果在屬性後加上!default他會變成類似預設值的存在，權重最低，可以用任何方式覆蓋。 通常會用在scss的變數上 1$primary: blue !default;  舉例來說bs5中的 _variable.scs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript: 比較運算子">
-<meta property="og:url" content="https://huanginch.github.io/2022/06/14/js-compare-operator/index.html">
+<meta property="og:title" content="SCSS: !default">
+<meta property="og:url" content="https://huanginch.github.io/2022/08/27/SCSS-default/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="在賦值運算子篇中有提到常常被新手搞混的「&#x3D;&#x3D;」，這篇就會來介紹和 &#x3D;&#x3D; 同為比較運算子的成員。  大於: &gt;  判斷左式是否大於右式，與數學中的大於無異。   小於: &lt;  判斷左式是否小於右式，與數學中的小於無異。   等於: &#x3D;&#x3D;  判斷左右兩邊是否相等，相等回傳true，不相等回傳false，就和數學中的相等是一樣的，值">
+<meta property="og:description" content="在scss中有個語法叫!default，與css中的!important有點像是相反的存在，關於!important可以參考這篇，不過!defult是scss特有的，css並沒有。 如果在屬性後加上!default他會變成類似預設值的存在，權重最低，可以用任何方式覆蓋。 通常會用在scss的變數上 1$primary: blue !default;  舉例來說bs5中的 _variable.scs">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-06-14T03:01:00.000Z">
-<meta property="article:modified_time" content="2022-06-21T02:49:49.098Z">
+<meta property="og:image" content="https://huanginch.github.io/images/pasted-120.png">
+<meta property="article:published_time" content="2022-08-27T11:47:00.000Z">
+<meta property="article:modified_time" content="2022-08-27T11:57:11.959Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="scss">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://huanginch.github.io/images/pasted-120.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -78,16 +81,12 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-js-compare-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-SCSS-default" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/06/14/js-compare-operator/" class="article-date">
-  <time class="dt-published" datetime="2022-06-14T03:01:00.000Z" itemprop="datePublished">2022-06-14</time>
+    <a href="/2022/08/27/SCSS-default/" class="article-date">
+  <time class="dt-published" datetime="2022-08-27T11:47:00.000Z" itemprop="datePublished">2022-08-27</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/js-operator/">js-operator</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -96,7 +95,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Javascript: 比較運算子
+      SCSS: !default
     </h1>
   
 
@@ -104,60 +103,23 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>在<a href="https://huanginch.github.io/2022/06/05/js-assignment-operator/">賦值運算子篇</a>中有提到常常被新手搞混的「&#x3D;&#x3D;」，這篇就會來介紹和 &#x3D;&#x3D; 同為比較運算子的成員。</p>
-<ul>
-<li><p>大於: &gt;</p>
-<ul>
-<li>判斷左式是否大於右式，與數學中的大於無異。</li>
-</ul>
-</li>
-<li><p>小於: &lt;</p>
-<ul>
-<li>判斷左式是否小於右式，與數學中的小於無異。</li>
-</ul>
-</li>
-<li><p>等於: &#x3D;&#x3D;</p>
-<ul>
-<li>判斷左右兩邊是否相等，相等回傳true，不相等回傳false，就和數學中的相等是一樣的，值得注意的是，因為js是弱型別語言，所以在使用時他會先幫你強制轉型，所以可以用來比較數字和字串，比如說:  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">lo</span>(<span class="number">1</span> == <span class="string">&#x27;1&#x27;</span>); <span class="comment">//執行結果: true</span></span><br></pre></td></tr></table></figure>
-  很酷吧，明明兩個型態不一樣，但內容一樣比較結果就是相等。</li>
-</ul>
-</li>
-<li><p>嚴格等於: &#x3D;&#x3D;&#x3D;</p>
-<ul>
-<li>那如果我不想要他幫我強制轉型怎麼辦?我就是要判斷他是不是不同型別啊?那沒問題喔，js有提供另一種等於，叫做嚴格等於，就跟其他強型別語言中的 &#x3D;&#x3D; 一樣，型別不同就會回傳false。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span> == <span class="string">&#x27;1&#x27;</span>);<span class="comment">//執行結果: false</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>大於等於: &gt;&#x3D;</p>
-<ul>
-<li>判斷左式是否大於等於右式，這裡也是不嚴格。</li>
-</ul>
-</li>
-<li><p>小於等於: &lt;&#x3D;</p>
-<ul>
-<li>判斷左式是否小於等於右式，這裡也是不嚴格。</li>
-</ul>
-</li>
-<li><p>不等於: !&#x3D;</p>
-<ul>
-<li>和 &#x3D;&#x3D; 類似，這是比較左右兩式是否不等，同樣也是不嚴格比較，所以數字和字串相比可能會得到與你預期不同的結果。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span> != <span class="string">&#x27;1&#x27;</span>);<span class="comment">//執行結果: false</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>嚴格不等於: !&#x3D;&#x3D;</p>
-<ul>
-<li>你如果希望上面那段code得到true的結果就可以使用這個。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span> != <span class="string">&#x27;1&#x27;</span>);<span class="comment">//執行結果: true </span></span><br></pre></td></tr></table></figure>
-這些就是全部的比較運算子，第一次接觸的js的時候常常因為不嚴格等於而遇到bug，所以大家在寫的時候最好多注意一下，不要犯了跟我一樣的錯。</li>
-</ul>
-</li>
-</ul>
+        <p>在scss中有個語法叫!default，與css中的!important有點像是相反的存在，關於!important可以參考<a href="https://huanginch.github.io/2022/07/05/css-important/">這篇</a>，不過!defult是scss特有的，css並沒有。</p>
+<p>如果在屬性後加上!default他會變成類似預設值的存在，權重最低，可以用任何方式覆蓋。</p>
+<p>通常會用在scss的變數上</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$primary</span>: blue !default;</span><br></pre></td></tr></table></figure>
+
+<p>舉例來說bs5中的 <code>_variable.scss</code>檔案的許多變數都有使用到!default。</p>
+<p><img src="/../images/pasted-120.png" alt="_varaible.scss"></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>今天這篇沒有介紹scss就直接介紹了!default，之後會補齊關於scss的文章。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/14/js-compare-operator/" data-id="cl4dljelm00008gvpbtk5d0mn" data-title="Javascript: 比較運算子" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/08/27/SCSS-default/" data-id="cl7bulj7k00009ovp1gldhwe1" data-title="SCSS: !default" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scss/" rel="tag">scss</a></li></ul>
 
     </footer>
   </div>
@@ -165,19 +127,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/06/15/js-arthimetic-operator/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Javascript: 算數運算子
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/06/13/js-bit-operator/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/08/26/css-aos/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Javascript: bit operator</div>
+      <div class="article-nav-title">CSS: animation on scroll plugin</div>
     </a>
   
 </nav>
