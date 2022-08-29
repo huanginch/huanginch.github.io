@@ -75,6 +75,63 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-SCSS" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/29/SCSS/" class="article-date">
+  <time class="dt-published" datetime="2022-08-29T10:57:00.000Z" itemprop="datePublished">2022-08-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/08/29/SCSS/">SCSS介紹</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>SCSS是用來更方便、更有結構性撰寫CSS的一種語言，撰寫後的SCSS會被編譯成CSS。<br>這篇會來介紹SCSS的特色以及與CSS的不同之處。</p>
+<h2 id="巢狀結構"><a href="#巢狀結構" class="headerlink" title="巢狀結構"></a>巢狀結構</h2><p>scss可以使用巢狀結構，將子元素包在父元素的大括弧裡。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">	a &#123;</span><br><span class="line">    	<span class="attribute">color</span>: <span class="number">#2D2D2D</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>編譯後的CSS檔案會長這樣</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#2D2D2D</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果名稱相同也可以用&amp;來代替</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">	a &#123;</span><br><span class="line">    	<span class="attribute">color</span>: <span class="number">#2D2D2D</span>;</span><br><span class="line">        </span><br><span class="line">        &amp;<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">        	<span class="attribute">color</span>: <span class="number">#1C1C1C</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    &amp;-image &#123; <span class="comment">//if the class name is box-image</span></span><br><span class="line">    	<span class="attribute">width</span>: <span class="number">50%</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="變數"><a href="#變數" class="headerlink" title="變數"></a>變數</h2><p>SCSS可以像js那樣設定變數，並帶入到選擇器中</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$primary</span>: <span class="number">#2D2D2D</span>;</span><br><span class="line"><span class="variable">$secondary</span>: <span class="number">#1C1C1C</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-size-lg</span>: <span class="number">48px</span>;</span><br><span class="line"><span class="variable">$font-size-md</span>: <span class="number">24px</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">color</span>: <span class="variable">$primary</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="variable">$font-size-lg</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="mixin"><a href="#mixin" class="headerlink" title="mixin"></a>mixin</h2><p>mixin有點類似函數，可以將常用的語法包裝成mixin，要使用時可以直接拿出來，不過要注意，使用時須搭配@include。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> rounded-border() &#123;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">24px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="keyword">@include</span> rounded-border();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>以上就是scss的一些簡單介紹，其他我沒介紹到的語法因為我自己還沒用過也還沒學會，之後會再補上。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/29/SCSS/" data-id="cl7eo04r000003svpb2bucg2b" data-title="SCSS介紹" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scss/" rel="tag">scss</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-SCSS-default" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/27/SCSS-default/" class="article-date">
@@ -651,84 +708,6 @@
 
 
   
-    <article id="post-CSS-transition" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/08/17/CSS-transition/" class="article-date">
-  <time class="dt-published" datetime="2022-08-17T05:01:00.000Z" itemprop="datePublished">2022-08-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/17/CSS-transition/">CSS: 轉場動畫(transition)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>transition可以為樣式在改變時添加動畫，比如hover時可能會改變字體顏色、多條border等等，加入transition可以讓這個改變更加流暢。</p>
-<h2 id="transition-property"><a href="#transition-property" class="headerlink" title="transition-property"></a>transition-property</h2><p>要轉換的目標css屬性，比如color、border等等，也可以用all針對所有改變的屬性作出動畫。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">	<span class="attribute">transition-property</span>: all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="transition-duration"><a href="#transition-duration" class="headerlink" title="transition-duration"></a>transition-duration</h2><p>設定動畫要持續多久</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">	<span class="attribute">transition-duration</span>: <span class="number">0.5s</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="transition-timing-function"><a href="#transition-timing-function" class="headerlink" title="transition-timing-function"></a>transition-timing-function</h2><p>動畫呈現函式，可以自訂動畫呈現的效果，但這方面比較複雜，所以CSS也有提供幾個事先寫好的函式，更多可以參考<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">官方文件</a></p>
-<ul>
-<li><p>linear</p>
-</li>
-<li><p>ease</p>
-</li>
-<li><p>ease-in</p>
-</li>
-<li><p>ease-out</p>
-</li>
-<li><p>ease-in-out</p>
-</li>
-<li><p>step-start</p>
-</li>
-<li><p>step-end</p>
-</li>
-</ul>
-<p>關於動畫呈現效果我之後會補上文章</p>
-<h2 id="transition-delay"><a href="#transition-delay" class="headerlink" title="transition-delay"></a>transition-delay</h2><p>設定延遲幾秒才出現動畫</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">	<span class="attribute">transition-delay</span>:<span class="number">250ms</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h2><p>上述的語法都可以簡寫成transition一個屬性</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">	<span class="attribute">transition</span>: &lt;property&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/intHuang/embed/oNqQmRg?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/oNqQmRg">
-  Untitled</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>[註] transition要放在a上，不能放在hover上，否則滑鼠游標離開a時會沒有動畫。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/08/17/CSS-transition/" data-id="cl6x6efut0000vkvp9x7i7d9q" data-title="CSS: 轉場動畫(transition)" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -764,7 +743,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 10px;">scss</a>
+      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.67px;">scss</a>
     </div>
   </div>
 
@@ -786,6 +765,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/29/SCSS/">SCSS介紹</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/27/SCSS-default/">SCSS: !default</a>
           </li>
         
@@ -799,10 +782,6 @@
         
           <li>
             <a href="/2022/08/24/css-keyframe/">CSS: animation and @keyframe</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/22/css-vmax-and-vmin/">CSS: vmax、vmin</a>
           </li>
         
       </ul>

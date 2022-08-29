@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>CSS: Position: Absolute and Relative | Int&#39;s blog</title>
+  <title>SCSS介紹 | Int&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="這兩個屬性通常會一起出現，所以這邊把他們放在一起介紹，讓我們先從absolute開始看起。 absolute123.box&amp;#123;	position: absolute;&amp;#125;  absolute屬性會讓元素從document flow上移除，講的白話一點，就是網頁上的其他元素會無視這個元素，所以就會出現元素重疊，而這個absolute元素的位置可以透過top、bottom、left、r">
+  <meta name="description" content="SCSS是用來更方便、更有結構性撰寫CSS的一種語言，撰寫後的SCSS會被編譯成CSS。這篇會來介紹SCSS的特色以及與CSS的不同之處。 巢狀結構scss可以使用巢狀結構，將子元素包在父元素的大括弧裡。 1234567.box &amp;#123;	width: 100%	a &amp;#123;    	color: #2D2D2D;    &amp;#125;&amp;#125;  編譯後的CSS檔案會長這樣 123456">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS: Position: Absolute and Relative">
-<meta property="og:url" content="https://huanginch.github.io/2022/07/14/css-absolute-and-relative/index.html">
+<meta property="og:title" content="SCSS介紹">
+<meta property="og:url" content="https://huanginch.github.io/2022/08/29/SCSS/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
-<meta property="og:description" content="這兩個屬性通常會一起出現，所以這邊把他們放在一起介紹，讓我們先從absolute開始看起。 absolute123.box&amp;#123;	position: absolute;&amp;#125;  absolute屬性會讓元素從document flow上移除，講的白話一點，就是網頁上的其他元素會無視這個元素，所以就會出現元素重疊，而這個absolute元素的位置可以透過top、bottom、left、r">
+<meta property="og:description" content="SCSS是用來更方便、更有結構性撰寫CSS的一種語言，撰寫後的SCSS會被編譯成CSS。這篇會來介紹SCSS的特色以及與CSS的不同之處。 巢狀結構scss可以使用巢狀結構，將子元素包在父元素的大括弧裡。 1234567.box &amp;#123;	width: 100%	a &amp;#123;    	color: #2D2D2D;    &amp;#125;&amp;#125;  編譯後的CSS檔案會長這樣 123456">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-07-14T03:40:00.000Z">
-<meta property="article:modified_time" content="2022-07-14T04:34:59.381Z">
+<meta property="article:published_time" content="2022-08-29T10:57:00.000Z">
+<meta property="article:modified_time" content="2022-08-29T11:15:59.531Z">
 <meta property="article:author" content="int">
-<meta property="article:tag" content="css">
+<meta property="article:tag" content="scss">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
@@ -78,16 +78,12 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-css-absolute-and-relative" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-SCSS" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/07/14/css-absolute-and-relative/" class="article-date">
-  <time class="dt-published" datetime="2022-07-14T03:40:00.000Z" itemprop="datePublished">2022-07-14</time>
+    <a href="/2022/08/29/SCSS/" class="article-date">
+  <time class="dt-published" datetime="2022-08-29T10:57:00.000Z" itemprop="datePublished">2022-08-29</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/css-position/">css position</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -96,7 +92,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      CSS: Position: Absolute and Relative
+      SCSS介紹
     </h1>
   
 
@@ -104,39 +100,32 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>這兩個屬性通常會一起出現，所以這邊把他們放在一起介紹，讓我們先從absolute開始看起。</p>
-<h2 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>SCSS是用來更方便、更有結構性撰寫CSS的一種語言，撰寫後的SCSS會被編譯成CSS。<br>這篇會來介紹SCSS的特色以及與CSS的不同之處。</p>
+<h2 id="巢狀結構"><a href="#巢狀結構" class="headerlink" title="巢狀結構"></a>巢狀結構</h2><p>scss可以使用巢狀結構，將子元素包在父元素的大括弧裡。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">	a &#123;</span><br><span class="line">    	<span class="attribute">color</span>: <span class="number">#2D2D2D</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>absolute屬性會讓元素從document flow上移除，講的白話一點，就是網頁上的其他元素會無視這個元素，所以就會出現元素重疊，而這個absolute元素的位置可以透過top、bottom、left、right屬性來設定，這四個屬性的相關介紹可以看<a href="https://huanginch.github.io/2022/07/09/css-position-fixed/">這裡</a></p>
-<p>可是他的位置是從哪裡算起的呢？答案是上一層並且有設定position的元素(除了position: static)，如果沒有那就會默認為起始的容器(通常都是body)</p>
-<p>以下面這個例子來看(建議以0.25x觀看)，黃色方塊會跑到最底下，因為我將bottom設置為0，同時他上面的父元素並沒有設置position，所以默認會用body來做計算。</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="position: absolute " src="https://codepen.io/intHuang/embed/rNdWVRv?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/rNdWVRv">
-  position: absolute </a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
+<p>編譯後的CSS檔案會長這樣</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#2D2D2D</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h2><p>這時候如果想讓黃色方塊留在藍色方塊中，又不希望藍色方塊的位置跑掉，就可以使用position: relative</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.child-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果名稱相同也可以用&amp;來代替</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">	a &#123;</span><br><span class="line">    	<span class="attribute">color</span>: <span class="number">#2D2D2D</span>;</span><br><span class="line">        </span><br><span class="line">        &amp;<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">        	<span class="attribute">color</span>: <span class="number">#1C1C1C</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    &amp;-image &#123; <span class="comment">//if the class name is box-image</span></span><br><span class="line">    	<span class="attribute">width</span>: <span class="number">50%</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>設置了relative屬性的元素也可以透過top、bottom、right、left四個屬性來設定位置，基本上就與static相同，所以relative可以說是為了absolute而存在的。</p>
-<p>從下面的例子就可以看到，我在藍色方塊設置了position: relative; 所以黃色方塊就被固定在藍色方塊的底部。</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="position: absolute " src="https://codepen.io/intHuang/embed/BarQNez?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/BarQNez">
-  position: absolute </a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
+<h2 id="變數"><a href="#變數" class="headerlink" title="變數"></a>變數</h2><p>SCSS可以像js那樣設定變數，並帶入到選擇器中</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$primary</span>: <span class="number">#2D2D2D</span>;</span><br><span class="line"><span class="variable">$secondary</span>: <span class="number">#1C1C1C</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-size-lg</span>: <span class="number">48px</span>;</span><br><span class="line"><span class="variable">$font-size-md</span>: <span class="number">24px</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">color</span>: <span class="variable">$primary</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="variable">$font-size-lg</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>absolute與relative算是很常用在元素內的排版，特別是有圖文的樣式，之前寫作業的時候也有用到，不過一開始我沒想到可以用absolute和relative，還在那邊用background image XD ，下次我就會記得了。</p>
+<h2 id="mixin"><a href="#mixin" class="headerlink" title="mixin"></a>mixin</h2><p>mixin有點類似函數，可以將常用的語法包裝成mixin，要使用時可以直接拿出來，不過要注意，使用時須搭配@include。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> rounded-border() &#123;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">24px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="keyword">@include</span> rounded-border();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>以上就是scss的一些簡單介紹，其他我沒介紹到的語法因為我自己還沒用過也還沒學會，之後會再補上。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/14/css-absolute-and-relative/" data-id="cl5kjfe9u00009svp9zdc1ax5" data-title="CSS: Position: Absolute and Relative" class="article-share-link">Share</a>
+      <a data-url="https://huanginch.github.io/2022/08/29/SCSS/" data-id="cl7eo04r000003svpb2bucg2b" data-title="SCSS介紹" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scss/" rel="tag">scss</a></li></ul>
 
     </footer>
   </div>
@@ -144,19 +133,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/07/18/css-max-width-and-min-width/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          CSS: Max-width and min-width
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/07/13/css-position-sticky/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/08/27/SCSS-default/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">CSS: position:sticky</div>
+      <div class="article-nav-title">SCSS: !default</div>
     </a>
   
 </nav>

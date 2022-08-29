@@ -75,6 +75,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-max-width-and-min-width" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/18/css-max-width-and-min-width/" class="article-date">
+  <time class="dt-published" datetime="2022-07-18T11:13:00.000Z" itemprop="datePublished">2022-07-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/18/css-max-width-and-min-width/">CSS: Max-width and min-width</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>max-width和min-width可以為元素設定最大寬度與最小寬度，讓元素的寬度不會被width的值所限制。</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">	<span class="attribute">max-width</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box2</span>&#123;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="max-width"><a href="#max-width" class="headerlink" title="max-width"></a>max-width</h2><p>元素的寬度不會超過max-width所設定的值</p>
+<h2 id="min-width"><a href="#min-width" class="headerlink" title="min-width"></a>min-width</h2><p>元素的寬度不會小於min-width所設定的值</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>這幾次寫作業為了讓寬度達到跟設計稿相同高度很常使用到max-width，一來是寬度最大就是那樣，二來會有簡易的RWD，相當好用。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/18/css-max-width-and-min-width/" data-id="cl5qnvt7a0000ewvp0v5edh8c" data-title="CSS: Max-width and min-width" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-absolute-and-relative" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/14/css-absolute-and-relative/" class="article-date">
@@ -650,78 +696,6 @@
 
 
   
-    <article id="post-css-tag-class-and-id-selector" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/03/css-tag-class-and-id-selector/" class="article-date">
-  <time class="dt-published" datetime="2022-07-03T03:28:00.000Z" itemprop="datePublished">2022-07-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/css-selector/">css selector</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/03/css-tag-class-and-id-selector/">CSS: 標籤、類別、ID選擇器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>CSS中要對html元素做操作就會需要用到所謂的選擇器來選取DOM元素，這裡會介紹幾個基礎且常見的選擇器。</p>
-<h2 id="標籤選擇器-Type-Selector"><a href="#標籤選擇器-Type-Selector" class="headerlink" title="標籤選擇器(Type Selector)"></a>標籤選擇器(Type Selector)</h2><p>html中有許多的標籤，之前<a href="https://huanginch.github.io/2022/06/27/html-tag/">這篇</a>也有介紹一些常見的標籤，想當然可以直接選取標籤並為他們制定規則[註1]。</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="tag selector" src="https://codepen.io/intHuang/embed/QWmbmzG?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/QWmbmzG">
-  tag selector</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>標籤選擇器不需要多寫什麼，直接寫上標籤名稱即可，像我這裡就幫h1加了背景。</p>
-<h2 id="類別選擇器-Class-Selector"><a href="#類別選擇器-Class-Selector" class="headerlink" title="類別選擇器(Class Selector)"></a>類別選擇器(Class Selector)</h2><p>因為標籤選擇器只能選取所有相同類別的標籤而不能單獨對某個特定標籤做出處理，所以就有了類別選擇器，可以在標籤上加上屬性class，選擇時可以針對class name做選取</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="class selector" src="https://codepen.io/intHuang/embed/YzaXadM?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/YzaXadM">
-  class selector</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>類別選擇器的寫法是在要選取的class name前面加上一個 <strong>.</strong></p>
-<h2 id="ID選擇器-ID-Selector"><a href="#ID選擇器-ID-Selector" class="headerlink" title="ID選擇器(ID Selector)"></a>ID選擇器(ID Selector)</h2><p>和類別選擇器很類似，ID選擇器也可以針對特定元素做出處理</p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="ID Selector" src="https://codepen.io/intHuang/embed/poLJLYw?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/poLJLYw">
-  ID Selector</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>和class寫法不同，ID是在ID前面加上 <strong>#</strong></p>
-<p>[註1]所謂的規則(Rule)指的就是選擇器加上css屬性，例如:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>我自己比較常用到標籤與類別選擇器，至於類別和ID選擇器的差異會留到新文章來做比較。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/03/css-tag-class-and-id-selector/" data-id="cl54scto10006fovp0h2p6ahi" data-title="CSS: 標籤、類別、ID選擇器" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -757,7 +731,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 10px;">scss</a>
+      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.67px;">scss</a>
     </div>
   </div>
 
@@ -779,6 +753,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/29/SCSS/">SCSS介紹</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/27/SCSS-default/">SCSS: !default</a>
           </li>
         
@@ -792,10 +770,6 @@
         
           <li>
             <a href="/2022/08/24/css-keyframe/">CSS: animation and @keyframe</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/22/css-vmax-and-vmin/">CSS: vmax、vmin</a>
           </li>
         
       </ul>

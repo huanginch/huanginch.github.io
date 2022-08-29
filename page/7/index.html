@@ -75,6 +75,58 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-box-sizing-border-box" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/23/css-box-sizing-border-box/" class="article-date">
+  <time class="dt-published" datetime="2022-06-23T03:55:00.000Z" itemprop="datePublished">2022-06-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/23/css-box-sizing-border-box/">CSS: border-box</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在css中常常要自己去計算padding、margin等等的推擠造成的盒模型大小不同，所以css有提供一個叫border-box的方法讓你不用去計算。</p>
+<h2 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h2><p>這個就是用來選擇是否使用border-box，不修改的話預設會是content-box。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="border-box"><a href="#border-box" class="headerlink" title="border-box"></a>border-box</h2><p>想要使用border-box只需要把content-box做修改即可</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="套用到所有元素"><a href="#套用到所有元素" class="headerlink" title="套用到所有元素"></a>套用到所有元素</h2><p>因為border-box很方便，所以開發者通常會希望一次都套用到所有元素上，這時候就可以這樣寫</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*, </span><br><span class="line">*::before, </span><br><span class="line">*::after&#123;</span><br><span class="line">	box-sizing: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>這樣所有元素都會吃到border-box，* 代表全部，至於before和after就是擬態選擇器中有稍微提到的pesudo class，這部分以後會一起介紹。</p>
+<p>其實我之前切版都沒有使用到，下次應該會來試試，這樣我就不用自己計算推擠了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/23/css-box-sizing-border-box/" data-id="cl4qi2hrv0000vcvpchux075i" data-title="CSS: border-box" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-Pseudo-Class-Selector" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/22/css-Pseudo-Class-Selector/" class="article-date">
@@ -756,82 +808,6 @@
 
 
   
-    <article id="post-js-bit-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/13/js-bit-operator/" class="article-date">
-  <time class="dt-published" datetime="2022-06-13T05:25:00.000Z" itemprop="datePublished">2022-06-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/js-operator/">js-operator</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/13/js-bit-operator/">Javascript: bit operator</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>我們在前幾篇有介紹到邏輯運算子，這篇會來介紹新手很容易與邏輯運算子搞錯的位元運算子，其實我之前也有介紹過C的位元運算子，不過javascript能用的指令比C多了一些，就讓我們來看一下吧。</p>
-<ul>
-<li>and: &amp;<ul>
-<li>兩個位元都為1就設為1</li>
-</ul>
-</li>
-<li>or: |<ul>
-<li>其中一個位元為1就設為1</li>
-</ul>
-</li>
-<li>xor: ^<ul>
-<li>兩個位元不同就設為1</li>
-</ul>
-</li>
-<li>not: ~<ul>
-<li>位元為0設為1，位元為1設為0</li>
-</ul>
-</li>
-<li>zero fill left shift: &lt;&lt;<ul>
-<li>全部位元往左移動，空著的地方補0</li>
-</ul>
-</li>
-<li>signed right shift: &gt;&gt;<ul>
-<li>全部位元往右移動，但最右邊的會被推到最左邊(循環的概念)</li>
-</ul>
-</li>
-<li>zero fill right shift: &gt;&gt;&gt;<ul>
-<li>全部位元往右移動，空著的地方補0</li>
-</ul>
-</li>
-</ul>
-<p>與C最不同的是，js提供了signed right shift，讓我們不用自己寫(話說前幾天考試才剛考如何用C寫出signed right shift XD)，算是相當方便，不過其他的部分就大同小異，重要的還是要注意這是針對位元來做邏輯運算，而不是對整個資料。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/13/js-bit-operator/" data-id="cl4cayqv60000lovp0f4vf1u0" data-title="Javascript: bit operator" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -867,7 +843,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 10px;">scss</a>
+      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.67px;">scss</a>
     </div>
   </div>
 
@@ -889,6 +865,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/29/SCSS/">SCSS介紹</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/27/SCSS-default/">SCSS: !default</a>
           </li>
         
@@ -902,10 +882,6 @@
         
           <li>
             <a href="/2022/08/24/css-keyframe/">CSS: animation and @keyframe</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/22/css-vmax-and-vmin/">CSS: vmax、vmin</a>
           </li>
         
       </ul>

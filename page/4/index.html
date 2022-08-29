@@ -75,6 +75,72 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-font" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/28/css-font/" class="article-date">
+  <time class="dt-published" datetime="2022-07-28T05:46:00.000Z" itemprop="datePublished">2022-07-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/28/css-font/">CSS: font</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>字型在網頁設計中是必不可少的一部份，這篇會來簡單介紹字型的屬性以及一些注意事項。</p>
+<h2 id="預設字體"><a href="#預設字體" class="headerlink" title="預設字體"></a>預設字體</h2><p>每種作業系統與瀏覽器都有自己的預設字體，這裡主要介紹Windows和Mac，因為這兩種作業系統在PC上的市佔率最高。</p>
+<ul>
+<li><p>Windows: 常用中文字體有三種:新細明體(預設)、微軟正黑體、標楷體。英文有一種: Segoe UI。要特別注意雖然windows預設是新細明體，但在網頁設計上都會改成使用較好閱讀的微軟正黑，新細明體字體太細不適合閱讀，算是windows小雷的地方。</p>
+</li>
+<li><p>Mac: 中文: 蘋方(預設)</p>
+</li>
+</ul>
+<p>其他系統預設英文字體可以參考<a target="_blank" rel="noopener" href="https://css-tricks.com/snippets/css/system-font-stack/">這篇</a></p>
+<p>在讀設計稿時常常會遇到一個問題: 設計師用Mac&#x2F;Windows內建字體設計，我的電腦沒有那個字體怎麼辦，這時候只要使用你的系統的預設字體即可，比如windows就用微軟正黑，Mac就用蘋方。</p>
+<h2 id="在css中載入字型"><a href="#在css中載入字型" class="headerlink" title="在css中載入字型"></a>在css中載入字型</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.body</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: 第一種字形, 第二種字形, <span class="string">&quot;第三 種字形&quot;</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>想要在css中載入內建字體可以使用font-family，瀏覽器會從第一種字形開始套用，找不到就會套用第二種，以此類推，一般來說直接把字形名稱寫上去就好了，但如果遇到字體名稱有空格或無法載入就要加上單引號或雙引號。</p>
+<h2 id="載入外部字體"><a href="#載入外部字體" class="headerlink" title="載入外部字體"></a>載入外部字體</h2><p>除了作業系統內建的字體我們也可以載入外部字體，最常用的就是Google Fonts，因為這樣就沒有跨作業系統而缺字體的問題。</p>
+<p>一般來說中文會使用Noto Sans TC，這是Google與Adobe共同開發的開源字體，英文則會使用Roboto。<br>載入詳細步驟可以參考<a target="_blank" rel="noopener" href="https://hackmd.io/@YmcMgo-NSKOqgTGAjl_5tg/HJpJk8ABU/https%3A%2F%2Fhackmd.io%2F2nenMilfR7WSJSDI4WzcWA%3Fview">這篇</a></p>
+<h2 id="字重"><a href="#字重" class="headerlink" title="字重"></a>字重</h2><p>font還有一個屬性叫做font-weight，可以調整字體的粗細，可以細分為100、200…到900這幾種，不過要注意有些字體只有支援少數幾種字重，比如說微軟正黑只有Light(100)、Normal(400)、Bold(900)三種，所以大家才會選擇使用Google Fonts的Noto Sans TC，因為他支援100~900的字重。</p>
+<p>在觀看設計稿時也要特別注意設計師設計的字重，常見的有Medium、Regular(Normal)、Bold，Normal是預設，Medium與Bold轉換成數字分別對應到500與900。</p>
+<p>更多關於字重的介紹可以看<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">這篇</a></p>
+<h2 id="從Chrome開發人員工具觀看是否套用成功"><a href="#從Chrome開發人員工具觀看是否套用成功" class="headerlink" title="從Chrome開發人員工具觀看是否套用成功"></a>從Chrome開發人員工具觀看是否套用成功</h2><p>Chrome提供了非常強大的網頁開發工具，我們在自己撰寫網頁時可以用這個工具來看各種檔案的屬性與載入成功與否等等，這裡會介紹如何觀看字型是否套用成功。</p>
+<p>以這個例子來說，這是我自己撰寫的網站，我在英文字體的部分套用了Roboto字體，打開工具後我選取了Functional這個英文。</p>
+<p><img src="/../images/pasted-89.png" alt="chrome ex"></p>
+<p>選取後點擊右下角的Computed，之後拉到最下面有一個Rendered Fonts。</p>
+<p><img src="/../images/pasted-90.png" alt="Computed"></p>
+<p>上面會看到我現在使用的字體與字重(這裡是Roboto Medium)</p>
+<p><img src="/../images/pasted-91.png" alt="Rendered Fonts"></p>
+<h2 id="css懶人包"><a href="#css懶人包" class="headerlink" title="css懶人包"></a>css懶人包</h2><p>這個懶人包包含了所有常見預設字體，依序為Mac-&gt;Windows-&gt;Android-&gt;IOS-&gt;通用字體，其中Arial與sans-serif為最常見也最多瀏覽器支援的字體，如果不想特別設計字體可以使用這個懶人包。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: -apple-system, BlinkMacSystemFont, <span class="string">&quot;Segoe UI&quot;</span>, <span class="string">&quot;Microsoft JhengHei&quot;</span>, Roboto, <span class="string">&quot;Helvetica Neue&quot;</span>, Arial, sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/28/css-font/" data-id="cl64naijc00001svpbm179egr" data-title="CSS: font" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-background-attachment" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/27/css-background-attachment/" class="article-date">
@@ -690,52 +756,6 @@
 
 
   
-    <article id="post-css-max-width-and-min-width" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/18/css-max-width-and-min-width/" class="article-date">
-  <time class="dt-published" datetime="2022-07-18T11:13:00.000Z" itemprop="datePublished">2022-07-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/18/css-max-width-and-min-width/">CSS: Max-width and min-width</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>max-width和min-width可以為元素設定最大寬度與最小寬度，讓元素的寬度不會被width的值所限制。</p>
-<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">	<span class="attribute">max-width</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box2</span>&#123;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="max-width"><a href="#max-width" class="headerlink" title="max-width"></a>max-width</h2><p>元素的寬度不會超過max-width所設定的值</p>
-<h2 id="min-width"><a href="#min-width" class="headerlink" title="min-width"></a>min-width</h2><p>元素的寬度不會小於min-width所設定的值</p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>這幾次寫作業為了讓寬度達到跟設計稿相同高度很常使用到max-width，一來是寬度最大就是那樣，二來會有簡易的RWD，相當好用。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/18/css-max-width-and-min-width/" data-id="cl5qnvt7a0000ewvp0v5edh8c" data-title="CSS: Max-width and min-width" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -771,7 +791,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 10px;">scss</a>
+      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.67px;">scss</a>
     </div>
   </div>
 
@@ -793,6 +813,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/29/SCSS/">SCSS介紹</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/27/SCSS-default/">SCSS: !default</a>
           </li>
         
@@ -806,10 +830,6 @@
         
           <li>
             <a href="/2022/08/24/css-keyframe/">CSS: animation and @keyframe</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/22/css-vmax-and-vmin/">CSS: vmax、vmin</a>
           </li>
         
       </ul>
