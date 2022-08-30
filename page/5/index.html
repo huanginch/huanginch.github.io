@@ -75,6 +75,95 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-overflow" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/19/css-overflow/" class="article-date">
+  <time class="dt-published" datetime="2022-07-19T04:11:00.000Z" itemprop="datePublished">2022-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/19/css-overflow/">CSS: Overflow</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>有時候會有元素太大導致超出父元素的問題，這就叫做overflow(特別容易發生在有設定高度的元素中)，以下面為例:</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="css:overflow" src="https://codepen.io/intHuang/embed/qBormgx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/qBormgx">
+  css:overflow</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>可以看到文字超出了parent</p>
+<p>通常的作法是不設定高度，讓元素按照內容去伸展高度，但如果說我今天就是希望這個元素這麼高，這時候就可以使用overflow這個屬性</p>
+<h2 id="Overflow"><a href="#Overflow" class="headerlink" title="Overflow"></a>Overflow</h2><ul>
+<li>visible</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">overflow</span>: visibile;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>預設值，呈現效果等同上面的例子。</p>
+<ul>
+<li>hidden</li>
+</ul>
+<p>將overflow的元素藏起來</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">box&#123;</span><br><span class="line">	<span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="css:overflow" src="https://codepen.io/intHuang/embed/mdxWmov?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/mdxWmov">
+  css:overflow</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>可以看到多餘的部分都消失在元素內了。</p>
+<ul>
+<li>scroll</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">overflow</span>: scroll;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<iframe height="300" style="width: 100%;" scrolling="no" title="css:overflow: hidden" src="https://codepen.io/intHuang/embed/rNdymbm?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/rNdymbm">
+  css:overflow: hidden</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>讓子元素保持在父元素內，可以用上下左右滾動的方式看到超過的部分。</p>
+<ul>
+<li>auto、overlay<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">overflow</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<iframe height="300" style="width: 100%;" scrolling="no" title="css:overflow: auto" src="https://codepen.io/intHuang/embed/LYdWyvm?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/LYdWyvm">
+  css:overflow: auto</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>讓子元素保持在父元素內，和scroll不同，只能用上下滾動的方式看到超過的部分。<br>而overlay和auto相同，只是不同瀏覽器支援不同語法。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/19/css-overflow/" data-id="cl5rns1ti0000g8vp9mw698a4" data-title="CSS: Overflow" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-max-width-and-min-width" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/18/css-max-width-and-min-width/" class="article-date">
@@ -616,86 +705,6 @@
 
 
   
-    <article id="post-css-cmp-class-and-id-selector" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/04/css-cmp-class-and-id-selector/" class="article-date">
-  <time class="dt-published" datetime="2022-07-04T03:03:00.000Z" itemprop="datePublished">2022-07-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/css-selector/">css selector</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/04/css-cmp-class-and-id-selector/">CSS:類別與ID選擇器比較</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>在<a href="https://huanginch.github.io/2022/07/03/css-tag-class-and-id-selector/">上一篇</a>介紹了類別與ID選擇器，但什麼時候要用類別選擇器，什麼時候要用ID選擇器？這篇就會針對這兩個相似的選擇器做個比較。</p>
-<h2 id="比較表格"><a href="#比較表格" class="headerlink" title="比較表格"></a>比較表格</h2><table>
-<thead>
-<tr>
-<th>比較項目\選擇器</th>
-<th>類別選擇器</th>
-<th>ID選擇器</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>寫法</td>
-<td><code>.classname&#123;...&#125;</code></td>
-<td><code>#IDname&#123;...&#125;</code></td>
-</tr>
-<tr>
-<td>選擇對象</td>
-<td>會選擇有所有相符class的元素</td>
-<td>只會選擇第一個有相符ID的元素</td>
-</tr>
-<tr>
-<td>使用次數</td>
-<td>可重複使用</td>
-<td>一個頁面只能使用一次</td>
-</tr>
-<tr>
-<td>與css或html的關聯</td>
-<td>只能用來標記元素並為他加上樣式</td>
-<td>可能會與html有關(比如說內頁跳轉連結)</td>
-</tr>
-<tr>
-<td>使用時機</td>
-<td>一般情況都會選擇使用</td>
-<td>特定時機才會使用</td>
-</tr>
-</tbody></table>
-<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>一般情況下盡量使用類別選擇器，因為類別選擇器就是為了css styling而設計的，ID的意義主要還是在html上(比如說跳到某個段落，舉個例子點這個<a href="https://huanginch.github.io/2022/07/04/css-cmp-class-and-id-selector/#%E6%AF%94%E8%BC%83%E8%A1%A8%E6%A0%BC">連結</a>可以跳到比較表格，你可以看到網址上多了#比較表格，這就是ID最大的用途)，當然在有需要的情況下還是可以使用ID選擇器，但不要只是為了幫元素加點樣式就使用ID選擇器。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/04/css-cmp-class-and-id-selector/" data-id="cl566qkif0000ncvp6ah33mm9" data-title="CSS:類別與ID選擇器比較" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -753,6 +762,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/30/CSS-transform/">CSS: transform</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/29/SCSS/">SCSS介紹</a>
           </li>
         
@@ -766,10 +779,6 @@
         
           <li>
             <a href="/2022/08/25/CSS-opacity/">CSS: opacity</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/24/css-keyframe/">CSS: animation and @keyframe</a>
           </li>
         
       </ul>
