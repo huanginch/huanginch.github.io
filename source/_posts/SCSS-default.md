@@ -23,4 +23,4 @@ $primary: blue !default;
 
 ## 結語
 
-今天這篇沒有介紹scss就直接介紹了!default，之後會補齊關於scss的文章。
+關於SCSS的基礎介紹可以看[這篇](https://huanginch.github.io/2022/08/29/SCSS/)。
