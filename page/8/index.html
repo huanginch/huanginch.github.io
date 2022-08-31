@@ -75,6 +75,94 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-js-arthimetic-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/15/js-arthimetic-operator/" class="article-date">
+  <time class="dt-published" datetime="2022-06-15T03:11:00.000Z" itemprop="datePublished">2022-06-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/js-operator/">js-operator</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/15/js-arthimetic-operator/">Javascript: 算數運算子</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>算術運算子，簡單來說就是加減乘除。不過除了這幾個之外，還有其他可以使用，像次方之類的，這篇就會列出所有js中的算術運算子。</p>
+<ul>
+<li>加法: +<ul>
+<li>就跟數學中的加法一樣</li>
+</ul>
+</li>
+<li>減法: -<ul>
+<li>就跟數學中的減法一樣</li>
+</ul>
+</li>
+<li>乘法: *<ul>
+<li>就跟數學中的乘法一樣</li>
+</ul>
+</li>
+<li>取商數: &#x2F;<ul>
+<li>js中的除法分成兩種，取商數和取餘數，這個就會回傳商數。</li>
+</ul>
+</li>
+<li>取餘數: %<ul>
+<li>這個不念percent，要念mod。會回傳除法的餘數，其實就是數學中的mod運算。</li>
+</ul>
+</li>
+<li>增加: ++<ul>
+<li>一元運算子，對變數做增加1。比如說  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">0</span>;</span><br><span class="line">a++;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">//執行結果: 1</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>減少: –<ul>
+<li>一元運算子，對變數做減少1。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">0</span>;</span><br><span class="line">a--;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">//執行結果: -1</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>取負數: -<ul>
+<li>一元運算子，我自己覺得跟減法很像，不過前面的減法是二元運算子。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(-a); <span class="comment">//執行結果: -1</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>加號: +<ul>
+<li>一元運算子，可以把不是數字的運算元改成數字。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="literal">true</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(+<span class="literal">true</span>); <span class="comment">//執行結果: 1</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>指數運算子: **<ul>
+<li>用來運算指數的 a ** b 就是算a的b次方。  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>**<span class="number">3</span>); <span class="comment">//執行結果: 8</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<p>[註] 一元運算子表示只需要一個運算元，二元表示要兩個運算元，三元表示三個，最多到三元。上述沒有特別標註的都是二元運算子，而三元之後會另外寫一篇。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/06/15/js-arthimetic-operator/" data-id="cl4f1rf500000rsvp5kwp0379" data-title="Javascript: 算數運算子" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-js-compare-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/14/js-compare-operator/" class="article-date">
@@ -671,110 +759,6 @@
 
 
   
-    <article id="post-Javascript-logic-operator" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/04/Javascript-logic-operator/" class="article-date">
-  <time class="dt-published" datetime="2022-06-04T12:22:00.000Z" itemprop="datePublished">2022-06-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/js-operator/">js-operator</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/04/Javascript-logic-operator/">Javascript: 邏輯運算子</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>這篇會來簡單介紹js中的邏輯運算子語法</p>
-<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><ul>
-<li>and: &amp;&amp;</li>
-<li>or: ||</li>
-<li>not: !</li>
-</ul>
-<p>其實語法就跟多數語言一樣，沒什麼不同。</p>
-<h2 id="真值表"><a href="#真值表" class="headerlink" title="真值表"></a>真值表</h2><table>
-<thead>
-<tr>
-<th>and</th>
-<th>True</th>
-<th>False</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>True</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr>
-<td>False</td>
-<td>False</td>
-<td>Fasle</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>or</th>
-<th>Fsalse</th>
-<th>True</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Fasle</td>
-<td>Fasle</td>
-<td>True</td>
-</tr>
-<tr>
-<td>True</td>
-<td>True</td>
-<td>True</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>not</th>
-<th>Fasle</th>
-<th>True</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td>True</td>
-<td>Fasle</td>
-</tr>
-</tbody></table>
-<p>很簡單的一篇，但我想把各種運算子都記錄一下。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/04/Javascript-logic-operator/" data-id="cl3zutt430000nkvp2g0655c3" data-title="Javascript: 邏輯運算子" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -800,7 +784,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/owl-carousel/" rel="tag">owl-carousel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scss/" rel="tag">scss</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oocss/" rel="tag">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/owl-carousel/" rel="tag">owl-carousel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scss/" rel="tag">scss</a></li></ul>
     </div>
   </div>
 
@@ -810,7 +794,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.67px;">scss</a>
+      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.67px;">scss</a>
     </div>
   </div>
 
@@ -832,6 +816,10 @@
       <ul>
         
           <li>
+            <a href="/2022/08/31/CSS-OOCSS/">CSS: OOCSS</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/30/CSS-transform/">CSS: transform</a>
           </li>
         
@@ -845,10 +833,6 @@
         
           <li>
             <a href="/2022/08/26/css-aos/">CSS: animation on scroll plugin</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/25/CSS-opacity/">CSS: opacity</a>
           </li>
         
       </ul>
