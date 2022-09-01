@@ -75,6 +75,66 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-bs5-strechedlinked" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/20/bs5-strechedlinked/" class="article-date">
+  <time class="dt-published" datetime="2022-08-20T03:11:00.000Z" itemprop="datePublished">2022-08-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/08/20/bs5-strechedlinked/">bs5: stretched-link</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在設計網頁時我們很常將一個區塊作為可點擊的連結，例如可點擊的卡片、可點擊的文章等等，平常的情況下我們都會使用<code>a</code> tag來做出這樣的效果，不過bs5提供了一個更簡單的方法來實作。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>只要在對應區塊的a連結內加入<code>stretched-link</code> class就可以讓整個父層元素變得<br>可點擊。</p>
+<ul>
+<li>以卡片為例</li>
+</ul>
+<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/intHuang/embed/dymaJwJ?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/dymaJwJ">
+  Untitled</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>他是透過偽元素<code>::after</code>並用<code>position:absolute</code>讓a連結覆蓋整個元素，因為bs5的卡片元件本身就有<code>position:relative</code>的特性，所以可以直接使用，其他元件或自己寫的元素沒有的話要記得在最外層加上<code>position: relative</code>才會作用。</p>
+<h2 id="可能會讓連結無法延伸的原因"><a href="#可能會讓連結無法延伸的原因" class="headerlink" title="可能會讓連結無法延伸的原因"></a>可能會讓連結無法延伸的原因</h2><p>剛剛也提到<code>stretched-link</code>是透過position:absolute實作，所以只要有以下情況都可能讓他無法使用:</p>
+<ul>
+<li>static 以外的 position 值。</li>
+<li>none 以外的 transform 或 perspective 值。</li>
+<li>在 transform 或 perspective 使用 will-change 作為值。</li>
+<li>none 以外的 filter 值，或是在 filter 使用 will-change 作為值 (只會在 Firefox 作用)。</li>
+</ul>
+<p>在使用時要特別注意。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/20/bs5-strechedlinked/" data-id="cl71ec6hr0000ngvpf60sg75w" data-title="bs5: stretched-link" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-bs5-card-height" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/19/bs5-card-height/" class="article-date">
@@ -598,51 +658,6 @@
 
 
   
-    <article id="post-jquery-document-ready" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/08/10/jquery-document-ready/" class="article-date">
-  <time class="dt-published" datetime="2022-08-10T05:30:00.000Z" itemprop="datePublished">2022-08-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/10/jquery-document-ready/">JQuery: $(document).ready()</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>在撰寫jquery時要特別注意，一般來說所有的程式都要寫在 $(document).ready()裡，這個函式代表網頁載入完成後該執行什麼，所以將一些動畫程式碼寫在這個外面會沒有作用。</p>
-<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="variable language_">document</span>).<span class="title function_">ready</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="comment">//your code here</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>document指的是整個網頁，透過$()可以監聽，而ready()是確認監聽的元素是否完全載入好。</p>
-<p>關於jquery基本介紹可以看<a href="https://huanginch.github.io/2022/07/29/JQuery-intro/">這篇</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/08/10/jquery-document-ready/" data-id="cl6n6i9iz0000ckvp3h7f1hd9" data-title="JQuery: $(document).ready()" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -668,7 +683,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oocss/" rel="tag">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/owl-carousel/" rel="tag">owl-carousel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scss/" rel="tag">scss</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oocss/" rel="tag">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/owl-carousel/" rel="tag">owl-carousel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scss/" rel="tag">scss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/smacss/" rel="tag">smacss</a></li></ul>
     </div>
   </div>
 
@@ -678,7 +693,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.67px;">scss</a>
+      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.67px;">scss</a> <a href="/tags/smacss/" style="font-size: 10px;">smacss</a>
     </div>
   </div>
 
@@ -687,7 +702,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">彙整</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a></li></ul>
     </div>
   </div>
 
@@ -698,6 +713,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/09/01/CSS-SMACSS/">CSS: SMACSS</a>
+          </li>
         
           <li>
             <a href="/2022/08/31/CSS-OOCSS/">CSS: OOCSS</a>
@@ -713,10 +732,6 @@
         
           <li>
             <a href="/2022/08/27/SCSS-default/">SCSS: !default</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/26/css-aos/">CSS: animation on scroll plugin</a>
           </li>
         
       </ul>
