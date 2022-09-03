@@ -75,6 +75,59 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-background-position" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/23/background-position/" class="article-date">
+  <time class="dt-published" datetime="2022-07-23T02:57:00.000Z" itemprop="datePublished">2022-07-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/css-background/">css background</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/23/background-position/">CSS: background-position</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>關於其他background的屬性都有提到，想要調整background的位置就要利用background-position這個屬性，除了各種數字單位外還可以使用top、bottom、left、right、center。</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="background-position" src="https://codepen.io/intHuang/embed/dymRddN?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/dymRddN">
+  background-position</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>可以看到在box1我使用了center，所以背景圖片會居中，如果使用了top、bottom、left、right就會分別靠上、靠下、靠左、靠右。</p>
+<p>也可以像box2那樣，寫了bottom和right之後分別寫上數字，此時圖片就會位於從右數來35%的位置，從下數來45%的位置。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/23/background-position/" data-id="cl5xbl5de0000d0vpf8l193or" data-title="CSS: background-position" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-background-repeat" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/22/css-background-repeat/" class="article-date">
@@ -669,85 +722,6 @@
 
 
   
-    <article id="post-css-position" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/08/css-position/" class="article-date">
-  <time class="dt-published" datetime="2022-07-08T03:44:00.000Z" itemprop="datePublished">2022-07-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/css-position/">css position</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/08/css-position/">CSS: position</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>position可以用來安排元素的位置，包含讓他們重疊或固定於網頁某個地方都能用position來實現，這篇會來介紹position的各種值以及和position相關的其他屬性。</p>
-<p>不過因為有些屬性內容比較多我會改成用連結文章的方式，並且之後這幾天都會寫和positon相關的主題，之後再彙整過來。</p>
-<h2 id="position屬性"><a href="#position屬性" class="headerlink" title="position屬性"></a>position屬性</h2><ol>
-<li><p>static: </p>
-<ul>
-<li>預設值，在static上不會有任何元素重疊。 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: static;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>absolute、relative:</p>
-<ul>
-<li>這兩個雖然分別是不同屬性但基本上都會一起使用。</li>
-<li><a href="https://huanginch.github.io/2022/07/14/css-absolute-and-relative/">介紹文章傳送門</a> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.child-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:absolute;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>fixed:</p>
-<ul>
-<li>可以將元素固定在網頁上，不論如何滑動頁面元素都不會消失。</li>
-<li><a href="https://huanginch.github.io/2022/07/09/css-position-fixed/">介紹文章傳送門</a> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>sticky</p>
-<ul>
-<li>sticky比較像fixed + relative，可以讓子元素固定在畫面上，滾動時又不會超出父元素。</li>
-<li><a href="https://huanginch.github.io/2022/07/13/css-position-sticky/">介紹文章傳送門</a>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: sticky;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ol>
-<h2 id="其他元素定位相關屬性"><a href="#其他元素定位相關屬性" class="headerlink" title="其他元素定位相關屬性"></a>其他元素定位相關屬性</h2><h2 id="float"><a href="#float" class="headerlink" title="float"></a>float</h2><ul>
-<li>常用於文字與圖片，可做出文繞圖的樣式。</li>
-<li><a href="https://huanginch.github.io/2022/07/07/css-float/">介紹文章傳送門</a></li>
-</ul>
-<h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><ul>
-<li>可調整網頁z軸(也就是圖片與元素的重疊和上下關係)</li>
-<li><a href="https://huanginch.github.io/2022/07/12/css-z-index/">介紹文章傳送門</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/08/css-position/" data-id="cl5bwzduy0000bsvpgu8x9iel" data-title="CSS: position" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -783,7 +757,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 13.33px;">Ren'Py</a> <a href="/tags/bem/" style="font-size: 10px;">bem</a> <a href="/tags/bs5/" style="font-size: 16.67px;">bs5</a> <a href="/tags/c/" style="font-size: 11.67px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.67px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/javascript/" style="font-size: 18.33px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/json/" style="font-size: 11.67px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.67px;">scss</a> <a href="/tags/smacss/" style="font-size: 10px;">smacss</a>
+      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 12.86px;">Ren'Py</a> <a href="/tags/bem/" style="font-size: 10px;">bem</a> <a href="/tags/bs5/" style="font-size: 17.14px;">bs5</a> <a href="/tags/c/" style="font-size: 11.43px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.43px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15.71px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 14.29px;">html</a> <a href="/tags/javascript/" style="font-size: 18.57px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15.71px;">jquery</a> <a href="/tags/json/" style="font-size: 11.43px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.43px;">scss</a> <a href="/tags/smacss/" style="font-size: 10px;">smacss</a>
     </div>
   </div>
 
@@ -805,6 +779,10 @@
       <ul>
         
           <li>
+            <a href="/2022/09/03/html-icon/">如何在網頁上使用線上icon</a>
+          </li>
+        
+          <li>
             <a href="/2022/09/02/CSS-BEM/">CSS: BEM</a>
           </li>
         
@@ -818,10 +796,6 @@
         
           <li>
             <a href="/2022/08/30/CSS-transform/">CSS: transform</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/29/SCSS/">SCSS介紹</a>
           </li>
         
       </ul>
