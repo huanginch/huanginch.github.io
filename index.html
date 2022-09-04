@@ -75,6 +75,79 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-swiper-js" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/05/swiper-js/" class="article-date">
+  <time class="dt-published" datetime="2022-09-04T16:33:00.000Z" itemprop="datePublished">2022-09-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/09/05/swiper-js/">輪播插件: swiper.js</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>這篇要介紹一個很好用的插件-swiper.js。這個插件可以用來做卡片輪播動畫，最重要的是他提供RWD以及可以客製化樣式。</p>
+<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><ul>
+<li>官網: <a target="_blank" rel="noopener" href="https://swiperjs.com/">https://swiperjs.com/</a></li>
+<li>npm:   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install swiper</span><br></pre></td></tr></table></figure></li>
+<li>CDN:  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span></span></span><br><span class="line"><span class="tag">  <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2></li>
+</ul>
+<ol>
+<li><p>html</p>
+<ul>
+<li>最外層是swiper，內層會有swiper-wrapper，wrapper裡面用swiper-slide包輪播的卡片。視需求可以新增pagination(底下的換頁點點)、navigation buttons(左右換頁)、scrollbar</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 這裡的mySwiper可以自己取 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;swiper mySwiper&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- Additional required wrapper --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;swiper-wrapper&quot;</span>&gt;</span></span><br><span class="line">          <span class="comment">&lt;!-- Slides --&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;swiper-slide&quot;</span>&gt;</span>Slide 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;swiper-slide&quot;</span>&gt;</span>Slide 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;swiper-slide&quot;</span>&gt;</span>Slide 3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          ...</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- If we need pagination --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;swiper-pagination&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!-- If we need navigation buttons --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;swiper-button-prev&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;swiper-button-next&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!-- If we need scrollbar --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;swiper-scrollbar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>css</p>
+<ul>
+<li>swiper有提供自己的css，可以按照css內定義的class，用覆蓋的方式複寫上自己的樣式，有些東西有swiper自己的樣式，在修改時要特別注意。更多可以參考<a target="_blank" rel="noopener" href="https://swiperjs.com/swiper-api#css-styles">官方文件</a></li>
+</ul>
+</li>
+<li><p>js</p>
+<ul>
+<li>swiper提供非常多js動畫，可以根據自己需求選擇對應的動畫，可以參考<a target="_blank" rel="noopener" href="https://swiperjs.com/demos">官網的demo</a>，點擊open in new window可以觀看原始碼</li>
+</ul>
+<p><img src="/../images/pasted-125.png"></p>
+<ul>
+<li>要使用swiper的初始設定要在js撰寫swiper的語法(.mySwiper要填入自己為swiper命名的class)</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> swiper = <span class="keyword">new</span> <span class="title class_">Swiper</span>(<span class="string">&quot;.mySwiper&quot;</span>, &#123;&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>要新增其他動畫等等就可以依據官網的各種demo複製貼上做修改</li>
+</ul>
+</li>
+</ol>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p> swiper最強大的但同時也最讓我頭痛的是他的樣式客製化，會寫的話基本上什麼樣的樣式都能靠自己手刻css寫出來，但麻煩的是要先弄清楚他原本的css怎麼寫，否則會蓋不掉。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/09/05/swiper-js/" data-id="cl7nkn2fq0000k0vpee4u5caj" data-title="輪播插件: swiper.js" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/" rel="tag">js</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-html-icon" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/09/03/html-icon/" class="article-date">
@@ -581,83 +654,11 @@
 
 
   
-    <article id="post-css-keyframe" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/08/24/css-keyframe/" class="article-date">
-  <time class="dt-published" datetime="2022-08-24T09:54:00.000Z" itemprop="datePublished">2022-08-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/24/css-keyframe/">CSS: animation and @keyframe</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>CSS提供了許多語法來做動畫，這裡要介紹的是@keyframe這個關鍵字，可以針對元素來做一連串的動畫。</p>
-<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><p>首先要在@keyframe關鍵字後面為自己的動畫做命名，到時候套用到元素上時會使用。@keyframe的語法有幾種，可以針對秒數來切割動畫效果，或是直接一次到底。</p>
-<ul>
-<li>from、to</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframe</span> myAnimation &#123;</span><br><span class="line">	<span class="selector-tag">from</span> &#123;<span class="attribute">top</span>: <span class="number">0px</span>;&#125;</span><br><span class="line">    <span class="selector-tag">to</span> &#123;<span class="attribute">top</span>: <span class="number">200px</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>這個寫法元素就可以直接最左邊移動到最右邊</p>
-<ul>
-<li>針對秒數細分</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> myAnimation &#123;</span><br><span class="line">  <span class="number">0%</span>   &#123;<span class="attribute">top</span>: <span class="number">0px</span>;&#125;</span><br><span class="line">  <span class="number">25%</span>  &#123;<span class="attribute">top</span>: <span class="number">200px</span>;&#125;</span><br><span class="line">  <span class="number">50%</span>  &#123;<span class="attribute">top</span>: <span class="number">100px</span>;&#125;</span><br><span class="line">  <span class="number">75%</span>  &#123;<span class="attribute">top</span>: <span class="number">200px</span>;&#125;</span><br><span class="line">  <span class="number">100%</span> &#123;<span class="attribute">top</span>: <span class="number">0px</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>這個寫法會將動畫持續時間切割成100等分，到達指定%數時會執行對應的動畫。假設動畫持續時間設定為4秒，那第0秒時會在top: 0px的位置，第一秒時(4*0.25)會移動到top: 200px的地方，依此類推</p>
-<h2 id="套用到元素上"><a href="#套用到元素上" class="headerlink" title="套用到元素上"></a>套用到元素上</h2><p>要讓元素使用我們用@keyframe設定的動畫就要使用<code>animation</code>語法</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> myAnimation &#123;</span><br><span class="line">  <span class="number">0%</span>   &#123;<span class="attribute">top</span>: <span class="number">0px</span>;&#125;</span><br><span class="line">  <span class="number">25%</span>  &#123;<span class="attribute">top</span>: <span class="number">200px</span>;&#125;</span><br><span class="line">  <span class="number">50%</span>  &#123;<span class="attribute">top</span>: <span class="number">100px</span>;&#125;</span><br><span class="line">  <span class="number">75%</span>  &#123;<span class="attribute">top</span>: <span class="number">200px</span>;&#125;</span><br><span class="line">  <span class="number">100%</span> &#123;<span class="attribute">top</span>: <span class="number">0px</span>;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">animation</span>: myAnimation <span class="number">5s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h2><p>aniamtion也如同background、border等等，有多種屬性，並且可以合併成一個屬性。</p>
-<ul>
-<li>animation-name: 欲套用的@keyframe動畫名稱。</li>
-<li>aniamtion-duration: 動畫持續時間。</li>
-<li>aniamtion-duration-function: 動畫函式，css有寫好一些動畫函式，或是可以自己撰寫，可以參考<a href="https://huanginch.github.io/2022/08/17/CSS-transition/">轉場動畫</a>。</li>
-<li>animation-delay: 動畫延遲時間。</li>
-<li>animation-iteration-count: 動畫重複次數，也可以使用infinite讓他永遠持續下去。</li>
-<li>animation-direction: 動畫的方向。</li>
-<li>animation-fill-mode: 動畫最後會停在哪格。</li>
-<li>animation-play-state: 動畫的播放狀態，有paused和running兩個屬性。</li>
-</ul>
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="Day 42-練習 keyframes" src="https://codepen.io/intHuang/embed/qBovwdE?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/qBovwdE">
-  Day 42-練習 keyframes</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/08/24/css-keyframe/" data-id="cl77h8ste0000i0vp8j6oe85c" data-title="CSS: animation and @keyframe" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">下一頁 &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/">下一頁 &raquo;</a>
   </nav>
 
 </section>
@@ -678,7 +679,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bem/" rel="tag">bem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oocss/" rel="tag">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/owl-carousel/" rel="tag">owl-carousel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scss/" rel="tag">scss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/smacss/" rel="tag">smacss</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bem/" rel="tag">bem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oocss/" rel="tag">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/owl-carousel/" rel="tag">owl-carousel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scss/" rel="tag">scss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/smacss/" rel="tag">smacss</a></li></ul>
     </div>
   </div>
 
@@ -688,7 +689,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 12.86px;">Ren'Py</a> <a href="/tags/bem/" style="font-size: 10px;">bem</a> <a href="/tags/bs5/" style="font-size: 17.14px;">bs5</a> <a href="/tags/c/" style="font-size: 11.43px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.43px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15.71px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 14.29px;">html</a> <a href="/tags/javascript/" style="font-size: 18.57px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15.71px;">jquery</a> <a href="/tags/json/" style="font-size: 11.43px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.43px;">scss</a> <a href="/tags/smacss/" style="font-size: 10px;">smacss</a>
+      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 12.86px;">Ren'Py</a> <a href="/tags/bem/" style="font-size: 10px;">bem</a> <a href="/tags/bs5/" style="font-size: 17.14px;">bs5</a> <a href="/tags/c/" style="font-size: 11.43px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.43px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15.71px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 14.29px;">html</a> <a href="/tags/javascript/" style="font-size: 18.57px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15.71px;">jquery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/json/" style="font-size: 11.43px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.43px;">scss</a> <a href="/tags/smacss/" style="font-size: 10px;">smacss</a>
     </div>
   </div>
 
@@ -710,6 +711,10 @@
       <ul>
         
           <li>
+            <a href="/2022/09/05/swiper-js/">輪播插件: swiper.js</a>
+          </li>
+        
+          <li>
             <a href="/2022/09/03/html-icon/">如何在網頁上使用線上icon</a>
           </li>
         
@@ -723,10 +728,6 @@
         
           <li>
             <a href="/2022/08/31/CSS-OOCSS/">CSS: OOCSS</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/30/CSS-transform/">CSS: transform</a>
           </li>
         
       </ul>
