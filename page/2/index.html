@@ -75,6 +75,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-CSS-opacity" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/25/CSS-opacity/" class="article-date">
+  <time class="dt-published" datetime="2022-08-25T09:27:00.000Z" itemprop="datePublished">2022-08-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/08/25/CSS-opacity/">CSS: opacity</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>opacity顧名思義就是拿來調整透明度的，可以針對目標元素改變透明度，數值為0~1之間，0為完全透明，1為完全不透明。</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="opacity" src="https://codepen.io/intHuang/embed/VwXOvyR?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/VwXOvyR">
+  opacity</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>範例中的box1與box2正是使用了opacity的區別，一般來說opacity會應用在hover的效果，我通常會用在圖片上，讓圖片產生hover效果，而一般開發者常見的用法會是overlay，讓他產生一個有透明度的背景(overlay)覆蓋整個元素，範例中的box3就是應用了opacity與overlay來達到效果的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/25/CSS-opacity/" data-id="cl78v0nos00009ovp9xrj02c7" data-title="CSS: opacity" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-keyframe" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/24/css-keyframe/" class="article-date">
@@ -670,76 +720,6 @@
 
 
   
-    <article id="post-bs5-listedgroup" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/08/14/bs5-listedgroup/" class="article-date">
-  <time class="dt-published" datetime="2022-08-14T15:42:00.000Z" itemprop="datePublished">2022-08-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/14/bs5-listedgroup/">bs5: Listed Group</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>群組列表是bs5中的一個元件，使用的是一般的ul結構，不過bs5有為它制定了樣式。</p>
-<p>群組列表由外層的list-group和內層的list-group-item組成。</p>
-<p><img src="/../images/pasted-110.png" alt="basic listed group"></p>
-<ul>
-<li>最基本的群組列表</li>
-</ul>
-<h2 id="狀態"><a href="#狀態" class="headerlink" title="狀態"></a>狀態</h2><p>群組列表同樣可以新增<code>disabled</code>、<code>active</code>等狀態</p>
-<ul>
-<li>disabled: 將<code>disabled</code> class新增至對應的list-group-item上可以讓它呈現禁用狀態(如圖)。</li>
-</ul>
-<p><img src="/../images/pasted-111.png"></p>
-<ul>
-<li>active: 將<code>active</code> class新增至對應的 list-group-item 上可呈現啟用狀態(如圖)。</li>
-</ul>
-<p><img src="/../images/pasted-112.png"></p>
-<h2 id="列表內容"><a href="#列表內容" class="headerlink" title="列表內容"></a>列表內容</h2><p>列表內容可以不是單純的文字，連結、按鈕、圖片等等也都是可以放入列表中的，其中比較特別的是通用標籤。</p>
-<ul>
-<li>通用標籤是藉由新增通用類別來增加標籤這個樣式</li>
-</ul>
-<p><img src="/../images/pasted-114.png"></p>
-<h2 id="移除邊框與圓角"><a href="#移除邊框與圓角" class="headerlink" title="移除邊框與圓角"></a>移除邊框與圓角</h2><p>預設的列表樣式是有邊框與圓角的，加入<code>.list-group-flush</code> class 可以移除</p>
-<p><img src="/../images/pasted-113.png"></p>
-<h2 id="其他樣式"><a href="#其他樣式" class="headerlink" title="其他樣式"></a>其他樣式</h2><ul>
-<li>常用的前面帶有數字的ol在列表群組也有類似的樣式可以使用，在<code>list-group</code>後方新增 <code>list-group-numbered</code> class 即可</li>
-</ul>
-<p><img src="/../images/pasted-115.png"></p>
-<ul>
-<li>想要將列表改成水平的也是可行的，只需要加入<code>list-group-horizontal</code>class即可。</li>
-</ul>
-<p><img src="/../images/pasted-116.png"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/08/14/bs5-listedgroup/" data-id="cl6tin44u0000egvp8vt5475w" data-title="bs5: Listed Group" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -797,6 +777,10 @@
       <ul>
         
           <li>
+            <a href="/2022/09/05/CSS-triangle/">CSS: 製作三角形</a>
+          </li>
+        
+          <li>
             <a href="/2022/09/05/swiper-js/">輪播插件: swiper.js</a>
           </li>
         
@@ -810,10 +794,6 @@
         
           <li>
             <a href="/2022/09/01/CSS-SMACSS/">CSS: SMACSS</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/31/CSS-OOCSS/">CSS: OOCSS</a>
           </li>
         
       </ul>

@@ -75,6 +75,75 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-CSS-triangle" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/05/CSS-triangle/" class="article-date">
+  <time class="dt-published" datetime="2022-09-05T14:22:00.000Z" itemprop="datePublished">2022-09-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/09/05/CSS-triangle/">CSS: 製作三角形</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>你知道CSS不只可以用來幫網頁增加樣式，還可以在網頁上畫圖嗎?在卡片右下方放上一個三角形算是蠻常見的設計(如圖)，所以這篇會來介紹如何畫出三角形，為你的網頁增加設計感。</p>
+<p><img src="/../images/pasted-126.png"></p>
+<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol>
+<li><p>首先給一個box</p>
+<p> <img src="/../images/pasted-127.png" alt="box"></p>
+</li>
+<li><p>給他的四邊加上不同顏色的border觀察一下，可以發現border和border之間的邊緣是斜的，我們就是要利用這個特性製作三角形</p>
+</li>
+</ol>
+<p><img src="/../images/pasted-128.png"></p>
+<ol start="3">
+<li>把背景改成透明只留下border</li>
+</ol>
+<p><img src="/../images/pasted-129.png"></p>
+<ol start="4">
+<li>讓box的長寬都歸零，這時候三角形就出現了</li>
+</ol>
+<p><img src="/../images/pasted-131.png"></p>
+<ol start="5">
+<li>把自己想要的三角形留下，其他border改成透明(這裡我留右邊和下面，並都改成藍色)</li>
+</ol>
+<p><img src="/../images/pasted-132.png"></p>
+<h2 id="Codepen"><a href="#Codepen" class="headerlink" title="Codepen"></a>Codepen</h2><iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/intHuang/embed/rNvaoxV?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/rNvaoxV">
+  Untitled</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>是不是很神奇? 自己在寫得時候可以跳過1、2步驟，直接寫transparent就好，這邊只是方便講解才列出的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/09/05/CSS-triangle/" data-id="cl7ovclo50000lovp2w2v5fm3" data-title="CSS: 製作三角形" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-swiper-js" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/09/05/swiper-js/" class="article-date">
@@ -604,56 +673,6 @@
 
 
   
-    <article id="post-CSS-opacity" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/08/25/CSS-opacity/" class="article-date">
-  <time class="dt-published" datetime="2022-08-25T09:27:00.000Z" itemprop="datePublished">2022-08-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/25/CSS-opacity/">CSS: opacity</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>opacity顧名思義就是拿來調整透明度的，可以針對目標元素改變透明度，數值為0~1之間，0為完全透明，1為完全不透明。</p>
-<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="opacity" src="https://codepen.io/intHuang/embed/VwXOvyR?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/VwXOvyR">
-  opacity</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>範例中的box1與box2正是使用了opacity的區別，一般來說opacity會應用在hover的效果，我通常會用在圖片上，讓圖片產生hover效果，而一般開發者常見的用法會是overlay，讓他產生一個有透明度的背景(overlay)覆蓋整個元素，範例中的box3就是應用了opacity與overlay來達到效果的。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/08/25/CSS-opacity/" data-id="cl78v0nos00009ovp9xrj02c7" data-title="CSS: opacity" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -711,6 +730,10 @@
       <ul>
         
           <li>
+            <a href="/2022/09/05/CSS-triangle/">CSS: 製作三角形</a>
+          </li>
+        
+          <li>
             <a href="/2022/09/05/swiper-js/">輪播插件: swiper.js</a>
           </li>
         
@@ -724,10 +747,6 @@
         
           <li>
             <a href="/2022/09/01/CSS-SMACSS/">CSS: SMACSS</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/31/CSS-OOCSS/">CSS: OOCSS</a>
           </li>
         
       </ul>
