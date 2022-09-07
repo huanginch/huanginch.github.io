@@ -75,6 +75,66 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-js-dom-selector" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/31/js-dom-selector/" class="article-date">
+  <time class="dt-published" datetime="2022-05-31T03:16:00.000Z" itemprop="datePublished">2022-05-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/05/31/js-dom-selector/">Javascript: 選取DOM元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在javascipt中，如果想操作Html的元素要先使用document.querySelector()等語法來選取，這篇會來介紹有哪些語法以及如何選取。</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><ul>
+<li>document.querySelector(): 最常見的語法，這個語法可以選取html中<strong>第一個符合條件的元素</strong>。</li>
+<li>document.querySelectorAll(): 與querySelector()用法相同，但會選取<strong>所有符合條件的元素</strong>，並回傳一個nodelist。</li>
+<li>document.getElementById(): 根據指定的id選取相對應元素。</li>
+<li>document.getElementByClassName(): 根據指定的class名稱選取相對應元素。</li>
+<li>document.getElementByTagName():根據指定的標籤名稱選取相對應元素。</li>
+</ul>
+<h2 id="選取元素"><a href="#選取元素" class="headerlink" title="選取元素"></a>選取元素</h2><p>在qeuerySelector()與querySelectorAll()中，根據選取不同類型元素，條件寫法也不同。<br></p>
+<ul>
+<li>選取html tag: 在單引號或雙引號中直接寫上標籤名稱即可<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;h1&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+<li>選取class name: 在在單引號或雙引號中寫上classname，但前面必須加.<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.header&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+<li>選取id: 在單引號或雙引號中寫上id，但前面必須加#<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#email&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>其實選取方式就跟css的選取方式相同，所以說querySelector的部分也可以寫成這樣:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.header h1&#x27;</span>); <span class="comment">// 選取header class中的h1</span></span><br></pre></td></tr></table></figure>
+<p>在剩下的getElementBy…中，只需要在單引號或雙引號中寫下相對應的名字即可</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;email&#x27;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementByClassName</span>(<span class="string">&#x27;header&#x27;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementByTagName</span>(<span class="string">&#x27;h1&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>這篇算是簡單整理，幫助自己記憶，平常的話我都使用querySelector()或querySelectorAll()而已，其他幾個視情況使用，分享給大家。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/05/31/js-dom-selector/" data-id="cl3tmuwic0000covp0r2v5ujf" data-title="Javascript: 選取DOM元素" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-C-function-return-function" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/05/30/C-function-return-function/" class="article-date">
@@ -690,66 +750,6 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
 
 
   
-    <article id="post-hexo-admin-deploy" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/21/hexo-admin-deploy/" class="article-date">
-  <time class="dt-published" datetime="2022-05-21T03:33:00.000Z" itemprop="datePublished">2022-05-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo-introduce/">hexo introduce</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/21/hexo-admin-deploy/">使用Hexo admin來部屬(deploy)網站</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Hexo admin是一個很方便的插件，可以用圖形化介面來管理你的網站後台，不過下載後來是要自己設定一些東西才能部屬網站，這篇文就是來介紹部屬的設定。</p>
-<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol>
-<li><p>安裝hexo admin: 在cmd輸入以下指令，不知道怎麼打開cmd可以看<a href="https://huanginch.github.io/2022/05/19/My-First-Post/">這篇文</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$npm install hexo-admin --save</span><br></pre></td></tr></table></figure></li>
-<li><p>打開blog資料夾裡的 <strong>_config.yml</strong>，在最底下新增以下程式碼</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">admin:</span><br><span class="line">          deployCommand: &#x27;hexo-publish.bat&#x27;</span><br></pre></td></tr></table></figure></li>
-<li><p>在跟 <strong>_config.yml</strong> 同一層的地方新增一個叫 <strong>hexo-publish.bat</strong> 的檔案</p>
-</li>
-<li><p>在<strong>hexo-publish.bat</strong>中新增以下程式碼</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure></li>
-<li><p>切換到Hexo Admin中的deploy頁面<br><img src="/../images/hexo-admin-navbar.png"></p>
-</li>
-<li><p>在輸入欄輸入本次更新說明文字後按下deploy即可<br><img src="/../images/pasted-4.png"></p>
-</li>
-</ol>
-<p>因為我自己是用github.io來部屬網站，所以我成功後就可以在自己的github上面看到更新後的檔案，至於怎麼使用github來部屬網站可以到<a href="https://huanginch.github.io/2022/05/22/deploy-on-github/">這篇文</a>。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/05/21/hexo-admin-deploy/" data-id="cl3qqmhv6000arkvpdis9716a" data-title="使用Hexo admin來部屬(deploy)網站" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -807,6 +807,10 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       <ul>
         
           <li>
+            <a href="/2022/09/07/html-anchor-in-anchor/">HTML: a標籤裡面不能有a標籤</a>
+          </li>
+        
+          <li>
             <a href="/2022/09/05/CSS-triangle/">CSS: 製作三角形</a>
           </li>
         
@@ -820,10 +824,6 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
         
           <li>
             <a href="/2022/09/02/CSS-BEM/">CSS: BEM</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/01/CSS-SMACSS/">CSS: SMACSS</a>
           </li>
         
       </ul>

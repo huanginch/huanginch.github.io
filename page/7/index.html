@@ -75,6 +75,72 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-margin-and-padding-shorthand" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/01/css-margin-and-padding-shorthand/" class="article-date">
+  <time class="dt-published" datetime="2022-07-01T03:40:00.000Z" itemprop="datePublished">2022-07-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/01/css-margin-and-padding-shorthand/">CSS: Margin 、 Padding與Border 的寫法與縮寫</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在<a href="https://huanginch.github.io/2022/06/30/css-box-model/">上一篇盒模型</a>介紹了margin、padding和border，所以這篇會來介紹在css中的寫法。</p>
+<h2 id="Marign"><a href="#Marign" class="headerlink" title="Marign"></a>Marign</h2><p>在上一篇中有提到margin有分上下左右，所以寫法也有分上下左右。</p>
+<h3 id="全部相同寬度"><a href="#全部相同寬度" class="headerlink" title="全部相同寬度"></a>全部相同寬度</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="個別設定"><a href="#個別設定" class="headerlink" title="個別設定"></a>個別設定</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">margin-top</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="縮寫"><a href="#縮寫" class="headerlink" title="縮寫"></a>縮寫</h3><p>你可能會想說，這樣我要設定只有一邊不同不就很麻煩嗎？所以css有提供縮寫寫法:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">8px</span> <span class="number">10px</span> <span class="number">12px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上從左到右分別為上、右、下、左</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">12px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上從左到右為上和下、左和右</p>
+<h2 id="Padding"><a href="#Padding" class="headerlink" title="Padding"></a>Padding</h2><p>padding的寫法跟margin很像</p>
+<h3 id="全部相同寬度-1"><a href="#全部相同寬度-1" class="headerlink" title="全部相同寬度"></a>全部相同寬度</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="個別設定-1"><a href="#個別設定-1" class="headerlink" title="個別設定"></a>個別設定</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">padding-top</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="縮寫-1"><a href="#縮寫-1" class="headerlink" title="縮寫"></a>縮寫</h3><p>和margin一樣，padding也有縮寫寫法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">8px</span> <span class="number">10px</span> <span class="number">12px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上依序為上、右、下、左</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上依序為上和下、左和右</p>
+<h2 id="Border"><a href="#Border" class="headerlink" title="Border"></a>Border</h2><p>border的位置設定也和margin、padding一樣，不同的是border可以設定樣式、顏色、寬度等等</p>
+<h3 id="個別設定-2"><a href="#個別設定-2" class="headerlink" title="個別設定"></a>個別設定</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">border-top-width</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">border-top-color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">border-top-style</span>: solid;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="縮寫-2"><a href="#縮寫-2" class="headerlink" title="縮寫"></a>縮寫</h3><h4 id="全部相同"><a href="#全部相同" class="headerlink" title="全部相同"></a>全部相同</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上順序可以調換</p>
+<h4 id="個別設定-3"><a href="#個別設定-3" class="headerlink" title="個別設定"></a>個別設定</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">border-top</span>: <span class="number">5px</span> solid <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> dashed <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">3px</span> dotted <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上順序可以調換</p>
+<p>個人覺得有縮寫真的很方便，之前不知道有縮寫的時候還笨笨的一個一個寫，code變有夠長的，自從學會了縮寫整個世界都不一樣了呢XD</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/01/css-margin-and-padding-shorthand/" data-id="cl51ym7l50000lgvp6u5j0u70" data-title="CSS: Margin 、 Padding與Border 的寫法與縮寫" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-box-model" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/30/css-box-model/" class="article-date">
@@ -656,148 +722,6 @@
 
 
   
-    <article id="post-js-operators" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/21/js-operators/" class="article-date">
-  <time class="dt-published" datetime="2022-06-21T02:48:00.000Z" itemprop="datePublished">2022-06-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/js-operator/">js-operator</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/21/js-operators/">Javascript: 運算子總整理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>因為之前發的運算子文章都是分開發的，雖然有資料夾整理好，不過我覺得要調整一下順序跟增加優先級表格。</p>
-<h2 id="文章整理"><a href="#文章整理" class="headerlink" title="文章整理"></a>文章整理</h2><ul>
-<li>順序大致會比照MDN的順序</li>
-</ul>
-<ol>
-<li><p><a href="https://huanginch.github.io/2022/06/05/js-assignment-operator/">賦值運算子</a></p>
-</li>
-<li><p><a href="https://huanginch.github.io/2022/06/14/js-compare-operator/">比較運算子</a></p>
-</li>
-<li><p><a href="https://huanginch.github.io/2022/06/15/js-arthimetic-operator/">算數運算子</a></p>
-</li>
-<li><p><a href="https://huanginch.github.io/2022/06/13/js-bit-operator/">位元運算子</a></p>
-</li>
-<li><p><a href="https://huanginch.github.io/2022/06/04/Javascript-logic-operator/">邏輯運算子</a></p>
-</li>
-<li><p><a href="https://huanginch.github.io/2022/06/16/js-conditional-operator/">三元運算子</a></p>
-</li>
-<li><p><a href="https://huanginch.github.io/2022/06/17/js-relation-operator/">關係運算子</a></p>
-</li>
-<li><p>其他:</p>
-<ol>
-<li><a href="https://huanginch.github.io/2022/06/19/js-operator/">delete、逗號運算子、字串運算子</a></li>
-<li><a href="https://huanginch.github.io/2022/06/20/js-typeof/">typeof、void</a></li>
-</ol>
-</li>
-</ol>
-<h2 id="運算子優先級"><a href="#運算子優先級" class="headerlink" title="運算子優先級"></a>運算子優先級</h2><table>
-<thead>
-<tr>
-<th>運算子類型</th>
-<th>屬於該類別的運算子</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>成員</td>
-<td><code>. []</code></td>
-</tr>
-<tr>
-<td>呼叫&#x2F;建立 實例</td>
-<td><code>() new</code></td>
-</tr>
-<tr>
-<td>反向&#x2F;增加</td>
-<td><code>! ~ - + ++ -- typeof void delete</code></td>
-</tr>
-<tr>
-<td>乘法&#x2F;除法</td>
-<td><code>* / %</code></td>
-</tr>
-<tr>
-<td>加法&#x2F;減法</td>
-<td><code>+ -</code></td>
-</tr>
-<tr>
-<td>位元移動</td>
-<td><code>&lt;&lt; &gt;&gt; &gt;&gt;&gt;</code></td>
-</tr>
-<tr>
-<td>關係運算子</td>
-<td><code>&lt; &lt;= &gt; &gt;= in instanceof</code></td>
-</tr>
-<tr>
-<td>相等性</td>
-<td><code>== != === !==</code></td>
-</tr>
-<tr>
-<td>位元 and</td>
-<td><code>&amp;</code></td>
-</tr>
-<tr>
-<td>位元 xor</td>
-<td><code>^</code></td>
-</tr>
-<tr>
-<td>位元 or</td>
-<td><code>|</code></td>
-</tr>
-<tr>
-<td>邏輯 and</td>
-<td><code>&amp;&amp;</code></td>
-</tr>
-<tr>
-<td>邏輯 or</td>
-<td><code>||</code></td>
-</tr>
-<tr>
-<td>條件運算子</td>
-<td><code>? :</code></td>
-</tr>
-<tr>
-<td>指定運算子</td>
-<td><code>= += -= *= /= %= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;= &amp;= ^= |=</code></td>
-</tr>
-<tr>
-<td>逗點運算子</td>
-<td><code>,</code></td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/21/js-operators/" data-id="cl4nlni7d000044vpbo2980sl" data-title="Javascript: 運算子總整理" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -855,6 +779,10 @@
       <ul>
         
           <li>
+            <a href="/2022/09/07/html-anchor-in-anchor/">HTML: a標籤裡面不能有a標籤</a>
+          </li>
+        
+          <li>
             <a href="/2022/09/05/CSS-triangle/">CSS: 製作三角形</a>
           </li>
         
@@ -868,10 +796,6 @@
         
           <li>
             <a href="/2022/09/02/CSS-BEM/">CSS: BEM</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/01/CSS-SMACSS/">CSS: SMACSS</a>
           </li>
         
       </ul>

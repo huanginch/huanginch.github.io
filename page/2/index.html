@@ -75,6 +75,70 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-aos" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/26/css-aos/" class="article-date">
+  <time class="dt-published" datetime="2022-08-26T10:31:00.000Z" itemprop="datePublished">2022-08-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/08/26/css-aos/">CSS: animation on scroll plugin</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>為了讓網頁看起來更豐富，很常會讓頁面在滾動時套用動畫，這篇會介紹最簡單達成這個目的的插件-<a target="_blank" rel="noopener" href="https://michalsnik.github.io/aos/">animation on scroll library</a>。</p>
+<p>AOS插件提供了非常多樣的簡易載入動畫，如果只是要讓網頁呈現簡單的動畫，aos肯定是首選。</p>
+<h2 id="載入方法"><a href="#載入方法" class="headerlink" title="載入方法"></a>載入方法</h2><ol>
+<li><p>npm、yarn</p>
+</li>
+<li><p>CDN</p>
+</li>
+</ol>
+<p>css: </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://unpkg.com/aos@2.3.1/dist/aos.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>js: </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/aos@2.3.1/dist/aos.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
+<li>在網頁中加入初始化js語法(可以寫在script中或寫在外部的js檔案)。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">AOS</span>.<span class="title function_">init</span>();</span><br></pre></td></tr></table></figure></li>
+<li>在欲套用動畫的元素上加入對應的動畫函式。<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-aos</span>=<span class="string">&quot;fade-up&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>兩步驟結束，是不是超簡單XD<br>當然也可以自訂動畫時間、動畫函式與滾動次數等等</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-aos</span>=<span class="string">&quot;fade-up&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-aos-duration</span>=<span class="string">&quot;3000&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-aos</span>=<span class="string">&quot;fade-down&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-aos-easing</span>=<span class="string">&quot;linear&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">data-aos-duration</span>=<span class="string">&quot;1500&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>套用方式也是只要複製貼上就好，相當簡單。</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>之前不知道有這個套件我都手寫jQuery還達不到自己想要的效果，自從知道這個套件後簡單的載入動畫我都改用這個了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/26/css-aos/" data-id="cl7acyxyw00007ovpbg45eidy" data-title="CSS: animation on scroll plugin" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-CSS-opacity" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/25/CSS-opacity/" class="article-date">
@@ -675,51 +739,6 @@
 
 
   
-    <article id="post-css-em-and-rem" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/08/15/css-em-and-rem/" class="article-date">
-  <time class="dt-published" datetime="2022-08-15T15:16:00.000Z" itemprop="datePublished">2022-08-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/15/css-em-and-rem/">CSS: em 與 rem</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>我們平常寫網頁使用的單位是px，不過px是絕對單位，如果使用者改變預設字體大小，使用px單位的元素將不會跟著改變，這時候就會使用em或者rem這兩個相對單位。</p>
-<h2 id="em"><a href="#em" class="headerlink" title="em"></a>em</h2><p>em的計算方式是看父層元素的大小再乘上給予的係數，比如我將某個p段落的font-size設定成1.5em，如果父層元素的font-size是16px，那這個p段落的font-size就會是24px。</p>
-<h2 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h2><p>rem的r代表的是root，所以會根據root的大小改變，一般瀏覽器預設字體大小都是16px，所以我任何文字的font-size設定成1.5rem都會是24px。</p>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>em與rem不只會用於文字上，margin、padding等等有時也會使用em與rem，不過border、shadow、border-radius並不會使用em或rem，還是會使用px。</p>
-<p>一般來說會使用的都是rem，因為rem是根據root來設定，em在計算上面較不方便。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/08/15/css-em-and-rem/" data-id="cl6uwser80000oovpecmegqrs" data-title="CSS: em 與 rem" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -777,6 +796,10 @@
       <ul>
         
           <li>
+            <a href="/2022/09/07/html-anchor-in-anchor/">HTML: a標籤裡面不能有a標籤</a>
+          </li>
+        
+          <li>
             <a href="/2022/09/05/CSS-triangle/">CSS: 製作三角形</a>
           </li>
         
@@ -790,10 +813,6 @@
         
           <li>
             <a href="/2022/09/02/CSS-BEM/">CSS: BEM</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/01/CSS-SMACSS/">CSS: SMACSS</a>
           </li>
         
       </ul>
