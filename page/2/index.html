@@ -75,6 +75,54 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-SCSS-default" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/27/SCSS-default/" class="article-date">
+  <time class="dt-published" datetime="2022-08-27T11:47:00.000Z" itemprop="datePublished">2022-08-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/08/27/SCSS-default/">SCSS: !default</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在scss中有個語法叫!default，與css中的!important有點像是相反的存在，關於!important可以參考<a href="https://huanginch.github.io/2022/07/05/css-important/">這篇</a>，不過!defult是scss特有的，css並沒有。</p>
+<p>如果在屬性後加上!default他會變成類似預設值的存在，權重最低，可以用任何方式覆蓋。</p>
+<p>通常會用在scss的變數上</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$primary</span>: blue !default;</span><br></pre></td></tr></table></figure>
+
+<p>舉例來說bs5中的 <code>_variable.scss</code>檔案的許多變數都有使用到!default。</p>
+<p><img src="/../images/pasted-120.png" alt="_varaible.scss"></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>關於SCSS的基礎介紹可以看<a href="https://huanginch.github.io/2022/08/29/SCSS/">這篇</a>。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/27/SCSS-default/" data-id="cl7bulj7k00009ovp1gldhwe1" data-title="SCSS: !default" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scss/" rel="tag">scss</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-aos" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/26/css-aos/" class="article-date">
@@ -681,64 +729,6 @@
 
 
   
-    <article id="post-css-text-transform" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/08/16/css-text-transform/" class="article-date">
-  <time class="dt-published" datetime="2022-08-16T12:06:00.000Z" itemprop="datePublished">2022-08-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/16/css-text-transform/">CSS: text-transform</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>text-transform可以改變文字的大小寫，基本上是針對英文字做使用。</p>
-<h2 id="屬性"><a href="#屬性" class="headerlink" title="屬性"></a>屬性</h2><h3 id="none"><a href="#none" class="headerlink" title="none"></a>none</h3><p>可以避免文字被套用text-transform。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">text-transform</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="uppercase"><a href="#uppercase" class="headerlink" title="uppercase"></a>uppercase</h3><p>將文字全部轉換成大寫</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">text-transform</span>: uppercase;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="lowercase"><a href="#lowercase" class="headerlink" title="lowercase"></a>lowercase</h3><p>將文字全部轉換成小寫</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">text-transform</span>: lowercase;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="capitalize"><a href="#capitalize" class="headerlink" title="capitalize"></a>capitalize</h3><p>將文字字首轉成大寫</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">text-transform</span>: capitalize;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="full-width"><a href="#full-width" class="headerlink" title="full-width"></a>full-width</h3><p>將文字強迫塞滿整個格子，通常會作用在象形符號或是拉丁文，讓他們的對齊方式像中文或日文那樣</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">text-transform</span>: full-width;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="full-size-kana"><a href="#full-size-kana" class="headerlink" title="full-size-kana"></a>full-size-kana</h3><p>通常用在<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby"><code>&lt;ruby&gt;</code></a> tag上，他會將所有小寫kana字元轉成大的kana</p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>會用到這個是因為在寫六角第五週作業時某夜的文字在PC版和Pad版的字母大小寫有轉換，所以我就用上了text-transform來改變字母大小寫，至於他最後兩個屬性我還不太了解，kana似乎是用在類似日文的平假名或羅馬上標，有機會會再做介紹。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/08/16/css-text-transform/" data-id="cl6w72tcg0000r0vpgpo0155f" data-title="CSS: text-transform" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -796,6 +786,10 @@
       <ul>
         
           <li>
+            <a href="/2022/09/08/css-word-wrap/">CSS: word-wrap</a>
+          </li>
+        
+          <li>
             <a href="/2022/09/07/html-anchor-in-anchor/">HTML: a標籤裡面不能有a標籤</a>
           </li>
         
@@ -809,10 +803,6 @@
         
           <li>
             <a href="/2022/09/03/html-icon/">如何在網頁上使用線上icon</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/02/CSS-BEM/">CSS: BEM</a>
           </li>
         
       </ul>
