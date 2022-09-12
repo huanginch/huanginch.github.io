@@ -75,6 +75,69 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-background-image" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/21/css-background-image/" class="article-date">
+  <time class="dt-published" datetime="2022-07-21T02:55:00.000Z" itemprop="datePublished">2022-07-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/css-background/">css background</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/21/css-background-image/">CSS: background-image</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>background-image可以為元素的背景設定圖像，通常是放上外部的圖片，不過除了圖片也能用其他的顏色函式(例如rgba、linear-gradient等)為背景上色，並且可以疊加。</p>
+<h2 id="linear-gradient"><a href="#linear-gradient" class="headerlink" title="linear-gradient"></a>linear-gradient</h2><p>linear-gradient函式可以做出顏色漸層，搭配background-image就可以做出以下效果:</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="background-image: linear-gradient" src="https://codepen.io/intHuang/embed/bGvWajY?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/bGvWajY">
+  background-image: linear-gradient</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+
+<p>設定幾個顏色就會有幾個顏色由上到下依序等分漸層，如果你設定了to left、to right或是to bottom(如box2)，就會從指定的方向漸層(範例中為向左漸層)，如果設定數字，就會在指定的位置才開始出現漸層，以box2為例，紅色我設定為75%，所以從右邊向左邊漸層，到75%的地方才會開始出現漸層，同時也能使用角度來設定方向(如box3)。</p>
+<h2 id="圖層疊加"><a href="#圖層疊加" class="headerlink" title="圖層疊加"></a>圖層疊加</h2><p>背景圖片也能疊加，可以圖片與圖片疊，也可以圖片與顏色疊加</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="background-image" src="https://codepen.io/intHuang/embed/jOzmZWX?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/jOzmZWX">
+  background-image</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>他會從最後一個開始，一層一層疊上去。</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>通常使用了background-image都還會配合background-position和background-size來調整位置，可以看考上一篇<a href="https://huanginch.github.io/2022/07/20/css-background/">background</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/07/21/css-background-image/" data-id="cl5ufyb130000bwvpb7kvcsyx" data-title="CSS: background-image" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-css-background" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/20/css-background/" class="article-date">
@@ -705,53 +768,6 @@
 
 
   
-    <article id="post-css-specificity" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/06/css-specificity/" class="article-date">
-  <time class="dt-published" datetime="2022-07-06T02:32:00.000Z" itemprop="datePublished">2022-07-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/06/css-specificity/">CSS: Specificity</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>CSS中每個規則、標籤會有不同的權重，所以對相同標籤下不同規則會互相覆蓋，而誰覆蓋誰就是由權重決定。所謂的Specificity(優先級、權重)就是瀏覽器用來決定權重的算法。</p>
-<h2 id="權重排序"><a href="#權重排序" class="headerlink" title="權重排序"></a>權重排序</h2><p>含有!important的規則 &gt; 直接寫在html上的style屬性 &gt; ID選擇器 &gt; 類別、偽類別、屬性選擇器 &gt; 標籤、偽元素選擇器</p>
-<h2 id="順序也會影響權重"><a href="#順序也會影響權重" class="headerlink" title="順序也會影響權重"></a>順序也會影響權重</h2><p>css的寫法是由上而下，除了標籤本身的權重(上述所示)，在css檔案中的排序也會影響權重，越下方的權重越大，但順序的影響力並沒有原本權重排序來的大，所以ID選擇器就算寫在上方也不會被類別選擇器蓋掉，要特別注意</p>
-<h2 id="關係選擇器可以看成加法"><a href="#關係選擇器可以看成加法" class="headerlink" title="關係選擇器可以看成加法"></a>關係選擇器可以看成加法</h2><p>以最常見的後代選擇器來說</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">h2</span>&#123;</span><br><span class="line">	....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>這種就可以理解為 10 + 1的權重，會比單純的.box權重來的高，即使.box的選擇器寫在他的下方也一樣。</p>
-<br>
-要學好css就一定要學會權重，這方面我也還是要多加練習，有時候會因為權重不對導致自己想要的樣式被蓋掉，在編寫上的邏輯就還要多加訓練。
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/06/css-specificity/" data-id="cl58zj7vl0000egvp0n61gezg" data-title="CSS: Specificity" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -809,6 +825,10 @@
       <ul>
         
           <li>
+            <a href="/2022/09/12/css-waterfall/">CSS: 瀑布流排版</a>
+          </li>
+        
+          <li>
             <a href="/2022/09/11/hexschool-final/">2022六角網頁切版直播班心得分享</a>
           </li>
         
@@ -822,10 +842,6 @@
         
           <li>
             <a href="/2022/09/08/css-word-wrap/">CSS: word-wrap</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/07/html-anchor-in-anchor/">HTML: a標籤裡面不能有a標籤</a>
           </li>
         
       </ul>
