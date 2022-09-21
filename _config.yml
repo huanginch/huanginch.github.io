@@ -107,3 +107,5 @@ deploy:
   branch: gh-pages
 admin:
   deployCommand: 'hexo-publish.bat'
+sitemap:
+    path: sitemap.xml
