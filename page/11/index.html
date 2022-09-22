@@ -75,6 +75,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-javascript-octal-decimal" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/27/javascript-octal-decimal/" class="article-date">
+  <time class="dt-published" datetime="2022-05-27T04:33:00.000Z" itemprop="datePublished">2022-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/05/27/javascript-octal-decimal/">Javascript: 十進制數字與其他進制數字互相轉換</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>相較其他語言，在javascript中，要將十進制的數字轉換成其他進制的數字算是相對容易，函式在讀取參數的時候只要有相對應的前綴就會自動幫你轉換，但同時也有不便之處，這篇會來介紹我所採的雷以及如何轉換十進制成其他進制。</p>
+<h2 id="十進制轉換成其他進制"><a href="#十進制轉換成其他進制" class="headerlink" title="十進制轉換成其他進制"></a>十進制轉換成其他進制</h2><p>在你的程式碼中想要做到十進制轉換成不同進制只需要用到 toString() 這個函式。<br>舉例來說我想把10進制轉成8進制以及2進制，可以這樣寫:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">11</span>).<span class="title function_">toString</span>(<span class="number">2</span>);<span class="comment">//10進制的11轉2進制表示</span></span><br><span class="line">(<span class="number">156</span>).<span class="title function_">toString</span>(<span class="number">8</span>);<span class="comment">//10進制的156轉8進制表示</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>不過要注意使用了toString後資料型態會變成字串，你想要它變回數字的話記得使用parseInt();</li>
+</ul>
+<h2 id="其他進制轉成十進制"><a href="#其他進制轉成十進制" class="headerlink" title="其他進制轉成十進制"></a>其他進制轉成十進制</h2><p>那如果想要反過來將其他進制轉成十進制就可以使用 parseInt() 這個函式，程式碼如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">11</span>;</span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">2</span>);<span class="comment">//將2進制的11轉成10進制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">8</span>);<span class="comment">//將8進制的11轉成10進制</span></span><br></pre></td></tr></table></figure>
+<h2 id="參數的自動轉換"><a href="#參數的自動轉換" class="headerlink" title="參數的自動轉換"></a>參數的自動轉換</h2><p>在javascript中，如果數字以0作為前綴，它會將數字視為8進制並自動轉換成10進制<br>比如說我這樣寫:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">010</span>)</span><br></pre></td></tr></table></figure>
+<p>輸出會是8，又或者是以0x為前綴則會視為16進制。<br><br>這個看似方便的功能也帶給我一些麻煩，我遇到一個題目是輸入有可能會有032這樣的輸入，但js卻會自己幫我轉型，我試著想要取消自動轉型似乎是辦不到，唯一的方法就是改成用字串輸入，所以大家在做的時候要注意使用者是否會誤輸格式，又或者是你必須限制使用者只能輸入字串。如果有人知道如何實作取消自動轉型歡迎和我分享。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/05/27/javascript-octal-decimal/" data-id="cl3qqmhvf0011rkvp5amy8ehi" data-title="Javascript: 十進制數字與其他進制數字互相轉換" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-RenPy-hide-quick-menu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/05/26/RenPy-hide-quick-menu/" class="article-date">
@@ -632,7 +683,7 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
   <div class="widget-wrap">
     <h3 class="widget-title">標籤</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bem/" rel="tag">bem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oocss/" rel="tag">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/other/" rel="tag">other</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/owl-carousel/" rel="tag">owl-carousel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scss/" rel="tag">scss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/smacss/" rel="tag">smacss</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bem/" rel="tag">bem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain-name/" rel="tag">domain name</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-pages/" rel="tag">github pages</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oocss/" rel="tag">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/other/" rel="tag">other</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/owl-carousel/" rel="tag">owl-carousel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scss/" rel="tag">scss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/smacss/" rel="tag">smacss</a></li></ul>
     </div>
   </div>
 
@@ -642,7 +693,7 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 12.86px;">Ren'Py</a> <a href="/tags/bem/" style="font-size: 10px;">bem</a> <a href="/tags/bs5/" style="font-size: 17.14px;">bs5</a> <a href="/tags/c/" style="font-size: 11.43px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.43px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15.71px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 14.29px;">html</a> <a href="/tags/javascript/" style="font-size: 18.57px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15.71px;">jquery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/json/" style="font-size: 11.43px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.43px;">scss</a> <a href="/tags/smacss/" style="font-size: 10px;">smacss</a>
+      <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 12.86px;">Ren'Py</a> <a href="/tags/bem/" style="font-size: 10px;">bem</a> <a href="/tags/bs5/" style="font-size: 17.14px;">bs5</a> <a href="/tags/c/" style="font-size: 11.43px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.43px;">css-flex</a> <a href="/tags/domain-name/" style="font-size: 10px;">domain name</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/github-pages/" style="font-size: 10px;">github pages</a> <a href="/tags/hexo/" style="font-size: 17.14px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 14.29px;">html</a> <a href="/tags/javascript/" style="font-size: 18.57px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15.71px;">jquery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/json/" style="font-size: 11.43px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.43px;">scss</a> <a href="/tags/smacss/" style="font-size: 10px;">smacss</a>
     </div>
   </div>
 
@@ -664,6 +715,10 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
       <ul>
         
           <li>
+            <a href="/2022/09/22/omain-name/">Github pages 設定 domain name: 以部屬在github pages上的HEXO為例</a>
+          </li>
+        
+          <li>
             <a href="/2022/09/12/css-waterfall/">CSS: 瀑布流排版</a>
           </li>
         
@@ -677,10 +732,6 @@ on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
         
           <li>
             <a href="/2022/09/09/css-word-break/">CSS: word-break</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/08/css-word-wrap/">CSS: word-wrap</a>
           </li>
         
       </ul>

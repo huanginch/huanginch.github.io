@@ -75,6 +75,126 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-CSS-unit" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/21/CSS-unit/" class="article-date">
+  <time class="dt-published" datetime="2022-08-21T09:34:00.000Z" itemprop="datePublished">2022-08-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/08/21/CSS-unit/">CSS: 單位(unit)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在CSS中有許多的單位提供開發者使用，不同情況下適合的單位都不同，這篇將會彙整所有CSS可以使用的單位。</p>
+<h2 id="絕對單位"><a href="#絕對單位" class="headerlink" title="絕對單位"></a>絕對單位</h2><p>不會隨著root大小或螢幕大小改變的單位。</p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cm</td>
+<td>公分</td>
+</tr>
+<tr>
+<td>mm</td>
+<td>毫米</td>
+</tr>
+<tr>
+<td>in</td>
+<td>英吋</td>
+</tr>
+<tr>
+<td>px</td>
+<td>像素</td>
+</tr>
+<tr>
+<td>pt</td>
+<td>points(1pt &#x3D; 1&#x2F;72 of 1in)</td>
+</tr>
+<tr>
+<td>pc</td>
+<td>picas (1pc &#x3D; 12 pt)</td>
+</tr>
+</tbody></table>
+<h2 id="相對單位"><a href="#相對單位" class="headerlink" title="相對單位"></a>相對單位</h2><p>會自適應的單位，為了因應RWD的需求，現在大多使用這些單位來做開發。</p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>em</td>
+<td><a href="https://huanginch.github.io/2022/08/15/css-em-and-rem/">介紹文章</a></td>
+</tr>
+<tr>
+<td>ex</td>
+<td>根據x軸的高度改變(很少使用)</td>
+</tr>
+<tr>
+<td>ch</td>
+<td>根據字元’0’的大小改變</td>
+</tr>
+<tr>
+<td>rem</td>
+<td><a href="https://huanginch.github.io/2022/08/15/css-em-and-rem/">介紹文章</a></td>
+</tr>
+<tr>
+<td>vw</td>
+<td><a href="https://huanginch.github.io/2022/08/18/CSS-vh-and-vw/">介紹文章</a></td>
+</tr>
+<tr>
+<td>vh</td>
+<td><a href="https://huanginch.github.io/2022/08/18/CSS-vh-and-vw/">介紹文章</a></td>
+</tr>
+<tr>
+<td>vmax</td>
+<td>根據viewport最小邊改變</td>
+</tr>
+<tr>
+<td>vmin</td>
+<td>根據viewport最大邊改變</td>
+</tr>
+<tr>
+<td>%</td>
+<td>百分比</td>
+</tr>
+</tbody></table>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>最常使用的單位是px、rem、vw、vh、%這幾個，如果可以的話盡量使用px以外的其他幾種單位，因為px是絕對單位。不過並不是所有元素都要更改成相對單位，如果是border或shadow之類的寬度還是會習慣使用px，因為我們通常不會希望這些樣式改變。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huanginch.github.io/2022/08/21/CSS-unit/" data-id="cl738c6i30000ogvp9dnycech" data-title="CSS: 單位(unit)" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-bs5-strechedlinked" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/20/bs5-strechedlinked/" class="article-date">
@@ -609,55 +729,6 @@
 
 
   
-    <article id="post-bs5-component" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/08/12/bs5-component/" class="article-date">
-  <time class="dt-published" datetime="2022-08-11T17:57:00.000Z" itemprop="datePublished">2022-08-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/12/bs5-component/">bs5: component</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>在bootstrap中最強大的功能就是他所提供的元件(component)，所謂的元件是由bs5所提供事先寫好的、可重複利用的元素，比如說按鈕、navbar、card等等，他們會有固定的樣式與功能，當我們要使用時就可以直接套用，不用自己從頭寫一個。</p>
-<h2 id="元件種類"><a href="#元件種類" class="headerlink" title="元件種類"></a>元件種類</h2><p>bs5提供許多元件，比較常用的有button、navbar、tab、card等等，下面這兩張圖列出了所有bs5有提供的元件。</p>
-<p><img src="/../images/pasted-100.png"></p>
-<p><img src="/../images/pasted-101.png"></p>
-<h2 id="使用元件"><a href="#使用元件" class="headerlink" title="使用元件"></a>使用元件</h2><p>想要使用元件可以到相對應的文件，以按鈕為例，先進入按鈕的<a target="_blank" rel="noopener" href="https://bootstrap5.hexschool.com/docs/5.0/components/buttons/">文件</a></p>
-<p>再來選擇範例的樣式，複製下方程式碼貼到自己的編輯器上，就可以獲得與範例相同的按鈕(記得先引入bs5)</p>
-<p><img src="/../images/pasted-102.png"></p>
-<p>想要客製化可以依照下方其他範例做修改，更詳細的客製化方法在本篇不會介紹，之後會獨立一篇出來介紹。</p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>元件比較困難的地方大概是要理解他寫好的class在做什麼才能做到客製化，我自己一開始在使用也是有點不知道從何下手，不過多用幾次就會發現非常方便，因為都幫你寫好了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/08/12/bs5-component/" data-id="cl6pcy6610000iovpa47g8ucf" data-title="bs5: component" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -683,7 +754,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bem/" rel="tag">bem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oocss/" rel="tag">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/other/" rel="tag">other</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/owl-carousel/" rel="tag">owl-carousel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scss/" rel="tag">scss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/smacss/" rel="tag">smacss</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RWD/" rel="tag">RWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ren-Py/" rel="tag">Ren&#39;Py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bem/" rel="tag">bem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bs5/" rel="tag">bs5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-error/" rel="tag">c error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css-flex/" rel="tag">css-flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain-name/" rel="tag">domain name</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-pages/" rel="tag">github pages</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-error/" rel="tag">hexo error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/" rel="tag">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/" rel="tag">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oocss/" rel="tag">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/other/" rel="tag">other</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/owl-carousel/" rel="tag">owl-carousel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scss/" rel="tag">scss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/smacss/" rel="tag">smacss</a></li></ul>
     </div>
   </div>
 
@@ -693,7 +764,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 12.86px;">Ren'Py</a> <a href="/tags/bem/" style="font-size: 10px;">bem</a> <a href="/tags/bs5/" style="font-size: 17.14px;">bs5</a> <a href="/tags/c/" style="font-size: 11.43px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.43px;">css-flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15.71px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 14.29px;">html</a> <a href="/tags/javascript/" style="font-size: 18.57px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15.71px;">jquery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/json/" style="font-size: 11.43px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.43px;">scss</a> <a href="/tags/smacss/" style="font-size: 10px;">smacss</a>
+      <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/RWD/" style="font-size: 10px;">RWD</a> <a href="/tags/Ren-Py/" style="font-size: 12.86px;">Ren'Py</a> <a href="/tags/bem/" style="font-size: 10px;">bem</a> <a href="/tags/bs5/" style="font-size: 17.14px;">bs5</a> <a href="/tags/c/" style="font-size: 11.43px;">c</a> <a href="/tags/c-error/" style="font-size: 10px;">c error</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css-flex/" style="font-size: 11.43px;">css-flex</a> <a href="/tags/domain-name/" style="font-size: 10px;">domain name</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/github-pages/" style="font-size: 10px;">github pages</a> <a href="/tags/hexo/" style="font-size: 17.14px;">hexo</a> <a href="/tags/hexo-error/" style="font-size: 10px;">hexo error</a> <a href="/tags/html/" style="font-size: 14.29px;">html</a> <a href="/tags/javascript/" style="font-size: 18.57px;">javascript</a> <a href="/tags/jquery/" style="font-size: 15.71px;">jquery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/json/" style="font-size: 11.43px;">json</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/owl-carousel/" style="font-size: 10px;">owl-carousel</a> <a href="/tags/scss/" style="font-size: 11.43px;">scss</a> <a href="/tags/smacss/" style="font-size: 10px;">smacss</a>
     </div>
   </div>
 
@@ -715,6 +786,10 @@
       <ul>
         
           <li>
+            <a href="/2022/09/22/omain-name/">Github pages 設定 domain name: 以部屬在github pages上的HEXO為例</a>
+          </li>
+        
+          <li>
             <a href="/2022/09/12/css-waterfall/">CSS: 瀑布流排版</a>
           </li>
         
@@ -728,10 +803,6 @@
         
           <li>
             <a href="/2022/09/09/css-word-break/">CSS: word-break</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/08/css-word-wrap/">CSS: word-wrap</a>
           </li>
         
       </ul>
