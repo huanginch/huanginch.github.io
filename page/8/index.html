@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Int&#39;s blog">
-<meta property="og:url" content="https://huanginch.github.io/page/8/index.html">
+<meta property="og:url" content="https://inthuang.tw/page/8/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:author" content="int">
@@ -66,7 +66,7 @@
         <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://huanginch.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://inthuang.tw"></form>
       </div>
     </div>
   </div>
@@ -166,7 +166,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/27/html-tag/" data-id="cl4w8njqw0000zovp3cgs4apv" data-title="常見html標籤" class="article-share-link">Share</a>
+      <a data-url="https://inthuang.tw/2022/06/27/html-tag/" data-id="cl4w8njqw0000zovp3cgs4apv" data-title="常見html標籤" class="article-share-link">Share</a>
       
       
       
@@ -227,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/27/github-token/" data-id="cl4viv23f0000e8vp1tkg1uco" data-title="Github: Personal Access Token" class="article-share-link">Share</a>
+      <a data-url="https://inthuang.tw/2022/06/27/github-token/" data-id="cl4viv23f0000e8vp1tkg1uco" data-title="Github: Personal Access Token" class="article-share-link">Share</a>
       
       
       
@@ -263,7 +263,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>在<a href="https://huanginch.github.io/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/">這篇</a>有介紹過json格式，這篇會來介紹如何用js讀取json。</p>
+        <p>在<a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/">這篇</a>有介紹過json格式，這篇會來介紹如何用js讀取json。</p>
 <p>假設我們有一個json檔:</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">[</span><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;first_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Frannie&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;last_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Sandeland&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;email&quot;</span><span class="punctuation">:</span> <span class="string">&quot;fsandeland0@sogou.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;gender&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Female&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;ip_address&quot;</span><span class="punctuation">:</span> <span class="string">&quot;227.100.11.35&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;first_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Batsheva&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;last_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Biswell&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;email&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bbiswell1@miitbeian.gov.cn&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;gender&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Female&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;ip_address&quot;</span><span class="punctuation">:</span> <span class="string">&quot;214.81.196.38&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;first_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Priscilla&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;last_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Mapletoft&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;email&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pmapletoft2@reference.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;gender&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Genderfluid&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;ip_address&quot;</span><span class="punctuation">:</span> <span class="string">&quot;37.45.100.248&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
 
@@ -281,7 +281,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/25/js-json/" data-id="cl4tbkh4i0000wovpc1x6hfv6" data-title="Javascript: 讀取JSON" class="article-share-link">Share</a>
+      <a data-url="https://inthuang.tw/2022/06/25/js-json/" data-id="cl4tbkh4i0000wovpc1x6hfv6" data-title="Javascript: 讀取JSON" class="article-share-link">Share</a>
       
       
       
@@ -326,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/" data-id="cl4slbdua0000rsvpgz8r895s" data-title="JSON格式" class="article-share-link">Share</a>
+      <a data-url="https://inthuang.tw/2022/06/24/JSON%E6%A0%BC%E5%BC%8F/" data-id="cl4slbdua0000rsvpgz8r895s" data-title="JSON格式" class="article-share-link">Share</a>
       
       
       
@@ -378,7 +378,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/23/css-box-sizing-border-box/" data-id="cl4qi2hrv0000vcvpchux075i" data-title="CSS: border-box" class="article-share-link">Share</a>
+      <a data-url="https://inthuang.tw/2022/06/23/css-box-sizing-border-box/" data-id="cl4qi2hrv0000vcvpchux075i" data-title="CSS: border-box" class="article-share-link">Share</a>
       
       
       
@@ -426,7 +426,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/22/css-Pseudo-Class-Selector/" data-id="cl4p7aazs0000h4vp9xc1game" data-title="CSS: 擬態選擇器" class="article-share-link">Share</a>
+      <a data-url="https://inthuang.tw/2022/06/22/css-Pseudo-Class-Selector/" data-id="cl4p7aazs0000h4vp9xc1game" data-title="CSS: 擬態選擇器" class="article-share-link">Share</a>
       
       
       
@@ -471,24 +471,24 @@
 <li>順序大致會比照MDN的順序</li>
 </ul>
 <ol>
-<li><p><a href="https://huanginch.github.io/2022/06/05/js-assignment-operator/">賦值運算子</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/05/js-assignment-operator/">賦值運算子</a></p>
 </li>
-<li><p><a href="https://huanginch.github.io/2022/06/14/js-compare-operator/">比較運算子</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/14/js-compare-operator/">比較運算子</a></p>
 </li>
-<li><p><a href="https://huanginch.github.io/2022/06/15/js-arthimetic-operator/">算數運算子</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/15/js-arthimetic-operator/">算數運算子</a></p>
 </li>
-<li><p><a href="https://huanginch.github.io/2022/06/13/js-bit-operator/">位元運算子</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/13/js-bit-operator/">位元運算子</a></p>
 </li>
-<li><p><a href="https://huanginch.github.io/2022/06/04/Javascript-logic-operator/">邏輯運算子</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/04/Javascript-logic-operator/">邏輯運算子</a></p>
 </li>
-<li><p><a href="https://huanginch.github.io/2022/06/16/js-conditional-operator/">三元運算子</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/16/js-conditional-operator/">三元運算子</a></p>
 </li>
-<li><p><a href="https://huanginch.github.io/2022/06/17/js-relation-operator/">關係運算子</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/17/js-relation-operator/">關係運算子</a></p>
 </li>
 <li><p>其他:</p>
 <ol>
-<li><a href="https://huanginch.github.io/2022/06/19/js-operator/">delete、逗號運算子、字串運算子</a></li>
-<li><a href="https://huanginch.github.io/2022/06/20/js-typeof/">typeof、void</a></li>
+<li><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/19/js-operator/">delete、逗號運算子、字串運算子</a></li>
+<li><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/20/js-typeof/">typeof、void</a></li>
 </ol>
 </li>
 </ol>
@@ -568,7 +568,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/21/js-operators/" data-id="cl4nlni7d000044vpbo2980sl" data-title="Javascript: 運算子總整理" class="article-share-link">Share</a>
+      <a data-url="https://inthuang.tw/2022/06/21/js-operators/" data-id="cl4nlni7d000044vpbo2980sl" data-title="Javascript: 運算子總整理" class="article-share-link">Share</a>
       
       
       
@@ -624,7 +624,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/20/js-typeof/" data-id="cl4m8z2al0000covpbgybh3jk" data-title="Javascript: typeof、void" class="article-share-link">Share</a>
+      <a data-url="https://inthuang.tw/2022/06/20/js-typeof/" data-id="cl4m8z2al0000covpbgybh3jk" data-title="Javascript: typeof、void" class="article-share-link">Share</a>
       
       
       
@@ -665,7 +665,7 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>前面幾篇幾乎把所有的運算子都介紹過一遍了，這篇會介紹幾個寫起來篇幅比較少的運算子。</p>
-<h2 id="一元運算子-delete"><a href="#一元運算子-delete" class="headerlink" title="一元運算子: delete"></a>一元運算子: delete</h2><p>之前在<a href="https://huanginch.github.io/2022/06/15/js-arthimetic-operator/">算術運算子篇</a>中也有介紹其他的一元運算子，這篇會把最後的一元運算子介紹給大家。</p>
+<h2 id="一元運算子-delete"><a href="#一元運算子-delete" class="headerlink" title="一元運算子: delete"></a>一元運算子: delete</h2><p>之前在<a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/15/js-arthimetic-operator/">算術運算子篇</a>中也有介紹其他的一元運算子，這篇會把最後的一元運算子介紹給大家。</p>
 <p>delete可以刪除物件、物件屬性、陣列元素等等。刪除後物件會變成undefined</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">delete 物件名稱;</span><br><span class="line"></span><br><span class="line">delete 物件名稱.屬性;</span><br><span class="line"></span><br><span class="line">delete 物件名稱[index];</span><br><span class="line"></span><br><span class="line">delete 屬性; //只有在with中才能使用</span><br></pre></td></tr></table></figure>
 
@@ -681,7 +681,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/19/js-operator/" data-id="cl4kub1it0000rsvp2x428wa5" data-title="Javascript: delete、逗號運算子、字串運算子" class="article-share-link">Share</a>
+      <a data-url="https://inthuang.tw/2022/06/19/js-operator/" data-id="cl4kub1it0000rsvp2x428wa5" data-title="Javascript: delete、逗號運算子、字串運算子" class="article-share-link">Share</a>
       
       
       
@@ -774,7 +774,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/18/node-change-version/" data-id="cl4jfnq400000fkvp2yzqhd8j" data-title="Nodejs: 更改版本" class="article-share-link">Share</a>
+      <a data-url="https://inthuang.tw/2022/06/18/node-change-version/" data-id="cl4jfnq400000fkvp2yzqhd8j" data-title="Nodejs: 更改版本" class="article-share-link">Share</a>
       
       
       

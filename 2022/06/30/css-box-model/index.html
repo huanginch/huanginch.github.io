@@ -9,20 +9,20 @@
   <meta name="description" content="說到css就不能不提他最重要的觀念-盒模型(box model)，在css眼中，所有元素都是以盒模型方式呈現。盒模型由以下幾種東西組成: 內容(content)、內邊距(padding)、邊界線(border)、外邊距(margin)。   Chrome 開發者工具中的盒模型(打開開發者工具後拉到style最下面可以看到當前選取元素的盒模型)  知道盒模型長什麼樣子之後，那他到底是來幹嘛的? 簡單">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS: 盒模型">
-<meta property="og:url" content="https://huanginch.github.io/2022/06/30/css-box-model/index.html">
+<meta property="og:url" content="https://inthuang.tw/2022/06/30/css-box-model/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
 <meta property="og:description" content="說到css就不能不提他最重要的觀念-盒模型(box model)，在css眼中，所有元素都是以盒模型方式呈現。盒模型由以下幾種東西組成: 內容(content)、內邊距(padding)、邊界線(border)、外邊距(margin)。   Chrome 開發者工具中的盒模型(打開開發者工具後拉到style最下面可以看到當前選取元素的盒模型)  知道盒模型長什麼樣子之後，那他到底是來幹嘛的? 簡單">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-82.png">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-86.png">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-84.png">
-<meta property="og:image" content="https://huanginch.github.io/images/pasted-87.png">
+<meta property="og:image" content="https://inthuang.tw/images/pasted-82.png">
+<meta property="og:image" content="https://inthuang.tw/images/pasted-86.png">
+<meta property="og:image" content="https://inthuang.tw/images/pasted-84.png">
+<meta property="og:image" content="https://inthuang.tw/images/pasted-87.png">
 <meta property="article:published_time" content="2022-06-30T03:17:00.000Z">
 <meta property="article:modified_time" content="2022-07-02T03:54:10.556Z">
 <meta property="article:author" content="int">
 <meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huanginch.github.io/images/pasted-82.png">
+<meta name="twitter:image" content="https://inthuang.tw/images/pasted-82.png">
   
     <link rel="alternate" href="/atom.xml" title="Int's blog" type="application/atom+xml">
   
@@ -76,7 +76,7 @@
         <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://huanginch.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://inthuang.tw"></form>
       </div>
     </div>
   </div>
@@ -120,12 +120,12 @@
 <h2 id="元素大小計算"><a href="#元素大小計算" class="headerlink" title="元素大小計算"></a>元素大小計算</h2><p>那知道了盒模型是由什麼組成之後就可以來計算元素的大小了，一般來說我們都會認為元素的大小只有content大小，但如果有加上padding和border就會跟這一起算進去。</p>
 <p><img src="/../images/pasted-87.png" alt="包含padding和border的和模型範例"></p>
 <p>以這張圖來說，元素的寬會是內容的24+左右兩邊的border，所以是24+1+1 &#x3D; 26，長度則是225.875 + 22 + 22 + 1 + 1 &#x3D; 271.875。<br>你可能會想問，那margin呢？ 不用算嗎？沒錯，margin並不算在元素的大小上，但是仍然會在網頁上留下空間，所以在寫的時候要特別注意。</p>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>盒模型基本上是css的核心概念，要學好css一定要學好盒模型，當然你會覺得每次都要自己計算很麻煩，所以css也有提供其他方法，像是我之前寫過的<a href="https://huanginch.github.io/2022/06/23/css-box-sizing-border-box/">border-box</a>，基本上開發時都會使用borderbox來省下計算盒模型的推擠，相當方便。</p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>盒模型基本上是css的核心概念，要學好css一定要學好盒模型，當然你會覺得每次都要自己計算很麻煩，所以css也有提供其他方法，像是我之前寫過的<a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/23/css-box-sizing-border-box/">border-box</a>，基本上開發時都會使用borderbox來省下計算盒模型的推擠，相當方便。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/06/30/css-box-model/" data-id="cl50i3jol0000esvp4y9j02p6" data-title="CSS: 盒模型" class="article-share-link">Share</a>
+      <a data-url="https://inthuang.tw/2022/06/30/css-box-model/" data-id="cl50i3jol0000esvp4y9j02p6" data-title="CSS: 盒模型" class="article-share-link">Share</a>
       
       
       

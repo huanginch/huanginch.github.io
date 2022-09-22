@@ -9,7 +9,7 @@
   <meta name="description" content="我上次在這篇簡單介紹了jQuery，這篇要來介紹其中一個常見的function: toggleClass。 這個函式是我在學如何製作漢堡選單時學習到的，之後也會寫一篇關於如何製作漢堡選單的文章。 用途toggleClass可以改變class的有無，比如說我對一個按鈕點擊後想要對某個元素做出樣式改變就可以使用。以下面這個例子來說，我設定成點擊.menu-btn後會修改.navbar-list的sho">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JQuery: toggleClass">
-<meta property="og:url" content="https://huanginch.github.io/2022/08/03/JQuery-toggleClass/index.html">
+<meta property="og:url" content="https://inthuang.tw/2022/08/03/JQuery-toggleClass/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
 <meta property="og:description" content="我上次在這篇簡單介紹了jQuery，這篇要來介紹其中一個常見的function: toggleClass。 這個函式是我在學如何製作漢堡選單時學習到的，之後也會寫一篇關於如何製作漢堡選單的文章。 用途toggleClass可以改變class的有無，比如說我對一個按鈕點擊後想要對某個元素做出樣式改變就可以使用。以下面這個例子來說，我設定成點擊.menu-btn後會修改.navbar-list的sho">
 <meta property="og:locale" content="zh_TW">
@@ -71,7 +71,7 @@
         <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://huanginch.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://inthuang.tw"></form>
       </div>
     </div>
   </div>
@@ -100,14 +100,14 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>我上次在<a href="https://huanginch.github.io/2022/07/29/JQuery-intro/">這篇</a>簡單介紹了jQuery，這篇要來介紹其中一個常見的function: toggleClass。</p>
+        <p>我上次在<a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/07/29/JQuery-intro/">這篇</a>簡單介紹了jQuery，這篇要來介紹其中一個常見的function: toggleClass。</p>
 <p>這個函式是我在學如何製作漢堡選單時學習到的，之後也會寫一篇關於如何製作漢堡選單的文章。</p>
 <h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><p>toggleClass可以改變class的有無，比如說我對一個按鈕點擊後想要對某個元素做出樣式改變就可以使用。以下面這個例子來說，我設定成點擊.menu-btn後會修改.navbar-list的show class狀態，如果.navbar-list有show class會移除，沒有就會新增。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;.menu-btn&#x27;</span>).<span class="title function_">click</span>(<span class="keyword">function</span> (<span class="params">e</span>) &#123;</span><br><span class="line">    e.<span class="title function_">preventDefault</span>();</span><br><span class="line">    $(<span class="string">&#x27;.navbar-list&#x27;</span>).<span class="title function_">toggleClass</span>(<span class="string">&#x27;show&#x27;</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/08/03/JQuery-toggleClass/" data-id="cl6dhzd0o0000povp0mx0axn2" data-title="JQuery: toggleClass" class="article-share-link">Share</a>
+      <a data-url="https://inthuang.tw/2022/08/03/JQuery-toggleClass/" data-id="cl6dhzd0o0000povp0mx0axn2" data-title="JQuery: toggleClass" class="article-share-link">Share</a>
       
       
       

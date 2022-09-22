@@ -9,7 +9,7 @@
   <meta name="description" content="position可以用來安排元素的位置，包含讓他們重疊或固定於網頁某個地方都能用position來實現，這篇會來介紹position的各種值以及和position相關的其他屬性。 不過因為有些屬性內容比較多我會改成用連結文章的方式，並且之後這幾天都會寫和positon相關的主題，之後再彙整過來。 position屬性 static:   預設值，在static上不會有任何元素重疊。 123h2&amp;#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS: position">
-<meta property="og:url" content="https://huanginch.github.io/2022/07/08/css-position/index.html">
+<meta property="og:url" content="https://inthuang.tw/2022/07/08/css-position/index.html">
 <meta property="og:site_name" content="Int&#39;s blog">
 <meta property="og:description" content="position可以用來安排元素的位置，包含讓他們重疊或固定於網頁某個地方都能用position來實現，這篇會來介紹position的各種值以及和position相關的其他屬性。 不過因為有些屬性內容比較多我會改成用連結文章的方式，並且之後這幾天都會寫和positon相關的主題，之後再彙整過來。 position屬性 static:   預設值，在static上不會有任何元素重疊。 123h2&amp;#">
 <meta property="og:locale" content="zh_TW">
@@ -71,7 +71,7 @@
         <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://huanginch.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://inthuang.tw"></form>
       </div>
     </div>
   </div>
@@ -115,35 +115,35 @@
 <li><p>absolute、relative:</p>
 <ul>
 <li>這兩個雖然分別是不同屬性但基本上都會一起使用。</li>
-<li><a href="https://huanginch.github.io/2022/07/14/css-absolute-and-relative/">介紹文章傳送門</a> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.child-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:absolute;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/07/14/css-absolute-and-relative/">介紹文章傳送門</a> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.child-box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:absolute;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p>fixed:</p>
 <ul>
 <li>可以將元素固定在網頁上，不論如何滑動頁面元素都不會消失。</li>
-<li><a href="https://huanginch.github.io/2022/07/09/css-position-fixed/">介紹文章傳送門</a> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/07/09/css-position-fixed/">介紹文章傳送門</a> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p>sticky</p>
 <ul>
 <li>sticky比較像fixed + relative，可以讓子元素固定在畫面上，滾動時又不會超出父元素。</li>
-<li><a href="https://huanginch.github.io/2022/07/13/css-position-sticky/">介紹文章傳送門</a>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: sticky;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/07/13/css-position-sticky/">介紹文章傳送門</a>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: sticky;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ol>
 <h2 id="其他元素定位相關屬性"><a href="#其他元素定位相關屬性" class="headerlink" title="其他元素定位相關屬性"></a>其他元素定位相關屬性</h2><h2 id="float"><a href="#float" class="headerlink" title="float"></a>float</h2><ul>
 <li>常用於文字與圖片，可做出文繞圖的樣式。</li>
-<li><a href="https://huanginch.github.io/2022/07/07/css-float/">介紹文章傳送門</a></li>
+<li><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/07/07/css-float/">介紹文章傳送門</a></li>
 </ul>
 <h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><ul>
 <li>可調整網頁z軸(也就是圖片與元素的重疊和上下關係)</li>
-<li><a href="https://huanginch.github.io/2022/07/12/css-z-index/">介紹文章傳送門</a></li>
+<li><a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/07/12/css-z-index/">介紹文章傳送門</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://huanginch.github.io/2022/07/08/css-position/" data-id="cl5bwzduy0000bsvpgu8x9iel" data-title="CSS: position" class="article-share-link">Share</a>
+      <a data-url="https://inthuang.tw/2022/07/08/css-position/" data-id="cl5bwzduy0000bsvpgu8x9iel" data-title="CSS: position" class="article-share-link">Share</a>
       
       
       
