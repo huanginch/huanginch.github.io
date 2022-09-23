@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next # landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -109,3 +109,8 @@ admin:
   deployCommand: 'hexo-publish.bat'
 sitemap:
     path: sitemap.xml
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
