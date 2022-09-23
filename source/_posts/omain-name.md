@@ -28,9 +28,11 @@ date: 2022-09-22 12:52:00
 * 點選新增
 ![](../images/pasted-137.png)
 
+* **把內建的 CNAME www domianname 刪掉(很重要!!一定要做!!)**
+
 * 輸入以下網域
-	1. 自己的github.io的網址
-  ![](../images/pasted-138.png)
+	1. 自己的github.io的網址 
+	![](../images/pasted-145.png)
   
 	2. github主機ip
     	
@@ -61,6 +63,6 @@ date: 2022-09-22 12:52:00
 ![](../images/pasted-144.png)
 
 ## 結語
-網路上很多教學都有點舊，不知道是不是因為git改版過還是怎樣，在設定DNS指向github.io時，所有我找到的教學網站都叫我在name輸入www，內容值輸入username.github.io，害我卡半天，改成name輸入username，內容值輸入github.io就成功了。
+我一開始在設定時cname www username.github.io都無法設定，一直說請輸入有效的值，一開始我以為是www有錯，後來才發現我要把預設的 cname www domainname刪掉才能新增，真是搞死我...這邊新增後github那邊也能順利驗證TLS了，可喜可賀。
 
 如此一來其他的專案的domain name也能變成我自訂的名稱，不用特別設定，因為他們都是在github.io底下的網站，相當方便。
