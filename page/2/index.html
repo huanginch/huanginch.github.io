@@ -189,6 +189,93 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/09/03/html-icon/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="int">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Int's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/03/html-icon/" class="post-title-link" itemprop="url">如何在網頁上使用線上icon</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2022-09-03 14:52:00 / 修改時間：15:07:19" itemprop="dateCreated datePublished" datetime="2022-09-03T14:52:00+08:00">2022-09-03</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在網頁上通常會使用小圖示或icon來增加設計感與樣式，也有許多按鈕都是使用icon來呈現，這篇會介紹線上svg或線上icon的引入方式。</p>
+<ol>
+<li><p>線上icon網站</p>
+<ul>
+<li>首先要找到有提供線上icon的網站，常用的有<a target="_blank" rel="noopener" href="https://fonts.google.com/icons">google font</a>、<a target="_blank" rel="noopener" href="https://fontawesome.com/">fontawsome</a>等免費網站(fontawsome為部分收費)。</li>
+</ul>
+</li>
+<li><p>根據icon網站的指引引入cdn</p>
+<ul>
+<li><p>以google font為例，點擊icon後右手邊就會出現cdn可以讓開發者引入<br> <img src="/../images/pasted-121.png" alt="google font icon"></p>
+</li>
+<li><p>fontawsome的話要先填寫email他才會寄cdn給你</p>
+</li>
+</ul>
+<p> <img src="/../images/pasted-122.png" alt="fontawsome"></p>
+</li>
+<li><p>將cdn引入專案中</p>
+<ul>
+<li>把複製好的code貼到自己html的header即可</li>
+</ul>
+<p> <img src="/../images/pasted-123.png"></p>
+</li>
+<li><p>根據網站的說明複製對應的icon code</p>
+<ul>
+<li>引入cdn後就可以開始使用icon了，以google font為例，右手邊也會有icon自己的code，只需要複製並貼到自己想要放icon的位置即可</li>
+</ul>
+<p> <img src="/../images/pasted-124.png"></p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/09/02/CSS-BEM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -862,74 +949,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/08/22/css-vmax-and-vmin/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="int">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Int's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/08/22/css-vmax-and-vmin/" class="post-title-link" itemprop="url">CSS: vmax、vmin</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2022-08-22 23:11:00 / 修改時間：23:23:13" itemprop="dateCreated datePublished" datetime="2022-08-22T23:11:00+08:00">2022-08-22</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>vmax與vmin是css中的單位，與vh、vw很相似，都是依據viewport來改變大小的單位，與vh、vw相同，範圍是0~100。</p>
-<h2 id="VMAX"><a href="#VMAX" class="headerlink" title="VMAX"></a>VMAX</h2><p>vmax會找到viewport中較大的那邊，元素的長度或寬度會與那個邊相同長度，比如現在螢幕大小是1920*1080，假設我使用了一個元素他的寬度是100vmax，那麼這個元素的寬度會和螢幕寬度相同(1920 &gt; 1080)。</p>
-<h2 id="VMIN"><a href="#VMIN" class="headerlink" title="VMIN"></a>VMIN</h2><p>和vamx相反，vmin會找較短的邊，該元素長度或寬度會與短邊相同。</p>
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><ul>
-<li>可以試著改變螢幕大小來觀看效果</li>
-</ul>
-<iframe height="300" style="width: 100%;" scrolling="no" title="vmax、vmin" src="https://codepen.io/intHuang/embed/XWEGVaW?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/XWEGVaW">
-  vmax、vmin</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -999,7 +1018,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-count">110</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1012,7 +1031,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>

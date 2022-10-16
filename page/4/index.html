@@ -189,6 +189,87 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/08/12/bs5-component-button/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="int">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Int's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/08/12/bs5-component-button/" class="post-title-link" itemprop="url">bs5: button</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2022-08-12 16:27:00 / 修改時間：17:08:04" itemprop="dateCreated datePublished" datetime="2022-08-12T16:27:00+08:00">2022-08-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>button是bootstrap提供的一個元件，可以觀看<a target="_blank" rel="noopener" href="https://bootstrap5.hexschool.com/docs/5.1/components/buttons/">官方文件</a>，而這篇會簡單介紹如何使用button以及button這個元件是如何運作的。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>button可以使用在button、a以及input三個tag上，一般來說我都會選擇a或是input，在tag上加入btn class就完成了button元件的引入。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;btn&quot;</span>&gt;</span>button<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="樣式"><a href="#樣式" class="headerlink" title="樣式"></a>樣式</h3><p>button提供了不同種類的預設樣式，最常使用的就是這種實心按鈕，只需要寫上對應的class就能獲得對應的顏色以及hover effect。</p>
+<p><code>btn-primary</code> <code>btn-secondary</code> <code>btn-success</code> <code>btn-danger</code> <code>btn-warning</code> <code>btn-info</code> <code>btn-light</code> <code>btn-dark</code> <code>btn-link</code></p>
+<p><img src="/../images/pasted-103.png"></p>
+<p>除了實心也有提供只有外框(outline)的按鈕樣式</p>
+<p><code>btn-outline-primary</code> <code>btn-outline-secondary</code> <code>btn-outline-success</code> <code>btn-outline-danger</code> <code>btn-outline-warning</code> <code>btn-outline-info</code> <code>btn-outline-light</code> <code>btn-outline-dark</code> <code>btn-outline-link</code></p>
+<p><img src="/../images/pasted-104.png"></p>
+<h3 id="尺寸"><a href="#尺寸" class="headerlink" title="尺寸"></a>尺寸</h3><p>也有提供大小不同的按鈕，使用方法一樣是加上對應的class即可。</p>
+<p><code>btn-lg</code> <code>btn-sm</code></p>
+<p><img src="/../images/pasted-105.png"></p>
+<h3 id="狀態"><a href="#狀態" class="headerlink" title="狀態"></a>狀態</h3><p>button還可以新增其他狀態，例如禁用、啟用等等</p>
+<ul>
+<li><p>disable:<br>  禁用屬性直接加上disabled即可</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-lg btn-primary&quot;</span> <span class="attr">disabled</span>&gt;</span>Primary button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  不過在a標籤比較特別，因為a標籤本身沒有disabled屬性，所以要改加在class上，bs5同樣為a標籤撰寫了禁用的樣式</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary btn-lg disabled&quot;</span> <span class="attr">role</span>=<span class="string">&quot;button&quot;</span> <span class="attr">aria-disabled</span>=<span class="string">&quot;true&quot;</span>&gt;</span>Primary link<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>active:<br>   想讓按鈕為active狀態可以加上 <code>data-bs-toggle=&quot;button&quot;</code> 或是加上 <code>.active</code>這個class</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary active&quot;</span> <span class="attr">data-bs-toggle</span>=<span class="string">&quot;button&quot;</span> <span class="attr">autocomplete</span>=<span class="string">&quot;off&quot;</span> <span class="attr">aria-pressed</span>=<span class="string">&quot;true&quot;</span>&gt;</span>Active toggle button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>按鈕不只是上述介紹的而已，還能夠加上其他的class來達到與其他元件互動的效果，不過這部分讓我留到介紹需要使用按鈕作互動的元件時再來談吧。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/08/12/bs5-component/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -804,75 +885,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/08/02/html-anchor/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="int">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Int's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/08/02/html-anchor/" class="post-title-link" itemprop="url">html: 錨點</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2022-08-02 18:03:00 / 修改時間：18:20:15" itemprop="dateCreated datePublished" datetime="2022-08-02T18:03:00+08:00">2022-08-02</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>按下一個按鈕，可以往下滾動到頁面中相對應的區塊，這是網頁設計中很常使用到的技巧，要達成這個效果就要使用到Html中的錨點(anchor)。</p>
-<h2 id="id"><a href="#id" class="headerlink" title="id"></a>id</h2><p>說到錨點就要提到html的一個屬性: id，id就像是當前區塊或元素的身分證，它代表了當前元素，所以整個頁面中id只會出現一次，而id就是所謂的錨點，透過找到這個獨一無二的id來達成。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;section1&quot;</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>常見於html中的id。</p>
-<h2 id="a標籤"><a href="#a標籤" class="headerlink" title="a標籤"></a>a標籤</h2><p>那有了錨點，我們要怎麼讓使用者能使用這個功能？這時候就會用到a連結，我們一般預設a連結會寫成如下:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>link<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>那個href所指向的#指的就是首頁，如果改成id的名稱就可以跳轉到那個區塊。<br>但是，所有id名稱前面都要加上#，否則他會認為是外部連結。</p>
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="Day 27-錨點練習" src="https://codepen.io/intHuang/embed/RwMQVPq?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/RwMQVPq">
-  Day 27-錨點練習</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -942,7 +954,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-count">110</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -955,7 +967,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
