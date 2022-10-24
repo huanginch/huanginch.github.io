@@ -3464,4 +3464,17 @@ row後面一定要接col，所以這樣寫是錯的。</li>
         <tag>other, copilot, AI</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Hidden Markov Model implement in python</title>
+    <url>/2022/10/16/Hidden-Markov-Model-implement-in-python/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因為HEXO不支援Latex語法，所以我把文章放在<a href="https://hackmd.io/@XibGbVrGSw6szTtbuQpNBw/HJdmQtqmj">Hackmd</a>上，請移動至Hackmd觀看。</p>
+<h2 id="Source-code"><a href="#Source-code" class="headerlink" title="Source code"></a><a href="https://github.com/huanginch/HMM">Source code</a></h2><p>如果你不想看那麼多字想直接看程式碼，可以直接點上面的連結，程式碼都有註解，應該不難懂。</p>
+]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>bioinformatics</tag>
+        <tag>algorithmn</tag>
+        <tag>hidden-markov-model</tag>
+      </tags>
+  </entry>
 </search>
