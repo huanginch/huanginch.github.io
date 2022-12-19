@@ -3477,4 +3477,26 @@ row後面一定要接col，所以這樣寫是錯的。</li>
         <tag>hidden-markov-model</tag>
       </tags>
   </entry>
+  <entry>
+    <title>使用AOS套件後出現X軸</title>
+    <url>/2022/12/19/x-axis-after-using-aos/</url>
+    <content><![CDATA[<p><a href="https://michalsnik.github.io/aos/">AOS (Animation-on-Scroll)</a>套件是一個在網頁開發上很常使用的動畫套件，不過在使用到「<strong>fade-left</strong>」與「<strong>fade-right</strong>」時很常會發生網頁出現x軸的情形。</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="aos-overflow" src="https://codepen.io/intHuang/embed/rNrNyXW?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/intHuang/pen/rNrNyXW">
+  aos-overflow</a> by int (<a href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>以上面的例子來說，在我頁面滾動到灰色區塊前都會有一個x軸存在，而造成這個原因正是「<strong>fade-left</strong>」與「<strong>fade-right</strong>」這兩個效果並用所導致；因為這兩個效果是利區塊位置改變(從負軸到正軸的位移)，所以就會產生x軸。(此情況也會發生在自己寫的animation-on-scroll上，道理是相同的。)</p>
+<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>知道原因之後要解決這件事其實很簡單，產生x軸的原因是元素超出畫面，那個幫他上個overflow-hidden把超出去的元素藏起來就好了。</p>
+<p>為了一勞永逸，直接在body上面加上<code>overflow-x: hidden;</code>的style就可以了。</p>
+<h2 id="地雷"><a href="#地雷" class="headerlink" title="地雷"></a>地雷</h2><p>但這邊還有個小小地雷，在做RWD時你會發現手機版的<code>overflow-x: hidden;</code>上不去，這是因為手機版瀏覽器會自己加上<code>overflow: auto;</code>還是加在inline-style上，根本概不掉，所以這時候要用一個div把你的整個網頁包起來，<code>overflow-x: hidden</code>就寫在上面。</p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>這個問題困擾我好久了，害我一直沒辦法做左右淡入的動畫，還好有找到解決方法，希望這篇文章可以幫助跟我遇到相同問題的人。</p>
+]]></content>
+      <tags>
+        <tag>javascript</tag>
+        <tag>frontend</tag>
+        <tag>aos</tag>
+      </tags>
+  </entry>
 </search>

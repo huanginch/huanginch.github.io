@@ -189,6 +189,90 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/07/25/css-background-origin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="int">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Int's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/07/25/css-background-origin/" class="post-title-link" itemprop="url">CSS: background-origin</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-07-25 13:07:00" itemprop="dateCreated datePublished" datetime="2022-07-25T13:07:00+08:00">2022-07-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2022-07-26 20:26:15" itemprop="dateModified" datetime="2022-07-26T20:26:15+08:00">2022-07-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css-background/" itemprop="url" rel="index"><span itemprop="name">css background</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>background-origin可以設定背景圖片的起點位置，分為以下三種:</p>
+<h2 id="border-box"><a href="#border-box" class="headerlink" title="border-box"></a>border-box</h2><p>border-box會讓圖片從border正下方開始延伸，意即border會覆蓋在圖片上。</p>
+<h2 id="padding-box"><a href="#padding-box" class="headerlink" title="padding-box"></a>padding-box</h2><p>padding-box會讓圖片從padding開始延伸，所以border底下會留白，這個也是background-origin的預設值。</p>
+<h2 id="content-box"><a href="#content-box" class="headerlink" title="content-box"></a>content-box</h2><p>content-box會讓圖片從content開始延伸，所以border和padding的部分會留白。</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="background-origin" src="https://codepen.io/intHuang/embed/abYymLa?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/abYymLa">
+  background-origin</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>要注意的是如果沒有下no-repeat，看起來會沒有差別，不過一般來說都會設定no-repeat就是。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/07/24/css-background-size/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -981,86 +1065,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/07/12/css-z-index/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="int">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Int's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/07/12/css-z-index/" class="post-title-link" itemprop="url">CSS: z-index</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2022-07-12 20:30:00 / 修改時間：21:56:38" itemprop="dateCreated datePublished" datetime="2022-07-12T20:30:00+08:00">2022-07-12</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css-position/" itemprop="url" rel="index"><span itemprop="name">css position</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>一般排版的時候都是調整元素在網頁上的位置，也就是x、y軸，那如果想做出元素重疊時，要調整上下層就要調整z-index。</p>
-<p>z-index的數值可以自己自訂(你想寫10000也沒人阻止你，但不見一這樣做，程式碼很難維護)，但都遵循一個原則，數字越大越上面。</p>
-<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><p>z-index的值分成兩種，一個是數字另一個是auto，如果設成auto就會自動安排z-index，莫認為越下面z-index越大，元素也越上層；如果不寫z-index預設值為0。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box2</span>&#123;</span><br><span class="line">	<span class="attribute">z-index</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="z-index" src="https://codepen.io/intHuang/embed/WNzGwPE?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/WNzGwPE">
-  z-index</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>可以看到除了auto，z-index的數字是越大越上層，auto的部分則是按照順序安排權重。</p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>當然，你會看到我都有用到position，因為有使用到position才會出現元素重疊的情形，這時候z-index就是個好用的東西，好好運用就可以排出好看的排版。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1130,7 +1134,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">111</span>
+          <span class="site-state-item-count">112</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1143,7 +1147,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>

@@ -189,6 +189,86 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/07/12/css-z-index/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="int">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Int's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/07/12/css-z-index/" class="post-title-link" itemprop="url">CSS: z-index</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2022-07-12 20:30:00 / 修改時間：21:56:38" itemprop="dateCreated datePublished" datetime="2022-07-12T20:30:00+08:00">2022-07-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css-position/" itemprop="url" rel="index"><span itemprop="name">css position</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>一般排版的時候都是調整元素在網頁上的位置，也就是x、y軸，那如果想做出元素重疊時，要調整上下層就要調整z-index。</p>
+<p>z-index的數值可以自己自訂(你想寫10000也沒人阻止你，但不見一這樣做，程式碼很難維護)，但都遵循一個原則，數字越大越上面。</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><p>z-index的值分成兩種，一個是數字另一個是auto，如果設成auto就會自動安排z-index，莫認為越下面z-index越大，元素也越上層；如果不寫z-index預設值為0。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box2</span>&#123;</span><br><span class="line">	<span class="attribute">z-index</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="z-index" src="https://codepen.io/intHuang/embed/WNzGwPE?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/WNzGwPE">
+  z-index</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>可以看到除了auto，z-index的數字是越大越上層，auto的部分則是按照順序安排權重。</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>當然，你會看到我都有用到position，因為有使用到position才會出現元素重疊的情形，這時候z-index就是個好用的東西，好好運用就可以排出好看的排版。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/07/09/css-position-fixed/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -980,86 +1060,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/06/30/css-box-model/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="int">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Int's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/06/30/css-box-model/" class="post-title-link" itemprop="url">CSS: 盒模型</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2022-06-30 11:17:00" itemprop="dateCreated datePublished" datetime="2022-06-30T11:17:00+08:00">2022-06-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2022-07-02 11:54:10" itemprop="dateModified" datetime="2022-07-02T11:54:10+08:00">2022-07-02</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>說到css就不能不提他最重要的觀念-盒模型(box model)，在css眼中，所有元素都是以盒模型方式呈現。盒模型由以下幾種東西組成: 內容(content)、內邊距(padding)、邊界線(border)、外邊距(margin)。</p>
-<p><img src="/../images/pasted-82.png" alt="box-model"></p>
-<ul>
-<li>Chrome 開發者工具中的盒模型(打開開發者工具後拉到style最下面可以看到當前選取元素的盒模型)</li>
-</ul>
-<p>知道盒模型長什麼樣子之後，那他到底是來幹嘛的? 簡單來說，它可以用來推算元素在網頁上佔的位置大小，方便我們對元素做排版，接著我會一一介紹盒模型的四個組成要件。</p>
-<h2 id="內容-Content"><a href="#內容-Content" class="headerlink" title="內容(Content)"></a>內容(Content)</h2><p>內容就是元素內容，img就是圖片，p段落就是文字等等，任何你真正想在網頁上呈現的東西。</p>
-<h2 id="內邊距-Padding"><a href="#內邊距-Padding" class="headerlink" title="內邊距(Padding)"></a>內邊距(Padding)</h2><p>內邊距是在元素內產生的留白，分為上下左右，可針對不同方向產生不同推擠，方向上來說是從邊界線開始項內容推。</p>
-<p><img src="/../images/pasted-86.png" alt="padding"></p>
-<h2 id="邊界線-Border"><a href="#邊界線-Border" class="headerlink" title="邊界線(Border)"></a>邊界線(Border)</h2><p>元素最外層的界線，邊界線除了讓我們方便分清楚元素與元素之間的界線外，也可以用來當裝飾。因為邊界線也會有大小，自然會算進去盒模型的大小中，同樣分為上下左右四個方向。</p>
-<h2 id="外邊距-Margin"><a href="#外邊距-Margin" class="headerlink" title="外邊距(Margin)"></a>外邊距(Margin)</h2><p>和padding相反，margin是元素外產生的留白，從邊界線開始由內而外推擠，同樣分為上下左右四個方向。</p>
-<p><img src="/../images/pasted-84.png" alt="margin"></p>
-<h2 id="元素大小計算"><a href="#元素大小計算" class="headerlink" title="元素大小計算"></a>元素大小計算</h2><p>那知道了盒模型是由什麼組成之後就可以來計算元素的大小了，一般來說我們都會認為元素的大小只有content大小，但如果有加上padding和border就會跟這一起算進去。</p>
-<p><img src="/../images/pasted-87.png" alt="包含padding和border的和模型範例"></p>
-<p>以這張圖來說，元素的寬會是內容的24+左右兩邊的border，所以是24+1+1 &#x3D; 26，長度則是225.875 + 22 + 22 + 1 + 1 &#x3D; 271.875。<br>你可能會想問，那margin呢？ 不用算嗎？沒錯，margin並不算在元素的大小上，但是仍然會在網頁上留下空間，所以在寫的時候要特別注意。</p>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>盒模型基本上是css的核心概念，要學好css一定要學好盒模型，當然你會覺得每次都要自己計算很麻煩，所以css也有提供其他方法，像是我之前寫過的<a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/23/css-box-sizing-border-box/">border-box</a>，基本上開發時都會使用borderbox來省下計算盒模型的推擠，相當方便。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1129,7 +1129,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">111</span>
+          <span class="site-state-item-count">112</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1142,7 +1142,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
