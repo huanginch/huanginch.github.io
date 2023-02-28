@@ -189,6 +189,95 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/05/21/hexo-admin-deploy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="int">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Int's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/21/hexo-admin-deploy/" class="post-title-link" itemprop="url">使用Hexo admin來部屬(deploy)網站</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-05-21 11:33:00" itemprop="dateCreated datePublished" datetime="2022-05-21T11:33:00+08:00">2022-05-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2022-05-23 12:21:11" itemprop="dateModified" datetime="2022-05-23T12:21:11+08:00">2022-05-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo-introduce/" itemprop="url" rel="index"><span itemprop="name">hexo introduce</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Hexo admin是一個很方便的插件，可以用圖形化介面來管理你的網站後台，不過下載後來是要自己設定一些東西才能部屬網站，這篇文就是來介紹部屬的設定。</p>
+<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><ol>
+<li><p>安裝hexo admin: 在cmd輸入以下指令，不知道怎麼打開cmd可以看<a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/05/19/My-First-Post/">這篇文</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$npm install hexo-admin --save</span><br></pre></td></tr></table></figure></li>
+<li><p>打開blog資料夾裡的 <strong>_config.yml</strong>，在最底下新增以下程式碼</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">admin:</span><br><span class="line">          deployCommand: &#x27;hexo-publish.bat&#x27;</span><br></pre></td></tr></table></figure></li>
+<li><p>在跟 <strong>_config.yml</strong> 同一層的地方新增一個叫 <strong>hexo-publish.bat</strong> 的檔案</p>
+</li>
+<li><p>在<strong>hexo-publish.bat</strong>中新增以下程式碼</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure></li>
+<li><p>切換到Hexo Admin中的deploy頁面<br><img src="/../images/hexo-admin-navbar.png"></p>
+</li>
+<li><p>在輸入欄輸入本次更新說明文字後按下deploy即可<br><img src="/../images/pasted-4.png"></p>
+</li>
+</ol>
+<p>因為我自己是用github.io來部屬網站，所以我成功後就可以在自己的github上面看到更新後的檔案，至於怎麼使用github來部屬網站可以到<a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/05/22/deploy-on-github/">這篇文</a>。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/05/20/insertImage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -432,7 +521,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-count">113</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -445,7 +534,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-count">35</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -486,7 +575,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

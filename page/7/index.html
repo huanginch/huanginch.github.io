@@ -189,6 +189,84 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/07/13/css-position-sticky/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="int">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Int's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/07/13/css-position-sticky/" class="post-title-link" itemprop="url">CSS: position:sticky</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2022-07-13 19:08:00 / 修改時間：23:18:33" itemprop="dateCreated datePublished" datetime="2022-07-13T19:08:00+08:00">2022-07-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css-position/" itemprop="url" rel="index"><span itemprop="name">css position</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>sticky像是結合了fixed和relative，有position: sticky的元素會像fixed一樣被固定在畫面上，但並不會超出父元素，一旦父元素超出畫面，sticky元素也會跟著消失在畫面上。</p>
+<h2 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: sticky</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><iframe height="300" style="width: 100%;" scrolling="no" title="position: sticky" src="https://codepen.io/intHuang/embed/LYdRqXa?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/LYdRqXa">
+  position: sticky</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>從範例中可以看到第二個sticky-box一旦碰到橘色的部分(另一個div)就不會固定在畫面上，而是會消失，至於sticky-box的位置，一樣可以透過top、bottom、left、right來控制，這部分在position: fixed有介紹過，用法是相同的。(<a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/07/09/css-position-fixed/">傳送門</a>)</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>sticky雖然好用，但要注意他是比較新的語法，部分瀏覽器可能無法支援(特別是IE)，可以透過<a target="_blank" rel="noopener" href="https://caniuse.com/?search=sticky">caniuse</a>來查詢是否支援。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/07/12/css-z-index/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -976,90 +1054,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/07/01/css-margin-and-padding-shorthand/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="int">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Int's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/07/01/css-margin-and-padding-shorthand/" class="post-title-link" itemprop="url">CSS: Margin 、 Padding與Border 的寫法與縮寫</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2022-07-01 11:40:00 / 修改時間：12:32:22" itemprop="dateCreated datePublished" datetime="2022-07-01T11:40:00+08:00">2022-07-01</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在<a target="_blank" rel="noopener" href="https://huanginch.github.io/2022/06/30/css-box-model/">上一篇盒模型</a>介紹了margin、padding和border，所以這篇會來介紹在css中的寫法。</p>
-<h2 id="Marign"><a href="#Marign" class="headerlink" title="Marign"></a>Marign</h2><p>在上一篇中有提到margin有分上下左右，所以寫法也有分上下左右。</p>
-<h3 id="全部相同寬度"><a href="#全部相同寬度" class="headerlink" title="全部相同寬度"></a>全部相同寬度</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="個別設定"><a href="#個別設定" class="headerlink" title="個別設定"></a>個別設定</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">margin-top</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="縮寫"><a href="#縮寫" class="headerlink" title="縮寫"></a>縮寫</h3><p>你可能會想說，這樣我要設定只有一邊不同不就很麻煩嗎？所以css有提供縮寫寫法:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">8px</span> <span class="number">10px</span> <span class="number">12px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上從左到右分別為上、右、下、左</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">12px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上從左到右為上和下、左和右</p>
-<h2 id="Padding"><a href="#Padding" class="headerlink" title="Padding"></a>Padding</h2><p>padding的寫法跟margin很像</p>
-<h3 id="全部相同寬度-1"><a href="#全部相同寬度-1" class="headerlink" title="全部相同寬度"></a>全部相同寬度</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="個別設定-1"><a href="#個別設定-1" class="headerlink" title="個別設定"></a>個別設定</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">padding-top</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="縮寫-1"><a href="#縮寫-1" class="headerlink" title="縮寫"></a>縮寫</h3><p>和margin一樣，padding也有縮寫寫法</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">8px</span> <span class="number">10px</span> <span class="number">12px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上依序為上、右、下、左</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上依序為上和下、左和右</p>
-<h2 id="Border"><a href="#Border" class="headerlink" title="Border"></a>Border</h2><p>border的位置設定也和margin、padding一樣，不同的是border可以設定樣式、顏色、寬度等等</p>
-<h3 id="個別設定-2"><a href="#個別設定-2" class="headerlink" title="個別設定"></a>個別設定</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">border-top-width</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">border-top-color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">border-top-style</span>: solid;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="縮寫-2"><a href="#縮寫-2" class="headerlink" title="縮寫"></a>縮寫</h3><h4 id="全部相同"><a href="#全部相同" class="headerlink" title="全部相同"></a>全部相同</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上順序可以調換</p>
-<h4 id="個別設定-3"><a href="#個別設定-3" class="headerlink" title="個別設定"></a>個別設定</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line">	<span class="attribute">border-top</span>: <span class="number">5px</span> solid <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> dashed <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">3px</span> dotted <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上順序可以調換</p>
-<p>個人覺得有縮寫真的很方便，之前不知道有縮寫的時候還笨笨的一個一個寫，code變有夠長的，自從學會了縮寫整個世界都不一樣了呢XD</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1129,7 +1123,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-count">113</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1142,7 +1136,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-count">35</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -1183,7 +1177,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
