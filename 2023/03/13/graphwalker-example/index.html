@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"inthuang.tw","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="這篇文章會用一個簡單的範例來說明 Graphwalker 的使用方法，並且會用到 Selenium 來驅動瀏覽器。 關於 GraphwalkerGraph Walker 是一個 Model Base Testing 的工具，它可以讓你用一個 Graph 的方式來描述你的測試案例，他提供一個 UI 介面讓你繪製 Model (以 Graph 的方式呈現)，並且可以讓你用 Java 或是 C# 來撰寫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Graphwalker:  A Simple Example with Selenium">
+<meta property="og:url" content="https://inthuang.tw/2023/03/13/graphwalker-example/index.html">
+<meta property="og:site_name" content="Int&#39;s blog">
+<meta property="og:description" content="這篇文章會用一個簡單的範例來說明 Graphwalker 的使用方法，並且會用到 Selenium 來驅動瀏覽器。 關於 GraphwalkerGraph Walker 是一個 Model Base Testing 的工具，它可以讓你用一個 Graph 的方式來描述你的測試案例，他提供一個 UI 介面讓你繪製 Model (以 Graph 的方式呈現)，並且可以讓你用 Java 或是 C# 來撰寫">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://inthuang.tw/images/pasted-147.png">
+<meta property="og:image" content="https://inthuang.tw/images/pasted-148.png">
+<meta property="og:image" content="https://inthuang.tw/images/pasted-149.png">
+<meta property="og:image" content="https://inthuang.tw/images/pasted-150.png">
+<meta property="og:image" content="https://inthuang.tw/images/pasted-151.png">
+<meta property="og:image" content="https://inthuang.tw/images/pasted-152.png">
+<meta property="article:published_time" content="2023-03-13T07:48:00.000Z">
+<meta property="article:modified_time" content="2023-03-13T11:57:47.966Z">
+<meta property="article:author" content="int">
+<meta property="article:tag" content="test">
+<meta property="article:tag" content="graphwalker">
+<meta property="article:tag" content="selenium">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://inthuang.tw/images/pasted-147.png">
+
+<link rel="canonical" href="https://inthuang.tw/2023/03/13/graphwalker-example/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>Graphwalker:  A Simple Example with Selenium | Int's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Int's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Int 的程式筆記</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2023/03/13/graphwalker-example/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="int">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Int's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Graphwalker:  A Simple Example with Selenium
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2023-03-13 15:48:00 / 修改時間：19:57:47" itemprop="dateCreated datePublished" datetime="2023-03-13T15:48:00+08:00">2023-03-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>這篇文章會用一個簡單的範例來說明 Graphwalker 的使用方法，並且會用到 Selenium 來驅動瀏覽器。</p>
+<h2 id="關於-Graphwalker"><a href="#關於-Graphwalker" class="headerlink" title="關於 Graphwalker"></a>關於 Graphwalker</h2><p><a target="_blank" rel="noopener" href="https://graphwalker.github.io/">Graph Walker</a> 是一個 <a target="_blank" rel="noopener" href="https://www.browserstack.com/guide/how-model-based-testing-help-test-automation">Model Base Testing</a> 的工具，它可以讓你用一個 Graph 的方式來描述你的測試案例，他提供一個 UI 介面讓你繪製 Model (以 Graph 的方式呈現)，並且可以讓你用 Java 或是 C# 來撰寫測試程式。</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><p>本篇將會介紹一個簡單的範例以及我痛苦的踩雷歷程來帶大家入門 Graph Walker，程式碼在我的 <a target="_blank" rel="noopener" href="https://github.com/huanginch/graphwalker-SimpleExapmle">GitHub</a> 上可以找到。</p>
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Windows 10</li>
+<li>Java JDK 19.0.2 (依照官網說法Java 8 以上都可以)</li>
+<li>Maven 3.9.0</li>
+<li>Graphwalker 4.3.0</li>
+<li>Selenium 4.8.0<br>關於 <a target="_blank" rel="noopener" href="https://www.kjnotes.com/devtools/35">Java</a> 和 <a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10260305">Maven</a> 的安裝可以參考我提供的連結，這邊就不再贅述。</li>
+</ul>
+<h3 id="Graphwalker-的安裝"><a href="#Graphwalker-的安裝" class="headerlink" title="Graphwalker 的安裝"></a>Graphwalker 的安裝</h3><p>Graphwalker 有兩個工具，一個是 <a target="_blank" rel="noopener" href="https://github.com/GraphWalker/graphwalker-project/releases/download/4.3.2/graphwalker-studio-4.3.2.jar">Graphwalker Studio</a>，一個是 <a target="_blank" rel="noopener" href="https://github.com/GraphWalker/graphwalker-project/releases/download/4.3.2/graphwalker-cli-4.3.2.jar">Graphwalker CLI</a>，要建模型的話這邊我們只會用到 Studio，所以我們就先安裝 Graphwalker Studio，後面會用到 Graphwalker CLI 的時候再來安裝。</p>
+<p>按連結下載後，把它放到你想要的地方，接著打開命令提示字元，輸入以下指令來執行 Graphwalker Studio。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar graphwalker-studio-4.3.2.jar</span><br></pre></td></tr></table></figure>
+<p>或是直接對他點兩下也可以。</p>
+<p>之後打開瀏覽器，輸入 <a target="_blank" rel="noopener" href="http://localhost:9090/studio.html"><code>http://localhost:9090/studio.html</code></a>，就可以看到 Graphwalker Studio 的畫面了。</p>
+<p><img src="/../images/pasted-147.png"></p>
+<h3 id="建立-Model"><a href="#建立-Model" class="headerlink" title="建立 Model"></a>建立 Model</h3><p>這邊 Graph Walker的官網文件就寫得蠻清楚的，可以直接參考他<a target="_blank" rel="noopener" href="https://graphwalker.github.io/">首頁的 gif</a> 建立新的 Model 檔案。</p>
+<p>新建好空檔案後記得要改名稱。</p>
+<p><img src="/../images/pasted-148.png"></p>
+<p>模型有兩個元素</p>
+<ul>
+<li>v: Vertex，代表一個狀態或是頁面，是靜態的</li>
+<li>e: Edge，代表一個動作或事件，是動態的</li>
+</ul>
+<p>在 Graphwalker Studio 中</p>
+<ul>
+<li>按住鍵盤的 v 並點擊畫面，可以建立一個 Vertex</li>
+<li>按住鍵盤的 e 並點擊起點 Vertex 後按住不放，拖曳到目標 Vertex，可以建立一個 Edge</li>
+</ul>
+<blockquote>
+<p>除了使用 Graphwalker Studio 來建立模型，你也可以使用其他工具來建立，例如 <a target="_blank" rel="noopener" href="https://www.yworks.com/products/yed">yEd</a>，他產出的 graphml 檔案也可以直接拿來使用。</p>
+</blockquote>
+<h3 id="我的模型"><a href="#我的模型" class="headerlink" title="我的模型"></a>我的模型</h3><p>我的模型是用來測試我自己之前的 Side Project，是一個電商網站。我想要測試從首頁一路點擊到商品細節頁面的流程，所以我建立了以下的模型。</p>
+<p><img src="/../images/pasted-149.png"></p>
+<ul>
+<li>e_init: 模型的起點，在左側設定欄下方 Start Element 可以打開這個設定</li>
+<li>v_StartBrowser: 啟動瀏覽器</li>
+<li>e_GetUrl: 進入首頁</li>
+<li>v_HomePage: 首頁</li>
+<li>e_ClickProductLink: 點擊商品列表連結</li>
+<li>e_ClickHomeLink: 點擊首頁連結</li>
+<li>v_ProductPage: 商品頁面</li>
+<li>e_ClickProductCard: 點擊商品卡片</li>
+<li>v_ProductDetailPage: 商品細節頁面</li>
+</ul>
+<p>完成後按左方的儲存按鈕，就可以把這個模型儲存下來了。它會自動幫你下載一個叫做 <code>test.json</code> 的檔案，記得重新命名成你想要的名稱，這邊我就叫做 <code>WineWorld.json</code>， 之後你的 JAVA Interface 會用這個命名。</p>
+<h3 id="寫測試程式"><a href="#寫測試程式" class="headerlink" title="寫測試程式"></a>寫測試程式</h3><p>首先我們要建立一個 Maven 專案，並且加入 Graphwalker 的 Dependency，這邊官方文件就寫的很不清不楚了，好多該加的都沒寫。</p>
+<ol>
+<li>建立 Maven 專案<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:generate</span><br></pre></td></tr></table></figure></li>
+</ol>
+<blockquote>
+<p>這邊官網本來有給一串指令，意思是說可以直接建立一個包含 graphwalker 的 Maven 專案，但是我試了好幾次都失敗，所以我就直接用上面的指令建立一個空的專案，再加入 graphwalker 的 dependency。</p>
+</blockquote>
+<p>設定<br>GroupId: <code>tw.inthuang</code> 這個可以自己設定<br>ArtifactId: <code>WineWorld</code> 這個也可以自己設定<br>Version: <code>4.3.2</code> 這個請不要動，會影響到後面的 graphwalker 的版本<br>Package: <code>WineWorld</code> 這個也可以自己設定</p>
+<ol start="2">
+<li>在 <code>pom.xml</code> 加入 Graphwalker 的 Dependency</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.graphwalker<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>graphwalker-cli<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;project_version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.graphwalker<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>graphwalker-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;project_version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>重要</strong> 在 <code>pom.xml</code> 加入 Maven-graphwalker-plugin 的 Plugin</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.graphwalker<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-graphwalker-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;project_version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>generate-sources<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">phase</span>&gt;</span>generate-sources<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">goal</span>&gt;</span>generate-sources<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上面你可以看到不管是 Graphwalker 的 Dependency 還是 Maven-graphwalker-plugin 的 Plugin，都有一個 <code>$&#123;project_version&#125;</code>，這個是我們在第一步驟設定的 Graphwalker 的版本號，如果你的版本號不是 4.3.2，請記得要改成你的版本號。</p>
+</blockquote>
+<ol start="4">
+<li>加入 Selenium 的 Dependency</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.seleniumhq.selenium<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>selenium-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.8.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>把 Graphwalker 的 Model 檔案放到 <code>src/main/resources/tw/inthuang/</code> 資料夾下<br>注意，resources 資料夾和 java 資料夾是平行的，不要放錯了，裡面還要包含 GroupId 的資料夾，你的 java 資料夾裡面有幾個資料夾才到自動生成的 App.java，這裡就要有幾個。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">src|-main-java-tw-inthuang-App.java</span><br><span class="line">   |</span><br><span class="line">   |-main-resources-tw-inthuang-WineWorld.json</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>建立 Graphwalker 的 Interface<br>使用 graphwalker:generate-sources 這個指令，會自動幫你建立 Graphwalker 的 Interface，這個 Interface 會自動幫你實作 Model 的所有 Vertex 和 Edge。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn graphwalker:generate-sources</span><br></pre></td></tr></table></figure>
+<p>完成後你會看到多出一個 <code>target</code> 資料夾，裡面有很多東西，按照 targert -&gt; generated-sources -&gt; graphwalker -&gt; tw -&gt; inthuang -&gt; WineWorld.java 這個路徑，就可以找到一個名為 WineWorld.java 的檔案 (這個檔案的名稱取決於你的 model file 名稱)。不要客氣點開來看看會發現有許多用你剛剛模型的 Vertex 和 Edge 命名的 Method，這些 Method 就是 Graphwalker 會自動幫你實作的。</p>
+<ol start="7">
+<li>實作 Test.java<br>打開你的 <code>main</code> 資料夾，最裡面應該有一個預設的 App.java，把它刪掉，然後建立一個名為 WineWorldTest.java 的檔案，裡面寫入以下程式碼。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> WineWorld;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.time.Duration;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.graphwalker.core.machine.ExecutionContext;</span><br><span class="line"><span class="keyword">import</span> org.graphwalker.java.annotation.AfterExecution;</span><br><span class="line"><span class="keyword">import</span> org.graphwalker.java.annotation.BeforeExecution;</span><br><span class="line"><span class="keyword">import</span> org.graphwalker.java.annotation.GraphWalker;</span><br><span class="line"><span class="keyword">import</span> org.openqa.selenium.By;</span><br><span class="line"><span class="keyword">import</span> org.openqa.selenium.Keys;</span><br><span class="line"><span class="keyword">import</span> org.openqa.selenium.support.ui.ExpectedConditions;</span><br><span class="line"><span class="keyword">import</span> org.openqa.selenium.support.ui.WebDriverWait;</span><br><span class="line"><span class="keyword">import</span> org.openqa.selenium.firefox.FirefoxDriver;</span><br><span class="line"><span class="keyword">import</span> org.openqa.selenium.WebDriver;</span><br><span class="line"><span class="keyword">import</span> org.junit.Assert;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Hello world!</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@GraphWalker()</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WineWorldTest</span> <span class="keyword">extends</span> <span class="title class_">ExecutionContext</span> <span class="keyword">implements</span> <span class="title class_">WineWorld</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">FirefoxDriver</span> <span class="variable">driver</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FirefoxDriver</span>();</span><br><span class="line">    <span class="type">WebDriverWait</span> <span class="variable">wait</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">WebDriverWait</span>(driver, Duration.ofSeconds(<span class="number">10</span>));</span><br><span class="line"></span><br><span class="line">    <span class="meta">@BeforeExecution</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setup</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Setup happens here&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@AfterExecution</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">cleanup</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Cleanup happens here&quot;</span>);</span><br><span class="line">        driver.quit();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">e_Init</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Init&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">e_ClickHomeLink</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Click Home Link&quot;</span>);</span><br><span class="line">        wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText(<span class="string">&quot;WineWorld&quot;</span>)));</span><br><span class="line">        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className(<span class="string">&quot;loading&quot;</span>)));</span><br><span class="line">        driver.findElement(By.partialLinkText(<span class="string">&quot;WineWorld&quot;</span>)).click();</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">e_ClickProductLink</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Click Product Link&quot;</span>);</span><br><span class="line">        wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(<span class="string">&quot;商品列表&quot;</span>)));</span><br><span class="line">        driver.findElement(By.linkText(<span class="string">&quot;商品列表&quot;</span>)).click();</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">e_ClickProductCard</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Click Product Card&quot;</span>);</span><br><span class="line">        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(<span class="string">&quot;card&quot;</span>)));</span><br><span class="line">        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className(<span class="string">&quot;loading&quot;</span>)));</span><br><span class="line">        driver.findElement(By.className(<span class="string">&quot;img-overlay&quot;</span>)).click();</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">e_GetUrl</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Get URL&quot;</span>);</span><br><span class="line">        driver.get(<span class="string">&quot;https://inthuang.tw/WineWorld/&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">v_StartBorwser</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Start Browser&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">v_HomePage</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Home Page&quot;</span>);</span><br><span class="line">        wait.until(ExpectedConditions.titleContains(<span class="string">&quot;Wine World | 你要找的酒，都在這裡&quot;</span>));</span><br><span class="line">        Assert.assertEquals(<span class="string">&quot;Wine World | 你要找的酒，都在這裡&quot;</span>, driver.getTitle());</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">v_ProductPage</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Product Page&quot;</span>);</span><br><span class="line">        wait.until(ExpectedConditions.urlContains(<span class="string">&quot;#/product&quot;</span>));</span><br><span class="line">        Assert.assertEquals(<span class="string">&quot;product&quot;</span>, driver.getCurrentUrl().substring(<span class="number">32</span>));</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">v_ProductDetailPage</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Product Detail Page&quot;</span>);</span><br><span class="line">        wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName(<span class="string">&quot;h3&quot;</span>)));</span><br><span class="line">        Assert.assertEquals(<span class="string">&quot;商品介紹&quot;</span>, driver.findElement(By.tagName(<span class="string">&quot;h3&quot;</span>)).getText());</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">e_NewEdge</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;New Edge&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>[Source] (<a target="_blank" rel="noopener" href="https://github.com/huanginch/graphwalker-SimpleExapmle/blob/master/WineWorld/src/main/java/WineWorld/WineWorldTest.java">https://github.com/huanginch/graphwalker-SimpleExapmle/blob/master/WineWorld/src/main/java/WineWorld/WineWorldTest.java</a>)</p>
+<p>總之就是實現剛剛 Graphwalker 產生的 Interface，然後實作裡面的 Method。</p>
+<p>簡單介紹一下大致在做什麼:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">FirefoxDriver</span> <span class="variable">driver</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FirefoxDriver</span>();</span><br><span class="line"><span class="type">WebDriverWait</span> <span class="variable">wait</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">WebDriverWait</span>(driver, Duration.ofSeconds(<span class="number">10</span>));</span><br></pre></td></tr></table></figure>
+<p>設定瀏覽器和等待時間</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@BeforeExecution</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setup</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Setup happens here&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@AfterExecution</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">cleanup</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Cleanup happens here&quot;</span>);</span><br><span class="line">    driver.quit();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>設定測試開始前和結束後的動作，這邊我們只是印出一些訊息，然後關閉瀏覽器。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">e_Init</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Init&quot;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>這個 Method 就是 Graphwalker 產生的 Interface 裡面的 <code>e_Init</code>，這個 Method 就是在測試開始前會執行的動作，我們只是印出一些提示訊息。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">e_ClickHomeLink</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Click Home Link&quot;</span>);</span><br><span class="line">    wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText(<span class="string">&quot;WineWorld&quot;</span>)));</span><br><span class="line">    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className(<span class="string">&quot;loading&quot;</span>)));</span><br><span class="line">    driver.findElement(By.partialLinkText(<span class="string">&quot;WineWorld&quot;</span>)).click();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>等待網頁上的 <code>WineWorld</code> 這個 Link 出現，然後點擊它，不過因為我有些頁面有蓋一個 loading 的 overlay，所以又多一行等待他消失的程式。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">e_ClickProductLink</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Click Product Link&quot;</span>);</span><br><span class="line">    wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(<span class="string">&quot;商品列表&quot;</span>)));</span><br><span class="line">    driver.findElement(By.linkText(<span class="string">&quot;商品列表&quot;</span>)).click();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>等待網頁上的 <code>商品列表</code> 這個 Link 出現，然後點擊它。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">e_ClickProductCard</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Click Product Card&quot;</span>);</span><br><span class="line">    wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(<span class="string">&quot;card&quot;</span>)));</span><br><span class="line">    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className(<span class="string">&quot;loading&quot;</span>)));</span><br><span class="line">    driver.findElement(By.className(<span class="string">&quot;img-overlay&quot;</span>)).click();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>等待網頁上的 <code>card</code> 這個 Class 出現，然後點擊它，同樣也是因為 overlay 的原因，我們又多一行等待他消失的程式。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">e_GetUrl</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Get URL&quot;</span>);</span><br><span class="line">    driver.get(<span class="string">&quot;https://inthuang.tw/WineWorld/&quot;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>對網址 <code>https://inthuang.tw/WineWorld/</code> 發出 get 請求。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">v_StartBorwser</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Start Browser&quot;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>啟動瀏覽器。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">v_HomePage</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Home Page&quot;</span>);</span><br><span class="line">    wait.until(ExpectedConditions.titleContains(<span class="string">&quot;Wine World | 你要找的酒，都在這裡&quot;</span>));</span><br><span class="line">    Assert.assertEquals(<span class="string">&quot;Wine World | 你要找的酒，都在這裡&quot;</span>, driver.getTitle());</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>等待網頁的 title 包含 <code>Wine World | 你要找的酒，都在這裡</code>，然後驗證網頁的 title 是否等於 <code>Wine World | 你要找的酒，都在這裡</code>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">v_ProductPage</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Product Page&quot;</span>);</span><br><span class="line">    wait.until(ExpectedConditions.urlContains(<span class="string">&quot;#/product&quot;</span>));</span><br><span class="line">    Assert.assertEquals(<span class="string">&quot;product&quot;</span>, driver.getCurrentUrl().substring(<span class="number">32</span>));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>等待網頁的 url 包含 <code>#/product</code>，然後驗證網頁的 url 是否等於 <code>#/product</code>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">v_ProductDetailPage</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Product Detail Page&quot;</span>);</span><br><span class="line">    wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName(<span class="string">&quot;h3&quot;</span>)));</span><br><span class="line">    Assert.assertEquals(<span class="string">&quot;商品介紹&quot;</span>, driver.findElement(By.tagName(<span class="string">&quot;h3&quot;</span>)).getText());</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>等待網頁上的 <code>h3</code> 這個 Tag 出現，然後驗證網頁上的 <code>h3</code> 這個 Tag 的文字是否等於 <code>商品介紹</code>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">e_NewEdge</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;New Edge&quot;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>這個東西其實我不知道是哪來的，但是 Graphwalker 產生的 Interface 裡面有這個東西，所以我也不得不實作它，猜測可能是當初建立的模型有多按到一條 Edge 導致的，但我沒看到他在哪，真尷尬，總之你的模型要是沒問題就別管他。</p>
+<h2 id="執行測試"><a href="#執行測試" class="headerlink" title="執行測試"></a>執行測試</h2><p>接下來就是執行測試了，我們只要在終端機輸入以下指令就可以了:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean graphwalker:<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<p>clean 是清除之前的編譯結果，graphwalker:test 是執行 Graphwalker 的測試。</p>
+<p>執行完後，就會看到噴出一堆運行結果，可以看到 graphwalker 的 logo 出現在畫面上，還記得當初看到有多感動，試了好多次才看見他。</p>
+<p><img src="/../images/pasted-150.png"></p>
+<p>然後就是一些測試過程中會印出的訊息</p>
+<p><img src="/../images/pasted-151.png"></p>
+<p>最後會看到執行結果以及 Build Success</p>
+<p><img src="/../images/pasted-152.png"></p>
+<p>大功告成!</p>
+<h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><p>這邊教你怎麼看測試後的報告，執行 <code>mvn clean graphwalker:test</code> 後，會在專案的根目錄下產生一個 <code>target</code> 的資料夾，裡面會有一個 <code>graphwalker-reports</code> 的資料夾，資料夾裡有一個名字很長的 xml，這就是我們要的報告，打開後拉到最底下會看見錯誤訊息以及錯誤的行數。</p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>這篇文章分享了這兩天踩雷的結果，畢竟官方的文檔給了好多方法但是前後說詞不一阿… 像是根本沒提到 model 可以是 json 也可以是 graphml，又或者是沒說要加入 graphwalker 的 plugin，這些都是我花了很多時間才找到的，希望這篇文章能幫助到大家，如果有任何問題歡迎敲我 DC 或 推特討論。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/test/" rel="tag"># test</a>
+              <a href="/tags/graphwalker/" rel="tag"># graphwalker</a>
+              <a href="/tags/selenium/" rel="tag"># selenium</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/02/28/TheCleanCoder/" rel="prev" title="「The Clean Coder」閱讀筆記">
+      <i class="fa fa-chevron-left"></i> 「The Clean Coder」閱讀筆記
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%9C%E6%96%BC-Graphwalker"><span class="nav-number">1.</span> <span class="nav-text">關於 Graphwalker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">2.</span> <span class="nav-text">範例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%92%B0%E5%A2%83"><span class="nav-number">2.1.</span> <span class="nav-text">環境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Graphwalker-%E7%9A%84%E5%AE%89%E8%A3%9D"><span class="nav-number">2.2.</span> <span class="nav-text">Graphwalker 的安裝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B-Model"><span class="nav-number">2.3.</span> <span class="nav-text">建立 Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.4.</span> <span class="nav-text">我的模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%AB%E6%B8%AC%E8%A9%A6%E7%A8%8B%E5%BC%8F"><span class="nav-number">2.5.</span> <span class="nav-text">寫測試程式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%B7%E8%A1%8C%E6%B8%AC%E8%A9%A6"><span class="nav-number">3.</span> <span class="nav-text">執行測試</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Debug"><span class="nav-number">4.</span> <span class="nav-text">Debug</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B5%90%E8%AB%96"><span class="nav-number">5.</span> <span class="nav-text">結論</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">int</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huanginch" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huanginch" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:huanginch329@gmail.com" title="E-Mail → mailto:huanginch329@gmail.com" rel="noopener" target="_blank"><i class="fas fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/int60196354" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;int60196354" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://discordapp.com/users/472007247069839360" title="Discord → https:&#x2F;&#x2F;discordapp.com&#x2F;users&#x2F;472007247069839360" rel="noopener" target="_blank"><i class="fab fa-discord fa-fw"></i>Discord</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">int</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

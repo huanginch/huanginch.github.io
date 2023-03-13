@@ -189,6 +189,73 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/08/06/owl-carsouel-drag-bug/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="int">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Int's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/08/06/owl-carsouel-drag-bug/" class="post-title-link" itemprop="url">owl-carousel drag bug</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-08-06 21:58:00" itemprop="dateCreated datePublished" datetime="2022-08-06T21:58:00+08:00">2022-08-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2022-08-07 00:33:03" itemprop="dateModified" datetime="2022-08-07T00:33:03+08:00">2022-08-07</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>owl-carsouel是一個jquery插件，提供滾動式卡片樣式與動畫，<a target="_blank" rel="noopener" href="https://owlcarousel2.github.io/OwlCarousel2/">官網</a>，但是我卻發現他有一個bug，在手機版上如果左右滑動後點擊事件會失效。</p>
+<p>查了查後發現是owl-carsouel一直以來的bug，按著<a target="_blank" rel="noopener" href="https://github.com/OwlCarousel2/OwlCarousel2/issues/1864">這篇</a>試著解決這個bug，簡單來說要把owl.carousel.js或owl.carousel.min.js中的<code>(Math.abs(d.x)&gt;3||(new Date).getTime()-this._drag.time&gt;300)</code>改成<code>((Math.abs(delta.x) &gt; 3 || new Date().getTime() - this._drag.time &gt; 300) &amp;&amp; event.type === &#39;mouseup&#39;)</code>，我這著做之後在電腦上即使使用開發人員工具換成手機模式也不會產生bug了可喜可賀。</p>
+<p>但是，沒錯，但是我用手機開網頁這個bug還是在，真的尷尬，現在我查不到任何解決方法了，值得慶幸的是再點一次同樣可以觸發，如果有人知道如何解決歡迎告訴我。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/08/05/JQuery-anchor-animation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -891,92 +958,6 @@ row後面一定要接col，所以這樣寫是錯的。</li>
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/07/27/css-background-attachment/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="int">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Int's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/07/27/css-background-attachment/" class="post-title-link" itemprop="url">CSS: background-attachment</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2022-07-27 15:23:00 / 修改時間：16:02:58" itemprop="dateCreated datePublished" datetime="2022-07-27T15:23:00+08:00">2022-07-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css-background/" itemprop="url" rel="index"><span itemprop="name">css background</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>background-attachment可以設定背景圖片、文字與viewport的關係，有三個屬性。</p>
-<h2 id="fixed"><a href="#fixed" class="headerlink" title="fixed"></a>fixed</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">background-attachment</span>: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>背景會被固定在viewport上，意及不管怎麼滾動網頁，背景圖都不會改變。</p>
-<h2 id="local"><a href="#local" class="headerlink" title="local"></a>local</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">background-attachment</span>: local;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>外層網頁在滾動的時候內層背景與內文會跟著滾動，滾動內層元素的時候背景與內文也會跟著移動(背景被固定在內文的位置)。</p>
-<h2 id="scroll"><a href="#scroll" class="headerlink" title="scroll"></a>scroll</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">	<span class="attribute">background-attachment</span>: scroll</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>滾動外層網頁時的效果和local相同，但滾動內層的時候只有內文會滾動，背景圖會被固定在viewport上(背景被固定在元素上)。</p>
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><ul>
-<li>建議使用0.5x觀看</li>
-</ul>
-<iframe height="300" style="width: 100%;" scrolling="no" title="background-attachment" src="https://codepen.io/intHuang/embed/OJvxxGO?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/intHuang/pen/OJvxxGO">
-  background-attachment</a> by int (<a target="_blank" rel="noopener" href="https://codepen.io/intHuang">@intHuang</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.
-</iframe>
-
-<p>從上到下分別是fixed、local、scroll，最後一個則是因為有兩張背景圖，所以分別設定了scroll和local兩個屬性，這理想示範的是可以同時為不同背景設定不同屬性。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1046,7 +1027,7 @@ row後面一定要接col，所以這樣寫是錯的。</li>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1059,7 +1040,7 @@ row後面一定要接col，所以這樣寫是錯的。</li>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
