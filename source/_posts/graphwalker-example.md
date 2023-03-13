@@ -249,7 +249,7 @@ public class WineWorldTest extends ExecutionContext implements WineWorld {
     };
 }
 ```
-[Source] (https://github.com/huanginch/graphwalker-SimpleExapmle/blob/master/WineWorld/src/main/java/WineWorld/WineWorldTest.java)
+[Source](https://github.com/huanginch/graphwalker-SimpleExapmle/blob/master/WineWorld/src/main/java/WineWorld/WineWorldTest.java)
 
 總之就是實現剛剛 Graphwalker 產生的 Interface，然後實作裡面的 Method。
 
