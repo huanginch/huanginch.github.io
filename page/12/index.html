@@ -189,6 +189,75 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/05/23/ERROR-ENOENT/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="int">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Int's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/23/ERROR-ENOENT/" class="post-title-link" itemprop="url">HEXO ERROR: spawn ENOENT</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-05-23 11:14:00" itemprop="dateCreated datePublished" datetime="2022-05-23T11:14:00+08:00">2022-05-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2022-05-25 11:25:09" itemprop="dateModified" datetime="2022-05-25T11:25:09+08:00">2022-05-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>前幾天在更新文章到github時出現了一個錯誤碼:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: spawn ENOENT</span><br></pre></td></tr></table></figure>
+<p>ENOENT是Error NO ENTry 或 Error No ENTity的縮寫，意思等同於常見的no such file or directory，中文意思就是檔案不存在或找不到路徑。</p>
+<p>本以為是deploy需要的hexo-publish.bat沒寫好或_config.yml中哪裡沒設定好，但後來發現是文章我使用了中文命名才導致他無法辨識。</p>
+<p>所以說<strong>不要用中文幫文章命名，標題可以建好檔案之後改</strong>。</p>
+<p>也算是學了一課，不然當初找半天找不要哪裡錯。</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/05/22/deploy-on-github/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -616,7 +685,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-count">115</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -629,7 +698,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">40</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>

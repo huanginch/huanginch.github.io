@@ -189,6 +189,111 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/06/13/js-bit-operator/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="int">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Int's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/06/13/js-bit-operator/" class="post-title-link" itemprop="url">Javascript: bit operator</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-06-13 13:25:00" itemprop="dateCreated datePublished" datetime="2022-06-13T13:25:00+08:00">2022-06-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2022-06-21 10:50:05" itemprop="dateModified" datetime="2022-06-21T10:50:05+08:00">2022-06-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js-operator/" itemprop="url" rel="index"><span itemprop="name">js-operator</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>我們在前幾篇有介紹到邏輯運算子，這篇會來介紹新手很容易與邏輯運算子搞錯的位元運算子，其實我之前也有介紹過C的位元運算子，不過javascript能用的指令比C多了一些，就讓我們來看一下吧。</p>
+<ul>
+<li>and: &amp;<ul>
+<li>兩個位元都為1就設為1</li>
+</ul>
+</li>
+<li>or: |<ul>
+<li>其中一個位元為1就設為1</li>
+</ul>
+</li>
+<li>xor: ^<ul>
+<li>兩個位元不同就設為1</li>
+</ul>
+</li>
+<li>not: ~<ul>
+<li>位元為0設為1，位元為1設為0</li>
+</ul>
+</li>
+<li>zero fill left shift: &lt;&lt;<ul>
+<li>全部位元往左移動，空著的地方補0</li>
+</ul>
+</li>
+<li>signed right shift: &gt;&gt;<ul>
+<li>全部位元往右移動，但最右邊的會被推到最左邊(循環的概念)</li>
+</ul>
+</li>
+<li>zero fill right shift: &gt;&gt;&gt;<ul>
+<li>全部位元往右移動，空著的地方補0</li>
+</ul>
+</li>
+</ul>
+<p>與C最不同的是，js提供了signed right shift，讓我們不用自己寫(話說前幾天考試才剛考如何用C寫出signed right shift XD)，算是相當方便，不過其他的部分就大同小異，重要的還是要注意這是針對位元來做邏輯運算，而不是對整個資料。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/06/12/css-reset/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1012,90 +1117,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2022/06/02/javascript-variable/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="int">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Int's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/06/02/javascript-variable/" class="post-title-link" itemprop="url">javascript: 變數宣告</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2022-06-02 11:02:00" itemprop="dateCreated datePublished" datetime="2022-06-02T11:02:00+08:00">2022-06-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2022-06-15 11:29:14" itemprop="dateModified" datetime="2022-06-15T11:29:14+08:00">2022-06-15</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>javascript的變數宣告相對其他語言簡單容易的許多，這篇會簡單介紹怎麼宣告。</p>
-<ul>
-<li>var<ul>
-<li>最早在javascript中只有這個語法可以用來宣告變數  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>let <ul>
-<li>現在都使用這個語法來宣告變數  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>const<ul>
-<li>一旦被初始化就很難再被重新賦值  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>什麼都不寫<ul>
-<li>沒錯，只寫變數名稱也能夠宣告，因為沒有寫的話會被當作是在window下的變數  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">0</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-<p>相對於其他語言，javascript宣告變數真的簡單很多，也可能和他是弱型別語言有關，這部分我不是很了解，等有機會研究之後再來寫文。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1165,7 +1186,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-count">115</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1178,7 +1199,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">40</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>

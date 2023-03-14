@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"inthuang.tw","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="繼上一次的2022切版直播班心得分享後，我又參加了2023六角 Vue 作品實戰班，這次的課程內容是以 Vue 為主，並提供了 API 讓我們能夠實作一個完整的電商網站作品，多麼吸引人阿！一個屬於自己的完整作品，能夠學 Vue 又能擁有自己的完整作品，正好是我需要的。 課程內容課前影音跟切版直播班一樣，一開始就有提供很多課前影音，說真的有了這些課前影音，要跟上直播正課基本上是輕而易舉。我一直很喜歡">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2023六角Vue作品實戰班心得分享">
+<meta property="og:url" content="https://inthuang.tw/2023/03/02/hexschool-vue/index.html">
+<meta property="og:site_name" content="Int&#39;s blog">
+<meta property="og:description" content="繼上一次的2022切版直播班心得分享後，我又參加了2023六角 Vue 作品實戰班，這次的課程內容是以 Vue 為主，並提供了 API 讓我們能夠實作一個完整的電商網站作品，多麼吸引人阿！一個屬於自己的完整作品，能夠學 Vue 又能擁有自己的完整作品，正好是我需要的。 課程內容課前影音跟切版直播班一樣，一開始就有提供很多課前影音，說真的有了這些課前影音，要跟上直播正課基本上是輕而易舉。我一直很喜歡">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-03-02T06:20:00.000Z">
+<meta property="article:modified_time" content="2023-03-14T06:10:09.809Z">
+<meta property="article:author" content="int">
+<meta property="article:tag" content="hexschool">
+<meta property="article:tag" content="Vue">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://inthuang.tw/2023/03/02/hexschool-vue/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>2023六角Vue作品實戰班心得分享 | Int's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Int's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Int 的程式筆記</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://inthuang.tw/2023/03/02/hexschool-vue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="int">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Int's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2023六角Vue作品實戰班心得分享
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2023-03-02 14:20:00" itemprop="dateCreated datePublished" datetime="2023-03-02T14:20:00+08:00">2023-03-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-03-14 14:10:09" itemprop="dateModified" datetime="2023-03-14T14:10:09+08:00">2023-03-14</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>繼上一次的2022切版直播班心得分享後，我又參加了2023六角 Vue 作品實戰班，這次的課程內容是以 Vue 為主，並提供了 API 讓我們能夠實作一個完整的電商網站作品，多麼吸引人阿！一個屬於自己的完整作品，能夠學 Vue 又能擁有自己的完整作品，正好是我需要的。</p>
+<h2 id="課程內容"><a href="#課程內容" class="headerlink" title="課程內容"></a>課程內容</h2><h3 id="課前影音"><a href="#課前影音" class="headerlink" title="課前影音"></a>課前影音</h3><p>跟切版直播班一樣，一開始就有提供很多課前影音，說真的有了這些課前影音，要跟上直播正課基本上是輕而易舉。我一直很喜歡六角這種方式，每個影片都短短的看起來也不會有太大壓力。</p>
+<h3 id="直播課程"><a href="#直播課程" class="headerlink" title="直播課程"></a>直播課程</h3><p>每週五晚上固定會有直播課程，基本上是影音課程的延伸，有些內容會在影音課程中沒有提到，但是在直播課程中會有更詳細的說明，這樣的方式讓我們可以更深入的了解課程內容。除了每週五的正課，後來週三也有加課，是關於一些樣式設計和套件的介紹，這些內容也是很實用的，讓我們可以更快的完成作品。以及每週日也會有每週作業講解，讓我們有個作業的方向。</p>
+<h3 id="作業"><a href="#作業" class="headerlink" title="作業"></a>作業</h3><p>每週都有一個作業，每次都有三個等級可以挑戰，老實說跟切版直播班相比， Vue 的作業對我來說簡單很多，我每週都能做到最高等級，可能也是因為我以前有學過 Vue，所以對於 Vue 的語法比較熟悉，所以作業做起來比較快。</p>
+<h3 id="專題班"><a href="#專題班" class="headerlink" title="專題班"></a>專題班</h3><p>雖然一開始就說過會帶著我們做出電商作品，不過專題班比較特別，會由另一位帶著我們做，可以選擇就著主線的電商下去，也可以自訂題目。我這次的目的是練習 Vue 所以依舊選擇了主線電商。專題的部分我們需要自己構想網站架構、自己畫線稿圖，首頁部分可以請設計師設計也可以自行設計，我沒什麼設計天分所以當然是請了設計師幫我設計美美的首頁。之後會有專題發表會可以參加，學員們可以簡報自己的作品給公司看，並且可以提供履歷給公司參考。</p>
+<h3 id="分組"><a href="#分組" class="headerlink" title="分組"></a>分組</h3><p>和切版直播班相同，這次也可以進行分組，並且每週有額外的小組任務，這次有別於切版班的組員，大家都很積極說話，互動也很高，很開心可以分到這樣的團隊，老實說這才是我想參加分組的原因。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><h3 id="最大收穫"><a href="#最大收穫" class="headerlink" title="最大收穫"></a>最大收穫</h3><p>果然還是電商作品，一直都很喜歡做 Side Project 帶給我的成就感，這麼完整的作品能給我成就感也是相當之大，不只如此，我還能拿著這份作品去投遞實習，這是我參加這個課程的最大收穫。</p>
+<h3 id="最喜歡的活動"><a href="#最喜歡的活動" class="headerlink" title="最喜歡的活動"></a>最喜歡的活動</h3><p>這個非小組討論時間莫屬，我們的組員會固定約時間討論，每次討論都能多學一點東西，這都是自己一個人自學所得不到的寶貴經驗。</p>
+<h3 id="課程建議"><a href="#課程建議" class="headerlink" title="課程建議"></a>課程建議</h3><p>有優點就有缺點，這堂課我覺得問題最大的應該是六角提供的 API 文件，很多部分沒有寫清楚的感覺，常常要花很多時間嘗試才能找到答案，例如說 cart api 回傳的資料包在 data 裡的 data 裡，挺迂迴而且不直覺，又例如 admin-product-all 這支 api 好像不能用，我本來想自己修改每頁呈現的 product 數量 (因為原本給的get admin product 的 api 每頁給的是寫死的，所以我得全部抓過來再自己寫函式)，但發現拉過來都是空的，customer 的 product api 就沒有這問題。這些都是我在做作業時遇到的問題，希望以後有機會改善。</p>
+<h3 id="給想參加的人"><a href="#給想參加的人" class="headerlink" title="給想參加的人"></a>給想參加的人</h3><p>你要是很想要一個作品，參加準沒錯，要是你也有求職需求這絕對是一個很好的機會，六角提供的專題班絕對是個難得的機會，像我也拿著作品去投了實習。此外也有提供職涯輔導的面談，這個倒是讓我很意外，你可以和老師約時間討論專題進度規畫以及未來學習和生活規劃，不確定有哪些線上課程也有提供這種服務，真的很酷。</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>這次的課程我覺得很棒，我很喜歡這種有作品的課程，雖然可能要花上不少時間但我認為很值得，我也很期待以後的課程，以後有機會我也會再參加其他課程，希望能繼續學習到更多東西。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/hexschool/" rel="tag"># hexschool</a>
+              <a href="/tags/Vue/" rel="tag"># Vue</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/02/28/TheCleanCoder/" rel="prev" title="「The Clean Coder」閱讀筆記">
+      <i class="fa fa-chevron-left"></i> 「The Clean Coder」閱讀筆記
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/03/13/graphwalker-example/" rel="next" title="Graphwalker:  A Simple Example with Selenium">
+      Graphwalker:  A Simple Example with Selenium <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AA%B2%E7%A8%8B%E5%85%A7%E5%AE%B9"><span class="nav-number">1.</span> <span class="nav-text">課程內容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AA%B2%E5%89%8D%E5%BD%B1%E9%9F%B3"><span class="nav-number">1.1.</span> <span class="nav-text">課前影音</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%92%AD%E8%AA%B2%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">直播課程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E6%A5%AD"><span class="nav-number">1.3.</span> <span class="nav-text">作業</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%88%E9%A1%8C%E7%8F%AD"><span class="nav-number">1.4.</span> <span class="nav-text">專題班</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B5%84"><span class="nav-number">1.5.</span> <span class="nav-text">分組</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%83%E5%BE%97"><span class="nav-number">2.</span> <span class="nav-text">心得</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%A4%A7%E6%94%B6%E7%A9%AB"><span class="nav-number">2.1.</span> <span class="nav-text">最大收穫</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%96%9C%E6%AD%A1%E7%9A%84%E6%B4%BB%E5%8B%95"><span class="nav-number">2.2.</span> <span class="nav-text">最喜歡的活動</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AA%B2%E7%A8%8B%E5%BB%BA%E8%AD%B0"><span class="nav-number">2.3.</span> <span class="nav-text">課程建議</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B5%A6%E6%83%B3%E5%8F%83%E5%8A%A0%E7%9A%84%E4%BA%BA"><span class="nav-number">2.4.</span> <span class="nav-text">給想參加的人</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B5%90%E8%AA%9E"><span class="nav-number">3.</span> <span class="nav-text">結語</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">int</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">115</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huanginch" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huanginch" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:huanginch329@gmail.com" title="E-Mail → mailto:huanginch329@gmail.com" rel="noopener" target="_blank"><i class="fas fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/int7518" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;int7518" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://discordapp.com/users/472007247069839360" title="Discord → https:&#x2F;&#x2F;discordapp.com&#x2F;users&#x2F;472007247069839360" rel="noopener" target="_blank"><i class="fab fa-discord fa-fw"></i>Discord</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">int</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
