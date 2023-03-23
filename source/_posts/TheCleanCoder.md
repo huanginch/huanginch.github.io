@@ -1,7 +1,11 @@
 title: 「The Clean Coder」閱讀筆記
 author: int
-tags: 'clean code, clean coder, book review'
-date: 2023-02-28 17:12:21
+tags:
+  - clean code
+  - book review
+  - clean coder
+categories: []
+date: 2023-02-28 17:12:00
 ---
 > 我猜，你之所以拿起這本書，因為你是程式設計師，"專業主義"這個說法吸引了你。你就該如此。我們這種專業人士迫切渴求的，正是，"專業主義"。
 
