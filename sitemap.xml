@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://inthuang.tw/2023/03/23/The-Clean-Code/</loc>
+    
+    <lastmod>2023-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://inthuang.tw/2023/02/28/TheCleanCoder/</loc>
     
     <lastmod>2023-03-23</lastmod>
@@ -1414,6 +1423,13 @@
   
   <url>
     <loc>https://inthuang.tw/categories/css-position/</loc>
+    <lastmod>2023-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://inthuang.tw/categories/The-Clean-Code/</loc>
     <lastmod>2023-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
