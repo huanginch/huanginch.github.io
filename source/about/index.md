@@ -8,12 +8,13 @@ date: 2022-10-03 22:05:13
 這個網站什麼都寫，但主要以FrontEnd技術為主，因為現在學的最有心得:D
 
 ## 作品集
+* React作品:
+  * 麵音白湯menonpaitan形象網站: https://inthuang.tw/paitan/
+      * 負責內容: 開發
 * Vue作品:
   * WineWorld 洋酒電商 https://inthuang.tw/WineWorld/
       * 負責內容: 開發、首頁以外之內頁設計
 * 靜態網站:
-  * 麵音白湯menonpaitan形象網站: https://inthuang.tw/paitan/
-      * 負責內容: 開發
   * 稻乙緹iitifox形象網站: https://inthuang.tw/iitifox/
       * 負責內容: 設計、開發
   * F2E2022 首頁: https://inthuang.tw/F2E2022/
