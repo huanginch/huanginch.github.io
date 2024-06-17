@@ -12,6 +12,8 @@ date: 2022-10-03 22:05:13
   * WineWorld 洋酒電商 https://inthuang.tw/WineWorld/
       * 負責內容: 開發、首頁以外之內頁設計
 * 靜態網站:
+  * 麵音白湯menonpaitan形象網站: https://inthuang.tw/paitan/
+      * 負責內容: 開發
   * 稻乙緹iitifox形象網站: https://inthuang.tw/iitifox/
       * 負責內容: 設計、開發
   * F2E2022 首頁: https://inthuang.tw/F2E2022/
